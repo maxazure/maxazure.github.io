@@ -1,7 +1,9 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="******************** CHINA ***********" tvg-id="" group-title="" tvg-logo="",******************* CHINA ***********
-http://
+#EXTINF:-1 tvg-name="Parliament TV" tvg-id="" group-title="NEWZEALAND" tvg-logo="https://i.imgur.com/Bmt34GV.png",Parliament TV
+https://i.mjh.nz/nz/tv.18.m3u8
 #EXTINF:-1 tvg-logo="http://www.tvyan.com/uploads/dianshi/cctv4.jpg" group-title="CHINA",CCTV-4
 https://cctvcnch5ca.v.wscdns.com/live/cctveurope_2/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/oIRxwu9.png" group-title="CHINA",Hong Kong Open TV
 http://media.fantv.hk/m3u8/archive/channel2_stream1.m3u8
+#EXTINF:-1 tvg-name="ABC News" tvg-id="ABC Eastern US" group-title="USA" tvg-logo="https://i.imgur.com/7sJLzKi.png",ABC News
+https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8
