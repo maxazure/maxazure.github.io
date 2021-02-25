@@ -7,3 +7,5 @@ https://cctvcnch5ca.v.wscdns.com/live/cctveurope_2/index.m3u8
 http://media.fantv.hk/m3u8/archive/channel2_stream1.m3u8
 #EXTINF:-1 tvg-name="ABC News" tvg-id="ABC Eastern US" group-title="USA" tvg-logo="https://i.imgur.com/7sJLzKi.png",ABC News
 https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8
+#EXTINF:-1 tvg-name="ABC News Australia" tvg-id="abcnews.com.au" tvg-logo="https://i.imgur.com/rdkvOCh.png" group-title="AUSTRALIA",ABC News Australia (2)
+https://c.mjh.nz/101002210220/
