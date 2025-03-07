@@ -1,0 +1,126 @@
+/* Resume Section Styles */
+.resume {
+  background-color: white;
+}
+
+.resume-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--gray-light);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 2px;
+  background-color: var(--gray-light);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  padding-bottom: 50px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid var(--primary);
+  z-index: 1;
+}
+
+.timeline-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.timeline-date {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-subtitle {
+  font-size: 1rem;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.timeline-description {
+  color: var(--text);
+}
+
+.timeline-description ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.timeline-description li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-description li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
