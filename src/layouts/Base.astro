@@ -1,0 +1,50 @@
+---
+import { copy, profile, type Locale } from '../data/profile';
+import { seo } from '../lib/seo';
+import '../styles/global.css';
+interface Props { locale?: Locale; kind?: 'home' | 'privacy' | '404' }
+const { locale = 'en', kind = 'home' } = Astro.props;
+const c = copy[locale];
+const meta = seo(locale, kind);
+---
+<!doctype html>
+<html lang={c.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    <meta name="keywords" content={profile.keywords} />
+    <meta name="author" content={profile.name} />
+    <meta name="theme-color" content="#121413" />
+    <meta name="robots" content={kind === '404' ? 'noindex, follow' : 'index, follow, max-image-preview:large'} />
+    <link rel="canonical" href={meta.canonical} />
+    {meta.alternates.map((item) => <link rel="alternate" hreflang={item.lang} href={item.href} />)}
+    <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/jost-700.woff2" as="font" type="font/woff2" crossorigin />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={profile.name} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:url" content={meta.canonical} />
+    <meta property="og:locale" content={locale === 'en' ? 'en_NZ' : 'zh_CN'} />
+    <meta property="og:locale:alternate" content={locale === 'en' ? 'zh_CN' : 'en_NZ'} />
+    <meta property="og:image" content={meta.image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Jay Liu. Senior Software Engineer. FinTech, Cloud and Applied AI. Auckland, New Zealand." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+    <meta name="twitter:image" content={meta.image} />
+    <meta name="twitter:image:alt" content="Jay Liu. Senior Software Engineer. FinTech, Cloud and Applied AI. Auckland, New Zealand." />
+    {meta.graph && <script type="application/ld+json" set:html={JSON.stringify(meta.graph).replace(/</g, '\\u003c')} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{c.skip}</a>
+    <slot />
+  </body>
+</html>

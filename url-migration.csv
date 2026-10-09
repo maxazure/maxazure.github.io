@@ -1,0 +1,5 @@
+source_path,target_path,action,evidence
+/,/,preserve,existing repository and live homepage
+/index.html,/index.html,preserve,existing homepage file
+/cv/Jie-Liu-CV.pdf,/cv/Jie-Liu-CV.pdf,preserve,existing public CV exact bytes
+/content/resume/images/favicon.ico,/content/resume/images/favicon.ico,preserve,existing favicon reference

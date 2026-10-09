@@ -1,0 +1,52 @@
+---
+import { copy, type Locale } from '../data/profile';
+interface Props { locale: Locale; kind?: 'home' | 'privacy' | '404' }
+const { locale, kind = 'home' } = Astro.props;
+const c = copy[locale];
+const root = locale === 'en' ? '/' : '/zh/';
+const switchHref = kind === 'privacy' ? `${c.switchHref}privacy/` : c.switchHref;
+---
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="wordmark" href={root} aria-label="Jay Liu home">JAY LIU<span aria-hidden="true">.</span></a>
+    <nav class="desktop-nav" aria-label={c.navLabel}>
+      {c.nav.map(([id, label]) => <a href={`${kind === 'home' ? '' : root}#${id}`}>{label}</a>)}
+    </nav>
+    <div class="header-actions">
+      <a class="language-link" href={switchHref} lang={locale === 'en' ? 'zh-CN' : 'en-NZ'} aria-label={locale === 'en' ? '中文版本' : 'English version'}>{c.switchLabel}</a>
+      <button class="menu-button" aria-controls="mobile-nav" aria-expanded="false" type="button">
+        <span>{c.menu}</span><span class="menu-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav shell" aria-label={c.navLabel}>
+    {c.nav.map(([id, label]) => <a href={`${kind === 'home' ? '' : root}#${id}`}>{label}</a>)}
+  </nav>
+</header>
+<script>
+  const header = document.querySelector<HTMLElement>('.site-header');
+  const button = document.querySelector<HTMLButtonElement>('.menu-button');
+  const nav = document.querySelector<HTMLElement>('#mobile-nav');
+  if (header && button && nav) {
+    header.classList.add('enhanced');
+    const close = () => { button.setAttribute('aria-expanded', 'false'); nav.classList.remove('is-open'); };
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('is-open', open);
+    });
+    nav.addEventListener('click', (event) => {
+      const link = (event.target as Element).closest<HTMLAnchorElement>('a');
+      if (!link) return;
+      close();
+      const fragment = new URL(link.href).hash;
+      const section = fragment && document.getElementById(fragment.slice(1));
+      if (section) { section.setAttribute('tabindex', '-1'); section.focus({ preventScroll: true }); }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') { close(); button.focus(); }
+    });
+    document.addEventListener('click', (event) => { if (!header.contains(event.target as Node)) close(); });
+    window.matchMedia('(min-width: 800px)').addEventListener('change', close);
+  }
+</script>
