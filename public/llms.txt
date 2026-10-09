@@ -1,11 +1,11 @@
 # Jay Liu
 
-> Jay Liu (Jie Liu) is a software engineer based in Auckland, New Zealand. He currently works as an Analyst Developer at FNZ Group. His independent projects cover applied AI, business automation, browser tools, knowledge systems and creative workflows.
+> Jay Liu (Jie Liu) is a senior software engineer based in Auckland, New Zealand. He builds full-stack software and AI-enabled workflows with C#/.NET, React/TypeScript and Python. His portfolio presents anonymous industry websites, private systems and public open-source tools.
 
 ## Public website
 
-- [English portfolio](https://jayliu.co.nz/): Background, selected independent projects, skills, experience and contact details.
+- [English portfolio](https://jayliu.co.nz/): Concrete project cases, background, skills, experience and contact details.
 - [中文个人网站](https://jayliu.co.nz/zh/): Chinese version of the same personal portfolio.
 - [Privacy](https://jayliu.co.nz/privacy/): How this website and contact links handle information.
 
-The independent projects and personal views on this website are Jay's own. The website makes no claims about FNZ's AI systems or internal projects.
+The private system previews contain no customer records. Public links identify externally accessible websites or open-source repositories; private system endpoints are not published.

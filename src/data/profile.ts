@@ -24,68 +24,19 @@ export const copy = {
   en: {
     lang: 'en-NZ', switchLabel: '中文', switchHref: '/zh/',
     skip: 'Skip to content', menu: 'Menu', navLabel: 'Main navigation',
-    nav: [ ['about', 'About'], ['portfolio', 'Projects'], ['skills', 'Skills'], ['resume', 'Experience'], ['contact', 'Contact'] ],
+    nav: [ ['portfolio', 'Projects'], ['about', 'About'], ['skills', 'Skills'], ['resume', 'Experience'], ['contact', 'Contact'] ],
     location: 'Auckland, New Zealand', heroLabel: 'Software / Systems / Applied AI',
     role: 'Senior Software Engineer',
     heroIntro: "Enterprise engineering. Applied AI. Reliable systems.",
-    heroBody: "FinTech development at FNZ, with independent work in agent orchestration, knowledge retrieval and production software. Connecting AI capabilities to sound engineering practices.",
+    heroBody: "I build full-stack software and AI-enabled workflows with C#/.NET, React/TypeScript and Python. My work spans enterprise platforms, agent tooling, knowledge retrieval and reliable delivery.",
     viewWork: 'Explore my work', getInTouch: 'Get in touch',
-    current: 'Currently at FNZ Group', focus: 'Exploring applied AI',
+    current: 'Architecture through to deployment', focus: 'Exploring applied AI',
     orbitLabel: 'Engineering, connected.', orbitFooter: 'Human judgment. Software. Intelligence.',
     aboutLabel: 'About me', aboutHeading: "Software foundations.\nSystems thinking.",
     aboutLead: "Enterprise software experience, extended into the engineering of AI-enabled systems.",
-    aboutBody: 'I’m Jay, a software engineer based in Auckland. Over 18 years, I’ve worked on financial platforms, healthcare systems and web applications in China and New Zealand. I’m still at FNZ Group, working as an Analyst Developer on enterprise financial software.',
+    aboutBody: 'I’m Jay, a software engineer based in Auckland. Over 18 years, I’ve worked on financial platforms, healthcare systems and web applications in China and New Zealand.',
     aboutBody2: "My recent independent work focuses on agent-tool interfaces, persistent knowledge retrieval and transactional workflow platforms. The common thread is reliability: explicit execution boundaries, source provenance, concurrency control and validation. I bring the same attention to testing, maintainability and production support that underpins enterprise development.",
-    aboutFacts: [ ['18+', 'Years in software'], ['FNZ', 'Current workplace'], ['Auckland', 'Home base'] ],
-    workLabel: "Selected engineering work", workHeading: "Recent systems & projects.",
-    workIntro: "Independent engineering projects alongside my role at FNZ. Each explores a practical systems problem with relevance to enterprise software and applied AI.",
-    workLink: 'More on GitHub', projectLink: 'Explore project',
-    projects: [
-  {
-    "name": "Agentic software delivery",
-    "category": "Orchestration & tool interfaces",
-    "description": "Developing workflows that connect coding agents, browser automation and command-line tools to software delivery. Separating model-led planning from deterministic execution checks, with explicit permissions, observable actions and build/test checkpoints.",
-    "tags": [
-      "Agent orchestration",
-      "Tool contracts",
-      "CI/CD"
-    ],
-    "visual": "flow"
-  },
-  {
-    "name": "Knowledge & memory infrastructure",
-    "category": "Retrieval & evidence governance",
-    "description": "Prototyping persistent knowledge workflows with source-linked records, validity checks and review gates. Keeping retrieval and model-generated candidates separate from approved knowledge, with bounded context selection and citation checks.",
-    "tags": [
-      "Persistent memory",
-      "Retrieval",
-      "Provenance"
-    ],
-    "visual": "orbit"
-  },
-  {
-    "name": "Transactional workflow platforms",
-    "category": "Data integrity & systems integration",
-    "description": "Building business applications around typed API boundaries and a PostgreSQL source of truth. Applying idempotent commands, optimistic concurrency and versioned records across web and CLI interfaces to handle retries and conflicting updates.",
-    "tags": [
-      "PostgreSQL",
-      "Idempotency",
-      "Concurrency"
-    ]
-  },
-  {
-    "name": "Multimodal processing pipelines",
-    "category": "Reproducible automation",
-    "description": "Developing modular speech and video tooling with source-bound artifacts, timeline normalisation and automated media checks. Applying reproducible pipeline design to model-assisted processing and downstream delivery.",
-    "tags": [
-      "Python",
-      "FFmpeg",
-      "Artifact validation"
-    ],
-    "href": "https://github.com/maxazure/video-editing-skill",
-    "linkLabel": "View public toolkit"
-  }
-],
+    aboutFacts: [ ['18+', 'Years in software'], ['.NET', 'Enterprise engineering'], ['Auckland', 'Home base'] ],
     skillLabel: 'Skills & approach', skillHeading: 'A broader toolkit.\nThe same engineering standards.',
     skillIntro: 'A strong software foundation, with an expanding focus on practical AI systems and the tools around them.',
     skills: [
@@ -94,38 +45,6 @@ export const copy = {
       { name: 'Cloud & delivery', summary: 'Taking systems into production and looking after them once they’re there.', items: ['Azure · Cloudflare · Linux', 'Docker · CI/CD · GitHub Actions', 'Architecture · Testing · Code review', 'Observability · Production support'] },
       { name: 'Systems integration', summary: 'Designing interfaces and data flows that remain predictable under change.', items: ['Typed APIs · Schema validation', 'Idempotency · Optimistic concurrency', 'Source provenance · Execution boundaries', 'Responsive UI · Accessibility'] },
     ],
-    researchLabel: 'Research context', researchHeading: 'Engineering questions,\nwith research behind them.',
-    researchIntro: 'Selected research relevant to my current work: how agents interact with tools, how retrieval grounds answers, and how memory stays useful over time.',
-    papers: [
-  {
-    "name": "ReAct",
-    "detail": "Yao et al. · ICLR 2023",
-    "note": "Interleaving reasoning and external actions provides a useful lens for designing observable agent-tool loops.",
-    "href": "https://arxiv.org/abs/2210.03629",
-    "title": "ReAct: Synergizing Reasoning and Acting in Language Models"
-  },
-  {
-    "name": "SWE-agent",
-    "detail": "Yang et al. · NeurIPS 2024",
-    "note": "Agent-computer interface design connects directly to stable tool contracts and software-delivery workflows.",
-    "href": "https://arxiv.org/abs/2405.15793",
-    "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
-  },
-  {
-    "name": "Retrieval-Augmented Generation",
-    "detail": "Lewis et al. · NeurIPS 2020",
-    "note": "Combining language models with external retrieval frames the problem of grounding answers in source material.",
-    "href": "https://arxiv.org/abs/2005.11401",
-    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
-  },
-  {
-    "name": "LongMemEval",
-    "detail": "Wu et al. · ICLR 2025",
-    "note": "Temporal reasoning, knowledge updates and abstention are relevant to source validity and evidence sufficiency in memory systems.",
-    "href": "https://arxiv.org/abs/2410.10813",
-    "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
-  }
-],
     experienceLabel: 'Experience', experienceHeading: 'The work behind the work.',
     experienceIntro: 'A career spanning enterprise engineering, team leadership and teaching.',
     experience: [
@@ -151,67 +70,18 @@ export const copy = {
   zh: {
     lang: 'zh-CN', switchLabel: 'EN', switchHref: '/',
     skip: '跳到正文', menu: '菜单', navLabel: '主导航',
-    nav: [ ['about', '关于'], ['portfolio', '项目'], ['skills', '技能'], ['resume', '经历'], ['contact', '联系'] ],
+    nav: [ ['portfolio', '项目'], ['about', '关于'], ['skills', '技能'], ['resume', '经历'], ['contact', '联系'] ],
     location: '新西兰，奥克兰', heroLabel: '软件 / 系统 / AI 应用',
     role: '资深软件工程师',
     heroIntro: "企业软件工程、AI 应用与可靠系统。",
-    heroBody: "目前在 FNZ 从事金融科技开发，工作之外探索 Agent 编排、知识检索和生产级软件，让 AI 能力与工程实践结合。",
-    viewWork: '看看我的项目', getInTouch: '联系我', current: '目前就职于 FNZ Group', focus: '持续探索 AI 应用',
+    heroBody: "使用 C#/.NET、React/TypeScript 和 Python 构建完整应用与 AI 工作流，覆盖企业平台、Agent 工具、知识检索及可靠交付。",
+    viewWork: '看看我的项目', getInTouch: '联系我', current: '从架构设计到部署交付', focus: '持续探索 AI 应用',
     orbitLabel: '让工程能力连接起来。', orbitFooter: '人的判断。软件。智能。',
     aboutLabel: '关于我', aboutHeading: "软件工程基础，\n系统设计视角。",
     aboutLead: "从企业软件开发出发，逐步扩展到 AI 系统的工程实现。",
-    aboutBody: '我是 Jay，中文名刘杰，目前住在奥克兰。过去 18 年多，我在中国和新西兰参与过金融平台、医疗信息系统和 Web 应用的开发。目前我仍在 FNZ Group 任职，担任 Analyst Developer，从事企业金融软件开发。',
+    aboutBody: '我是 Jay，中文名刘杰，目前住在奥克兰。过去 18 年多，我在中国和新西兰参与过金融平台、医疗信息系统和 Web 应用的开发。',
     aboutBody2: "近期的独立项目集中在 Agent 与工具的接口、持久化知识检索和事务型工作流平台。共同关注的问题是可靠性：明确执行边界、保留来源、处理并发冲突，并验证执行结果。测试、可维护性和生产支持也贯穿这些项目。",
-    aboutFacts: [ ['18+', '年软件开发经验'], ['FNZ', '目前任职公司'], ['Auckland', '生活与工作城市'] ],
-    workLabel: "近期工程项目", workHeading: "近期的系统与项目。",
-    workIntro: "这些是 FNZ 工作之外的独立工程项目，围绕企业软件和 AI 应用中的实际系统问题展开。",
-    workLink: '更多 GitHub 项目', projectLink: '查看项目',
-    projects: [
-  {
-    "name": "Agent 驱动的软件交付",
-    "category": "编排与工具接口",
-    "description": "开发连接编程 Agent、浏览器自动化和命令行工具的交付工作流，将模型规划与确定性的执行检查分离，并加入明确权限、可观测操作及构建和测试检查点。",
-    "tags": [
-      "Agent 编排",
-      "工具契约",
-      "CI/CD"
-    ],
-    "visual": "flow"
-  },
-  {
-    "name": "知识与记忆基础设施",
-    "category": "检索与证据管理",
-    "description": "构建持久化知识工作流原型，结合来源关联、有效性检查和审阅机制。区分检索结果、模型生成候选与已确认知识，并约束上下文选择、检查引用。",
-    "tags": [
-      "持久化记忆",
-      "检索",
-      "来源追溯"
-    ],
-    "visual": "orbit"
-  },
-  {
-    "name": "事务型工作流平台",
-    "category": "数据一致性与系统集成",
-    "description": "围绕类型化 API 边界和 PostgreSQL 统一数据源构建业务应用，通过幂等命令、乐观并发控制和版本化记录，处理 Web 与 CLI 接口中的重试和更新冲突。",
-    "tags": [
-      "PostgreSQL",
-      "幂等性",
-      "并发控制"
-    ]
-  },
-  {
-    "name": "多模态处理流水线",
-    "category": "可复现的自动化",
-    "description": "开发模块化语音与视频工具，使用绑定来源的产物、时间轴归一和自动媒体检查，将可复现流水线设计用于模型辅助处理及后续交付。",
-    "tags": [
-      "Python",
-      "FFmpeg",
-      "产物验证"
-    ],
-    "href": "https://github.com/maxazure/video-editing-skill",
-    "linkLabel": "查看公开工具"
-  }
-],
+    aboutFacts: [ ['18+', '年软件开发经验'], ['.NET', '企业应用开发'], ['Auckland', '生活与工作城市'] ],
     skillLabel: '技能与方法', skillHeading: '工具更多了，\n工程要求依然具体。',
     skillIntro: '以软件工程为基础，逐步扩展到 AI 系统及其周边工具。',
     skills: [
@@ -220,38 +90,6 @@ export const copy = {
       { name: '云平台与交付', summary: '让系统上线运行，并持续处理运行中的问题。', items: ['Azure · Cloudflare · Linux', 'Docker · CI/CD · GitHub Actions', '架构 · 测试 · 代码审查', '可观测性 · 生产支持'] },
       { name: '系统集成', summary: '让接口与数据流在变化和冲突下仍然可预测。', items: ['类型化 API · Schema 校验', '幂等性 · 乐观并发控制', '来源追溯 · 执行边界', '响应式界面 · 无障碍'] },
     ],
-    researchLabel: '研究背景', researchHeading: '工程问题，\n也有研究依据。',
-    researchIntro: '与近期工程方向相关的论文，涉及 Agent 工具交互、检索增强，以及长期记忆中的时效性与证据问题。',
-    papers: [
-  {
-    "name": "ReAct",
-    "detail": "Yao 等 · ICLR 2023",
-    "note": "将推理与外部行动交织，为可观测的 Agent 工具调用循环提供了研究视角。",
-    "href": "https://arxiv.org/abs/2210.03629",
-    "title": "ReAct: Synergizing Reasoning and Acting in Language Models"
-  },
-  {
-    "name": "SWE-agent",
-    "detail": "Yang 等 · NeurIPS 2024",
-    "note": "Agent 与计算机的接口设计，与稳定工具契约和软件交付工作流直接相关。",
-    "href": "https://arxiv.org/abs/2405.15793",
-    "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
-  },
-  {
-    "name": "Retrieval-Augmented Generation",
-    "detail": "Lewis 等 · NeurIPS 2020",
-    "note": "结合语言模型与外部检索，为基于来源材料生成答案提供了技术框架。",
-    "href": "https://arxiv.org/abs/2005.11401",
-    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
-  },
-  {
-    "name": "LongMemEval",
-    "detail": "Wu 等 · ICLR 2025",
-    "note": "关注时间推理、知识更新和信息不足时的拒答，可用于思考记忆系统的来源有效性与证据充分性。",
-    "href": "https://arxiv.org/abs/2410.10813",
-    "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
-  }
-],
     experienceLabel: '工作经历', experienceHeading: '一路积累的经验。', experienceIntro: '经历过企业软件开发、团队管理和技术教学。',
     experience: [
       { date: '2022 年 10 月至今', role: 'Analyst Developer', company: 'FNZ Group', place: '新西兰，奥克兰', description: '使用 C# 和 .NET 开发、维护企业金融平台，参与功能交付、代码审查、生产支持和版本发布。' },

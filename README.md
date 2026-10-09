@@ -2,7 +2,7 @@
 
 Personal engineering portfolio, built with Astro 7, TypeScript and Tailwind CSS 4. Static HTML is generated at build time. A small native JavaScript disclosure handles mobile navigation; no React runtime, animation library, analytics or third-party fonts are required.
 
-The English homepage retains its established title and description. The site presents enterprise software experience and recent independent engineering work for a recruitment audience, with concise research references. FNZ employment is shown separately from independent projects.
+The English homepage retains its established title and description. The site presents enterprise software experience and recent independent engineering work for a recruitment audience, with a prominent case collection: recent anonymous client websites, private systems, open-source tools and earlier projects. Current employment is kept in the career timeline.
 
 ## Develop and verify
 
@@ -27,7 +27,7 @@ Pushes to `master` trigger `.github/workflows/deploy.yml`. GitHub Actions instal
 
 Preserved public contracts: `/`, `/index.html`, `#home`, `#about`, `#skills`, `#resume`, `#portfolio`, `#contact`, `/cv/Jie-Liu-CV.pdf` and the legacy favicon path. New routes are `/zh/`, `/privacy/`, `/zh/privacy/` and a real GitHub Pages 404 document. The CV is retained byte-for-byte as an existing public document; it is not promoted as a newly prepared job-application CV.
 
-After publishing, check the homepage, both language versions, privacy, an unknown URL, robots, sitemap, social image and CV. GitHub Pages owns HTTP headers and cache policy; this project does not claim to configure unsupported `_headers` rules. Search rankings, indexing and research benchmark performance are not inferred from build success.
+After publishing, check the homepage, both language versions, privacy, an unknown URL, robots, sitemap, social image and CV. GitHub Pages owns HTTP headers and cache policy; this project does not claim to configure unsupported `_headers` rules. Search rankings, indexing and project impact are not inferred from build success.
 
 See [DESIGN.md](DESIGN.md), [site specification](site-specification.md) and [content rationale](docs/engineering-content.md) for the design, evidence boundaries and verification record.
 
@@ -40,3 +40,5 @@ See [DESIGN.md](DESIGN.md), [site specification](site-specification.md) and [con
 - [SWE-agent](https://arxiv.org/abs/2405.15793)
 - [Retrieval-Augmented Generation](https://arxiv.org/abs/2005.11401)
 - [LongMemEval](https://arxiv.org/abs/2410.10813)
+
+Project copy lives in `src/data/projects.ts`. Only redacted 320×200 previews belong in `public/projects/`; do not add original screenshots, high-resolution variants, zoom links or client names. Public client-domain links are owner-authorised. Private systems have no public endpoints. See `docs/engineering-content.md` for evidence boundaries.

@@ -1,31 +1,32 @@
-# Engineering content rationale
+# Engineering content and project evidence
 
-Updated: 2026-10-10. Owner: Jay Liu. Audience: recruiters and engineering hiring teams considering senior software, enterprise/full-stack or applied AI engineering work.
+Updated: 2026-10-10. Owner: Jay Liu. Audience: senior software, enterprise/full-stack and applied AI hiring teams.
 
-The established identity remains **Jay Liu — Senior Software Engineer**, with FinTech, .NET, React, Cloud and AI Integration retained in the English search title. Current employment is **Analyst Developer, FNZ Group, October 2022–present**, confirmed by the owner and his current CV. Independent projects do not describe FNZ's internal systems.
+The introduction states identity, technical stack and delivery capabilities. Current employment remains in the career timeline and established SEO metadata; it is not emphasised in the hero or biography. The standalone third-party research section has been removed at the owner's request. Technical depth is explained through the owner's project implementation.
 
-## Project selection
+## Selected work
 
-| Public project summary | Evidence reviewed | Engineering relevance |
+| Group | Examples | Evidence and claim boundary |
 | --- | --- | --- |
-| Agentic software delivery | Owner's working tool/workflow definitions, browser integration and reusable delivery tooling | Tool interfaces, execution boundaries, orchestration, observable actions, build/test validation |
-| Knowledge & memory infrastructure | Implemented source-backed knowledge workflow and its current documentation | Persistent records, source hashes, validity filtering, bounded retrieval, review gates, citation checks; described as a prototype |
-| Transactional workflow platforms | Application models, API/services and CLI contract | PostgreSQL source of truth, typed boundaries, idempotency keys, optimistic concurrency and versioned records |
-| Multimodal processing pipelines | [Public video toolkit](https://github.com/maxazure/video-editing-skill) and [speech integration](https://github.com/maxazure/omnivoice-tts-skill) | Modular pipeline stages, source-bound artifacts, media normalisation and reproducible validation |
+| Recent client websites | Tourism, transport, accounting | Existing project code/docs and current public interfaces. Descriptions concern content architecture, components, locale routing and technical SEO. Client names are omitted from copy and screenshots. |
+| Private systems | Agent workbench, transactional CRM, knowledge/memory prototype | Actual application code/docs, an existing workbench screenshot, the real CRM template rendered with empty demo records, and actual CLI help. No production customer database was accessed for screenshots. |
+| Open-source tools | Video editing, local speech integration, bookkeeping record preparation | Public repositories verified under the owner's account. Existing model/tool engines are described as integration dependencies, with no authorship or training claim. |
+| Earlier projects | Financial platform, two healthcare sites, consumer application | Four real screenshot assets recovered from the previous website. Descriptions remain at the scope supported by that website and the captured interfaces. |
 
-Descriptions intentionally summarise engineering decisions. Private source URLs, local paths, deployment topology, customer information and employer project details are excluded. Existing third-party tools are described as integration work; the page does not imply authorship of their engines or models. No project-wide latency, accuracy, revenue, benchmark or productivity figures are claimed.
+A successful HTTP response does not establish that a historical project is still running. The financial-project domain currently serves a holding page; its screenshot is historical and the external link explicitly says “Current site”. The other historical destinations did not provide a usable secure public page at the check, so they have no links.
 
-## Research context
+The owner explicitly allowed public customer-domain links while requiring anonymous labels and thumbnails. Private application URLs, local paths, topology, personal correspondence, real customer records and credentials are excluded. The three private systems have no live or repository links. Only publicly accessible open-source repositories are linked as GitHub projects.
 
-References were checked against primary papers on 2026-10-10. They contextualise the work and do not establish the owner's academic publication record or reproduce the authors' evaluation results.
+## Screenshot boundaries
 
-- [ReAct — Yao et al., ICLR 2023](https://arxiv.org/abs/2210.03629): alternating reasoning and external action is relevant to agent–tool interactions. This is a conceptual connection, not a claimed implementation of the exact experimental method.
-- [SWE-agent — Yang et al., NeurIPS 2024](https://arxiv.org/abs/2405.15793): agent–computer interface design provides context for software-tool contracts and delivery workflows. No SWE-bench result is attributed to Jay.
-- [RAG — Lewis et al., NeurIPS 2020](https://arxiv.org/abs/2005.11401): external retrieval plus generation explains source-grounded answer construction. The portfolio does not claim to have trained the paper's model.
-- [LongMemEval — Wu et al., ICLR 2025](https://arxiv.org/abs/2410.10813): temporal reasoning, changing knowledge and abstention help frame evidence validity. No benchmark evaluation of Jay's prototype is claimed.
+Ten shipped screenshots are 320×200 WebP files. They are displayed at 140–220 CSS pixels wide, cannot trigger a lightbox, and have no full-size sibling or `srcset`. A screenshot's intrinsic low resolution is the privacy boundary; CSS alone is not relied on to hide detail.
 
-## Editorial decisions
+Browser-rendered derivatives mask brands, contact details and private session/user areas. The medical portrait is strongly blurred, its signature removed, and legacy brand text covered. Generic interface layout and non-identifying service headings remain visible. CRM preview contains zero actual records and is labelled “Empty-data demo interface”; memory preview is CLI help with no personal source records. No fake dashboard or generated image is presented as project evidence.
 
-The homepage uses English as the existing primary locale; Chinese has its own crawlable route and equivalent facts. Older speculative impact numbers, arbitrary skill percentages and unrelated legacy project tiles are removed. Previous employment is compressed into a readable timeline using the current CV, and the master's degree is retained. The original public CV URL remains intact.
+Original sources and capture files stay outside the public repository. Only reviewed redacted exports are committed. Filenames, alt text and captions use anonymous project IDs and industry descriptions. Replace a preview from its source and repeat privacy review; never upload an original to make the small preview sharper.
 
-AI-assisted drafting and translation organise owner-provided facts and reviewed implementation evidence. Jay remains the accountable owner. The site contains no fabricated testimonials, awards or research affiliations. References are presented as research context, not publications by the owner.
+## Editorial rules
+
+Each case describes purpose, a bounded implementation detail and relevant technologies. Keep project status and evidence type visible. No benchmark, latency, revenue, productivity, client-result or project-count claims are made. The displayed case count is an inventory of the selected examples, not a claimed total of completed work.
+
+English and Chinese expose the same projects, links, images and status. The homepage title/description, legacy fragments, career facts and original CV URL remain intact. All project explanations stay in initial HTML and remain available with JavaScript or images disabled.

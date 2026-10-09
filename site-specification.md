@@ -2,127 +2,77 @@
 
 Updated: 2026-10-10. Owner: Jay Liu. Canonical: https://jayliu.co.nz/. Repository: https://github.com/maxazure/maxazure.github.io. Branch: master.
 
-## Project context and success criteria
+## Purpose and success criteria
 
-Redesign an existing personal website for job applications. Preserve the established English title and description, current FNZ employment, public homepage/anchors and CV route. Present recent work as software/system engineering, with relevant primary-paper references. Ship a responsive, fast static site to the existing GitHub Pages domain and verify the production build.
+A personal portfolio for senior software, enterprise/full-stack and applied AI job applications. The owner requested concrete examples in a prominent position, anonymous client identities, small non-interactive screenshots, real GitHub links for open-source work, a capability-led introduction and removal of the standalone research section.
 
-## Audience, content and conversion
+Success: 13 corresponding cases in both languages; 10 reviewed 320×200 screenshots; cases precede About; no client names in case copy or thumbnails; no high-resolution image routes, zoom controls or private system links. Preserve the established English title/description, career facts, legacy anchors and unchanged public CV. Build, review rendered desktop/mobile pages, publish through the existing Pages workflow, and verify actual live output.
 
-Audience: senior software / enterprise / full-stack / applied AI hiring teams. Entry: name search, CV or profile link. Promise: established enterprise engineering plus current AI systems work. Proof: career history, concise implementation-informed project summaries and public tooling. Action: direct email or professional profile. Success signal: visitors can understand Jay's engineering background and reach him; no baseline conversion or ranking data is available.
+`src/data/profile.ts` owns identity and locale copy. `src/data/projects.ts` owns concrete cases. `docs/engineering-content.md` records factual and privacy boundaries. The owner allowed direct public customer-domain links, with industry labels and anonymous images. Private system previews have no public endpoint links.
 
-All facts and translated copy live in `src/data/profile.ts`. Fact evidence and research boundaries are documented in `docs/engineering-content.md`. Current FNZ role is owner-confirmed; recent independent project descriptions are implementation-informed summaries. Skill percentages, unsupported project totals, business impact figures, old unrelated project tiles and award-like claims are removed.
+## Creative route and section capacity
 
-## Creative route and benchmark packet
+Graphite editorial design, Jost typography, coral accents and mathematical hero imagery. The primary action and first navigation item lead to concrete projects. Three short in-page group links serve systems/tools/experiments first, followed by recent websites and earlier projects. This puts software/AI engineering evidence ahead of brochure-site examples for the recruitment audience. All examples remain visible in semantic HTML; no filters, carousel, details page or lightbox are added.
 
-Selected: image-light technical editorial. Rejected: screenshot-heavy product gallery, because the work includes private systems and would draw attention away from the engineering profile. Source signals: existing name/role/FinTech identity, current career record and reviewed engineering work. Structural choices: oversized name, two featured system concepts, dense project rows, paper-tone chronology. The small control surface remains calm and direct.
+| Section | Capacity / narrow transformation |
+| --- | --- |
+| Hero | Identity, current stack and delivery capability; no employer emphasis |
+| Projects | 3 recent websites, 6 systems/tools/experiments, 4 earlier projects; thumbnail/copy/action rows stack on phones |
+| About | Engineering background, approach and selected facts |
+| Skills | Four groups; four/two/one columns |
+| Experience | Career timeline and degree on paper background |
+| Contact / Privacy | Direct email and profiles; no forms or tracking |
 
-Primary references inspected: the existing portfolio; Astro's official static/GitHub deployment documentation; Google Search Central's SEO starter guide; the four primary papers linked in the research section. These are source/evidence references, not copied visual templates. This portfolio avoids the old equal-card grid, percentage bars, hidden education tabs and lengthy generic biography.
+`DESIGN.md` owns layout tokens and responsive rules. The supporting frontend-design and impeccable packages were unavailable when the first version was built; code-native design and rendered desktop/mobile review supply the documented fallback. No execution of those unavailable skills is claimed.
 
-## VisualDirection and design handoff
+## Runtime, hosting and URL contracts
 
-Design read: a personal engineering portfolio for hiring teams, using precise graphite editorial typography with honest mathematical abstractions. Brand anchor: Jay Liu / Senior Software Engineer. Subject vocabulary: software, tools, execution, retrieval, evidence, concurrency. Site signature: an orbit / path motif connecting independent engineering capabilities. Placements: hero, two featured schematic surfaces, social preview. Static fallback: every diagram is decorative and every answer is visible HTML.
+Astro 7.3.5, TypeScript and Tailwind 4.3.3, static output, no React runtime. Native mobile-menu enhancement remains below 1KB. GitHub Actions checks types, builds and verifies HTML contracts before Pages publication. Maintained actions are pinned to full commit SHAs, Node 22 application runtime, Ubuntu 24.04 runner. Custom domain and HTTPS are retained; no new DNS or account resources are required.
 
-Dials: design variance 7/10; motion intensity 2/10; visual density 5/10. `DESIGN.md` owns colours, fonts, spacing, layout, motion and responsive rules. The supporting frontend-design and impeccable skill packages were unavailable in the local catalog and searched skill directories. Equivalent code-native design and a rendered desktop/mobile polish pass are used; no claim is made that those unavailable skills ran.
+Preserved: `/`, `/index.html`, `#home`, `#about`, `#skills`, `#resume`, `#portfolio`, `#contact`, `/cv/Jie-Liu-CV.pdf`, original favicon path. New canonical pages from the redesign: `/zh/`, `/privacy/`, `/zh/privacy/`. Unknown URLs return HTTP 404 with a custom noindex document. `url-migration.csv` records contracts. Git history retains retired assets; no compatibility implementation is added.
 
-## Runtime and hosting
+## SEO and discovery
 
-Astro 7.3.5 + TypeScript + Tailwind 4.3.3; static output; zero React islands. The skill's Astro 5 default was superseded by the current supported release after the dependency audit identified vulnerabilities requiring later major versions. Checked current Astro 7 documentation before changing the framework.
+English homepage title and description remain verbatim. Person + WebSite + ProfilePage schema matches the career record; it includes no project performance, authorship or employer-architecture claims. Single canonical, Open Graph/Twitter preview, fully qualified en-NZ/zh-CN/x-default alternatives, robots, sitemap and `llms.txt`. Four indexable canonical pages. Case images have real `<img src>`, dimensions, contextual alt text and nearby descriptions. No fabricated gallery schema, review/award claims or image-ranking promise.
 
-GitHub Pages is the owner-requested deployment target, so the skill's default Cloudflare/BestAI deploy routes do not apply. Existing repository, master branch, CNAME and HTTPS remain. GitHub Actions performs typecheck, build and HTML-contract verification before deployment. There are no backend writes or forms. Old external Formspree form is replaced by a working direct mail link.
+Search Console/Bing indexing, field performance, rankings, recruiting conversions, social-crawler refresh and AI citations are unmeasured. Technical readiness and lab results do not establish those outcomes.
 
-## Information architecture and URL migration register
+## Brand asset and media register
 
-| Path or fragment | Decision | Evidence |
+Original wordmark and CV remain unchanged. Self-hosted Jost 500/700 WOFF2 is OFL licensed. Hero orbit is decorative SVG; the deterministic 1200×630 social card remains the preferred share image. Retired project diagrams are removed. No generated imagery is used as proof.
+
+| Family / anonymous ID | Source and non-destructive derivative | Consumer / QA |
 | --- | --- | --- |
-| `/`, `/index.html` | Preserve homepage | Existing repository and live site |
-| `#home`, `#about`, `#skills`, `#resume`, `#portfolio`, `#contact` | Preserve all targets | Existing HTML and live navigation |
-| `/cv/Jie-Liu-CV.pdf` | Preserve exact bytes | SHA-256 checked by build verifier |
-| `/content/resume/images/favicon.ico` | Preserve existing asset path | Existing HTML |
-| `/zh/`, `/privacy/`, `/zh/privacy/` | New crawlable pages | Locale parity / privacy |
-| Unknown URL | Actual 404 with noindex | GitHub Pages custom 404 document |
+| tourism, transport, accounting | Current public website captures; brand/contact masks; 320×200 WebP | Recent case rows; small static previews; privacy and rendered review |
+| agent-workbench | Existing actual workbench screenshot; session/user-area masks; 320×200 WebP | Private system row; no private endpoint |
+| transactional-crm | Actual application template rendered with empty demo records; 320×200 WebP | Labelled empty-data demo; no database accessed |
+| knowledge-memory | Actual CLI help rendered as terminal view; no source records; 320×200 WebP | Prototype row; labelled command-line preview |
+| finance-archive, medical-archive-a, consumer-app-archive, medical-archive-b | Four real images from previous website; brands/contact details masked; portrait blurred/signature covered; 320×200 WebP | Historical rows; current-domain link only where usable |
 
-No page routes are renamed and no HTML redirect aliases are created. Git history retains retired source/assets. `url-migration.csv` records the source contracts.
+All ten derivative files live in `public/projects/`, with anonymous filenames, no metadata carried into exports and no high-resolution siblings. Total image bytes: 52,246 at the reviewed encoding. Original captures remain outside Git/public output. Actual browser rendering supplies masking/resizing; WebP export changes encoding only. Permission: owner-directed publication, anonymous client labels, approved public-domain links. Source portraits are redacted; no identifiable patient or customer is introduced. SEO/accessibility: descriptive alternatives, contextual captions, lazy/async delivery, fixed 8:5 aspect ratio. Replacement invalidates privacy review and related checks.
 
-## SEO graph and metadata contract
+## Privacy and interaction contract
 
-`src/lib/seo.ts` and `src/layouts/Base.astro` own the head and graph. English homepage title and description remain verbatim. A single canonical, Open Graph URL, Twitter card, exact 1200×630 preview, fully qualified self-referencing language alternatives plus x-default, sitemap and robots are generated. Schema: Person + WebSite + ProfilePage, matching visible FNZ role and independent work. No LocalBusiness, publication authorship, FAQ or benchmark-performance claims. `llms.txt` is a concise public map, not a ranking promise.
+GitHub Pages may process request metadata; privacy pages describe hosting and direct-email/external-link handling. No application cookies, trackers, forms, backend writes or new processors. No real customer database, private session content, local paths, addresses, credentials or private app domains enter public case copy.
 
-## Section capacity map
+Thumbnails display at at most 220px, with an intrinsic 320×200 maximum. There is no image link, `srcset`, lightbox, fullscreen control or hover enlargement. The three non-open-source systems expose previews and explanation only. Three open-source tools link to verified public repositories; industry websites use generic link labels. The archived financial-domain link is explicitly a current holding page, not the historical application. Other old destinations failed secure/usable access and have no links.
 
-| Section | Job / dominant element | Capacity / narrow transformation |
-| --- | --- | --- |
-| Hero | Name, engineering role, two actions | One short profile; art moves below copy |
-| About | Background and engineering approach | Three brief paragraphs; two-column to one |
-| Work | Four implementation-informed summaries | Two featured concepts plus two rows; all descriptions visible |
-| Skills | Four engineering groups | Four to two to one columns; no percentages |
-| Research | Four primary-paper links and relevant concepts | Four to two to one columns |
-| Experience | Career timeline + degree | Paper background; rows reflow without hidden tabs |
-| Contact | Direct email and professional profiles | Email wraps safely; mobile links keep target area |
-| Privacy | Data-handling explanation | Narrow text column |
+All case content survives no-JavaScript and images-disabled states. Native headings/figures/captions structure the collection. Group links and primary CTA are keyboard navigable. Existing menu supports Escape, state announcement and destination-focus transfer. Reduced motion disables animation. Forced colours retain content and controls.
 
-## Brand asset, logo and media register
+## Performance budget and verification
 
-No generated photos or client/product screenshots are used. Current-site original wordmark remains at `public/brand/original-wordmark.png`; Git history preserves its source. Refreshed typography and favicon are deterministic. Graphics are abstract decoration, not product evidence. Jost is OFL licensed; Chinese uses native platform fonts.
+Strict target: initial page below 500KB, JS below 10KB, CSS below 40KB, fonts below 100KB. Ten lazy screenshots total about 52KB. No video, external fonts, runtime carousel or third-party scripts. Expected LCP: hero name; explicit thumbnail dimensions preserve layout. GitHub Pages owns cache headers, previously verified `max-age=600`; unsupported `_headers` rules are not shipped.
 
-| Asset | Source / transform / output | Consumer / QA |
-| --- | --- | --- |
-| Hero mathematical field | `SystemField.astro` projection; inline SVG | Decorative hero; stable viewBox; desktop/mobile checks |
-| Workflow and memory schematics | `ProjectVisual.astro`; HTML/CSS/SVG | Decorative featured work; visible descriptions carry meaning |
-| Social card | `build-brand.py`, OFL Jost and mathematical projection; 1200×630 PNG | OG/Twitter; exact text and export dimensions checked |
-| Favicon | Authored JL SVG and deterministic 32px PNG / 180px touch icon | Header brand identity; monochrome contrast and small-size check |
-| Fonts | Jost static 500/700, self-hosted WOFF2 | Display text; licence included; no remote calls |
+Verification uses `pnpm check`, build, HTML-contract verifier, strict resource/fragment/media audits and normal browser inputs. The verifier checks legacy routes, metadata/schema, exact CV bytes, 13 cases, 10 small previews, case ordering, removed standalone research and employer-free introduction. Desktop/mobile Chromium rendering is reviewed. Branded Safari, assistive-technology certification and field metrics are not claimed.
 
-No photographic provenance or AI metadata is claimed. Social image uses English name/professional identity across locales deliberately. Replace via source and rebuild; do not manually edit exports.
+The original redesign was published in content commit `50f506a` and workflow update `03fcbd8`. This case-focused follow-up supersedes that release's abstract projects and research section. The same owner-authorised GitHub Pages pipeline publishes the checked revision; live verification will compare deployed files and check the current case inventory, legacy routes and privacy boundaries.
 
-## Privacy and data-flow register
+## Follow-up verification, 2026-10-10
 
-| Flow | Categories / recipients | Notice and ownership |
-| --- | --- | --- |
-| GitHub Pages delivery | Technical IP/request metadata; GitHub as host | Privacy page links to GitHub's policy |
-| Direct email | User-supplied email/body; Jay and chosen email services | Visible email link; privacy explains replying |
-| External professional/tool links | Separate third-party navigation | New-tab rel protections; privacy explains handoff |
-| Forms, analytics, advertising, database writes | Intentionally absent | No new processor integration or collection |
-
-## Performance budget and cache policy
-
-Strict profile. Target initial page below 500KB, application JS below 10KB, CSS below 40KB, fonts below 100KB; no video or third-party scripts. Expected LCP: name / hero text. INP risk: one lightweight menu handler. CLS: fixed graphic ratios, explicit shell/hero layout and local display faces. Reduced motion stops the one-time 2-second orbit stroke animation.
-
-GitHub Pages owns delivery/cache headers. No unsupported Cloudflare `_headers` file is shipped. Record live headers rather than assuming year-long immutable caching. No field Core Web Vitals, search or conversion data is available; lab measurements remain separate.
-
-## UI QA and design verification ledger
-
-Completed before launch: production-built desktop EN and mobile EN/ZH full-scroll visual review, direct email/link destinations, primary anchors, mobile menu open/close/Escape/link selection and focus transfer, locale-equivalent privacy navigation, 320px reflow, text spacing, reduced motion, forced colours, no-JavaScript and exact social-card review. No clipped text or horizontal overflow was found. Menu navigation was improved to transfer focus to the destination section. Social-card role spacing was increased after visual review.
-
-Ego browser supplied normal-input functional checks and accessibility/DOM state; its screenshot API timed out on both the old and candidate pages. Lighthouse’s Chromium rendering supplied reviewed full-page desktop/mobile images instead. Forced-colour/text-spacing/reduced-motion/no-JavaScript checks have DOM/style evidence only; screenshots of those special states and branded Safari testing remain unverified. The public release does not claim a complete browser/assistive-technology certification.
-
-## AI-assisted content register
-
-Owner: Jay Liu. AI role: organising implementation evidence, editorial writing and EN/ZH translation. First-hand inputs: owner instructions, career record and project code/docs. Publication gate: only source-supported broad engineering claims; no benchmark results or third-party authorship. Paper summaries link to original authors. Public copy is indexable; private evidence and raw records are excluded from the website and repository.
-
-## Outcome and post-launch visibility register
-
-Primary outcome: useful hiring conversations. Guardrails: truthful career claims, title/description stability, usable contact, privacy. Baseline: existing manually reviewed site; no numeric ranking/conversion baseline. Release evidence: public-content commit `50f506a95b5fb43af375de86a1259cfebbd53232`, successful [Pages run 37994477503](https://github.com/maxazure/maxazure.github.io/actions/runs/37994477503), and exact-byte live URL validation. Observation: owner may review recruiting feedback and Search Console after indexing; no automatic account/resource creation. Decision: published on 10 October 2026 (Pacific/Auckland). Owner: Jay.
-
-Search Console/Bing indexing and measured query/click/ranking performance: unverified, requires account/report access. Sitemap, robots, metadata and visible HTML are readiness measures. AI citations and ranking gains are not claimed. Social crawler cache/display is unverified until fetched by a platform. Domain and asset availability were checked after deployment; production results follow below.
-
-## Pre-deployment verification, 2026-10-10
-
-- `pnpm check`: 17 files, zero errors/warnings/hints. `pnpm build` and `pnpm verify`: pass. The verifier checks 5 HTML pages, metadata/schema, every local asset/link, 64 legacy fragment links, locale alternates, unchanged CV bytes, 4 sitemap URLs and robots.
-- Dependency audit: zero reported vulnerabilities after selecting Astro 7.3.5.
-- Strict resource budget: homepage approximately 106KB referenced initial local resources, approximately 30KB CSS, 14KB fonts and less than 1KB application JS. No third-party scripts, embeds or background video. This is static resource accounting, not measured transfer size.
-- Font delivery, internal-link graph, fragment navigation, agent paths and launch preflight: no critical findings. Four indexable pages are reachable; no generic internal anchors or dead-end indexable pages.
-- Intentional heuristic exceptions: original English homepage title/description length retained by owner instruction; privacy pages do not need business schema; this portfolio uses Person rather than LocalBusiness/Organization. No private routes or advertising landing pages exist. The wildcard robots policy allows public fetchers, including training crawlers; explicit OAI-SearchBot and ChatGPT-User access is present.
-- Local Lighthouse mobile EN, desktop EN and mobile ZH each scored 100 for performance, accessibility, best practices and SEO. Mobile EN LCP 1.4s, TBT 0ms, CLS 0; desktop EN LCP 0.3s, TBT 0ms, CLS 0. Scores are lab observations of the tested build, not field performance or ranking results.
-- Browser evidence saved outside the public repository: desktop/mobile full-page screenshots, Chinese full-page screenshot, social preview, privacy rendering and JSON Lighthouse reports. Source, literal copy and technical metadata were reviewed together.
-
-## Production verification, 2026-10-10
-
-Published the checked content to the existing GitHub Pages domain, https://jayliu.co.nz/. Selected Actions build mode, retained the custom domain and enforced HTTPS, pushed master, and confirmed both build and deployment jobs succeeded. Explicit publication authorisation came from the owner's request.
-
-- Live verification at 2026-10-09 21:37:35 UTC (10 October in Auckland): all 22 deployed files returned HTTP 200 and matched the local production build byte for byte. The downloaded output also passed the HTML-contract verifier.
-- `/index.html` remains the same homepage; `https://www.jayliu.co.nz/zh/` redirects to the canonical domain and preserves the path. An unknown URL returned a real HTTP 404 with the custom noindex page. The original CV hash, robots, sitemap, fonts and social card were checked online.
-- Normal browser input switched the live English homepage to Chinese. Role, current FNZ employer, four engineering project descriptions and canonical/locale metadata matched the published source; no horizontal overflow at the reviewed desktop width.
-- Live mobile Lighthouse: performance 99, accessibility 100, best practices 100, SEO 100; LCP 1.4s, total blocking time 0ms, CLS 0. The live host sets `Cache-Control: max-age=600`; this is a GitHub Pages delivery constraint and is recorded rather than overridden with an unsupported header file.
-- The first successful CI run reported old action-runtime deprecation. Workflow pins have been updated from official action releases to Node 24 actions; the application remains on Node 22. The runner is fixed to Ubuntu 24.04. All pins are full commit SHAs, and the workflow continues to check/build/verify before each deployment.
-
-Production measurements remain lab results. Search Console/Bing indexing, field performance, branded Safari and assistive-technology testing, social-platform cache refresh, search rankings and AI citations remain unverified. No account or DNS resources were added.
+- Typecheck: 18 Astro files, no errors/warnings/hints. Build and HTML-contract verifier pass for 5 pages, 13 corresponding cases, 10 previews, removed research and capability-led introduction. The three private project entries have no links; original title/description, CV bytes, all local assets and legacy anchors pass.
+- Reviewed all 10 redacted exports at their intrinsic 320×200 size, then the complete gallery in desktop English and mobile Chinese Chromium renders. No client names appear in visible case copy. Original sources/records are not in the release. Thumbnails are rendered at 200px on narrow phones and at most 220px on desktop.
+- Desktop EN and mobile ZH Lighthouse: 100 in performance, accessibility, best practices and SEO. LCP 0.4s / 1.4s; CLS 0. EN mobile also scored 100 in all four categories before the final group-order change. Reports and screenshots are retained outside Git. The measured LCP is the hero H1.
+- Strict resource audit: no critical findings; homepage referenced resources about 163KB, CSS 27.6KB, fonts 14.4KB and application JS 867 bytes. All 70 internal fragment links pass. Launch preflight has no critical findings.
+- Image-audit exceptions: its first-image heuristic flags a lazy LCP image, but the first case image starts below 1,600px at a 320px viewport and Lighthouse identifies the hero H1 as LCP. Lazy previews remain appropriate. Its responsive-variant warnings are intentional: the owner forbids detailed/enlarged screenshots, so no high-resolution `srcset` is exposed.
+- Normal-input project navigation, mobile menu close/focus transfer, group anchors, 320px reflow and no-JavaScript case/navigation availability were checked. Thumbnail links/dialogs are absent. Existing privacy, contact and locale contracts are retained.
+- Other launch heuristics: original homepage title/description length is owner-required; privacy pages do not need business schema; Person schema is deliberate. No private or advertising routes exist. Wildcard robots access remains allowed. Branded Safari, screen-reader certification, real search outcomes and field CWV are unverified.

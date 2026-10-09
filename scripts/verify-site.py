@@ -100,7 +100,25 @@ for relative in ["index.html", "zh/index.html"]:
     assert person["worksFor"]["name"] == "FNZ Group"
     assert person["jobTitle"] == "Analyst Developer"
     assert not any(x["@type"] == "LocalBusiness" for x in graph), "Portfolio is a Person"
-    assert "ReAct" in page.path.read_text() and "LongMemEval" in page.path.read_text()
+    assert 'id="research"' not in page.path.read_text(), "Retired third-party research section"
+    cases = [(t,a) for t,a in page.nodes if t == "article" and "data-project" in a]
+    assert len(cases) == 13, "Expected concrete project inventory"
+    assert page.path.read_text().index('id="portfolio"') < page.path.read_text().index('id="about"'), "Projects must lead the introduction"
+    for section in ["home", "about"]:
+        text = page.path.read_text().split('id="' + section + '"', 1)[1].split('</section>', 1)[0]
+        assert "FNZ" not in text, "Employer emphasis in short introduction"
+    image_nodes = [a for t,a in page.nodes if t == "img" and a.get("src", "").startswith("/projects/")]
+    assert len(image_nodes) == 10
+    for attrs in image_nodes:
+        assert attrs.get("width") == "320" and attrs.get("height") == "200"
+        assert attrs.get("loading") == "lazy"
+    assert not any(t == "a" and a.get("href", "").startswith("/projects/") for t,a in page.nodes), "Thumbnail must not be a zoom link"
+    assert not any("srcset" in a for a in image_nodes), "Do not offer high-resolution variants"
+    html = page.path.read_text()
+    for identifier in ["agent-workbench", "transactional-crm", "knowledge-memory"]:
+        article = html.split('data-project="' + identifier + '"', 1)[1].split('</article>', 1)[0]
+        assert '<a ' not in article, "Private project must not expose an endpoint"
+    assert html.count('href="https://github.com/maxazure/') >= 3
 
 pdf = root / "cv/Jie-Liu-CV.pdf"
 assert hashlib.sha256(pdf.read_bytes()).hexdigest() == "1b62833b705d9f38b1b83b24aaf40954c3d7a0b37a1d7cc5335ee32ac4db95e1", "Existing CV changed"
@@ -115,4 +133,4 @@ sitemap = ET.parse(root / "sitemap-0.xml")
 urls = {e.text for e in sitemap.iter() if e.tag.endswith('}loc')}
 assert urls == {origin + p for p in ["/", "/zh/", "/privacy/", "/zh/privacy/"]}, urls
 assert "noindex" in pages[root / "404.html"].meta("robots")[0]
-print(f"Verified {len(pages)} pages: identity, metadata, schema, fragments, local links, assets, sitemap, robots and unchanged CV")
+print(f"Verified {len(pages)} pages: identity, metadata, schema, fragments, project inventory/privacy, local links, assets, sitemap, robots and unchanged CV")
