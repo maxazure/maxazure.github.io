@@ -101,9 +101,9 @@ Owner: Jay Liu. AI role: organising implementation evidence, editorial writing a
 
 ## Outcome and post-launch visibility register
 
-Primary outcome: useful hiring conversations. Guardrails: truthful career claims, title/description stability, usable contact, privacy. Baseline: existing manually reviewed site; no numeric ranking/conversion baseline. Release evidence: intended checked Git commit + successful Pages run + live URL validation. Observation: owner may review recruiting feedback and Search Console after indexing; no automatic account/resource creation. Decision before launch: planned. Owner: Jay.
+Primary outcome: useful hiring conversations. Guardrails: truthful career claims, title/description stability, usable contact, privacy. Baseline: existing manually reviewed site; no numeric ranking/conversion baseline. Release evidence: public-content commit `50f506a95b5fb43af375de86a1259cfebbd53232`, successful [Pages run 37994477503](https://github.com/maxazure/maxazure.github.io/actions/runs/37994477503), and exact-byte live URL validation. Observation: owner may review recruiting feedback and Search Console after indexing; no automatic account/resource creation. Decision: published on 10 October 2026 (Pacific/Auckland). Owner: Jay.
 
-Search Console/Bing indexing and measured query/click/ranking performance: unverified, requires account/report access. Sitemap, robots, metadata and visible HTML are readiness measures. AI citations and ranking gains are not claimed. Social crawler cache/display is unverified until fetched by a platform. Domain and asset availability are checked after deployment.
+Search Console/Bing indexing and measured query/click/ranking performance: unverified, requires account/report access. Sitemap, robots, metadata and visible HTML are readiness measures. AI citations and ranking gains are not claimed. Social crawler cache/display is unverified until fetched by a platform. Domain and asset availability were checked after deployment; production results follow below.
 
 ## Pre-deployment verification, 2026-10-10
 
@@ -115,4 +115,14 @@ Search Console/Bing indexing and measured query/click/ranking performance: unver
 - Local Lighthouse mobile EN, desktop EN and mobile ZH each scored 100 for performance, accessibility, best practices and SEO. Mobile EN LCP 1.4s, TBT 0ms, CLS 0; desktop EN LCP 0.3s, TBT 0ms, CLS 0. Scores are lab observations of the tested build, not field performance or ranking results.
 - Browser evidence saved outside the public repository: desktop/mobile full-page screenshots, Chinese full-page screenshot, social preview, privacy rendering and JSON Lighthouse reports. Source, literal copy and technical metadata were reviewed together.
 
-Deployment target: existing GitHub Pages site at https://jayliu.co.nz/, master source in maxazure/maxazure.github.io. Planned change: select Actions build mode, push the checked source and run the committed build/deploy workflow. Domain/DNS and CV content remain unchanged. Explicit publication authorisation came from the owner's request.
+## Production verification, 2026-10-10
+
+Published the checked content to the existing GitHub Pages domain, https://jayliu.co.nz/. Selected Actions build mode, retained the custom domain and enforced HTTPS, pushed master, and confirmed both build and deployment jobs succeeded. Explicit publication authorisation came from the owner's request.
+
+- Live verification at 2026-10-09 21:37:35 UTC (10 October in Auckland): all 22 deployed files returned HTTP 200 and matched the local production build byte for byte. The downloaded output also passed the HTML-contract verifier.
+- `/index.html` remains the same homepage; `https://www.jayliu.co.nz/zh/` redirects to the canonical domain and preserves the path. An unknown URL returned a real HTTP 404 with the custom noindex page. The original CV hash, robots, sitemap, fonts and social card were checked online.
+- Normal browser input switched the live English homepage to Chinese. Role, current FNZ employer, four engineering project descriptions and canonical/locale metadata matched the published source; no horizontal overflow at the reviewed desktop width.
+- Live mobile Lighthouse: performance 99, accessibility 100, best practices 100, SEO 100; LCP 1.4s, total blocking time 0ms, CLS 0. The live host sets `Cache-Control: max-age=600`; this is a GitHub Pages delivery constraint and is recorded rather than overridden with an unsupported header file.
+- The first successful CI run reported old action-runtime deprecation. Workflow pins have been updated from official action releases to Node 24 actions; the application remains on Node 22. The runner is fixed to Ubuntu 24.04. All pins are full commit SHAs, and the workflow continues to check/build/verify before each deployment.
+
+Production measurements remain lab results. Search Console/Bing indexing, field performance, branded Safari and assistive-technology testing, social-platform cache refresh, search rankings and AI citations remain unverified. No account or DNS resources were added.
