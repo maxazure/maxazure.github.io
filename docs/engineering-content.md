@@ -1,32 +1,33 @@
-# Engineering content and project evidence
+# Engineering content and evidence boundaries
 
-Updated: 2026-10-10. Owner: Jay Liu. Audience: senior software, enterprise/full-stack and applied AI hiring teams.
+Updated: 2026-10-10. Owner: Jay Liu. Audience: senior enterprise/full-stack and applied AI hiring teams.
 
-The introduction states identity, technical stack and delivery capabilities. Current employment remains in the career timeline and established SEO metadata; it is not emphasised in the hero or biography. The standalone third-party research section has been removed at the owner's request. Technical depth is explained through the owner's project implementation.
+## Career positioning
 
-## Selected work
+The opening description leads with enterprise financial platforms, ERP/CRM, retail invoicing and sales software, and hospital management information systems. C#/.NET, SQL, React/TypeScript, business requirements, integration and production delivery are the primary capabilities. AI workflows and engineering tools extend that experience.
 
-| Group | Examples | Evidence and claim boundary |
-| --- | --- | --- |
-| Recent client websites | Tourism, transport, accounting | Existing project code/docs and current public interfaces. Descriptions concern content architecture, components, locale routing and technical SEO. Client names are omitted from copy and screenshots. |
-| Private systems | Agent workbench, transactional CRM, knowledge/memory prototype | Actual application code/docs, an existing workbench screenshot, the real CRM template rendered with empty demo records, and actual CLI help. No production customer database was accessed for screenshots. |
-| Open-source tools | Video editing, local speech integration, bookkeeping record preparation | Public repositories verified under the owner's account. Existing model/tool engines are described as integration dependencies, with no authorship or training claim. |
-| Earlier projects | Financial platform, two healthcare sites, consumer application | Four real screenshot assets recovered from the previous website. Descriptions remain at the scope supported by that website and the captured interfaces. |
+ERP/CRM and retail business-system experience are explicit in the owner's original career record. The retail role used .NET Core, REST APIs, MySQL and Vue.js. Earlier leadership roles covered enterprise middleware, database architecture, server delivery and hospital management software. The 2022 and owner-reviewed 2026 career records supply these facts. No scale, revenue, performance or customer-result figures are added. The established 18+ years search identity and original public CV remain unchanged.
 
-A successful HTTP response does not establish that a historical project is still running. The financial-project domain currently serves a holding page; its screenshot is historical and the external link explicitly says “Current site”. The other historical destinations did not provide a usable secure public page at the check, so they have no links.
+Current employment remains in the chronological career record, with no employer emphasis in the short introduction. The site contains no personal-business promotion or company-service links. Third-party papers are not displayed as portfolio evidence.
 
-The owner explicitly allowed public customer-domain links while requiring anonymous labels and thumbnails. Private application URLs, local paths, topology, personal correspondence, real customer records and credentials are excluded. The three private systems have no live or repository links. Only publicly accessible open-source repositories are linked as GitHub projects.
+## Project gallery
 
-## Screenshot boundaries
+Fourteen selected examples follow the career section in one continuous gallery. Desktop has three columns, tablet two and phone one. Each card contains a small preview, a title, a brief purpose statement and a public website or GitHub link where appropriate. The displayed count is the selected inventory, not a claim about the total number of projects completed.
 
-Ten shipped screenshots are 320×200 WebP files. They are displayed at 140–220 CSS pixels wide, cannot trigger a lightbox, and have no full-size sibling or `srcset`. A screenshot's intrinsic low resolution is the privacy boundary; CSS alone is not relied on to hide detail.
+The gallery begins with an operations ERP development instance and a transactional CRM, followed by engineering tools, industry websites and historical projects. The ERP description is backed by its actual planning/catalogue/order/procurement/reminder interfaces. It is labelled a development instance; no claim about production acceptance or commercial scale is made.
 
-Browser-rendered derivatives mask brands, contact details and private session/user areas. The medical portrait is strongly blurred, its signature removed, and legacy brand text covered. Generic interface layout and non-identifying service headings remain visible. CRM preview contains zero actual records and is labelled “Empty-data demo interface”; memory preview is CLI help with no personal source records. No fake dashboard or generated image is presented as project evidence.
+The financial-project domain serves a holding page; its screenshot is historical and the link says “Current site”. Other historical destinations had no usable secure public page at the last check and have no links. Public customer-domain links are owner-authorised. All client labels remain anonymous industry descriptions. Private application URLs, source repositories, local paths, real customer records and credentials are excluded.
 
-Original sources and capture files stay outside the public repository. Only reviewed redacted exports are committed. Filenames, alt text and captions use anonymous project IDs and industry descriptions. Replace a preview from its source and repeat privacy review; never upload an original to make the small preview sharper.
+## Preview boundaries
 
-## Editorial rules
+Eleven screenshots are intrinsic 320×200 WebP files, rendered at no more than 320 CSS pixels. They have no clickable image wrapper, lightbox, full-size sibling or high-resolution `srcset`. Resolution and redaction provide the privacy boundary.
 
-Each case describes purpose, a bounded implementation detail and relevant technologies. Keep project status and evidence type visible. No benchmark, latency, revenue, productivity, client-result or project-count claims are made. The displayed case count is an inventory of the selected examples, not a claimed total of completed work.
+Existing exports mask brands, contacts and private session/user areas. The historical medical portrait is blurred and its signature covered. The CRM preview is an empty-data demo; the memory preview is CLI help without personal records. The new ERP preview renders the actual dashboard and shell components with an anonymous account, empty collections and zero counters. It makes no API calls and accesses no database. All three open-source covers are explicitly decorative code graphics, not invented application screenshots.
 
-English and Chinese expose the same projects, links, images and status. The homepage title/description, legacy fragments, career facts and original CV URL remain intact. All project explanations stay in initial HTML and remain available with JavaScript or images disabled.
+Original captures, temporary render scripts, application HTML and proof files remain outside Git/public output. Only reviewed low-resolution image exports are published. Names, alternative text and captions use anonymous project IDs and industry descriptions. Any replacement requires a fresh privacy review.
+
+## Locale and delivery contract
+
+English and Chinese expose the same career facts, 14 projects, 11 screenshots, status and links. Project descriptions stay short; detailed technical lists are omitted from the cards. All content remains in initial HTML, including when JavaScript or images are disabled.
+
+The established homepage title/description, canonical and alternate URLs, schema identity, old anchors and unchanged CV URL are preserved. No claims about hiring conversion, search rankings or field performance follow from a successful build or local lab result.

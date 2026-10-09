@@ -1,10 +1,109 @@
 export const projects = {
   "en": [
     {
+      "id": "operations-erp",
+      "group": "enterprise",
+      "name": "Tourism industry · Operations ERP",
+      "description": "An ERP development instance connecting planning, product/SKU catalogues, orders, procurement and operational reminders, with permissions and audit records.",
+      "tags": [
+        "React / TypeScript",
+        "NestJS / PostgreSQL",
+        "ERP workflows"
+      ],
+      "status": "development",
+      "image": "/projects/operations-erp.webp",
+      "alt": "Small empty-data demonstration of the operations ERP dashboard",
+      "caption": "Empty-data development preview"
+    },
+    {
+      "id": "transactional-crm",
+      "group": "enterprise",
+      "name": "Business operations · Enterprise CRM",
+      "description": "Relationships, projects, invoicing and operational records in one platform, with PostgreSQL, typed APIs, controlled writes and revision history.",
+      "tags": [
+        "Python / FastAPI",
+        "PostgreSQL",
+        "Concurrency control"
+      ],
+      "status": "private",
+      "image": "/projects/transactional-crm.webp",
+      "alt": "Small redacted screenshot of the internal operations",
+      "caption": "Empty-data demo interface"
+    },
+    {
+      "id": "agent-workbench",
+      "group": "labs",
+      "name": "AgentWeb · AI engineering workbench",
+      "description": "A browser workbench for coding-agent sessions, streamed tool events and workspace artifacts, built with React, TypeScript and Fastify.",
+      "tags": [
+        "React / TypeScript",
+        "Fastify / SSE",
+        "CLI integration"
+      ],
+      "status": "private",
+      "image": "/projects/agent-workbench.webp",
+      "alt": "Small redacted screenshot of the ai engineering workbench",
+      "caption": "Redacted interface preview"
+    },
+    {
+      "id": "knowledge-memory",
+      "group": "labs",
+      "name": "Knowledge & memory · Evidence workflow",
+      "description": "A source-backed knowledge prototype with validity checks, reviewed records and traceable retrieval.",
+      "tags": [
+        "Python CLI",
+        "Retrieval",
+        "Source provenance"
+      ],
+      "status": "prototype",
+      "image": "/projects/knowledge-memory.webp",
+      "alt": "Small redacted screenshot of the evidence prototype",
+      "caption": "Command-line interface preview"
+    },
+    {
+      "id": "video-editing",
+      "group": "labs",
+      "name": "Video Editing Skill",
+      "description": "Transcript-led editing and reproducible media delivery with Python, FFmpeg and artifact validation.",
+      "tags": [
+        "Python",
+        "FFmpeg",
+        "Artifact validation"
+      ],
+      "status": "open",
+      "href": "https://github.com/maxazure/video-editing-skill"
+    },
+    {
+      "id": "speech-tooling",
+      "group": "labs",
+      "name": "OmniVoice TTS Skill",
+      "description": "A command-line wrapper for the existing OmniVoice engine, packaging local speech generation into repeatable workflows.",
+      "tags": [
+        "Python",
+        "Local inference",
+        "Tool integration"
+      ],
+      "status": "open",
+      "href": "https://github.com/maxazure/omnivoice-tts-skill"
+    },
+    {
+      "id": "bookkeeping-assistant",
+      "group": "labs",
+      "name": "NZ Accounting Assistant",
+      "description": "Receipt and statement normalisation, structured ledgers and reconciliation packs for human review.",
+      "tags": [
+        "Structured JSON",
+        "Reconciliation",
+        "Human review"
+      ],
+      "status": "open",
+      "href": "https://github.com/maxazure/new-zealand-accounting-assistant"
+    },
+    {
       "id": "tourism",
       "group": "recent",
       "name": "Tourism industry · Journey website",
-      "description": "A content-led travel website that organises journeys, itineraries and enquiry paths. Static rendering, reusable page structures and structured metadata keep the experience fast and crawlable.",
+      "description": "A travel website organising journeys, itineraries and enquiry paths with reusable pages and structured metadata.",
       "tags": [
         "Astro",
         "TypeScript",
@@ -20,7 +119,7 @@ export const projects = {
       "id": "transport",
       "group": "recent",
       "name": "Transport industry · Service website",
-      "description": "A bilingual service website with clear recovery services and contact flows. Component-based pages, locale-aware routing and accessible navigation support use on mobile devices.",
+      "description": "A bilingual service website with clear service information, contact flows and mobile navigation.",
       "tags": [
         "Astro",
         "React",
@@ -36,7 +135,7 @@ export const projects = {
       "id": "accounting",
       "group": "recent",
       "name": "Accounting industry · Services & insights",
-      "description": "A bilingual website that connects professional services with a structured insights library. Shared content models, reciprocal locale metadata and contextual links make a growing publishing workflow maintainable.",
+      "description": "A bilingual professional-services website with a structured insights library and maintainable content models.",
       "tags": [
         "Astro",
         "Content modelling",
@@ -49,94 +148,10 @@ export const projects = {
       "href": "https://pillar.nz/"
     },
     {
-      "id": "agent-workbench",
-      "group": "labs",
-      "name": "AgentWeb · AI engineering workbench",
-      "description": "A browser workbench for coding-agent sessions, tool execution and workspace artifacts. A React interface streams CLI events through a Fastify backend, with session persistence and file-based delivery.",
-      "tags": [
-        "React / TypeScript",
-        "Fastify / SSE",
-        "CLI integration"
-      ],
-      "status": "private",
-      "image": "/projects/agent-workbench.webp",
-      "alt": "Small redacted screenshot of the ai engineering workbench",
-      "caption": "Redacted interface preview"
-    },
-    {
-      "id": "transactional-crm",
-      "group": "labs",
-      "name": "Transactional CRM · Internal operations",
-      "description": "A private platform for relationships, projects and operational records. PostgreSQL, typed APIs and a CLI share one source of truth, with idempotent writes, optimistic concurrency and revision history.",
-      "tags": [
-        "Python / FastAPI",
-        "PostgreSQL",
-        "Concurrency control"
-      ],
-      "status": "private",
-      "image": "/projects/transactional-crm.webp",
-      "alt": "Small redacted screenshot of the internal operations",
-      "caption": "Empty-data demo interface"
-    },
-    {
-      "id": "knowledge-memory",
-      "group": "labs",
-      "name": "Knowledge & memory · Evidence prototype",
-      "description": "A source-backed knowledge workflow that separates raw observations, generated candidates and reviewed records. Deterministic validity checks, bounded retrieval and citation checks support traceable recall.",
-      "tags": [
-        "Python CLI",
-        "Retrieval",
-        "Source provenance"
-      ],
-      "status": "prototype",
-      "image": "/projects/knowledge-memory.webp",
-      "alt": "Small redacted screenshot of the evidence prototype",
-      "caption": "Command-line interface preview"
-    },
-    {
-      "id": "video-editing",
-      "group": "labs",
-      "name": "Video Editing Skill · Media pipelines",
-      "description": "An open-source toolkit for transcript-led editing, timeline normalisation, rendering and media checks. Python and FFmpeg connect source-bound artifacts to reproducible delivery steps.",
-      "tags": [
-        "Python",
-        "FFmpeg",
-        "Artifact validation"
-      ],
-      "status": "open",
-      "href": "https://github.com/maxazure/video-editing-skill"
-    },
-    {
-      "id": "speech-tooling",
-      "group": "labs",
-      "name": "OmniVoice TTS Skill · Local speech tooling",
-      "description": "A Codex skill wrapper around the existing OmniVoice engine. It packages local speech generation as a repeatable command-line workflow with configurable inputs and audio outputs.",
-      "tags": [
-        "Python",
-        "Local inference",
-        "Tool integration"
-      ],
-      "status": "open",
-      "href": "https://github.com/maxazure/omnivoice-tts-skill"
-    },
-    {
-      "id": "bookkeeping-assistant",
-      "group": "labs",
-      "name": "NZ Accounting Assistant · Record preparation",
-      "description": "An open-source workflow for normalising receipts, income and bank statements into structured ledgers and exports. It prepares reconciliation evidence and draft review packs for human checking.",
-      "tags": [
-        "Structured JSON",
-        "Reconciliation",
-        "Human review"
-      ],
-      "status": "open",
-      "href": "https://github.com/maxazure/new-zealand-accounting-assistant"
-    },
-    {
       "id": "finance-archive",
       "group": "legacy",
       "name": "Financial industry · Digital asset platform",
-      "description": "An earlier web project presenting digital-asset services and mobile application entry points. The thumbnail preserves the historical interface; the current domain now shows a holding page.",
+      "description": "An earlier digital-asset web project. The preview is historical; the current domain serves a holding page.",
       "tags": [
         "Web development",
         "Financial services"
@@ -151,7 +166,7 @@ export const projects = {
       "id": "medical-archive-a",
       "group": "legacy",
       "name": "Medical industry · Service website",
-      "description": "An earlier healthcare website organising service categories, team information and enquiry navigation. Shown here as an anonymised historical interface.",
+      "description": "An earlier healthcare website presenting service categories, team information and enquiry paths.",
       "tags": [
         "Web development",
         "Information architecture"
@@ -164,8 +179,8 @@ export const projects = {
     {
       "id": "consumer-app-archive",
       "group": "legacy",
-      "name": "Consumer apps · Spending & activity records",
-      "description": "An earlier mobile-app project for recording fan-related spending and activity, accompanied by a web introduction and application entry page.",
+      "name": "Consumer app · Spending & activity",
+      "description": "A mobile-app project for recording spending and activity, with a companion web introduction.",
       "tags": [
         "App development",
         "Web landing page"
@@ -178,8 +193,8 @@ export const projects = {
     {
       "id": "medical-archive-b",
       "group": "legacy",
-      "name": "Medical industry · Specialist service website",
-      "description": "An earlier healthcare web project presenting specialist services and patient-facing information. The original screenshot is reduced and redacted for this archive.",
+      "name": "Medical industry · Specialist website",
+      "description": "An earlier healthcare website presenting specialist services and patient-facing information.",
       "tags": [
         "Web development",
         "Service content"
@@ -192,10 +207,109 @@ export const projects = {
   ],
   "zh": [
     {
+      "id": "operations-erp",
+      "group": "enterprise",
+      "name": "旅游行业 · 运营 ERP",
+      "description": "连接需求规划、产品与 SKU、订单、采购预订和业务提醒，结合权限与审计管理业务流程。当前展示开发实例。",
+      "tags": [
+        "React / TypeScript",
+        "NestJS / PostgreSQL",
+        "ERP workflows"
+      ],
+      "status": "development",
+      "image": "/projects/operations-erp.webp",
+      "alt": "运营 ERP 空数据演示界面的缩略图",
+      "caption": "开发实例的空数据演示界面"
+    },
+    {
+      "id": "transactional-crm",
+      "group": "enterprise",
+      "name": "业务管理 · 企业 CRM",
+      "description": "统一管理关系、项目、开票及业务记录，以 PostgreSQL、类型化 API 和受控写入支持版本追溯。",
+      "tags": [
+        "Python / FastAPI",
+        "PostgreSQL",
+        "并发控制"
+      ],
+      "status": "private",
+      "image": "/projects/transactional-crm.webp",
+      "alt": "内部业务系统的匿名缩略图",
+      "caption": "空数据演示界面"
+    },
+    {
+      "id": "agent-workbench",
+      "group": "labs",
+      "name": "AgentWeb · AI 工程工作台",
+      "description": "以 React、TypeScript 和 Fastify 连接编程 Agent 会话、工具事件流与工作区交付物。",
+      "tags": [
+        "React / TypeScript",
+        "Fastify / SSE",
+        "CLI 集成"
+      ],
+      "status": "private",
+      "image": "/projects/agent-workbench.webp",
+      "alt": "AI 工程工作台的匿名缩略图",
+      "caption": "隐私处理后的界面概览"
+    },
+    {
+      "id": "knowledge-memory",
+      "group": "labs",
+      "name": "知识与记忆 · 证据工作流",
+      "description": "通过来源有效性检查、人工审阅与可追溯检索，组织知识与记忆记录的实验原型。",
+      "tags": [
+        "Python CLI",
+        "检索",
+        "来源追溯"
+      ],
+      "status": "prototype",
+      "image": "/projects/knowledge-memory.webp",
+      "alt": "证据管理原型的匿名缩略图",
+      "caption": "命令行界面概览"
+    },
+    {
+      "id": "video-editing",
+      "group": "labs",
+      "name": "Video Editing Skill",
+      "description": "以 Python 和 FFmpeg 连接转录驱动的剪辑、媒体渲染与交付物校验。",
+      "tags": [
+        "Python",
+        "FFmpeg",
+        "产物验证"
+      ],
+      "status": "open",
+      "href": "https://github.com/maxazure/video-editing-skill"
+    },
+    {
+      "id": "speech-tooling",
+      "group": "labs",
+      "name": "OmniVoice TTS Skill",
+      "description": "封装现有 OmniVoice 引擎，为本地语音生成提供可重复使用的命令行工作流。",
+      "tags": [
+        "Python",
+        "本地推理",
+        "工具集成"
+      ],
+      "status": "open",
+      "href": "https://github.com/maxazure/omnivoice-tts-skill"
+    },
+    {
+      "id": "bookkeeping-assistant",
+      "group": "labs",
+      "name": "NZ Accounting Assistant",
+      "description": "整理收据和流水，生成结构化账簿与对账资料，供人工核对。",
+      "tags": [
+        "结构化 JSON",
+        "对账",
+        "人工审阅"
+      ],
+      "status": "open",
+      "href": "https://github.com/maxazure/new-zealand-accounting-assistant"
+    },
+    {
       "id": "tourism",
       "group": "recent",
       "name": "旅游行业 · 行程展示网站",
-      "description": "围绕行程、路线内容和咨询路径构建旅游网站，采用静态渲染、可复用页面结构和结构化元数据，兼顾移动端体验与搜索读取。",
+      "description": "组织行程、路线与咨询路径，通过可复用页面和结构化元数据支持持续维护。",
       "tags": [
         "Astro",
         "TypeScript",
@@ -210,8 +324,8 @@ export const projects = {
     {
       "id": "transport",
       "group": "recent",
-      "name": "运输行业 · 服务与询价网站",
-      "description": "面向运输与车辆救援服务构建双语网站，组织服务介绍和联系路径，通过组件化页面、多语言路由和无障碍导航支持手机端使用。",
+      "name": "运输行业 · 服务网站",
+      "description": "以双语页面呈现服务与联系入口，兼顾手机端导航和使用体验。",
       "tags": [
         "Astro",
         "React",
@@ -227,7 +341,7 @@ export const projects = {
       "id": "accounting",
       "group": "recent",
       "name": "会计行业 · 服务与知识网站",
-      "description": "将会计服务与知识内容组织成双语网站，通过共享内容模型、对应语言元数据及上下文链接，支持持续发布和维护。",
+      "description": "连接专业服务与知识内容，使用共享内容模型维护双语页面和文章库。",
       "tags": [
         "Astro",
         "内容建模",
@@ -240,94 +354,10 @@ export const projects = {
       "href": "https://pillar.nz/"
     },
     {
-      "id": "agent-workbench",
-      "group": "labs",
-      "name": "AgentWeb · AI 工程工作台",
-      "description": "为编程 Agent 构建浏览器工作台，连接会话、工具执行与工作空间产物。React 界面通过 Fastify 后端接收 CLI 事件流，并管理持久化会话和文件交付。",
-      "tags": [
-        "React / TypeScript",
-        "Fastify / SSE",
-        "CLI 集成"
-      ],
-      "status": "private",
-      "image": "/projects/agent-workbench.webp",
-      "alt": "AI 工程工作台的匿名缩略图",
-      "caption": "隐私处理后的界面概览"
-    },
-    {
-      "id": "transactional-crm",
-      "group": "labs",
-      "name": "事务型 CRM · 内部业务系统",
-      "description": "用于关系、项目及业务记录的内部系统。PostgreSQL、类型化 API 和 CLI 共享统一数据源，通过幂等写入、乐观并发控制和版本历史维护数据一致性。",
-      "tags": [
-        "Python / FastAPI",
-        "PostgreSQL",
-        "并发控制"
-      ],
-      "status": "private",
-      "image": "/projects/transactional-crm.webp",
-      "alt": "内部业务系统的匿名缩略图",
-      "caption": "空数据演示界面"
-    },
-    {
-      "id": "knowledge-memory",
-      "group": "labs",
-      "name": "知识与记忆 · 证据管理原型",
-      "description": "将原始观察、模型候选和已审阅记录分开管理的知识工作流原型，通过确定性有效性检查、有界检索和引用检查，支持可追溯的知识召回。",
-      "tags": [
-        "Python CLI",
-        "检索",
-        "来源追溯"
-      ],
-      "status": "prototype",
-      "image": "/projects/knowledge-memory.webp",
-      "alt": "证据管理原型的匿名缩略图",
-      "caption": "命令行界面概览"
-    },
-    {
-      "id": "video-editing",
-      "group": "labs",
-      "name": "Video Editing Skill · 媒体流水线",
-      "description": "开源媒体工具集，连接基于转写的剪辑、时间轴归一、渲染与媒体检查，使用 Python 和 FFmpeg 将绑定来源的产物组织成可复现的交付流程。",
-      "tags": [
-        "Python",
-        "FFmpeg",
-        "产物验证"
-      ],
-      "status": "open",
-      "href": "https://github.com/maxazure/video-editing-skill"
-    },
-    {
-      "id": "speech-tooling",
-      "group": "labs",
-      "name": "OmniVoice TTS Skill · 本地语音工具",
-      "description": "围绕现有 OmniVoice 引擎编写的 Codex Skill 封装，将本地语音生成接入可重复执行的命令行工作流，管理输入配置和音频产物。",
-      "tags": [
-        "Python",
-        "本地推理",
-        "工具集成"
-      ],
-      "status": "open",
-      "href": "https://github.com/maxazure/omnivoice-tts-skill"
-    },
-    {
-      "id": "bookkeeping-assistant",
-      "group": "labs",
-      "name": "NZ Accounting Assistant · 账务资料整理",
-      "description": "将收据、收入和银行流水整理成结构化账本与导出文件的开源工作流，生成对账证据和待人工检查的资料包。",
-      "tags": [
-        "结构化 JSON",
-        "对账",
-        "人工审阅"
-      ],
-      "status": "open",
-      "href": "https://github.com/maxazure/new-zealand-accounting-assistant"
-    },
-    {
       "id": "finance-archive",
       "group": "legacy",
       "name": "金融行业 · 数字资产平台",
-      "description": "早期 Web 项目，展示数字资产服务与移动应用入口。缩略图来自历史界面，现有域名目前为介绍页。",
+      "description": "早期数字资产 Web 项目。缩略图保留历史界面，现域名为占位页面。",
       "tags": [
         "Web 开发",
         "金融服务"
@@ -341,8 +371,8 @@ export const projects = {
     {
       "id": "medical-archive-a",
       "group": "legacy",
-      "name": "医疗行业 · 服务展示网站",
-      "description": "早期医疗行业网站，组织服务分类、团队信息和咨询导航，以匿名处理后的历史界面展示。",
+      "name": "医疗行业 · 服务网站",
+      "description": "早期医疗网站，组织服务类别、团队信息和咨询路径。",
       "tags": [
         "Web 开发",
         "信息架构"
@@ -356,7 +386,7 @@ export const projects = {
       "id": "consumer-app-archive",
       "group": "legacy",
       "name": "消费应用 · 支出与活动记录",
-      "description": "早期移动应用项目，用于记录粉丝相关支出与活动，并配套制作 Web 介绍和应用入口页面。",
+      "description": "用于记录支出与活动的移动应用，配有 Web 介绍页面。",
       "tags": [
         "应用开发",
         "Web 介绍页"
@@ -369,8 +399,8 @@ export const projects = {
     {
       "id": "medical-archive-b",
       "group": "legacy",
-      "name": "医疗行业 · 专项服务网站",
-      "description": "早期医疗行业 Web 项目，展示专项服务及面向访客的信息。原截图经过缩小和隐私处理后用于归档展示。",
+      "name": "医疗行业 · 专科服务网站",
+      "description": "早期医疗网站，呈现专科服务和面向患者的信息。",
       "tags": [
         "Web 开发",
         "服务内容"

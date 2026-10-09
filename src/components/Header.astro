@@ -13,7 +13,7 @@ const switchHref = kind === 'privacy' ? `${c.switchHref}privacy/` : c.switchHref
       {c.nav.map(([id, label]) => <a href={`${kind === 'home' ? '' : root}#${id}`}>{label}</a>)}
     </nav>
     <div class="header-actions">
-      <a class="language-link" href={switchHref} lang={locale === 'en' ? 'zh-CN' : 'en-NZ'} aria-label={locale === 'en' ? '中文版本' : 'English version'}>{c.switchLabel}</a>
+      <a class="language-link" href={switchHref} lang={locale === 'en' ? 'zh-CN' : 'en-NZ'} aria-label={locale === 'en' ? '中文版本' : 'EN (English version)'}>{c.switchLabel}</a>
       <button class="menu-button" aria-controls="mobile-nav" aria-expanded="false" type="button">
         <span>{c.menu}</span><span class="menu-lines" aria-hidden="true"><i></i><i></i></span>
       </button>

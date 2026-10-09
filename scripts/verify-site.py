@@ -55,6 +55,7 @@ class Page(HTMLParser):
 pages = {p: Page(p) for p in root.rglob("*.html")}
 assert len(pages) == 5, f"Unexpected page inventory: {list(pages)}"
 for path, page in pages.items():
+    assert "bestai" not in path.read_text().lower(), "Personal business association must not appear"
     assert page.h1 == 1, f"Expected one H1: {path}"
     canonical = [a["href"] for t,a in page.nodes if t == "link" and a.get("rel") == "canonical"]
     assert len(canonical) == 1 and canonical[0].startswith(origin + "/"), path
@@ -102,20 +103,24 @@ for relative in ["index.html", "zh/index.html"]:
     assert not any(x["@type"] == "LocalBusiness" for x in graph), "Portfolio is a Person"
     assert 'id="research"' not in page.path.read_text(), "Retired third-party research section"
     cases = [(t,a) for t,a in page.nodes if t == "article" and "data-project" in a]
-    assert len(cases) == 13, "Expected concrete project inventory"
-    assert page.path.read_text().index('id="portfolio"') < page.path.read_text().index('id="about"'), "Projects must lead the introduction"
+    assert len(cases) == 14, "Expected concrete project inventory"
+    html = page.path.read_text()
+    assert html.index('id="resume"') < html.index('id="portfolio"') < html.index('id="contact"'), "Project gallery must follow experience"
+    assert 'class="project-gallery"' in html, "Project gallery missing"
+    assert cases[0][1]["data-project"] == "operations-erp", "ERP must lead the project gallery"
+    assert "ERP" in html.split('id="home"', 1)[1].split('</section>', 1)[0], "Enterprise/ERP introduction missing"
     for section in ["home", "about"]:
         text = page.path.read_text().split('id="' + section + '"', 1)[1].split('</section>', 1)[0]
         assert "FNZ" not in text, "Employer emphasis in short introduction"
     image_nodes = [a for t,a in page.nodes if t == "img" and a.get("src", "").startswith("/projects/")]
-    assert len(image_nodes) == 10
+    assert len(image_nodes) == 11
     for attrs in image_nodes:
         assert attrs.get("width") == "320" and attrs.get("height") == "200"
         assert attrs.get("loading") == "lazy"
     assert not any(t == "a" and a.get("href", "").startswith("/projects/") for t,a in page.nodes), "Thumbnail must not be a zoom link"
     assert not any("srcset" in a for a in image_nodes), "Do not offer high-resolution variants"
     html = page.path.read_text()
-    for identifier in ["agent-workbench", "transactional-crm", "knowledge-memory"]:
+    for identifier in ["operations-erp", "agent-workbench", "transactional-crm", "knowledge-memory"]:
         article = html.split('data-project="' + identifier + '"', 1)[1].split('</article>', 1)[0]
         assert '<a ' not in article, "Private project must not expose an endpoint"
     assert html.count('href="https://github.com/maxazure/') >= 3

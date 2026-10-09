@@ -1,8 +1,8 @@
-# Jay Liu — jayliu.co.nz
+# Jay Liu - jayliu.co.nz
 
 Personal engineering portfolio, built with Astro 7, TypeScript and Tailwind CSS 4. Static HTML is generated at build time. A small native JavaScript disclosure handles mobile navigation; no React runtime, animation library, analytics or third-party fonts are required.
 
-The English homepage retains its established title and description. The site presents enterprise software experience and recent independent engineering work for a recruitment audience, with a prominent case collection: recent anonymous client websites, private systems, open-source tools and earlier projects. Current employment is kept in the career timeline.
+The English homepage retains its established title and description. The site presents enterprise financial, ERP/CRM and healthcare information-system experience alongside personal engineering projects for a recruitment audience, with a three-column project gallery after the career timeline: ERP/CRM systems, engineering tools, anonymous industry websites and earlier projects. Current employment is kept in the career timeline.
 
 ## Develop and verify
 
@@ -36,9 +36,5 @@ See [DESIGN.md](DESIGN.md), [site specification](site-specification.md) and [con
 - [Astro GitHub Pages deployment](https://docs.astro.build/en/guides/deploy/github/)
 - [Astro 7 migration guide](https://docs.astro.build/en/guides/upgrade-to/v7/)
 - [Google SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
-- [ReAct](https://arxiv.org/abs/2210.03629)
-- [SWE-agent](https://arxiv.org/abs/2405.15793)
-- [Retrieval-Augmented Generation](https://arxiv.org/abs/2005.11401)
-- [LongMemEval](https://arxiv.org/abs/2410.10813)
 
 Project copy lives in `src/data/projects.ts`. Only redacted 320×200 previews belong in `public/projects/`; do not add original screenshots, high-resolution variants, zoom links or client names. Public client-domain links are owner-authorised. Private systems have no public endpoints. See `docs/engineering-content.md` for evidence boundaries.
