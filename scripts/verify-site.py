@@ -133,7 +133,7 @@ for relative in ["index.html", "zh/index.html"]:
     assert html.count('href="https://github.com/maxazure/') >= 3
     for identifier in ["video-editing", "speech-tooling", "bookkeeping-assistant", "voice-companion", "web-builder-agent", "idea-builder", "writing-assessment", "voice-capture", "live-interpretation", "local-narration", "lan-microphone", "agentmeshkit", "codexview", "capability-vault", "agent-home", "browser-test-workspace", "hardware-control", "editorial-workflow", "media-workspace"]:
         article = html.split('data-project="' + identifier + '"', 1)[1].split('</article>', 1)[0]
-        assert "AI-generated interface mockup" in article or "AI 生成的界面示意" in article, "Generated covers must not imply actual screenshots"
+        assert "Generated interface mockup:" in article or "AI 生成的界面示意" in article, "Generated covers need accurate image alternatives"
         assert identifier + "-interface.jpg" in article
         if identifier in {"video-editing", "speech-tooling", "bookkeeping-assistant", "agentmeshkit", "codexview"}:
             assert 'href="https://github.com/' in article, "Open-source repository link missing"

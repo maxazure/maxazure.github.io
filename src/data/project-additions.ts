@@ -104,6 +104,5 @@ export function projectAdditions(locale: Locale) {
     ...shared,
     ...(locale === 'en' ? en : zh),
     image: `/projects/${shared.id}-interface.jpg`,
-    caption: locale === 'en' ? 'AI-generated interface mockup' : 'AI 生成的界面示意',
   }));
 }

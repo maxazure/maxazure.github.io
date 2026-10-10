@@ -1,10 +1,14 @@
-# Interface previews and 3D silver fern
+# Interface previews and hero media
 
 Updated: 2026-10-10. This release replaces the nineteen abstract concept covers. Built-in OpenAI GPT Image 2 was used, with one call per asset (19 calls; no re-generation). Each is an illustrative interface mockup based on verified project purposes, not a screenshot of the shipped product. No private interface, source record, client name, real transcript, voice reference or account data was supplied. Generic demo content appears in the mockups. The eleven actual anonymous screenshots remain unchanged.
 
 Publishing: `sips -z 200 320` creates each small derivative; `ai-image-finalize` produces the final JPEG at quality 82, with no gradient and truthful `AI-generated interface mockup; OpenAI GPT Image 2` Software metadata. Only 320×200 derivatives are published, without zoom, image links or high-resolution variants. New `-interface.jpg` paths avoid reusing the old cached concept covers. Masters remain outside Git.
 
-The silver fern is authored as a procedural 3D mesh in `src/lib/silver-fern.ts` and rendered with native WebGL in the `src/lib/fern-renderer.ts` worker, coordinated by `src/components/SilverFern.astro`; it is not an image-to-3D output or an externally generated model. Local investigation found no configured conversion provider in the checked toolbox/skill directories, AO or 232. The sculptural model has a curved rachis, tapered lobed pinnae and shallow folds, with restrained silver lighting. Desktop pointer input changes the viewing angle slightly; there is no continuous animation. Mobile, reduced-motion, data-saving and no-JavaScript views use transparent static renders of the same mesh. WebGL failure leaves that image visible. A main-thread WebGL prototype introduced a 282ms desktop lab blocking task; the final renderer uses an OffscreenCanvas worker to keep geometry generation, shader compilation and draw calls away from the page thread. Native render exports retain alpha and are mechanically encoded as WebP; no AI-image finaliser applies to these code-authored renders.
+The current hero restores the flat botanical fern from accepted source revision `f753c717`, unchanged at the pixel/file level, as `public/brand/silver-fern-background.jpg`. Its exact GPT Image 2 prompt and original publishing treatment remain in [ai-project-media.md](ai-project-media.md). It is decorative, emerges from the left, and uses separate desktop/mobile positioning and opacity. No new image-generation call is made for this correction.
+
+The procedural 3D fern from revision `33a2792` has been retired after the owner clarified that the plant must remain a background texture. Its component, worker, mesh and static render assets are removed from the active tree; Git history retains the previous implementation. The replacement model-like visual is an original small SVG (`src/components/TransformerField.astro`) representing token connections, parallel attention planes and a matrix. The structural reference is [Attention Is All You Need, section 3.2.2](https://arxiv.org/html/1706.03762v7#S3.SS2.SSS2), accessed 2026-10-10. The paper’s figure is not reproduced, and the site makes no model-training or research-authorship claim.
+
+The owner requested removal of all per-image caption lines. Screenshot-style mockups keep accurate generated-image alternative text and the exact prompts below; the gallery introduction describes screenshots and illustrative interfaces. All 30 image bytes, small dimensions, private-link boundaries and project descriptions remain unchanged.
 
 | ID | Final path | Generation master |
 | --- | --- | --- |
@@ -28,7 +32,7 @@ The silver fern is authored as a procedural 3D mesh in `src/lib/silver-fern.ts` 
 | speech-tooling | `public/projects/speech-tooling-interface.jpg` | `/Users/maxazure/.codex/generated_images/01a12279-e0d1-7610-8835-32c211a45d65/exec-6d81b539-1cb6-4aae-b764-ba0a93f7b056.png` |
 | bookkeeping-assistant | `public/projects/bookkeeping-assistant-interface.jpg` | `/Users/maxazure/.codex/generated_images/01a12279-e0d1-7610-8835-32c211a45d65/exec-fb9a9bb8-5afe-4ebf-b799-409e56b066b0.png` |
 
-Hero renders: `public/brand/silver-fern-desktop-v3.webp` and `public/brand/silver-fern-mobile-v3.webp`. Source PNG captures are `/tmp/jayliu-fern-desktop-render.png` and `/tmp/jayliu-fern-mobile-render.png`; the editable mesh and shaders are retained in the repository.
+Hero background: `public/brand/silver-fern-background.jpg` (57,785 bytes). It is byte-identical to the previously reviewed flat fern. The old `silver-fern-*-v3.webp` renders are no longer published.
 
 ## Exact prompt set
 

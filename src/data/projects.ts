@@ -15,7 +15,6 @@ const existingProjects = {
       "status": "development",
       "image": "/projects/operations-erp.webp",
       "alt": "Small empty-data demonstration of the operations ERP dashboard",
-      "caption": "Empty-data development preview"
     },
     {
       "id": "transactional-crm",
@@ -30,7 +29,6 @@ const existingProjects = {
       "status": "private",
       "image": "/projects/transactional-crm.webp",
       "alt": "Small redacted screenshot of the internal operations",
-      "caption": "Empty-data demo interface"
     },
     {
       "id": "agent-workbench",
@@ -45,7 +43,6 @@ const existingProjects = {
       "status": "private",
       "image": "/projects/agent-workbench.webp",
       "alt": "Small redacted screenshot of the ai engineering workbench",
-      "caption": "Redacted interface preview"
     },
     {
       "id": "knowledge-memory",
@@ -60,7 +57,6 @@ const existingProjects = {
       "status": "prototype",
       "image": "/projects/knowledge-memory.webp",
       "alt": "Small redacted screenshot of the evidence prototype",
-      "caption": "Command-line interface preview"
     },
     {
       "id": "video-editing",
@@ -75,7 +71,6 @@ const existingProjects = {
       "status": "open",
       "image": "/projects/video-editing-interface.jpg",
       "alt": "Generated interface mockup: Transcript-led editing and media export",
-      "caption": "AI-generated interface mockup",
       "href": "https://github.com/maxazure/video-editing-skill"
     },
     {
@@ -91,7 +86,6 @@ const existingProjects = {
       "status": "open",
       "image": "/projects/speech-tooling-interface.jpg",
       "alt": "Generated interface mockup: Local speech synthesis and audio preview",
-      "caption": "AI-generated interface mockup",
       "href": "https://github.com/maxazure/omnivoice-tts-skill"
     },
     {
@@ -107,7 +101,6 @@ const existingProjects = {
       "status": "open",
       "image": "/projects/bookkeeping-assistant-interface.jpg",
       "alt": "Generated interface mockup: Ledger reconciliation and accountant review",
-      "caption": "AI-generated interface mockup",
       "href": "https://github.com/maxazure/new-zealand-accounting-assistant"
     },
     {
@@ -123,7 +116,6 @@ const existingProjects = {
       "status": "live",
       "image": "/projects/tourism.webp",
       "alt": "Small redacted screenshot of the journey website",
-      "caption": "Redacted interface preview",
       "href": "https://futuresgroup.co.nz/"
     },
     {
@@ -139,7 +131,6 @@ const existingProjects = {
       "status": "live",
       "image": "/projects/transport.webp",
       "alt": "Small redacted screenshot of the service website",
-      "caption": "Redacted interface preview",
       "href": "https://drive1towing.co.nz/"
     },
     {
@@ -155,7 +146,6 @@ const existingProjects = {
       "status": "live",
       "image": "/projects/accounting.webp",
       "alt": "Small redacted screenshot of the services & insights",
-      "caption": "Redacted interface preview",
       "href": "https://pillar.nz/"
     },
     {
@@ -170,7 +160,6 @@ const existingProjects = {
       "status": "holding",
       "image": "/projects/finance-archive.webp",
       "alt": "Small redacted screenshot of the digital asset platform",
-      "caption": "Redacted historical screenshot",
       "href": "https://www.renrenbit.com/"
     },
     {
@@ -185,7 +174,6 @@ const existingProjects = {
       "status": "archive",
       "image": "/projects/medical-archive-a.webp",
       "alt": "Small redacted screenshot of the service website",
-      "caption": "Redacted historical screenshot"
     },
     {
       "id": "consumer-app-archive",
@@ -199,7 +187,6 @@ const existingProjects = {
       "status": "archive",
       "image": "/projects/consumer-app-archive.webp",
       "alt": "Small redacted screenshot of the spending & activity records",
-      "caption": "Redacted historical screenshot"
     },
     {
       "id": "medical-archive-b",
@@ -213,7 +200,6 @@ const existingProjects = {
       "status": "archive",
       "image": "/projects/medical-archive-b.webp",
       "alt": "Small redacted screenshot of the specialist service website",
-      "caption": "Redacted historical screenshot"
     }
   ],
   "zh": [
@@ -230,7 +216,6 @@ const existingProjects = {
       "status": "development",
       "image": "/projects/operations-erp.webp",
       "alt": "运营 ERP 空数据演示界面的缩略图",
-      "caption": "开发实例的空数据演示界面"
     },
     {
       "id": "transactional-crm",
@@ -245,7 +230,6 @@ const existingProjects = {
       "status": "private",
       "image": "/projects/transactional-crm.webp",
       "alt": "内部业务系统的匿名缩略图",
-      "caption": "空数据演示界面"
     },
     {
       "id": "agent-workbench",
@@ -260,7 +244,6 @@ const existingProjects = {
       "status": "private",
       "image": "/projects/agent-workbench.webp",
       "alt": "AI 工程工作台的匿名缩略图",
-      "caption": "隐私处理后的界面概览"
     },
     {
       "id": "knowledge-memory",
@@ -275,7 +258,6 @@ const existingProjects = {
       "status": "prototype",
       "image": "/projects/knowledge-memory.webp",
       "alt": "证据管理原型的匿名缩略图",
-      "caption": "命令行界面概览"
     },
     {
       "id": "video-editing",
@@ -290,7 +272,6 @@ const existingProjects = {
       "status": "open",
       "image": "/projects/video-editing-interface.jpg",
       "alt": "AI 生成的界面示意：转写稿、视频片段与编辑时间线",
-      "caption": "AI 生成的界面示意",
       "href": "https://github.com/maxazure/video-editing-skill"
     },
     {
@@ -306,7 +287,6 @@ const existingProjects = {
       "status": "open",
       "image": "/projects/speech-tooling-interface.jpg",
       "alt": "AI 生成的界面示意：本地语音合成与音频试听",
-      "caption": "AI 生成的界面示意",
       "href": "https://github.com/maxazure/omnivoice-tts-skill"
     },
     {
@@ -322,7 +302,6 @@ const existingProjects = {
       "status": "open",
       "image": "/projects/bookkeeping-assistant-interface.jpg",
       "alt": "AI 生成的界面示意：账簿对账与会计复核",
-      "caption": "AI 生成的界面示意",
       "href": "https://github.com/maxazure/new-zealand-accounting-assistant"
     },
     {
@@ -338,7 +317,6 @@ const existingProjects = {
       "status": "live",
       "image": "/projects/tourism.webp",
       "alt": "行程展示网站的匿名缩略图",
-      "caption": "隐私处理后的界面概览",
       "href": "https://futuresgroup.co.nz/"
     },
     {
@@ -354,7 +332,6 @@ const existingProjects = {
       "status": "live",
       "image": "/projects/transport.webp",
       "alt": "服务与询价网站的匿名缩略图",
-      "caption": "隐私处理后的界面概览",
       "href": "https://drive1towing.co.nz/"
     },
     {
@@ -370,7 +347,6 @@ const existingProjects = {
       "status": "live",
       "image": "/projects/accounting.webp",
       "alt": "服务与知识网站的匿名缩略图",
-      "caption": "隐私处理后的界面概览",
       "href": "https://pillar.nz/"
     },
     {
@@ -385,7 +361,6 @@ const existingProjects = {
       "status": "holding",
       "image": "/projects/finance-archive.webp",
       "alt": "数字资产平台的匿名缩略图",
-      "caption": "匿名处理后的历史截图",
       "href": "https://www.renrenbit.com/"
     },
     {
@@ -400,7 +375,6 @@ const existingProjects = {
       "status": "archive",
       "image": "/projects/medical-archive-a.webp",
       "alt": "服务展示网站的匿名缩略图",
-      "caption": "匿名处理后的历史截图"
     },
     {
       "id": "consumer-app-archive",
@@ -414,7 +388,6 @@ const existingProjects = {
       "status": "archive",
       "image": "/projects/consumer-app-archive.webp",
       "alt": "支出与活动记录的匿名缩略图",
-      "caption": "匿名处理后的历史截图"
     },
     {
       "id": "medical-archive-b",
@@ -428,7 +401,6 @@ const existingProjects = {
       "status": "archive",
       "image": "/projects/medical-archive-b.webp",
       "alt": "专项服务网站的匿名缩略图",
-      "caption": "匿名处理后的历史截图"
     }
   ]
 } as const;

@@ -4,7 +4,7 @@ import Header from './Header.astro';
 import Footer from './Footer.astro';
 import Arrow from './Arrow.astro';
 import Projects from './Projects.astro';
-import SilverFern from './SilverFern.astro';
+import TransformerField from './TransformerField.astro';
 interface Props { locale: Locale }
 const { locale } = Astro.props;
 const c = copy[locale];
@@ -20,7 +20,11 @@ const c = copy[locale];
       <p class="hero-description">{c.heroBody}</p>
       <div class="hero-actions"><a class="button button-primary" href="#resume">{c.viewExperience}<Arrow direction="right" /></a><a class="text-link" href="#portfolio">{c.viewWork}<Arrow /></a></div>
     </div>
-    <SilverFern />
+    <aside class="hero-panel" aria-label={locale === 'en' ? 'Engineering focus' : '技术主攻方向'}>
+      <p class="panel-head"><span>{locale === 'en' ? 'Engineering focus' : '主攻方向'}</span><span>03</span></p>
+      <TransformerField />
+      <ol class="domain-list">{c.heroDomains.map((domain, i) => <li><span>{String(i + 1).padStart(2, '0')}</span>{domain}</li>)}</ol>
+    </aside>
   </section>
   </div>
   <div class="stack-strip"><div class="shell stack-inner"><span>ERP / CRM</span><span>.NET</span><span>React</span><span>Python</span><span>AI Agents</span><span>{locale === 'en' ? 'From architecture to delivery' : '从架构设计到系统交付'}<span class="small-cross" aria-hidden="true">+</span></span></div></div>

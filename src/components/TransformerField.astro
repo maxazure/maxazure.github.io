@@ -1,0 +1,32 @@
+---
+const tokens = [48, 76, 104, 132];
+const strengths = [.28, .12, .42, .18, .16, .48, .18, .28, .32, .22, .52, .14, .14, .36, .22, .46];
+---
+<div class="transformer-field" aria-hidden="true">
+  <svg viewBox="0 0 400 180" fill="none" focusable="false">
+    <g class="attention-links">
+      {tokens.map((y, i) => <>
+        <path d={`M66 ${y}H94L158 ${62 + i * 20}`} />
+        <path d={`M254 ${62 + i * 20}L316 ${y}H338`} />
+      </>)}
+      <path d="M200 12V24M200 160V168" stroke-dasharray="2 5" />
+    </g>
+    <g class="attention-signals">
+      <path class="attention-signal" d="M66 76H94L158 82" />
+      <path class="attention-signal signal-out" d="M254 102L316 104H338" />
+    </g>
+    <g class="attention-planes">
+      <rect x="174" y="26" width="96" height="96" />
+      <rect x="166" y="36" width="96" height="96" />
+      <rect class="attention-face" x="158" y="46" width="96" height="96" />
+    </g>
+    <g class="attention-matrix">
+      {strengths.map((opacity, i) => <rect x={168 + (i % 4) * 20} y={56 + Math.floor(i / 4) * 20} width="14" height="14" style={`opacity:${opacity}`} />)}
+    </g>
+    <g class="attention-tokens">
+      {tokens.map(y => <><rect x="54" y={y - 6} width="12" height="12" /><rect x="338" y={y - 6} width="12" height="12" /></>)}
+    </g>
+    <path class="attention-edge" d="M158 68V46H180M232 142H254V120" />
+  </svg>
+  <p>Transformer <span> / </span> Multi-head attention</p>
+</div>
