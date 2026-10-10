@@ -71,6 +71,9 @@ export const projects = {
         "Artifact validation"
       ],
       "status": "open",
+      "image": "/projects/video-editing-concept.jpg",
+      "alt": "A concept illustration of transcript blocks, video clips and an editing timeline",
+      "caption": "AI-generated concept illustration",
       "href": "https://github.com/maxazure/video-editing-skill"
     },
     {
@@ -84,6 +87,9 @@ export const projects = {
         "Tool integration"
       ],
       "status": "open",
+      "image": "/projects/speech-tooling-concept.jpg",
+      "alt": "A concept illustration of documents flowing through local speech synthesis into an audio waveform",
+      "caption": "AI-generated concept illustration",
       "href": "https://github.com/maxazure/omnivoice-tts-skill"
     },
     {
@@ -97,6 +103,9 @@ export const projects = {
         "Human review"
       ],
       "status": "open",
+      "image": "/projects/bookkeeping-assistant-concept.jpg",
+      "alt": "A concept illustration of receipts and statements organised into a ledger and review pack",
+      "caption": "AI-generated concept illustration",
       "href": "https://github.com/maxazure/new-zealand-accounting-assistant"
     },
     {
@@ -277,6 +286,9 @@ export const projects = {
         "产物验证"
       ],
       "status": "open",
+      "image": "/projects/video-editing-concept.jpg",
+      "alt": "转录文本、视频片段与剪辑时间线的项目示意图",
+      "caption": "AI 生成的项目示意图",
       "href": "https://github.com/maxazure/video-editing-skill"
     },
     {
@@ -290,6 +302,9 @@ export const projects = {
         "工具集成"
       ],
       "status": "open",
+      "image": "/projects/speech-tooling-concept.jpg",
+      "alt": "文本经过本地语音合成生成音频波形的项目示意图",
+      "caption": "AI 生成的项目示意图",
       "href": "https://github.com/maxazure/omnivoice-tts-skill"
     },
     {
@@ -303,6 +318,9 @@ export const projects = {
         "人工审阅"
       ],
       "status": "open",
+      "image": "/projects/bookkeeping-assistant-concept.jpg",
+      "alt": "收据与银行流水整理为账簿和人工审阅资料的项目示意图",
+      "caption": "AI 生成的项目示意图",
       "href": "https://github.com/maxazure/new-zealand-accounting-assistant"
     },
     {

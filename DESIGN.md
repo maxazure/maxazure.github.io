@@ -1,6 +1,6 @@
 ---
 name: Jay Liu Engineering Portfolio
-version: 3
+version: 4
 updated: 2026-10-10
 ---
 
@@ -37,7 +37,7 @@ At narrow widths, put hero copy/actions before the profile panel. Keep the purpo
 
 ## Signature and assets
 
-The hero trace is a decorative abstraction of integration, with no employer-architecture or product-UI claim. Its thin rules and coral node are echoed in the project frames. The existing social card retains the original decorative orbit and its established name/role identity. The gallery uses actual anonymous screenshot exports; open-source cards use explicit decorative code covers. The original wordmark is preserved as an archival asset. The refreshed wordmark spells **JAY LIU** and the favicon uses **JL**.
+The hero trace is a decorative abstraction of integration, with no employer-architecture or product-UI claim. Its thin rules and coral node are echoed in the project frames. A static silver fern texture supplies a New Zealand botanical background, blended into graphite at low opacity with a separate phone crop. The texture sits behind the HTML content, accepts no pointer input and disappears in print and forced colours. The existing social card retains the original decorative orbit and its established name/role identity. The gallery uses eleven actual anonymous screenshot exports; three open-source cards use labelled AI-generated concept illustrations. The original wordmark is preserved as an archival asset. The refreshed wordmark spells **JAY LIU** and the favicon uses **JL**. Asset paths, production treatment and full prompts are recorded in `docs/generated-media.md`.
 
 ## Radius, shadow and motion
 

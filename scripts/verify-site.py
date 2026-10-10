@@ -113,7 +113,7 @@ for relative in ["index.html", "zh/index.html"]:
         text = page.path.read_text().split('id="' + section + '"', 1)[1].split('</section>', 1)[0]
         assert "FNZ" not in text, "Employer emphasis in short introduction"
     image_nodes = [a for t,a in page.nodes if t == "img" and a.get("src", "").startswith("/projects/")]
-    assert len(image_nodes) == 11
+    assert len(image_nodes) == 14, "Every project needs a small preview or labelled concept cover"
     for attrs in image_nodes:
         assert attrs.get("width") == "320" and attrs.get("height") == "200"
         assert attrs.get("loading") == "lazy"
@@ -124,6 +124,11 @@ for relative in ["index.html", "zh/index.html"]:
         article = html.split('data-project="' + identifier + '"', 1)[1].split('</article>', 1)[0]
         assert '<a ' not in article, "Private project must not expose an endpoint"
     assert html.count('href="https://github.com/maxazure/') >= 3
+    for identifier in ["video-editing", "speech-tooling", "bookkeeping-assistant"]:
+        article = html.split('data-project="' + identifier + '"', 1)[1].split('</article>', 1)[0]
+        assert "AI-generated concept illustration" in article or "AI 生成的项目示意图" in article, "Generated covers must not imply actual screenshots"
+        assert identifier + "-concept.jpg" in article
+        assert 'href="https://github.com/maxazure/' in article, "Open-source repository link missing"
 
 pdf = root / "cv/Jie-Liu-CV.pdf"
 assert hashlib.sha256(pdf.read_bytes()).hexdigest() == "1b62833b705d9f38b1b83b24aaf40954c3d7a0b37a1d7cc5335ee32ac4db95e1", "Existing CV changed"

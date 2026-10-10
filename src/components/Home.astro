@@ -11,6 +11,7 @@ const domains = c.heroLabel.split(' / ');
 ---
 <Header locale={locale} />
 <main id="main">
+  <div class="hero-backdrop">
   <section class="hero shell" id="home" aria-labelledby="hero-title">
     <div class="hero-main">
       <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>{c.location}</p>
@@ -32,6 +33,7 @@ const domains = c.heroLabel.split(' / ');
       <dl class="panel-facts">{c.aboutFacts.map(([value, label]) => <div><dt>{value}</dt><dd>{label}</dd></div>)}</dl>
     </aside>
   </section>
+  </div>
   <div class="stack-strip"><div class="shell stack-inner"><span>ERP / CRM</span><span>.NET</span><span>SQL</span><span>React</span><span>FinTech</span><span>{locale === 'en' ? 'From architecture to delivery' : '从架构设计到系统交付'}<span class="small-cross" aria-hidden="true">+</span></span></div></div>
 
   <section class="about-section shell section-space" id="about" aria-labelledby="about-title">
