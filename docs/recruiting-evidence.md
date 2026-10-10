@@ -22,7 +22,7 @@ CodexView's GitHub About was updated on 11 October 2026 to match its README and 
 - HTML-to-PDF was first rendered with the installed html2pdf service. The final accessible-structure export used Chromium 152 `Page.printToPDF`, with `preferCSSPageSize`, `generateTaggedPDF` and `generateDocumentOutline` enabled, `displayHeaderFooter` disabled and print backgrounds enabled.
 - No headless Chrome default URL/date header or footer appears. The page numbers and revision date are authored HTML.
 - Update HTML first, regenerate, inspect both pages with Poppler, check metadata/text/URLs/structure, then update the reviewed SHA-256 in `scripts/verify-site.py` and the size labels if necessary. A new source revision invalidates the export review.
-- The public PDF is a useful standalone recruiting document (`document-primary`); homepage career and project HTML remain readable alternatives. GitHub Pages controls PDF response headers and caches. Live MIME/cache/revision checks are pending publication.
+- The public PDF is a useful standalone recruiting document (`document-primary`); homepage career and project HTML remain readable alternatives. GitHub Pages controls PDF response headers and caches. Live MIME/cache/revision checks passed; see the publication record below.
 
 ## Verification
 
@@ -45,4 +45,9 @@ Documentation audit limitation: the installed skill’s `site-spec-audit` and `d
 
 Owner-supplied evidence on 11 October adds problem-led CRM customisation and AI workflow integration, FNZ complex-problem analysis/reliability, and HiLily microphone/echo/noise/speech-model integration. All six language versions and the CV reflect this. The CV now also includes a short volunteer HiLily contribution. Implemented CRM reminders and controlled writes are distinguished from broader AI analysis/decision extensions. See positioning.md for the exact factual boundaries. The two-page PDF was regenerated and both pages reviewed; its source remains the archived HTML.
 
-Follow-up validation: typecheck/build/19-page contracts and existing demo invariants pass. Both regenerated CV pages are A4, readable and tagged; eight link annotations include HiLily. Six homepage locales have no horizontal overflow at 320px; updated English desktop and Chinese narrow case copy were visually reviewed. SEO comparison remains 19 routes with zero errors, critical findings or warnings. The review branch remains unpublished.
+Follow-up validation: typecheck/build/19-page contracts and existing demo invariants pass. Both regenerated CV pages are A4, readable and tagged; eight link annotations include HiLily. Six homepage locales have no horizontal overflow at 320px; updated English desktop and Chinese narrow case copy were visually reviewed. SEO comparison remains 19 routes with zero errors, critical findings or warnings. The review branch was subsequently merged and published; see the publication record below.
+
+
+## Publication verification, 11 October 2026
+
+Published on 11 October 2026 with owner approval. PR #1 merged as `47e2a3ed86c62cb9e32e7f56acf8f532b06541c1`; [GitHub Pages run 38078624357](https://github.com/maxazure/maxazure.github.io/actions/runs/38078624357) passed build and deploy. All 70 live release files match the local build byte-for-byte. The live snapshot passes all 19 page contracts. The PDF returns HTTP 200, application/pdf, 206610 bytes and GitHub Pages max-age=600. Browser verification completed the five-step CRM flow and reset; final state has one record, version 3 and three revisions. Chinese mobile rendering has no horizontal overflow. No field-performance or recruitment-result claim.

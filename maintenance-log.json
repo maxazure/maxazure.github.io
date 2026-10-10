@@ -185,6 +185,16 @@
         "Updated six languages and regenerated two-page public CV including volunteer contribution"
       ],
       "release": "Same review branch; no website deployment requested in this follow-up"
+    },
+    {
+      "date": "2026-10-11",
+      "actions": [
+        "Merged PR #1 and deployed owner-approved public CV and FDE evidence revision",
+        "Verified 70 live files against build, 19 page contracts, PDF headers and CRM browser workflow"
+      ],
+      "release": "47e2a3ed86c62cb9e32e7f56acf8f532b06541c1",
+      "deployment": "https://github.com/maxazure/maxazure.github.io/actions/runs/38078624357",
+      "status": "published and verified"
     }
   ],
   "visibility_snapshots": [
