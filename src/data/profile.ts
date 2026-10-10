@@ -7,6 +7,7 @@ export const profile = {
   alternateName: 'Jie Liu',
   url: 'https://jayliu.co.nz',
   email: 'maxazure@gmail.com',
+  cvUrl: '/cv/Jie-Liu-CV.pdf?v=83db2384c48f',
   location: 'Auckland, New Zealand',
   employer: 'FNZ Group',
   role: 'Analyst Developer',

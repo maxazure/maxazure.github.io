@@ -130,7 +130,7 @@ for locale, prefix in locale_roots.items():
     assert "FNZ" not in hero, "Employer detail belongs with background and experience"
     assert escape(translations[locale]["copy"]["heroSpecialism"], quote=False) in hero
     assert translations[locale]["copy"]["heroName"] in hero
-    assert 'href="/cv/Jie-Liu-CV.pdf"' in hero and 'linkedin.com/in/jayliuinvers/' in hero
+    assert 'href="/cv/Jie-Liu-CV.pdf?v=83db2384c48f"' in hero and 'linkedin.com/in/jayliuinvers/' in hero
     assert '<img' not in hero, "Portrait must stay outside the first screen"
     assert html.index('id="about"') < html.index('/images/jay-liu.jpg') < html.index('id="portfolio"')
     assert '<canvas' in hero, "Keep the Transformer field"

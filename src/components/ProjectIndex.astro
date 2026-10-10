@@ -1,7 +1,7 @@
 ---
 import { ui } from '../data/content';
 import { localePath } from '../lib/locales';
-import { copy, type Locale } from '../data/profile';
+import { copy, profile, type Locale } from '../data/profile';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import Projects from './Projects.astro';
@@ -22,6 +22,6 @@ const root = localePath(locale);
   </div>
   <CrmDemo locale={locale} />
   <Projects locale={locale} />
-  <div class="project-index-contact shell"><a class="text-link" href={`${root}#contact`}>{t("Discuss a role with Jay")}<Arrow /></a><a class="text-link" href="/cv/Jie-Liu-CV.pdf">{copy[locale].cvLabel}<Arrow /></a></div>
+  <div class="project-index-contact shell"><a class="text-link" href={`${root}#contact`}>{t("Discuss a role with Jay")}<Arrow /></a><a class="text-link" href={profile.cvUrl}>{copy[locale].cvLabel}<Arrow /></a></div>
 </main>
 <Footer locale={locale} />

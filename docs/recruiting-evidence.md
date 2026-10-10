@@ -51,3 +51,8 @@ Follow-up validation: typecheck/build/19-page contracts and existing demo invari
 ## Publication verification, 11 October 2026
 
 Published on 11 October 2026 with owner approval. PR #1 merged as `47e2a3ed86c62cb9e32e7f56acf8f532b06541c1`; [GitHub Pages run 38078624357](https://github.com/maxazure/maxazure.github.io/actions/runs/38078624357) passed build and deploy. All 70 live release files match the local build byte-for-byte. The live snapshot passes all 19 page contracts. The PDF returns HTTP 200, application/pdf, 206610 bytes and GitHub Pages max-age=600. Browser verification completed the five-step CRM flow and reset; final state has one record, version 3 and three revisions. Chinese mobile rendering has no horizontal overflow. No field-performance or recruitment-result claim.
+
+
+## CV cache correction, 11 October 2026
+
+The owner reported seeing the old employer email. A fresh public download matched the current reviewed PDF (SHA-256 83db2384c48f159532bd3aab965691b65da68cd9be8099172180b95a4f5eeb5c), containing maxazure@gmail.com. The unchanged URL could retain an older browser/PDF-viewer cache; this is the suspected cause, not directly proven on the owner’s device. All CV actions now use a shared profile.cvUrl with a content-hash query version. The same public file is retained, and future CV replacements must refresh the query hash.

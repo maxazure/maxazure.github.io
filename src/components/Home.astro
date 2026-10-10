@@ -21,7 +21,7 @@ const c = copy[locale];
       <p class="hero-specialism">{c.heroSpecialism}</p>
       <p class="hero-intro">{c.heroIntro}</p>
       <p class="hero-description">{c.heroBody}</p>
-      <div class="hero-actions"><a class="button button-primary" href="#portfolio">{c.viewWork}<Arrow direction="right" /></a><a class="text-link" href="/cv/Jie-Liu-CV.pdf">{c.cvLabel}<Arrow /></a><a class="text-link" href="https://www.linkedin.com/in/jayliuinvers/" target="_blank" rel="noopener noreferrer">LinkedIn<Arrow /></a></div>
+      <div class="hero-actions"><a class="button button-primary" href="#portfolio">{c.viewWork}<Arrow direction="right" /></a><a class="text-link" href={profile.cvUrl}>{c.cvLabel}<Arrow /></a><a class="text-link" href="https://www.linkedin.com/in/jayliuinvers/" target="_blank" rel="noopener noreferrer">LinkedIn<Arrow /></a></div>
     </div>
     <aside class="hero-panel" aria-label={t("Engineering focus")}>
       <p class="panel-head"><span>{t("Engineering focus")}</span><span>03</span></p>
@@ -60,7 +60,7 @@ const c = copy[locale];
   </section>
 
   <section class="contact-section shell section-space" id="contact" aria-labelledby="contact-title">
-    <p class="eyebrow">{c.contactLabel}</p><div class="contact-layout"><div><h2 id="contact-title">{c.contactHeading.split('\n').map(line => <span>{line}</span>)}</h2><p>{c.contactBody}</p><a class="contact-email" href={`mailto:${profile.email}`} aria-label={`${c.emailLabel}: ${profile.email}`}>{profile.email}<Arrow /></a></div><div class="contact-side"><a class="text-link" href="/cv/Jie-Liu-CV.pdf">{c.cvLabel}<Arrow /></a><p>{c.location}</p><nav aria-label={t("Jay’s profiles")}>{profile.social.map((item) => <a class="text-link" href={item.href} target="_blank" rel="noopener noreferrer">{item.label}<Arrow /></a>)}</nav></div></div>
+    <p class="eyebrow">{c.contactLabel}</p><div class="contact-layout"><div><h2 id="contact-title">{c.contactHeading.split('\n').map(line => <span>{line}</span>)}</h2><p>{c.contactBody}</p><a class="contact-email" href={`mailto:${profile.email}`} aria-label={`${c.emailLabel}: ${profile.email}`}>{profile.email}<Arrow /></a></div><div class="contact-side"><a class="text-link" href={profile.cvUrl}>{c.cvLabel}<Arrow /></a><p>{c.location}</p><nav aria-label={t("Jay’s profiles")}>{profile.social.map((item) => <a class="text-link" href={item.href} target="_blank" rel="noopener noreferrer">{item.label}<Arrow /></a>)}</nav></div></div>
   </section>
 </main>
 <Footer locale={locale} />
