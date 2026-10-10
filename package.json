@@ -12,7 +12,7 @@
     "check": "astro check",
     "build": "astro build",
     "preview": "astro preview",
-    "verify": "python3 scripts/verify-site.py dist"
+    "verify": "python3 scripts/verify-site.py dist && node --experimental-strip-types scripts/test-crm-demo.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.4",

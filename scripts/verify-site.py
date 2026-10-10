@@ -141,6 +141,12 @@ for locale, prefix in locale_roots.items():
     relative = prefix + "projects/index.html"
     page = pages[root / relative]
     html = page.path.read_text()
+    assert "crm-demo" in page.ids, "CRM demonstration missing"
+    assert html.count("data-step=") == 5, "Complete no-JavaScript walkthrough required"
+    assert escape(translations[locale]["crmDemo"]["intro"], quote=False) in html
+    crm = html.split('data-project="transactional-crm"', 1)[1].split('</article>', 1)[0]
+    assert 'href="#crm-demo"' in crm
+    assert not re.search(r'href="https?://', crm), "CRM must not expose an external endpoint"
     cases = [(t,a) for t,a in page.nodes if t == "article" and "data-project" in a]
     assert len(cases) == 30, "Expected complete project inventory"
     identifiers = [a["data-project"] for _,a in cases]
@@ -162,7 +168,7 @@ for locale, prefix in locale_roots.items():
     assert not any(t == "a" and urlsplit(a.get("href", "")).path.endswith((".webp", ".jpg", ".png")) for t,a in page.nodes), "Thumbnail must not be a zoom link"
     assert not any("srcset" in a for a in image_nodes), "Do not offer high-resolution variants"
     html = page.path.read_text()
-    for identifier in ["operations-erp", "agent-workbench", "transactional-crm", "knowledge-memory", "web-builder-agent", "idea-builder", "writing-assessment", "voice-capture", "live-interpretation", "local-narration", "lan-microphone", "capability-vault", "agent-home", "browser-test-workspace", "hardware-control", "editorial-workflow", "media-workspace"]:
+    for identifier in ["operations-erp", "agent-workbench", "knowledge-memory", "web-builder-agent", "idea-builder", "writing-assessment", "voice-capture", "live-interpretation", "local-narration", "lan-microphone", "capability-vault", "agent-home", "browser-test-workspace", "hardware-control", "editorial-workflow", "media-workspace"]:
         article = html.split('data-project="' + identifier + '"', 1)[1].split('</article>', 1)[0]
         assert '<a ' not in article, "Private project must not expose an endpoint"
     assert html.count('href="https://github.com/maxazure/') >= 3
@@ -176,7 +182,7 @@ for locale, prefix in locale_roots.items():
     assert all(agent in web_builder for agent in ["Claude Code", "Codex", "OpenCode"]), "Web Builder agent compatibility missing"
 
 pdf = root / "cv/Jie-Liu-CV.pdf"
-assert hashlib.sha256(pdf.read_bytes()).hexdigest() == "1b62833b705d9f38b1b83b24aaf40954c3d7a0b37a1d7cc5335ee32ac4db95e1", "Existing CV changed"
+assert hashlib.sha256(pdf.read_bytes()).hexdigest() == "83db2384c48f159532bd3aab965691b65da68cd9be8099172180b95a4f5eeb5c", "Public CV differs from the reviewed export"
 assert (root / "CNAME").read_text().strip() == "jayliu.co.nz"
 assert (root / "brand/social-card.png").is_file()
 assert (root / "content/resume/images/favicon.ico").is_file()
@@ -229,4 +235,4 @@ for locale, prefix in locale_roots.items():
                 assert project[field] != translations["en"]["featured"][identifier][field]
 
 assert hashlib.sha256((Path(__file__).resolve().parents[1] / "src/components/TransformerField.astro").read_bytes()).hexdigest() == "adcc96f6413e0ff67a29fd0dd94ec7e7c3848d31f22d07538f10318c7765450f", "Protected animation changed"
-print(f"Verified {len(pages)} pages in six languages: native language names, complete translations, reciprocal routes, English content without Chinese, metadata, schema, project privacy, assets, unchanged animation and CV")
+print(f"Verified {len(pages)} pages in six languages: native language names, complete translations, reciprocal routes, English content without Chinese, metadata, schema, project privacy, assets, protected animation and reviewed public CV")

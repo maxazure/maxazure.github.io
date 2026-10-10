@@ -1,0 +1,102 @@
+---
+import { content } from '../data/content';
+import type { Locale } from '../lib/locales';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const d = content[locale].crmDemo;
+---
+<section class="crm-case shell section-space" id="crm-demo" aria-labelledby="crm-title">
+  <p class="eyebrow">{d.label}</p>
+  <h2 class="display-heading" id="crm-title">{d.title}</h2>
+  <p class="section-description">{d.intro}</p>
+  <div class="crm-walkthrough" data-crm-demo data-copy={JSON.stringify(d)}>
+    <ol class="crm-steps">{d.steps.map((step, i) => <li data-step={i + 1}><h3><span>{String(i + 1).padStart(2, '0')}</span>{step}</h3><p>{d.details[i]}</p></li>)}</ol>
+    <div class="crm-console">
+      <div class="crm-controls" hidden><button type="button" class="button button-primary" data-next>{d.next}</button><button type="button" class="text-link" data-reset>{d.reset}</button></div>
+      <noscript><p>{d.noscript}</p></noscript>
+      <p class="crm-progress" data-progress>{d.progress} 0 / 5</p>
+      <p class="crm-result" role="status" aria-live="polite" aria-atomic="true" data-outcome>{d.outcomes[0]}</p>
+      <h3>{d.record}</h3>
+      <p class="crm-record-meta"><span>{d.count}: <strong data-count>0</strong></span><span>{d.version}: <strong data-version>0</strong></span></p>
+      <p class="crm-record-id" data-record-id></p>
+      <p class="crm-note" data-note>{d.empty}</p>
+      <h3>{d.history}</h3>
+      <ol class="crm-history" data-history></ol>
+    </div>
+  </div>
+  <div class="crm-story"><h3>{d.storyTitle}</h3><dl>{d.story.map(([heading, description]) => <div><dt>{heading}</dt><dd>{description}</dd></div>)}</dl></div>
+</section>
+<script>
+  import { advanceDemo, initialDemo } from '../lib/crm-demo';
+  import type { SiteContent } from '../data/content';
+  document.querySelectorAll<HTMLElement>('[data-crm-demo]').forEach(root => {
+    const d: SiteContent['crmDemo'] = JSON.parse(root.dataset.copy!);
+    let state = initialDemo();
+    const get = (selector: string) => root.querySelector<HTMLElement>(selector)!;
+    const next = root.querySelector<HTMLButtonElement>('[data-next]')!;
+    const reset = root.querySelector<HTMLButtonElement>('[data-reset]')!;
+    function render() {
+      get('[data-progress]').textContent = `${d.progress} ${state.step} / 5`;
+      get('[data-outcome]').textContent = d.outcomes[state.step];
+      get('[data-count]').textContent = state.note ? '1' : '0';
+      get('[data-version]').textContent = String(state.note?.version ?? 0);
+      get('[data-record-id]').textContent = state.note?.id ?? '';
+      get('[data-note]').textContent = state.note?.text ?? d.empty;
+      get('[data-history]').replaceChildren(...state.revisions.map(note => {
+        const li = document.createElement('li');
+        const heading = document.createElement('strong');
+        heading.textContent = `${d.version} ${note.version} · ${d.revisionLabels[note.version - 1]}`;
+        const text = document.createElement('p');
+        text.textContent = note.text;
+        li.append(heading, text);
+        return li;
+      }));
+      root.querySelectorAll<HTMLElement>('[data-step]').forEach(item => {
+        if (Number(item.dataset.step) === state.step) item.setAttribute('aria-current', 'step');
+        else item.removeAttribute('aria-current');
+      });
+      next.disabled = state.step === 5;
+      next.textContent = state.step < 5 ? d.steps[state.step] : d.complete;
+    }
+    next.addEventListener('click', () => {
+      state = advanceDemo(state, d.notes);
+      render();
+      if (state.step === 5) reset.focus();
+    });
+    reset.addEventListener('click', () => { state = initialDemo(); render(); next.focus(); });
+    get('.crm-controls').hidden = false;
+    render();
+  });
+</script>
+<style>
+.crm-case{border-bottom:1px solid var(--line)}
+.crm-case>.display-heading{max-width:850px}
+.crm-walkthrough{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:48px;align-items:start}
+.crm-steps{list-style:none;display:grid;gap:24px}
+.crm-steps li{padding-bottom:24px;border-bottom:1px solid var(--line)}
+.crm-steps h3{display:flex;gap:16px;font-size:19px;line-height:1.4}
+.crm-steps h3 span{font:13px/2 var(--mono);color:var(--muted)}
+.crm-steps p{font-size:15px;color:var(--muted);margin-top:8px}
+.crm-steps [aria-current=step] h3{color:var(--accent)}
+.crm-steps [aria-current=step] h3 span{text-decoration:underline;text-underline-offset:5px}
+.crm-console{background:var(--surface);padding:28px;border:1px solid var(--line);min-width:0}
+.crm-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px;margin-bottom:18px}
+.crm-controls[hidden]{display:none}
+.crm-controls button{white-space:normal;text-align:left}
+.crm-controls .text-link{background:none;border:0;padding:8px 0}
+.crm-controls button:disabled{opacity:.55;cursor:default}
+.crm-progress,.crm-record-meta,.crm-record-id{font:12px/1.7 var(--mono);color:var(--muted)}
+.crm-result{font-size:17px;line-height:1.6;margin:12px 0 28px;min-height:3.2em}
+.crm-console h3{font-size:17px}
+.crm-record-meta{display:flex;flex-wrap:wrap;gap:24px;margin:8px 0}
+.crm-note{border-block:1px solid var(--line);padding:18px 0;margin:8px 0 24px}
+.crm-history{list-style:none;margin-top:8px}
+.crm-history li{padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.crm-history p{color:var(--muted);margin-top:5px}
+.crm-story{margin-top:64px;display:grid;grid-template-columns:1fr 2fr;gap:64px}
+.crm-story>h3{font-size:28px;line-height:1.25}
+.crm-story dl{display:grid;gap:24px}.crm-story dt{font-weight:700;margin-bottom:6px}.crm-story dd{margin:0;color:var(--muted);font-size:15px}
+@media(max-width:800px){.crm-walkthrough,.crm-story{grid-template-columns:1fr;gap:32px}.crm-console{padding:20px;grid-row:1}.crm-story{margin-top:40px}}
+@media print{.crm-controls,.crm-console{display:none}.crm-walkthrough,.crm-story{display:block}.crm-case{break-before:page}.crm-steps li{break-inside:avoid}}
+@media(forced-colors:active){.crm-console,.crm-steps li{border-color:CanvasText}.crm-steps [aria-current=step]{outline:2px solid Highlight;outline-offset:5px}}
+</style>

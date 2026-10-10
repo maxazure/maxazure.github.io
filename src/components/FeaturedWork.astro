@@ -1,5 +1,5 @@
 ---
-import { ui } from '../data/content';
+import { content, ui } from '../data/content';
 import { localePath } from '../lib/locales';
 import { featuredWork } from '../data/featured-work';
 import type { Locale } from '../data/profile';
@@ -22,7 +22,7 @@ const archive = localePath(locale, 'projects');
         <p class="featured-stage">{project.stage}</p>
         <ul class="case-technologies" aria-label={t("Technologies and focus")}>{project.tags.map(tag => <li>{tag}</li>)}</ul>
         {'href' in project && 'linkLabel' in project && <a class="text-link" href={project.href} target="_blank" rel="noopener noreferrer">{project.linkLabel}<Arrow /></a>}
-        {!('href' in project) && <a class="text-link" href={`${archive}#project-${project.id}`}>{t("View the anonymised preview")}<Arrow /></a>}
+        {!('href' in project) && <a class="text-link" href={`${archive}#crm-demo`}>{content[locale].crmDemo.link}<Arrow /></a>}
       </div>
       <div class="featured-body">
         <p class="case-problem">{project.problem}</p>

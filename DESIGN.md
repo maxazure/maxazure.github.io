@@ -1,7 +1,7 @@
 ---
 name: Jay Liu Engineering Portfolio
-version: 8
-updated: 2026-10-10
+version: 9
+updated: 2026-10-11
 ---
 
 # Design intent
@@ -55,3 +55,7 @@ Use concise, technically specific copy tied to reviewed work. Keep the FNZ caree
 ## Recruiting path additions
 
 Featured rows use the existing square, ruled editorial style with 32px titles, 18px problem summaries and 15px evidence text. On phones each row becomes one column; all copy stays visible without an accordion. Project descriptions are 14px and supporting status labels 11px. The original 219×256 photo file is retained. Display it as a 94×94px rounded square (76×76px on phones), with 10px corners and object-fit cover at center 40% to keep the face in view; preserve its colours and lazy loading. No new motion, font, JavaScript dependency or external embed is introduced. The contact headline states the recruitment context; CV, LinkedIn and email remain direct links.
+
+## CRM walkthrough and public CV
+
+The project index adds a scoped, ruled CRM walkthrough with fictional records. At desktop the five-step explanation sits beside a bordered console; below 800px the console comes first, followed by the full sequence. A four-part internal usage story follows. Existing colours/fonts and focus patterns apply. The console announces each result, preserves earlier revisions, and exposes reset; no storage, requests or animation. Static explanation remains available without JavaScript. The homepage layout and global CSS are unchanged. CV links identify English PDF, two pages and 207 KB. The CV uses a separate restrained A4 print layout, with career history on page one and independent projects plus education on page two.
