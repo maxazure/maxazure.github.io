@@ -1,4 +1,6 @@
 ---
+import { ui } from '../data/content';
+import { localePath } from '../lib/locales';
 import { copy, type Locale } from '../data/profile';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
@@ -6,18 +8,18 @@ import Projects from './Projects.astro';
 import Arrow from './Arrow.astro';
 interface Props { locale: Locale }
 const { locale } = Astro.props;
-const en = locale === 'en';
-const root = en ? '/' : '/zh/';
+const t = ui(locale);
+const root = localePath(locale);
 ---
 <Header locale={locale} kind="projects" />
 <main id="main">
   <div class="project-index-intro shell">
     <a class="text-link" href={root}>{copy[locale].backHome}<Arrow /></a>
-    <h1>{en ? 'Projects & engineering work.' : '项目与工程实践。'}</h1>
-    <p>{en ? 'Enterprise systems, applied AI, developer tools and earlier work. For the business context, my role and engineering decisions, start with the four selected cases.' : '这里汇集企业系统、AI 应用、开发工具与早期工作。重点案例进一步介绍业务背景、我的责任和工程取舍。'}</p>
-    <a class="text-link" href={`${root}#portfolio`}>{en ? 'Read the selected engineering cases' : '阅读重点工程案例'}<Arrow direction="right" /></a>
+    <h1>{t("Projects & engineering work.")}</h1>
+    <p>{t("Enterprise systems, applied AI, developer tools and earlier work. For the business context, my role and engineering decisions, start with the four selected cases.")}</p>
+    <a class="text-link" href={`${root}#portfolio`}>{t("Read the selected engineering cases")}<Arrow direction="right" /></a>
   </div>
   <Projects locale={locale} />
-  <div class="project-index-contact shell"><a class="text-link" href={`${root}#contact`}>{en ? 'Discuss a role with Jay' : '与 Jay 交流岗位机会'}<Arrow /></a><a class="text-link" href="/cv/Jie-Liu-CV.pdf">{copy[locale].cvLabel}<Arrow /></a></div>
+  <div class="project-index-contact shell"><a class="text-link" href={`${root}#contact`}>{t("Discuss a role with Jay")}<Arrow /></a><a class="text-link" href="/cv/Jie-Liu-CV.pdf">{copy[locale].cvLabel}<Arrow /></a></div>
 </main>
 <Footer locale={locale} />

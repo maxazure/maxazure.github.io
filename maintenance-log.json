@@ -10,17 +10,7 @@
       "type": "core"
     },
     {
-      "path": "/zh/",
-      "last_updated": "2026-10-10",
-      "type": "core"
-    },
-    {
       "path": "/projects/",
-      "last_updated": "2026-10-10",
-      "type": "collection"
-    },
-    {
-      "path": "/zh/projects/",
       "last_updated": "2026-10-10",
       "type": "collection"
     },
@@ -30,7 +20,77 @@
       "type": "core"
     },
     {
+      "path": "/zh/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/zh/projects/",
+      "last_updated": "2026-10-10",
+      "type": "collection"
+    },
+    {
       "path": "/zh/privacy/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/zh-hant/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/zh-hant/projects/",
+      "last_updated": "2026-10-10",
+      "type": "collection"
+    },
+    {
+      "path": "/zh-hant/privacy/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/ja/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/ja/projects/",
+      "last_updated": "2026-10-10",
+      "type": "collection"
+    },
+    {
+      "path": "/ja/privacy/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/fr/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/fr/projects/",
+      "last_updated": "2026-10-10",
+      "type": "collection"
+    },
+    {
+      "path": "/fr/privacy/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/ko/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/ko/projects/",
+      "last_updated": "2026-10-10",
+      "type": "collection"
+    },
+    {
+      "path": "/ko/privacy/",
       "last_updated": "2026-10-10",
       "type": "core"
     }
@@ -49,7 +109,7 @@
       ],
       "scope": "Bilingual recruitment positioning, four engineering cases, complete project indexes, owner-supplied portrait below hero and CV/contact paths",
       "evidence": "docs/positioning.md",
-      "publication": "Local preview; feature branch awaiting publication"
+      "publication": "Published from master at 8520c86; GitHub Pages run 38041508348 succeeded; all 57 live files matched the local build."
     },
     {
       "date": "2026-10-10",
@@ -57,7 +117,7 @@
         "content-refresh"
       ],
       "scope": "Owner-requested portrait shape: rounded square, 94px desktop / 76px phone, 10px corners, face-centred CSS crop",
-      "validation": "Build and seven-page HTML verifier passed. New browser screenshot not captured after user took control of the task space."
+      "validation": "Build and HTML verifier passed; subsequent six-language browser pass verified the rounded-square crop in desktop and mobile layouts."
     },
     {
       "date": "2026-10-10",
@@ -65,6 +125,19 @@
         "content-refresh"
       ],
       "scope": "Owner-requested Chinese hero name: 刘杰; English remains Jay Liu."
+    },
+    {
+      "date": "2026-10-10",
+      "actions": [
+        "content-refresh",
+        "page-created",
+        "seo-fix",
+        "sitemap-updated"
+      ],
+      "scope": "Six complete languages from English source; native translation-icon dropdown, matching page and fragment navigation; English UI without Chinese characters",
+      "evidence": "docs/localisation.md",
+      "publication": "Validated locally; owner-authorised GitHub Pages release pending",
+      "validation": "Typecheck/build/19-page verifier passed; six homepages at 1440/820/390/320px; all project/privacy routes at 1440/320px; page/fragment switching, keyboard, native no-JS, forced colours and text spacing passed."
     }
   ],
   "visibility_snapshots": [
@@ -93,7 +166,7 @@
       "date": "2026-10-10",
       "surface": "Recruitment outcome",
       "evidence": "docs/positioning.md measurement row",
-      "result": "queued",
+      "result": "observing",
       "follow_up": "Jay: assess relevant portfolio-attributed conversations during the first 28 complete days after publication; no tracking added"
     }
   ]

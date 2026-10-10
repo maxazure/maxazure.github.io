@@ -5,10 +5,14 @@
 ## Public website
 
 - [English portfolio](https://jayliu.co.nz/): Concrete project cases, background, skills, experience and contact details.
-- [中文个人网站](https://jayliu.co.nz/zh/): Chinese version of the same personal portfolio.
+- [Simplified Chinese portfolio](https://jayliu.co.nz/zh/): Chinese version of the same personal portfolio.
 - [Project collection](https://jayliu.co.nz/projects/): All 30 project examples, stages, small previews and public links.
-- [完整项目集](https://jayliu.co.nz/zh/projects/): Chinese version of the complete collection.
+- [Simplified Chinese project collection](https://jayliu.co.nz/zh/projects/): Chinese version of the complete collection.
 - [Privacy](https://jayliu.co.nz/privacy/): How this website and contact links handle information.
+- [Traditional Chinese portfolio](https://jayliu.co.nz/zh-hant/): Traditional Chinese homepage, with project and privacy counterparts.
+- [Japanese portfolio](https://jayliu.co.nz/ja/): Japanese version of the same facts and projects.
+- [French portfolio](https://jayliu.co.nz/fr/): French version of the same facts and projects.
+- [Korean portfolio](https://jayliu.co.nz/ko/): Korean version of the same facts and projects.
 
 Jay is a volunteer AI Coach for HiLily, providing technical guidance; its team reports a functional MVP preparing for pilots. The accounting assistant prepares records and exports for human review. CodexView is publicly inspectable source. The enterprise CRM is an internal system. FNZ client assignments and implementations are confidential; independent AI work is not attributed to FNZ.
 

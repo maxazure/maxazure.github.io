@@ -1,0 +1,455 @@
+{
+  "copy": {
+    "skip": "本文へ移動",
+    "menu": "メニュー",
+    "navLabel": "メインナビゲーション",
+    "nav": [
+      [
+        "about",
+        "プロフィール"
+      ],
+      [
+        "portfolio",
+        "主な実績"
+      ],
+      [
+        "resume",
+        "職歴"
+      ],
+      [
+        "skills",
+        "専門分野"
+      ],
+      [
+        "contact",
+        "お問い合わせ"
+      ]
+    ],
+    "location": "ニュージーランド、オークランド",
+    "heroDomains": [
+      "エンタープライズソフトウェア",
+      "AI 活用システム",
+      "エージェントのワークフロー"
+    ],
+    "role": "シニア\nソフトウェア\nエンジニア",
+    "heroIntro": "業務の流れを捉え、既存システムと AI をつなぐ。",
+    "heroBody": "ERP／CRM から金融プラットフォームの開発・導入まで、企業向けソフトウェアに18年以上携わってきました。その経験を土台に、AI エージェント、知識検索、音声システムを構築しています。",
+    "heroSpecialism": "企業向け AI 活用・FinTech",
+    "viewWork": "主な実績を見る",
+    "cvLabel": "職務経歴書（英語・PDF）",
+    "focus": "AI を活用したシステムの開発",
+    "aboutLabel": "プロフィール",
+    "aboutHeading": "業務への理解と、\n確かな開発力。",
+    "aboutLead": "業務プロセスの理解から、実際に使えるソフトウェアの実装まで取り組んでいます。",
+    "aboutBody": "オークランドを拠点とするソフトウェアエンジニア、Jay（Jie Liu）です。中国とニュージーランドで、ERP／CRM、小売業向けソフトウェア、医療情報システム、金融プラットフォームに携わり、開発、アーキテクチャ設計、チーム運営を経験してきました。",
+    "aboutBody2": "FNZ では、ソフトウェアの開発・デリバリーを中心に担当しています。個人プロジェクトでは、AI モデル、ツール、データを実務のワークフローにつなぎ、明確な検証手順、障害からの復旧、人の判断が必要な場面でのレビューを組み込んでいます。",
+    "skillLabel": "専門分野",
+    "skillHeading": "業務要件から、\n動くシステムへ。",
+    "skillIntro": "業務モデリング、システム連携、開発・導入を、企業向けソフトウェアと AI 活用の技術で支えます。",
+    "skills": [
+      {
+        "name": "企業向けソフトウェア",
+        "summary": "ERP／CRM、金融プラットフォーム、業務アプリケーションのデータ設計から開発・導入まで。",
+        "items": [
+          "C# · .NET · ASP.NET Core",
+          "React · TypeScript · Astro",
+          "Python · FastAPI · Node.js",
+          "SQL Server · PostgreSQL · REST APIs"
+        ]
+      },
+      {
+        "name": "AI 活用・エージェント",
+        "summary": "モデルとツールを連携し、情報の出所とレビューが必要な範囲を明確に保ちます。",
+        "items": [
+          "エージェント制御 · MCP · LLM 統合",
+          "RAG · 知識検索 · エージェントの記憶",
+          "ASR · VAD · TTS · 音声処理フロー",
+          "Claude Code · Codex · OpenCode"
+        ]
+      },
+      {
+        "name": "クラウド・デリバリー",
+        "summary": "本番環境への導入から、その後の運用・保守まで。",
+        "items": [
+          "Azure · Cloudflare · Linux",
+          "Docker · CI/CD · GitHub Actions",
+          "設計 · テスト · コードレビュー",
+          "可観測性 · 本番運用サポート"
+        ]
+      },
+      {
+        "name": "システム連携",
+        "summary": "変更が加わっても振る舞いを予測できるインターフェースとデータフローを設計します。",
+        "items": [
+          "型付き API · スキーマ検証",
+          "冪等性 · 楽観的同時実行制御",
+          "情報源の追跡 · 実行権限の境界",
+          "レスポンシブ UI · アクセシビリティ"
+        ]
+      }
+    ],
+    "experienceLabel": "職歴",
+    "experienceHeading": "企業システムの現場で重ねてきた経験。",
+    "experienceIntro": "ERP／CRM、小売業務ソフトウェア、医療情報システム、企業向け金融プラットフォームでの開発実務とチーム運営。",
+    "experience": [
+      {
+        "date": "2022年10月 - 現在",
+        "role": "Analyst Developer",
+        "company": "FNZ Group",
+        "place": "ニュージーランド、オークランド",
+        "description": "C# と .NET を使い、企業向け金融プラットフォームの開発・デリバリーに従事。",
+        "responsibilities": [
+          "要件を分析し、実装可能なアプリケーションの変更内容に落とし込む。",
+          "保守性と既存機能への影響を考慮し、開発、テスト、コードレビューを行う。",
+          "アナリスト、開発者、テスター、関連するデリバリーチームと連携し、問題の調査とリリースを支援する。"
+        ],
+        "note": "顧客案件と具体的な実装内容は、守秘義務のため公開していません。"
+      },
+      {
+        "date": "2022年2月 - 7月",
+        "role": "情報技術講師",
+        "company": "Southern Institute of Technology",
+        "place": "ニュージーランド、インバーカーギル",
+        "description": "プログラミングの基礎とソフトウェア工学を指導。実習授業と個別指導を担当。"
+      },
+      {
+        "date": "2020 - 2022年",
+        "role": "フルスタックエンジニア（パートタイム）",
+        "company": "小売業",
+        "place": "中国、広州",
+        "description": ".NET Core、REST API、MySQL、Vue.js を使った請求・販売管理ソフトウェアの開発と保守。小売業の要件をアプリケーションの改善に反映。"
+      },
+      {
+        "date": "2018 - 2021年",
+        "role": "フルスタックエンジニア",
+        "company": "Best IT Solution / Hangzhou Xianbing Technology",
+        "place": "ニュージーランド・中国",
+        "description": "Flask、REST API、MySQL、React、Redux を使った業務用 Web システムと SMS プラットフォームの開発。"
+      },
+      {
+        "date": "2011 - 2017年",
+        "role": "ソフトウェア開発チームリーダー",
+        "company": "企業向けソフトウェア・コンサルティング",
+        "place": "中国、北京",
+        "description": "企業情報システムのコンサルティングと開発・導入を主導。ミドルウェア、データベース設計、サーバー導入を担当。"
+      },
+      {
+        "date": "2008 - 2011年",
+        "role": "情報技術部門責任者",
+        "company": "医療分野",
+        "place": "中国、北京",
+        "description": "病院管理情報システムの設計と開発チームの運営を担当。医療関連 Web サイトの構築・保守も実施。"
+      }
+    ],
+    "educationLabel": "学歴",
+    "education": "情報技術修士",
+    "educationSchool": "Southern Institute of Technology · 2019-2021",
+    "educationNote": "研究関心は対話型 AI と生成モデル。",
+    "contactLabel": "お問い合わせ",
+    "contactHeading": "業務と開発をつなぐ仕事について、\nお話ししませんか。",
+    "contactBody": "シニアソフトウェアエンジニアリング、企業向け AI 統合、顧客の現場で導入を担う Forward Deployed Engineering（FDE）に関心があります。募集職種、解決したい業務課題、チームの状況をお知らせください。",
+    "emailLabel": "Jay にメールする",
+    "personalNote": "個人プロジェクトと意見は、私個人のものです。",
+    "privacy": "プライバシー",
+    "backHome": "ホームへ戻る",
+    "footerRole": "ソフトウェアエンジニア・ツール開発者",
+    "privacyTitle": "プライバシー | Jay Liu",
+    "privacyHeading": "シンプルなサイト。\n情報の扱いも明確に。",
+    "privacyIntro": "Jay Liu の個人ポートフォリオです。これまでの仕事を紹介し、連絡先へのリンクを掲載しています。",
+    "privacySections": [
+      [
+        "サイトの閲覧",
+        "本サイトのアプリケーションコードには、お問い合わせフォーム、広告トラッカー、アクセス解析スクリプト、Cookie の設定はありません。フォントと画像はサイトとともに配信しています。ホスティングサービスの GitHub Pages は、独自のプライバシーポリシーに基づき、IP アドレスやリクエストログなどの技術情報を処理する場合があります。"
+      ],
+      [
+        "メールと外部リンク",
+        "メールリンクを選ぶと、ご利用のメールアプリが開きます。メールをいただいた場合、記載された情報を内容の確認と返信に使用します。プロジェクトやプロフィールのリンク先には、それぞれのプライバシーポリシーが適用されます。"
+      ],
+      [
+        "ご質問",
+        "私に提供した情報に関するご質問、または閲覧・訂正のご希望は、maxazure@gmail.com までご連絡ください。"
+      ]
+    ],
+    "updatedLabel": "更新日：2026年10月10日",
+    "heroName": "Jay Liu",
+    "portraitName": "Jie Liu"
+  },
+  "ui": {
+    "Engineering focus": "技術の重点領域",
+    "From architecture to delivery": "設計から導入まで",
+    "Jay Liu": "Jay Liu",
+    "Open-source work": "オープンソース",
+    "Follow the implementation.": "実装を確かめる。",
+    "Source, workflow instructions and examples you can inspect.": "ソースコード、ワークフローの説明、使用例を公開しています。",
+    "Transcript-led editing, FFmpeg rendering and artifact checks.": "文字起こしを起点にした編集、FFmpeg による出力、成果物の検証。",
+    "Transcript adapters, a React viewer and a Markdown CLI.": "会話ログのアダプター、React ビューアー、Markdown CLI。",
+    "Traceable bookkeeping workflows and exports for review.": "出所を追跡できる記帳フローと、確認用データの出力。",
+    "Jay’s profiles": "Jay の外部プロフィール",
+    "Projects & engineering work.": "プロジェクトと開発実績。",
+    "Enterprise systems, applied AI, developer tools and earlier work. For the business context, my role and engineering decisions, start with the four selected cases.": "企業システム、AI 活用、開発ツール、過去のプロジェクトをまとめています。業務背景、担当範囲、設計上の判断は、4件の主な実績で紹介しています。",
+    "Read the selected engineering cases": "主な実績を詳しく見る",
+    "Discuss a role with Jay": "採用について Jay に相談する",
+    "Complete project collection": "全プロジェクト",
+    "A wider view of the work.": "取り組みの全体像。",
+    "project examples": "件のプロジェクト",
+    "AI systems, voice workflows, enterprise software and web applications. Client work is anonymised; previews include screenshots and illustrative interfaces.": "AI システム、音声ワークフロー、企業向けソフトウェア、Web アプリケーション。顧客案件は匿名化し、プレビューには画面のスクリーンショットと説明用のイメージを使用しています。",
+    "AI interface illustration": "AI 生成の画面イメージ",
+    "Current site": "現在のサイト",
+    "Demo & team": "デモとチーム",
+    "Visit website": "サイトを見る",
+    "Selected engineering work": "主な開発実績",
+    "From business problems to working systems.": "業務課題を、動くシステムへ。",
+    "Four examples of how I approach business software and applied AI, with my role and the available evidence made explicit.": "業務ソフトウェアと AI 活用への取り組みを4件の事例で紹介します。担当した仕事と、公開できる成果をそれぞれ明示しています。",
+    "Technologies and focus": "技術と重点領域",
+    "View the anonymised preview": "匿名化したプレビューを見る",
+    "My role": "担当した仕事",
+    "Constraint & decision": "制約と設計上の判断",
+    "Current evidence": "現在の成果と公開資料",
+    "More enterprise systems, AI tools, voice workflows and earlier projects.": "企業システム、AI ツール、音声ワークフロー、過去のプロジェクトも紹介しています。",
+    "Explore all 30 projects": "全30件のプロジェクトを見る",
+    "More project categories": "その他のプロジェクト分類",
+    "Enterprise systems": "企業システム",
+    "AI & engineering tools": "AI・開発ツール",
+    "Web applications": "Web アプリケーション",
+    "Earlier work": "過去のプロジェクト",
+    "Languages": "言語を選択",
+    "Jay Liu home": "Jay Liu ホーム",
+    "GitHub Privacy Statement": "GitHub プライバシーステートメント",
+    "English": "英語",
+    "Simplified Chinese": "中国語（簡体字）",
+    "Traditional Chinese": "中国語（繁体字）",
+    "Japanese": "日本語",
+    "French": "フランス語",
+    "Korean": "韓国語",
+    "Website": "Web サイト",
+    "Private system": "非公開システム",
+    "Development instance": "開発環境",
+    "Prototype": "プロトタイプ",
+    "Open source": "オープンソース",
+    "Historical project": "過去のプロジェクト",
+    "Archived project": "アーカイブ",
+    "MVP · preparing for pilots": "MVP · 試験導入の準備中",
+    "Internal operational system": "社内運用中のシステム",
+    "AI Agents": "AI エージェント"
+  },
+  "meta": {
+    "homeTitle": "Jay Liu | シニアソフトウェアエンジニア | 企業向け AI・FinTech",
+    "homeDescription": "オークランドのソフトウェアエンジニア Jay Liu。企業向けソフトウェアに18年以上携わり、FNZ で金融プラットフォームの開発・デリバリーを担当。個人で AI 活用システムを開発しています。",
+    "projectsTitle": "プロジェクトと開発実績 | Jay Liu",
+    "projectsDescription": "企業向けソフトウェア、AI 活用、音声ワークフロー、オープンソース開発ツールなど、Jay Liu の30件のプロジェクト。各案件の段階と公開資料を紹介します。",
+    "socialAlt": "Jay Liu。シニアソフトウェアエンジニア。FinTech、クラウド、AI 活用。ニュージーランド、オークランド。"
+  },
+  "featured": {
+    "transactional-crm": {
+      "name": "企業向け CRM",
+      "category": "業務システム",
+      "stage": "社内運用中のシステム",
+      "tags": [
+        "Python / FastAPI",
+        "PostgreSQL",
+        "型付き API / CLI"
+      ],
+      "problem": "人とソフトウェアエージェントが同じ業務データを更新する環境では、顧客関係、プロジェクト、請求書を一貫した記録として管理する必要があります。",
+      "role": "アプリケーション、API、CLI を設計・実装し、構造化された業務データとバージョン管理されたノートを連携させました。",
+      "decision": "再試行や同時編集は、重複登録や上書きにつながります。書き込みの冪等性とバージョンチェックによって安全な再試行を可能にし、競合は明示して解決できるようにしました。",
+      "evidence": "変更履歴と書き込み制御を備えた社内ワークフローを実装しています。全プロジェクトのページでは空データのプレビューを公開し、実際の業務記録とシステムへの接続先は非公開にしています。"
+    },
+    "bookkeeping-assistant": {
+      "name": "NZ Accounting Assistant",
+      "category": "経理ワークフロー",
+      "stage": "オープンソースのワークフロー",
+      "tags": [
+        "構造化レコード",
+        "照合",
+        "Python"
+      ],
+      "problem": "領収書や銀行明細はさまざまな形式で届きます。確認可能な帳簿を作るには、元の証憑を残しながら各記録を照合する必要があります。",
+      "role": "証憑の取り込み、帳簿の作成、照合、エクスポートをつなぐ再利用可能なスキルと補助ツールを開発しました。",
+      "decision": "不確かな照合結果を曖昧なまま処理しないようにしています。元ファイルを保持し、記録を JSON に正規化して、判断の分かれる項目は人が確認してから出力資料を準備します。",
+      "evidence": "公開しているワークフローとスクリプトには、Xero 用 CSV の出力や会計担当者向け確認資料の作成が含まれます。財務記録と最終判断は人による確認を前提としています。",
+      "linkLabel": "ワークフローとソースを見る"
+    },
+    "voice-companion": {
+      "name": "HiLily",
+      "category": "AI システム連携",
+      "stage": "動作する MVP · 試験導入の準備中",
+      "tags": [
+        "対話型 AI",
+        "記憶",
+        "音声処理"
+      ],
+      "problem": "高齢者向けの音声コンパニオンでは、組み込み端末とクラウドサービスの間で、音声、対話、記憶を一体として動かす必要があります。",
+      "role": "ボランティアの AI Coach として、AI アーキテクチャ、対話の記憶、音声処理についてチームに技術的な助言をしています。製品はチームで開発しています。",
+      "decision": "端末の音声、モデルの応答、保持する文脈には、それぞれ異なる制約があります。AI 処理パイプラインと端末側の音声処理を通じて各要素をどうつなぐかに重点を置いて助言しています。",
+      "evidence": "プロジェクトのサイトでデモと私の役割を確認できます。チームは動作する MVP を作り、複数回の改良を経て、実環境での試験導入を準備していると公表しています。",
+      "linkLabel": "デモとチームを見る"
+    },
+    "codexview": {
+      "name": "CodexView",
+      "category": "開発ツール",
+      "stage": "オープンソースのパッケージ",
+      "tags": [
+        "TypeScript",
+        "React",
+        "会話ログのアダプター"
+      ],
+      "problem": "コーディングエージェントごとに会話ログの形式が異なります。ツール呼び出しや入れ子のセッションを、共通の方法で確認できるようにしたいと考えました。",
+      "role": "会話ログのアダプター、React コンポーネント、Markdown CLI を、再利用可能なパッケージとして開発しました。",
+      "decision": "形式の解析と表示を分離しました。アダプターは共通のイベントモデルを出力し、ツールやサブエージェントの文脈を保ちながら、画面上の会話表示と簡潔なテキスト出力の両方を支えます。",
+      "evidence": "公開リポジトリには3つのパッケージ、使用例、テスト用データが含まれています。非公開のワークベンチにアクセスせずに、実装を確認できます。",
+      "linkLabel": "パッケージとソースを見る"
+    }
+  },
+  "projects": {
+    "voice-companion": {
+      "name": "HiLily · 音声コンパニオン",
+      "description": "ボランティアの AI Coach として、AI アーキテクチャ、対話の記憶、音声処理について助言しています。チームで開発した動作する MVP は試験導入の準備段階にあり、公開サイトでデモと各メンバーの役割を確認できます。",
+      "alt": "AI 生成の画面イメージ：HiLily · 音声コンパニオン"
+    },
+    "web-builder-agent": {
+      "name": "Web Builder Agent · Web サイト制作・公開フロー",
+      "description": "調査、デザイン、構築、検証、公開をつなぐ一連のワークフロー。再利用可能な工程とエージェント設定で Claude Code、Codex、OpenCode に対応し、実行の記録、再試行、レビューの節目を組み込んでいます。",
+      "alt": "AI 生成の画面イメージ：Web Builder Agent · Web サイト制作・公開フロー"
+    },
+    "idea-builder": {
+      "name": "Idea Builder · マルチエージェント開発",
+      "description": "アイデアを計画、実装、テスト、デプロイへ段階的に進めるソフトウェア開発システム。コーディングエージェントの切り替え、逐次出力、セッションの再開に対応しています。",
+      "alt": "AI 生成の画面イメージ：Idea Builder · マルチエージェント開発"
+    },
+    "agent-workbench": {
+      "name": "AgentWeb · AI 開発ワークベンチ",
+      "description": "コーディングエージェントのセッション、逐次配信されるツールイベント、ワークスペースの成果物を扱うブラウザ型ワークベンチ。React、TypeScript、Fastify で構築しています。",
+      "alt": "情報を匿名化した縮小スクリーンショット：AgentWeb · AI 開発ワークベンチ"
+    },
+    "voice-capture": {
+      "name": "Voice2Task · 音声の収集と意図処理",
+      "description": "Android で VAD による音声分割、AAC エンコード、再試行可能なアップロードを行い、サーバー側で文字起こしと文脈を踏まえた音声リクエスト処理につなげます。",
+      "alt": "AI 生成の画面イメージ：Voice2Task · 音声の収集と意図処理"
+    },
+    "writing-assessment": {
+      "name": "教育分野 · AI ライティング評価",
+      "description": "評価基準に沿った AI フィードバック、教員による確認、役割別アクセス制御を組み合わせた評価アプリ。構造化された評価記録と、採点結果を修正できるワークフローを備えています。",
+      "alt": "AI 生成の画面イメージ：教育分野 · AI ライティング評価"
+    },
+    "knowledge-memory": {
+      "name": "知識と記憶 · 根拠をたどれるワークフロー",
+      "description": "情報源に基づく知識管理のプロトタイプ。有効性の確認、レビュー済みの記録、根拠を追跡できる検索を組み合わせています。",
+      "alt": "情報を匿名化した縮小スクリーンショット：知識と記憶 · 根拠をたどれるワークフロー"
+    },
+    "agentmeshkit": {
+      "name": "AgentMeshKit · エージェントワークベンチ SDK",
+      "description": "エージェント用ワークベンチの開発から切り出したモジュール型ツールキット。共通イベントプロトコル、CLI ランナー、会話コンポーネント、成果物、タスク状態を扱います。",
+      "alt": "AI 生成の画面イメージ：AgentMeshKit · エージェントワークベンチ SDK"
+    },
+    "codexview": {
+      "name": "CodexView · エージェント会話ログの表示",
+      "description": "コーディングエージェントの会話ログを読むための React コンポーネント、アダプター、Markdown CLI。ツールイベントと入れ子のセッションを保ち、一貫した形式で表示します。",
+      "alt": "AI 生成の画面イメージ：CodexView · エージェント会話ログの表示"
+    },
+    "capability-vault": {
+      "name": "Agent Capability Vault · 設定の同期",
+      "description": "エージェントへの指示、スキル、ツール接続、端末の機能設定を、複数の開発端末で管理するデスクトップアプリと LAN 同期システム。",
+      "alt": "AI 生成の画面イメージ：Agent Capability Vault · 設定の同期"
+    },
+    "agent-home": {
+      "name": "AgentHome · 永続的なエージェントワークスペース",
+      "description": "コーディングエージェント向けの再利用可能な作業ディレクトリ用ツールキット。指示テンプレート、Markdown の記憶、リマインダー、CLI 保守ツールを永続的な環境にまとめています。",
+      "alt": "AI 生成の画面イメージ：AgentHome · 永続的なエージェントワークスペース"
+    },
+    "browser-test-workspace": {
+      "name": "ブラウザテスト · 分離された作業環境",
+      "description": "機能確認向けのコンテナ化されたデスクトップブラウザ環境。ブラウザプロファイルの保持、テスト成果物の記録、バックアップと復元に対応しています。",
+      "alt": "AI 生成の画面イメージ：ブラウザテスト · 分離された作業環境"
+    },
+    "hardware-control": {
+      "name": "ハードウェア制御 · 画像から HID 操作へ",
+      "description": "ESP32-S3 のキーボード・マウスブリッジを、ホスト側の画面キャプチャと判断ツールに接続。画面の観察を、制御された USB HID 操作につなげます。",
+      "alt": "AI 生成の画面イメージ：ハードウェア制御 · 画像から HID 操作へ"
+    },
+    "local-narration": {
+      "name": "ローカル音声合成 · ナレーションツール",
+      "description": "既存の VoxCPM2 モデルを CLI とサービスに統合。原稿入力、音声設定、試聴、WAV／MP3 出力を、繰り返し実行できるナレーション制作フローにまとめています。",
+      "alt": "AI 生成の画面イメージ：ローカル音声合成 · ナレーションツール"
+    },
+    "live-interpretation": {
+      "name": "音声翻訳 · リアルタイム字幕",
+      "description": "入力音声を分割して文字起こしに送り、翻訳字幕を表示する Android の通訳プロトタイプ。継続的な音声処理フローとして実装しています。",
+      "alt": "AI 生成の画面イメージ：音声翻訳 · リアルタイム字幕"
+    },
+    "speech-tooling": {
+      "name": "OmniVoice TTS Skill",
+      "description": "既存の OmniVoice エンジン用コマンドラインラッパー。ローカルでの音声生成を、繰り返し実行できるワークフローとして利用できます。",
+      "alt": "AI 生成の画面イメージ：OmniVoice TTS Skill"
+    },
+    "lan-microphone": {
+      "name": "AirMicLAN · ネットワークマイク",
+      "description": "Bonjour による端末検出と TCP 音声ストリーミングで、2台の Mac をつなぐマイクブリッジ。PCM 音声を収集し、受信側の仮想オーディオ入力へ渡します。",
+      "alt": "AI 生成の画面イメージ：AirMicLAN · ネットワークマイク"
+    },
+    "video-editing": {
+      "name": "Video Editing Skill",
+      "description": "文字起こしを起点にした動画編集と、再現可能なメディア出力。Python、FFmpeg、成果物の検証を組み合わせています。",
+      "alt": "AI 生成の画面イメージ：Video Editing Skill"
+    },
+    "editorial-workflow": {
+      "name": "AI 編集ワークフロー · レビュー後の公開",
+      "description": "情報源を踏まえた原稿作成パイプライン。テーマの計画、記事生成、メタデータ、内容の検証をつなぎ、公開前にレビューを行います。",
+      "alt": "AI 生成の画面イメージ：AI 編集ワークフロー · レビュー後の公開"
+    },
+    "media-workspace": {
+      "name": "メディアワークフロー · Android 作業環境",
+      "description": "文案、画像、動画を素材パッケージとして整理する Android アプリと API。エージェントからのリクエストを処理し、成果物をスマートフォンへ届けます。",
+      "alt": "AI 生成の画面イメージ：メディアワークフロー · Android 作業環境"
+    },
+    "bookkeeping-assistant": {
+      "name": "NZ Accounting Assistant",
+      "description": "領収書と銀行明細の正規化、構造化された帳簿の作成、人が確認するための照合資料を準備するツール。",
+      "alt": "AI 生成の画面イメージ：NZ Accounting Assistant"
+    },
+    "operations-erp": {
+      "name": "観光業 · 業務運営 ERP",
+      "description": "計画、商品・SKU カタログ、受注、調達、業務リマインダーをつなぐ ERP の開発環境。権限管理と監査記録を備えています。",
+      "alt": "空データの小さなデモ画面：観光業 · 業務運営 ERP"
+    },
+    "transactional-crm": {
+      "name": "業務管理 · 企業向け CRM",
+      "description": "顧客関係、プロジェクト、請求、業務記録を一つの基盤で管理。PostgreSQL、型付き API、書き込み制御、変更履歴を組み合わせています。",
+      "alt": "情報を匿名化した縮小スクリーンショット：業務管理 · 企業向け CRM"
+    },
+    "tourism": {
+      "name": "観光業 · 旅行 Web サイト",
+      "description": "旅行商品、旅程、問い合わせの導線を整理したサイト。再利用可能なページと構造化メタデータで構成しています。",
+      "alt": "情報を匿名化した縮小スクリーンショット：観光業 · 旅行 Web サイト"
+    },
+    "transport": {
+      "name": "運輸業 · サービス Web サイト",
+      "description": "サービス情報、問い合わせの流れ、モバイルナビゲーションをわかりやすく整理した2言語対応サイト。",
+      "alt": "情報を匿名化した縮小スクリーンショット：運輸業 · サービス Web サイト"
+    },
+    "accounting": {
+      "name": "会計分野 · サービスと情報記事",
+      "description": "専門サービスを紹介する2言語対応サイト。体系的な記事ライブラリと、保守しやすいコンテンツモデルを備えています。",
+      "alt": "情報を匿名化した縮小スクリーンショット：会計分野 · サービスと情報記事"
+    },
+    "finance-archive": {
+      "name": "金融分野 · デジタル資産プラットフォーム",
+      "description": "過去に取り組んだデジタル資産の Web プロジェクト。プレビューは当時のもので、現在のドメインは案内用の仮ページを表示しています。",
+      "alt": "情報を匿名化した縮小スクリーンショット：金融分野 · デジタル資産プラットフォーム"
+    },
+    "medical-archive-a": {
+      "name": "医療分野 · サービス Web サイト",
+      "description": "サービス分類、チーム情報、問い合わせ方法を紹介する、過去の医療関連 Web サイト。",
+      "alt": "情報を匿名化した縮小スクリーンショット：医療分野 · サービス Web サイト"
+    },
+    "consumer-app-archive": {
+      "name": "消費者向けアプリ · 支出と活動の記録",
+      "description": "支出と活動を記録するモバイルアプリのプロジェクト。紹介用の Web サイトも作成しました。",
+      "alt": "情報を匿名化した縮小スクリーンショット：消費者向けアプリ · 支出と活動の記録"
+    },
+    "medical-archive-b": {
+      "name": "医療分野 · 専門サービス Web サイト",
+      "description": "専門的な医療サービスと患者向け情報を紹介する、過去の Web サイト。",
+      "alt": "情報を匿名化した縮小スクリーンショット：医療分野 · 専門サービス Web サイト"
+    }
+  }
+}

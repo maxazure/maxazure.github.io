@@ -22,7 +22,7 @@ The primary path is homepage positioning → four engineering cases → professi
 
 | Change | Hypothesis / scope | Primary outcome | Guardrails | Baseline / period | Release evidence | Observation window | Segments | Result source | Decision | Owner |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| recruiting-2026-10 | Clear fit + attributable cases help relevant hiring teams start a conversation; both homepages and project indexes | Relevant recruitment conversations where the sender mentions the portfolio | Confidentiality; accurate role/stage; working CV/contact links; mobile readability; unchanged animation | No existing conversion analytics or comparable count; old homepage gives 30 equal-weight cards | Branch commit and local build; publication separately recorded if performed | First 28 full days after publication; no calendar reminder created | Recruitment source and role interest, manually recorded only if volunteered | Owner's manual count; no new tracking or data collection | planned; no result claimed | Jay |
+| recruiting-2026-10 | Clear fit + attributable cases help relevant hiring teams start a conversation; both homepages and project indexes | Relevant recruitment conversations where the sender mentions the portfolio | Confidentiality; accurate role/stage; working CV/contact links; mobile readability; unchanged animation | No existing conversion analytics or comparable count; old homepage gives 30 equal-weight cards | Published source 8520c86; Pages run 38041508348 | First 28 full days after publication; no calendar reminder created | Recruitment source and role interest, manually recorded only if volunteered | Owner's manual count; no new tracking or data collection | observing; no result claimed | Jay |
 
 ## Implementation and acceptance plan
 
@@ -51,3 +51,6 @@ The installed website skill's optional Impeccable package is unavailable after s
 Portrait follow-up: the owner requested a square or circular frame. Applied a 10px rounded square using CSS object-fit cover at center 40%; 94px desktop, 76px phone, 60px print. Build and HTML verification pass. The subsequent browser capture was stopped because the browser task space was under user control; no new crop screenshot is claimed.
 
 Name follow-up: display “刘杰” in the Chinese hero name and retain “Jay Liu” in English. This is an intentional Chinese H1 wording change; canonical identity and metadata remain bilingual.
+
+
+Publication: the owner explicitly authorised push and deployment. Commit `8520c86` was fast-forwarded to master and [Pages run 38041508348](https://github.com/maxazure/maxazure.github.io/actions/runs/38041508348) succeeded. All 57 live release files matched the local build; seven-page contracts, HTTP-to-HTTPS/www redirects and custom 404 passed. The subsequent six-language work is recorded in [localisation.md](localisation.md).

@@ -1,4 +1,6 @@
-export type Locale = 'en' | 'zh';
+import { content } from './content';
+import { localeCodes, type Locale } from '../lib/locales';
+export type { Locale } from '../lib/locales';
 
 export const profile = {
   name: 'Jay Liu',
@@ -9,9 +11,6 @@ export const profile = {
   employer: 'FNZ Group',
   role: 'Analyst Developer',
   updated: '2026-10-10',
-  // Preserve the search identity; distinguish employment from independent AI work.
-  title: 'Jay Liu - Senior Software Engineer | FinTech | .NET | React | Cloud | AI Integration',
-  description: 'Jay Liu, senior software engineer in Auckland. 18+ years in enterprise software, financial-platform delivery at FNZ, and independent applied AI projects.',
   keywords: 'Jay Liu, senior software engineer, FinTech, .NET, ASP.NET Core, React, TypeScript, Azure, microservices, AI integration, AI agent, full stack developer, Auckland, New Zealand, FNZ',
   social: [
     { label: 'GitHub', href: 'https://github.com/maxazure' },
@@ -20,98 +19,4 @@ export const profile = {
   ],
 } as const;
 
-export const copy = {
-  en: {
-    lang: 'en-NZ', switchLabel: '中文', switchHref: '/zh/',
-    skip: 'Skip to content', menu: 'Menu', navLabel: 'Main navigation',
-    nav: [ ['about', 'About'], ['portfolio', 'Selected work'], ['resume', 'Experience'], ['skills', 'Capabilities'], ['contact', 'Contact'] ],
-    location: 'Auckland, New Zealand',
-    heroDomains: ['Enterprise software', 'Applied AI systems', 'Agent workflows'],
-    role: 'Senior Software Engineer',
-    heroIntro: 'Connecting business workflows, existing systems and AI.',
-    heroBody: '18+ years in enterprise software, from ERP/CRM to financial-platform delivery. I bring that foundation to AI agents, knowledge retrieval and voice systems.',
-    heroSpecialism: 'Enterprise AI & FinTech',
-    viewWork: 'See selected work', cvLabel: 'CV (PDF)',
-    focus: 'Building applied AI systems',
-    aboutLabel: 'About me', aboutHeading: 'Business context.\nEngineering depth.',
-    aboutLead: 'I work from the business process through to the software people use.',
-    aboutBody: 'I’m Jay (Jie Liu), a software engineer based in Auckland. My background spans ERP/CRM, retail software, healthcare systems and financial platforms in China and New Zealand, including development, architecture and team leadership.',
-    aboutBody2: 'At FNZ, my work focuses on software delivery. In my independent projects, I connect AI models, tools and data to practical workflows, with explicit checks, recoverable failures and human review where judgement is needed.',
-    skillLabel: 'Technical capabilities', skillHeading: 'From a business requirement\nto a working system.',
-    skillIntro: 'Business modelling, system integration and delivery, supported by a practical enterprise and AI toolkit.',
-    skills: [
-      { name: 'Enterprise software', summary: 'ERP/CRM, financial platforms and business applications, from data models to delivery.', items: ['C# · .NET · ASP.NET Core', 'React · TypeScript · Astro', 'Python · FastAPI · Node.js', 'SQL Server · PostgreSQL · REST APIs'] },
-      { name: 'Applied AI & agents', summary: 'Integrating models and tools, retaining source context and review boundaries.', items: ['Agent orchestration · MCP · LLM integration', 'RAG · Knowledge retrieval · Agent memory', 'ASR · VAD · TTS · Speech workflows', 'Claude Code · Codex · OpenCode'] },
-      { name: 'Cloud & delivery', summary: 'Taking systems into production and looking after them once they’re there.', items: ['Azure · Cloudflare · Linux', 'Docker · CI/CD · GitHub Actions', 'Architecture · Testing · Code review', 'Observability · Production support'] },
-      { name: 'Systems integration', summary: 'Designing interfaces and data flows that remain predictable under change.', items: ['Typed APIs · Schema validation', 'Idempotency · Optimistic concurrency', 'Source provenance · Execution boundaries', 'Responsive UI · Accessibility'] },
-    ],
-    experienceLabel: 'Experience', experienceHeading: 'Enterprise software, built over time.',
-    experienceIntro: 'ERP/CRM, retail business software, healthcare information systems and enterprise financial platforms, with hands-on development and team leadership.',
-    experience: [
-      { date: 'Oct 2022 - Present', role: 'Analyst Developer', company: 'FNZ Group', place: 'Auckland, New Zealand', description: 'Delivery-focused engineering on enterprise financial platforms with C# and .NET.', responsibilities: ['Analyse requirements and translate them into implementable application changes.', 'Develop, test and review changes, with attention to maintainability and regression risk.', 'Investigate issues and support releases with analysts, developers, testers and wider delivery teams.'], note: 'Client assignments and implementation details are confidential.' },
-      { date: 'Feb - Jul 2022', role: 'Information Technology Tutor', company: 'Southern Institute of Technology', place: 'Invercargill, New Zealand', description: 'Teaching programming fundamentals and software engineering, with practical coursework and individual mentoring.' },
-      { date: '2020 - 2022', role: 'Full Stack Developer (part-time)', company: 'Retail industry', place: 'Guangzhou, China', description: 'Developing and maintaining invoicing and sales management software with .NET Core, REST APIs, MySQL and Vue.js, translating retailer requirements into application changes.' },
-      { date: '2018 - 2021', role: 'Full Stack Developer', company: 'Best IT Solution / Hangzhou Xianbing Technology', place: 'New Zealand & China', description: 'Developing commercial web systems and SMS platforms with Flask, REST APIs, MySQL, React and Redux.' },
-      { date: '2011 - 2017', role: 'Software Development Team Leader', company: 'Enterprise software & consulting', place: 'Beijing, China', description: 'Leading enterprise information-system consulting and delivery, including middleware, database architecture and server deployments.' },
-      { date: '2008 - 2011', role: 'Information Technology Director', company: 'Healthcare industry', place: 'Beijing, China', description: 'Designing a hospital management information system and leading the development team, alongside delivery and maintenance of healthcare websites.' },
-    ],
-    educationLabel: 'Education', education: 'Master of Information Technology', educationSchool: 'Southern Institute of Technology · 2019-2021', educationNote: 'Research interests in conversational AI and generative models.',
-    contactLabel: 'Contact', contactHeading: 'Have a role that connects\nbusiness and engineering?',
-    contactBody: 'I’m interested in senior software engineering, enterprise AI integration and forward deployed engineering (FDE). Send me the role, the business problem and the team context to start a conversation.',
-    emailLabel: 'Email Jay',
-    personalNote: 'Personal projects and views are my own.', privacy: 'Privacy', backHome: 'Back to home', footerRole: 'Software engineer & builder',
-    privacyTitle: 'Privacy | Jay Liu', privacyHeading: 'A simple site. A clear policy.',
-    privacyIntro: 'This is Jay Liu’s personal portfolio. It provides information about my work and links to ways to contact me.',
-    privacySections: [
-      ['Browsing this site', 'This site has no contact form, advertising trackers, analytics scripts or cookies set by its application code. Fonts and graphics are served with the site. GitHub Pages hosts the website and may process technical information such as IP addresses and request logs under its own privacy policy.'],
-      ['Email and external links', 'Email links open your own email application. If you email me, I use the details you provide to read and respond to your message. Project and profile links take you to external websites with their own privacy policies.'],
-      ['Questions', 'Contact maxazure@gmail.com if you have a question about information you have shared with me, or want to request access or correction.'],
-    ],
-    updatedLabel: 'Updated 10 October 2026',
-  },
-  zh: {
-    lang: 'zh-CN', switchLabel: 'EN', switchHref: '/',
-    skip: '跳到正文', menu: '菜单', navLabel: '主导航',
-    nav: [ ['about', '关于'], ['portfolio', '重点案例'], ['resume', '经历'], ['skills', '技术能力'], ['contact', '联系'] ],
-    location: '新西兰，奥克兰',
-    heroDomains: ['企业软件', 'AI 应用系统', 'Agent 工作流'],
-    role: '资深软件工程师',
-    heroIntro: '理解业务流程，连接现有系统与 AI。',
-    heroBody: '18+ 年企业软件经验，覆盖 ERP／CRM 与金融平台交付。以这些工程积累，构建 AI Agent、知识检索和语音系统。',
-    heroSpecialism: '企业 AI 应用与金融科技',
-    viewWork: '查看重点案例', cvLabel: '简历（PDF）', focus: '构建 AI 应用系统',
-    aboutLabel: '关于我', aboutHeading: '理解业务，\n把系统做扎实。',
-    aboutLead: '从业务流程出发，推进到实际可用的软件。',
-    aboutBody: '我是 Jay，中文名刘杰，目前住在奥克兰。在中国和新西兰的工作涉及 ERP／CRM、零售软件、医疗信息系统和金融平台，经历覆盖开发、架构设计与团队管理。',
-    aboutBody2: '在 FNZ，我的工作主要围绕软件交付。个人项目则将 AI 模型、工具与数据接入具体流程，关注结果校验、失败后的恢复，以及需要判断时的人工复核。',
-    skillLabel: '技术能力', skillHeading: '从业务需求，\n推进到系统交付。',
-    skillIntro: '围绕业务建模、系统集成和软件交付，结合企业开发与 AI 应用技术。',
-    skills: [
-      { name: '企业软件开发', summary: '围绕 ERP／CRM、金融平台与业务应用，完成数据建模、开发和交付。', items: ['C# · .NET · ASP.NET Core', 'React · TypeScript · Astro', 'Python · FastAPI · Node.js', 'SQL Server · PostgreSQL · REST APIs'] },
-      { name: 'AI 应用与 Agent', summary: '连接模型与工具，在流程中保留来源信息和人工复核环节。', items: ['Agent 编排 · MCP · LLM 集成', 'RAG · 知识检索 · Agent 记忆', 'ASR · VAD · TTS · 语音工作流', 'Claude Code · Codex · OpenCode'] },
-      { name: '云平台与交付', summary: '让系统上线运行，并持续处理运行中的问题。', items: ['Azure · Cloudflare · Linux', 'Docker · CI/CD · GitHub Actions', '架构 · 测试 · 代码审查', '可观测性 · 生产支持'] },
-      { name: '系统集成', summary: '让接口与数据流在变化和冲突下仍然可预测。', items: ['类型化 API · Schema 校验', '幂等性 · 乐观并发控制', '来源追溯 · 执行边界', '响应式界面 · 无障碍'] },
-    ],
-    experienceLabel: '工作经历', experienceHeading: '企业系统中的长期积累。', experienceIntro: 'ERP／CRM、零售业务软件、医院管理信息系统与企业金融平台，覆盖实际开发和团队管理。',
-    experience: [
-      { date: '2022 年 10 月至今', role: 'Analyst Developer', company: 'FNZ Group', place: '新西兰，奥克兰', description: '以交付为重点，使用 C# 和 .NET 参与企业金融平台的开发与维护。', responsibilities: ['分析需求，将其细化为可实现的应用变更。', '完成开发、测试和代码审查，关注可维护性与回归风险。', '与分析师、开发、测试及交付团队协作，排查问题并支持版本发布。'], note: '客户项目与具体实现涉及保密，不在此公开。' },
-      { date: '2022 年 2-7 月', role: '信息技术讲师', company: 'Southern Institute of Technology', place: '新西兰，因弗卡吉尔', description: '教授编程基础和软件工程，通过实践课程和个别辅导帮助学生学习。' },
-      { date: '2020-2022 年', role: '全栈开发工程师（兼职）', company: '零售行业', place: '中国，广州', description: '使用 .NET Core、REST API、MySQL 和 Vue.js 开发、维护开票与销售管理软件，将零售业务需求落实为系统功能。' },
-      { date: '2018-2021 年', role: '全栈开发工程师', company: 'Best IT Solution / Hangzhou Xianbing Technology', place: '新西兰与中国', description: '使用 Flask、REST API、MySQL、React 和 Redux 开发商用 Web 系统和短信平台。' },
-      { date: '2011-2017 年', role: '软件开发团队负责人', company: '企业软件与技术咨询', place: '中国，北京', description: '带领团队交付企业信息管理系统，工作涉及中间件、数据库架构和服务器部署。' },
-      { date: '2008-2011 年', role: '信息技术总监', company: '医疗行业', place: '中国，北京', description: '设计医院管理信息系统的架构并带领开发团队，同时负责医疗网站的交付和维护。' },
-    ],
-    educationLabel: '教育经历', education: '信息技术硕士', educationSchool: 'Southern Institute of Technology · 2019-2021', educationNote: '研究方向涉及对话式 AI 与生成模型。',
-    contactLabel: '联系', contactHeading: '聊聊需要理解业务、\n也需要动手交付的岗位。', contactBody: '我关注资深软件工程、企业 AI 集成与前线部署工程（FDE）方向。欢迎发来岗位信息、要解决的业务问题和团队背景，我们可以从这些具体内容聊起。',
-    emailLabel: '给 Jay 发邮件',
-    personalNote: '个人项目及观点仅代表我自己。', privacy: '隐私说明', backHome: '返回首页', footerRole: '软件工程师，也喜欢做工具',
-    privacyTitle: '隐私说明 | Jay Liu', privacyHeading: '一个简单的网站，\n一份清楚的说明。',
-    privacyIntro: '这是 Jay Liu 的个人网站，用于介绍我的工作，并提供联系入口。',
-    privacySections: [
-      ['浏览网站', '本站的应用代码没有设置 Cookie，也没有联系表单、广告跟踪或分析脚本。字体和图形随网站提供。网站由 GitHub Pages 托管，托管方可能根据其隐私政策处理 IP 地址、访问日志等技术信息。'],
-      ['邮件和外部链接', '邮件链接会打开你自己的邮件应用。如果你给我发邮件，我会使用你提供的信息阅读和回复。项目和个人主页链接会带你前往外部网站，它们有独立的隐私政策。'],
-      ['有疑问时', '如果对分享给我的个人信息有疑问，或需要申请查看、更正，可发送邮件至 maxazure@gmail.com。'],
-    ],
-    updatedLabel: '更新于 2026 年 10 月 10 日',
-  },
-} as const;
+export const copy = Object.fromEntries(localeCodes.map(locale => [locale, content[locale].copy])) as Record<Locale, typeof content.en.copy>;

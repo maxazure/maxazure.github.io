@@ -1,0 +1,338 @@
+[
+  {
+    "id": "voice-companion",
+    "group": "labs",
+    "status": "mvp",
+    "href": "https://www.hilily.ai/",
+    "tags": [
+      "Python",
+      "Streaming audio",
+      "Conversational AI"
+    ],
+    "image": "/projects/voice-companion-interface.jpg"
+  },
+  {
+    "id": "web-builder-agent",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "Workflow orchestration",
+      "Agent profiles",
+      "Delivery gates"
+    ],
+    "image": "/projects/web-builder-agent-interface.jpg"
+  },
+  {
+    "id": "idea-builder",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "Rust",
+      "Agent CLI integration",
+      "Session recovery"
+    ],
+    "image": "/projects/idea-builder-interface.jpg"
+  },
+  {
+    "id": "agent-workbench",
+    "group": "labs",
+    "tags": [
+      "React / TypeScript",
+      "Fastify / SSE",
+      "CLI integration"
+    ],
+    "status": "private",
+    "image": "/projects/agent-workbench.webp"
+  },
+  {
+    "id": "voice-capture",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "Android / Kotlin",
+      "VAD / AAC",
+      "ASR processing"
+    ],
+    "image": "/projects/voice-capture-interface.jpg"
+  },
+  {
+    "id": "writing-assessment",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "Next.js",
+      "PostgreSQL",
+      "LLM integration"
+    ],
+    "image": "/projects/writing-assessment-interface.jpg"
+  },
+  {
+    "id": "knowledge-memory",
+    "group": "labs",
+    "tags": [
+      "Python CLI",
+      "Retrieval",
+      "Source provenance"
+    ],
+    "status": "prototype",
+    "image": "/projects/knowledge-memory.webp"
+  },
+  {
+    "id": "agentmeshkit",
+    "group": "labs",
+    "status": "open",
+    "href": "https://github.com/agentmeshkit",
+    "tags": [
+      "TypeScript SDK",
+      "Agent protocols",
+      "Workspace tooling"
+    ],
+    "image": "/projects/agentmeshkit-interface.jpg"
+  },
+  {
+    "id": "codexview",
+    "group": "labs",
+    "status": "open",
+    "href": "https://github.com/codexview/codexview",
+    "tags": [
+      "React",
+      "Transcript adapters",
+      "Markdown CLI"
+    ],
+    "image": "/projects/codexview-interface.jpg"
+  },
+  {
+    "id": "capability-vault",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "Electron",
+      "Capability management",
+      "LAN sync"
+    ],
+    "image": "/projects/capability-vault-interface.jpg"
+  },
+  {
+    "id": "agent-home",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "Python / Shell",
+      "Persistent workspaces",
+      "Agent instructions"
+    ],
+    "image": "/projects/agent-home-interface.jpg"
+  },
+  {
+    "id": "browser-test-workspace",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "Docker",
+      "Browser runtime",
+      "Artifact capture"
+    ],
+    "image": "/projects/browser-test-workspace-interface.jpg"
+  },
+  {
+    "id": "hardware-control",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "ESP32-S3",
+      "USB HID",
+      "Visual control loop"
+    ],
+    "image": "/projects/hardware-control-interface.jpg"
+  },
+  {
+    "id": "local-narration",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "VoxCPM2 integration",
+      "Local inference",
+      "Audio artifacts"
+    ],
+    "image": "/projects/local-narration-interface.jpg"
+  },
+  {
+    "id": "live-interpretation",
+    "group": "labs",
+    "status": "prototype",
+    "tags": [
+      "Android / Kotlin",
+      "ONNX VAD",
+      "Speech translation"
+    ],
+    "image": "/projects/live-interpretation-interface.jpg"
+  },
+  {
+    "id": "speech-tooling",
+    "group": "labs",
+    "tags": [
+      "Python",
+      "Local inference",
+      "Tool integration"
+    ],
+    "status": "open",
+    "image": "/projects/speech-tooling-interface.jpg",
+    "href": "https://github.com/maxazure/omnivoice-tts-skill"
+  },
+  {
+    "id": "lan-microphone",
+    "group": "labs",
+    "status": "prototype",
+    "tags": [
+      "SwiftUI",
+      "Bonjour / TCP",
+      "PCM audio"
+    ],
+    "image": "/projects/lan-microphone-interface.jpg"
+  },
+  {
+    "id": "video-editing",
+    "group": "labs",
+    "tags": [
+      "Python",
+      "FFmpeg",
+      "Artifact validation"
+    ],
+    "status": "open",
+    "image": "/projects/video-editing-interface.jpg",
+    "href": "https://github.com/maxazure/video-editing-skill"
+  },
+  {
+    "id": "editorial-workflow",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "Python / Shell",
+      "Source-aware drafting",
+      "Human review"
+    ],
+    "image": "/projects/editorial-workflow-interface.jpg"
+  },
+  {
+    "id": "media-workspace",
+    "group": "labs",
+    "status": "private",
+    "tags": [
+      "Android / Compose",
+      "FastAPI",
+      "Media packages"
+    ],
+    "image": "/projects/media-workspace-interface.jpg"
+  },
+  {
+    "id": "bookkeeping-assistant",
+    "group": "labs",
+    "tags": [
+      "Structured JSON",
+      "Reconciliation",
+      "Human review"
+    ],
+    "status": "open",
+    "image": "/projects/bookkeeping-assistant-interface.jpg",
+    "href": "https://github.com/maxazure/new-zealand-accounting-assistant"
+  },
+  {
+    "id": "operations-erp",
+    "group": "enterprise",
+    "tags": [
+      "React / TypeScript",
+      "NestJS / PostgreSQL",
+      "ERP workflows"
+    ],
+    "status": "development",
+    "image": "/projects/operations-erp.webp"
+  },
+  {
+    "id": "transactional-crm",
+    "group": "enterprise",
+    "tags": [
+      "Python / FastAPI",
+      "PostgreSQL",
+      "Concurrency control"
+    ],
+    "status": "operational",
+    "image": "/projects/transactional-crm.webp"
+  },
+  {
+    "id": "tourism",
+    "group": "recent",
+    "tags": [
+      "Astro",
+      "TypeScript",
+      "Content architecture"
+    ],
+    "status": "live",
+    "image": "/projects/tourism.webp",
+    "href": "https://futuresgroup.co.nz/"
+  },
+  {
+    "id": "transport",
+    "group": "recent",
+    "tags": [
+      "Astro",
+      "React",
+      "Bilingual routing"
+    ],
+    "status": "live",
+    "image": "/projects/transport.webp",
+    "href": "https://drive1towing.co.nz/"
+  },
+  {
+    "id": "accounting",
+    "group": "recent",
+    "tags": [
+      "Astro",
+      "Content modelling",
+      "Technical SEO"
+    ],
+    "status": "live",
+    "image": "/projects/accounting.webp",
+    "href": "https://pillar.nz/"
+  },
+  {
+    "id": "finance-archive",
+    "group": "legacy",
+    "tags": [
+      "Web development",
+      "Financial services"
+    ],
+    "status": "holding",
+    "image": "/projects/finance-archive.webp",
+    "href": "https://www.renrenbit.com/"
+  },
+  {
+    "id": "medical-archive-a",
+    "group": "legacy",
+    "tags": [
+      "Web development",
+      "Information architecture"
+    ],
+    "status": "archive",
+    "image": "/projects/medical-archive-a.webp"
+  },
+  {
+    "id": "consumer-app-archive",
+    "group": "legacy",
+    "tags": [
+      "App development",
+      "Web landing page"
+    ],
+    "status": "archive",
+    "image": "/projects/consumer-app-archive.webp"
+  },
+  {
+    "id": "medical-archive-b",
+    "group": "legacy",
+    "tags": [
+      "Web development",
+      "Service content"
+    ],
+    "status": "archive",
+    "image": "/projects/medical-archive-b.webp"
+  }
+]

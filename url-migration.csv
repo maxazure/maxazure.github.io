@@ -5,3 +5,15 @@ source_path,target_path,action,evidence
 /content/resume/images/favicon.ico,/content/resume/images/favicon.ico,preserve,existing favicon reference
 /projects/,/projects/,new,owner-directed complete project collection
 /zh/projects/,/zh/projects/,new,Chinese counterpart of complete project collection
+/zh-hant/,/zh-hant/,new,owner-requested six-language counterpart based on English facts
+/zh-hant/projects/,/zh-hant/projects/,new,owner-requested six-language counterpart based on English facts
+/zh-hant/privacy/,/zh-hant/privacy/,new,owner-requested six-language counterpart based on English facts
+/ja/,/ja/,new,owner-requested six-language counterpart based on English facts
+/ja/projects/,/ja/projects/,new,owner-requested six-language counterpart based on English facts
+/ja/privacy/,/ja/privacy/,new,owner-requested six-language counterpart based on English facts
+/fr/,/fr/,new,owner-requested six-language counterpart based on English facts
+/fr/projects/,/fr/projects/,new,owner-requested six-language counterpart based on English facts
+/fr/privacy/,/fr/privacy/,new,owner-requested six-language counterpart based on English facts
+/ko/,/ko/,new,owner-requested six-language counterpart based on English facts
+/ko/projects/,/ko/projects/,new,owner-requested six-language counterpart based on English facts
+/ko/privacy/,/ko/privacy/,new,owner-requested six-language counterpart based on English facts

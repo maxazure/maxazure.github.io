@@ -1,8 +1,10 @@
 """Check the deployed HTML contract: identity, routes, metadata and asset links."""
 import hashlib
 import json
+import re
 import sys
 from html.parser import HTMLParser
+from html import escape
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
@@ -11,6 +13,10 @@ root = Path(sys.argv[1] if len(sys.argv) > 1 else "dist").resolve()
 origin = "https://jayliu.co.nz"
 expected_title = "Jay Liu - Senior Software Engineer | FinTech | .NET | React | Cloud | AI Integration"
 expected_description = "Jay Liu, senior software engineer in Auckland. 18+ years in enterprise software, financial-platform delivery at FNZ, and independent applied AI projects."
+locale_roots = {'en': '', 'zh': 'zh/', 'zh-hant': 'zh-hant/', 'ja': 'ja/', 'fr': 'fr/', 'ko': 'ko/'}
+locale_langs = {'en': 'en-NZ', 'zh': 'zh-Hans', 'zh-hant': 'zh-Hant', 'ja': 'ja', 'fr': 'fr', 'ko': 'ko'}
+content_root = Path(__file__).resolve().parents[1] / 'src/data/locales'
+translations = {code: json.loads((content_root / f'{code}.json').read_text()) for code in locale_roots}
 legacy_fragments = {"home", "about", "skills", "resume", "portfolio", "contact"}
 
 class Page(HTMLParser):
@@ -53,7 +59,7 @@ class Page(HTMLParser):
         return [a.get("content") for t,a in self.nodes if t == "meta" and (a.get("name") == key or a.get("property") == key)]
 
 pages = {p: Page(p) for p in root.rglob("*.html")}
-assert len(pages) == 7, f"Unexpected page inventory: {list(pages)}"
+assert len(pages) == 19, f"Unexpected page inventory: {list(pages)}"
 for path, page in pages.items():
     assert "bestai" not in path.read_text().lower(), "Personal business association must not appear"
     assert page.h1 == 1, f"Expected one H1: {path}"
@@ -63,7 +69,7 @@ for path, page in pages.items():
     assert len(page.meta("description")) == 1, path
     if path.name != "404.html":
         alternates = [a for t,a in page.nodes if t == "link" and a.get("rel") == "alternate"]
-        assert len(alternates) == 3, path
+        assert len(alternates) == 7, path
         assert canonical[0] in [a["href"] for a in alternates], path
     for tag,attrs in page.nodes:
         for key in (["href"] if tag in {"a","link"} else ["src"] if tag in {"img","script"} else []):
@@ -92,7 +98,8 @@ for path, page in pages.items():
 home = pages[root / "index.html"]
 assert home.title == expected_title, "Homepage title changed"
 assert home.meta("description") == [expected_description], "Homepage description changed"
-for relative in ["index.html", "zh/index.html"]:
+for locale, prefix in locale_roots.items():
+    relative = prefix + "index.html"
     page = pages[root / relative]
     assert legacy_fragments <= page.ids, "Legacy fragment missing"
     assert len(page.graphs) == 1
@@ -109,7 +116,8 @@ for relative in ["index.html", "zh/index.html"]:
     assert html.index('id="about"') < html.index('id="portfolio"') < html.index('id="resume"') < html.index('id="skills"') < html.index('id="contact"')
     hero = html.split('id="home"', 1)[1].split('</section>', 1)[0]
     assert "FNZ" not in hero, "Employer detail belongs with background and experience"
-    assert "AI" in hero and ("Agent" in hero or "agent" in hero)
+    assert escape(translations[locale]["copy"]["heroSpecialism"], quote=False) in hero
+    assert translations[locale]["copy"]["heroName"] in hero
     assert 'href="/cv/Jie-Liu-CV.pdf"' in hero and 'linkedin.com/in/jayliuinvers/' in hero
     assert '<img' not in hero, "Portrait must stay outside the first screen"
     assert html.index('id="about"') < html.index('/images/jay-liu.jpg') < html.index('id="portfolio"')
@@ -117,7 +125,8 @@ for relative in ["index.html", "zh/index.html"]:
     assert 'class="delivery-responsibilities"' in html
     assert 'href="mailto:maxazure@gmail.com"' in html
 
-for relative in ["projects/index.html", "zh/projects/index.html"]:
+for locale, prefix in locale_roots.items():
+    relative = prefix + "projects/index.html"
     page = pages[root / relative]
     html = page.path.read_text()
     cases = [(t,a) for t,a in page.nodes if t == "article" and "data-project" in a]
@@ -129,8 +138,9 @@ for relative in ["projects/index.html", "zh/projects/index.html"]:
         english_projects = identifiers
     else:
         assert identifiers == english_projects, "English and Chinese project inventories must match"
-    locale_target = "/zh/projects/" if relative == "projects/index.html" else "/projects/"
-    assert any(t == "a" and a.get("class") == "language-link" and a.get("href") == locale_target for t,a in page.nodes), "Locale switch must retain project context"
+    language_links = [a for t,a in page.nodes if t == "a" and "data-language" in a]
+    assert len(language_links) == 6
+    assert {a["href"] for a in language_links} == {"/" + p + "projects/" for p in locale_roots.values()}
     image_nodes = [a for t,a in page.nodes if t == "img" and a.get("src", "").startswith("/projects/")]
     assert html.count('class="media-label"') == 19, "Generated interfaces need visible disclosure"
     assert len(image_nodes) == 30, "Every project needs a small preview or labelled interface mockup"
@@ -146,7 +156,7 @@ for relative in ["projects/index.html", "zh/projects/index.html"]:
     assert html.count('href="https://github.com/maxazure/') >= 3
     for identifier in ["video-editing", "speech-tooling", "bookkeeping-assistant", "voice-companion", "web-builder-agent", "idea-builder", "writing-assessment", "voice-capture", "live-interpretation", "local-narration", "lan-microphone", "agentmeshkit", "codexview", "capability-vault", "agent-home", "browser-test-workspace", "hardware-control", "editorial-workflow", "media-workspace"]:
         article = html.split('data-project="' + identifier + '"', 1)[1].split('</article>', 1)[0]
-        assert "Generated interface mockup:" in article or "AI 生成的界面示意" in article, "Generated covers need accurate image alternatives"
+        assert translations[locale]["projects"][identifier]["alt"] in article, "Translated image alternative missing"
         assert identifier + "-interface.jpg" in article
         if identifier in {"video-editing", "speech-tooling", "bookkeeping-assistant", "agentmeshkit", "codexview"}:
             assert 'href="https://github.com/' in article, "Open-source repository link missing"
@@ -164,6 +174,45 @@ assert "User-agent: OAI-SearchBot\nAllow: /" in robots
 assert "Disallow: /\n" not in robots
 sitemap = ET.parse(root / "sitemap-0.xml")
 urls = {e.text for e in sitemap.iter() if e.tag.endswith('}loc')}
-assert urls == {origin + p for p in ["/", "/zh/", "/projects/", "/zh/projects/", "/privacy/", "/zh/privacy/"]}, urls
+assert urls == {origin + "/" + prefix + suffix for prefix in locale_roots.values() for suffix in ["", "projects/", "privacy/"]}, urls
 assert "noindex" in pages[root / "404.html"].meta("robots")[0]
-print(f"Verified {len(pages)} pages: identity, metadata, schema, fragments, project inventory/privacy, local links, assets, sitemap, robots and unchanged CV")
+# Source-derived dictionaries must remain complete; route parity is checked separately.
+def same_shape(source, target, key=""):
+    assert type(source) is type(target), f"Translation type mismatch: {key}"
+    if isinstance(source, dict):
+        assert source.keys() == target.keys(), f"Translation fields differ: {key}"
+        for name in source: same_shape(source[name], target[name], f"{key}.{name}")
+    elif isinstance(source, list):
+        assert len(source) == len(target), f"Translation list length differs: {key}"
+        for i, (left, right) in enumerate(zip(source, target)): same_shape(left, right, f"{key}[{i}]")
+    elif isinstance(source, str):
+        assert target.strip(), f"Empty translation: {key}"
+
+for locale, prefix in locale_roots.items():
+    text = translations[locale]
+    same_shape(translations["en"], text, locale)
+    assert [item[0] for item in text["copy"]["nav"]] == [item[0] for item in translations["en"]["copy"]["nav"]]
+    for suffix in ["", "projects/", "privacy/"]:
+        page = pages[root / (prefix + suffix + "index.html")]
+        html = page.path.read_text()
+        assert f'lang="{locale_langs[locale]}"' in html
+        expected = {locale_langs[code]: origin + "/" + p + suffix for code,p in locale_roots.items()}
+        expected["x-default"] = origin + "/" + suffix
+        actual = {a["hreflang"]: a["href"] for t,a in page.nodes if t == "link" and a.get("rel") == "alternate"}
+        assert actual == expected, f"Non-reciprocal language routes: {page.path}"
+        controls = [a for t,a in page.nodes if t == "a" and "data-language" in a]
+        assert len(controls) == 6
+        assert {a["data-language"]: a["href"] for a in controls} == {code: "/" + p + suffix for code,p in locale_roots.items()}
+        assert [a["data-language"] for a in controls if a.get("aria-current") == "page"] == [locale]
+        if locale == "en":
+            assert not re.search(r"[\u3400-\u9fff]", html), f"Chinese characters in English HTML: {page.path}"
+    # A missing translation must never silently publish an English paragraph.
+    if locale != "en":
+        for identifier, project in text["projects"].items():
+            assert project["description"] != translations["en"]["projects"][identifier]["description"]
+        for identifier, project in text["featured"].items():
+            for field in ["problem", "role", "decision", "evidence"]:
+                assert project[field] != translations["en"]["featured"][identifier][field]
+
+assert hashlib.sha256((Path(__file__).resolve().parents[1] / "src/components/TransformerField.astro").read_bytes()).hexdigest() == "adcc96f6413e0ff67a29fd0dd94ec7e7c3848d31f22d07538f10318c7765450f", "Protected animation changed"
+print(f"Verified {len(pages)} pages in six languages: complete translations, reciprocal routes, English without Chinese, metadata, schema, project privacy, assets, unchanged animation and CV")

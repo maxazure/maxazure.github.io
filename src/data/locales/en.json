@@ -1,0 +1,455 @@
+{
+  "copy": {
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "navLabel": "Main navigation",
+    "nav": [
+      [
+        "about",
+        "About"
+      ],
+      [
+        "portfolio",
+        "Selected work"
+      ],
+      [
+        "resume",
+        "Experience"
+      ],
+      [
+        "skills",
+        "Capabilities"
+      ],
+      [
+        "contact",
+        "Contact"
+      ]
+    ],
+    "location": "Auckland, New Zealand",
+    "heroDomains": [
+      "Enterprise software",
+      "Applied AI systems",
+      "Agent workflows"
+    ],
+    "role": "Senior Software Engineer",
+    "heroIntro": "Connecting business workflows, existing systems and AI.",
+    "heroBody": "18+ years in enterprise software, from ERP/CRM to financial-platform delivery. I bring that foundation to AI agents, knowledge retrieval and voice systems.",
+    "heroSpecialism": "Enterprise AI & FinTech",
+    "viewWork": "See selected work",
+    "cvLabel": "CV (PDF, English)",
+    "focus": "Building applied AI systems",
+    "aboutLabel": "About me",
+    "aboutHeading": "Business context.\nEngineering depth.",
+    "aboutLead": "I work from the business process through to the software people use.",
+    "aboutBody": "I’m Jay (Jie Liu), a software engineer based in Auckland. My background spans ERP/CRM, retail software, healthcare systems and financial platforms in China and New Zealand, including development, architecture and team leadership.",
+    "aboutBody2": "At FNZ, my work focuses on software delivery. In my independent projects, I connect AI models, tools and data to practical workflows, with explicit checks, recoverable failures and human review where judgement is needed.",
+    "skillLabel": "Technical capabilities",
+    "skillHeading": "From a business requirement\nto a working system.",
+    "skillIntro": "Business modelling, system integration and delivery, supported by a practical enterprise and AI toolkit.",
+    "skills": [
+      {
+        "name": "Enterprise software",
+        "summary": "ERP/CRM, financial platforms and business applications, from data models to delivery.",
+        "items": [
+          "C# · .NET · ASP.NET Core",
+          "React · TypeScript · Astro",
+          "Python · FastAPI · Node.js",
+          "SQL Server · PostgreSQL · REST APIs"
+        ]
+      },
+      {
+        "name": "Applied AI & agents",
+        "summary": "Integrating models and tools, retaining source context and review boundaries.",
+        "items": [
+          "Agent orchestration · MCP · LLM integration",
+          "RAG · Knowledge retrieval · Agent memory",
+          "ASR · VAD · TTS · Speech workflows",
+          "Claude Code · Codex · OpenCode"
+        ]
+      },
+      {
+        "name": "Cloud & delivery",
+        "summary": "Taking systems into production and looking after them once they’re there.",
+        "items": [
+          "Azure · Cloudflare · Linux",
+          "Docker · CI/CD · GitHub Actions",
+          "Architecture · Testing · Code review",
+          "Observability · Production support"
+        ]
+      },
+      {
+        "name": "Systems integration",
+        "summary": "Designing interfaces and data flows that remain predictable under change.",
+        "items": [
+          "Typed APIs · Schema validation",
+          "Idempotency · Optimistic concurrency",
+          "Source provenance · Execution boundaries",
+          "Responsive UI · Accessibility"
+        ]
+      }
+    ],
+    "experienceLabel": "Experience",
+    "experienceHeading": "Enterprise software, built over time.",
+    "experienceIntro": "ERP/CRM, retail business software, healthcare information systems and enterprise financial platforms, with hands-on development and team leadership.",
+    "experience": [
+      {
+        "date": "Oct 2022 - Present",
+        "role": "Analyst Developer",
+        "company": "FNZ Group",
+        "place": "Auckland, New Zealand",
+        "description": "Delivery-focused engineering on enterprise financial platforms with C# and .NET.",
+        "responsibilities": [
+          "Analyse requirements and translate them into implementable application changes.",
+          "Develop, test and review changes, with attention to maintainability and regression risk.",
+          "Investigate issues and support releases with analysts, developers, testers and wider delivery teams."
+        ],
+        "note": "Client assignments and implementation details are confidential."
+      },
+      {
+        "date": "Feb - Jul 2022",
+        "role": "Information Technology Tutor",
+        "company": "Southern Institute of Technology",
+        "place": "Invercargill, New Zealand",
+        "description": "Teaching programming fundamentals and software engineering, with practical coursework and individual mentoring."
+      },
+      {
+        "date": "2020 - 2022",
+        "role": "Full Stack Developer (part-time)",
+        "company": "Retail industry",
+        "place": "Guangzhou, China",
+        "description": "Developing and maintaining invoicing and sales management software with .NET Core, REST APIs, MySQL and Vue.js, translating retailer requirements into application changes."
+      },
+      {
+        "date": "2018 - 2021",
+        "role": "Full Stack Developer",
+        "company": "Best IT Solution / Hangzhou Xianbing Technology",
+        "place": "New Zealand & China",
+        "description": "Developing commercial web systems and SMS platforms with Flask, REST APIs, MySQL, React and Redux."
+      },
+      {
+        "date": "2011 - 2017",
+        "role": "Software Development Team Leader",
+        "company": "Enterprise software & consulting",
+        "place": "Beijing, China",
+        "description": "Leading enterprise information-system consulting and delivery, including middleware, database architecture and server deployments."
+      },
+      {
+        "date": "2008 - 2011",
+        "role": "Information Technology Director",
+        "company": "Healthcare industry",
+        "place": "Beijing, China",
+        "description": "Designing a hospital management information system and leading the development team, alongside delivery and maintenance of healthcare websites."
+      }
+    ],
+    "educationLabel": "Education",
+    "education": "Master of Information Technology",
+    "educationSchool": "Southern Institute of Technology · 2019-2021",
+    "educationNote": "Research interests in conversational AI and generative models.",
+    "contactLabel": "Contact",
+    "contactHeading": "Have a role that connects\nbusiness and engineering?",
+    "contactBody": "I’m interested in senior software engineering, enterprise AI integration and forward deployed engineering (FDE). Send me the role, the business problem and the team context to start a conversation.",
+    "emailLabel": "Email Jay",
+    "personalNote": "Personal projects and views are my own.",
+    "privacy": "Privacy",
+    "backHome": "Back to home",
+    "footerRole": "Software engineer & builder",
+    "privacyTitle": "Privacy | Jay Liu",
+    "privacyHeading": "A simple site. A clear policy.",
+    "privacyIntro": "This is Jay Liu’s personal portfolio. It provides information about my work and links to ways to contact me.",
+    "privacySections": [
+      [
+        "Browsing this site",
+        "This site has no contact form, advertising trackers, analytics scripts or cookies set by its application code. Fonts and graphics are served with the site. GitHub Pages hosts the website and may process technical information such as IP addresses and request logs under its own privacy policy."
+      ],
+      [
+        "Email and external links",
+        "Email links open your own email application. If you email me, I use the details you provide to read and respond to your message. Project and profile links take you to external websites with their own privacy policies."
+      ],
+      [
+        "Questions",
+        "Contact maxazure@gmail.com if you have a question about information you have shared with me, or want to request access or correction."
+      ]
+    ],
+    "updatedLabel": "Updated 10 October 2026",
+    "heroName": "Jay Liu",
+    "portraitName": "Jie Liu"
+  },
+  "ui": {
+    "Engineering focus": "Engineering focus",
+    "From architecture to delivery": "From architecture to delivery",
+    "Jay Liu": "Jay Liu",
+    "Open-source work": "Open-source work",
+    "Follow the implementation.": "Follow the implementation.",
+    "Source, workflow instructions and examples you can inspect.": "Source, workflow instructions and examples you can inspect.",
+    "Transcript-led editing, FFmpeg rendering and artifact checks.": "Transcript-led editing, FFmpeg rendering and artifact checks.",
+    "Transcript adapters, a React viewer and a Markdown CLI.": "Transcript adapters, a React viewer and a Markdown CLI.",
+    "Traceable bookkeeping workflows and exports for review.": "Traceable bookkeeping workflows and exports for review.",
+    "Jay’s profiles": "Jay’s profiles",
+    "Projects & engineering work.": "Projects & engineering work.",
+    "Enterprise systems, applied AI, developer tools and earlier work. For the business context, my role and engineering decisions, start with the four selected cases.": "Enterprise systems, applied AI, developer tools and earlier work. For the business context, my role and engineering decisions, start with the four selected cases.",
+    "Read the selected engineering cases": "Read the selected engineering cases",
+    "Discuss a role with Jay": "Discuss a role with Jay",
+    "Complete project collection": "Complete project collection",
+    "A wider view of the work.": "A wider view of the work.",
+    "project examples": "project examples",
+    "AI systems, voice workflows, enterprise software and web applications. Client work is anonymised; previews include screenshots and illustrative interfaces.": "AI systems, voice workflows, enterprise software and web applications. Client work is anonymised; previews include screenshots and illustrative interfaces.",
+    "AI interface illustration": "AI interface illustration",
+    "Current site": "Current site",
+    "Demo & team": "Demo & team",
+    "Visit website": "Visit website",
+    "Selected engineering work": "Selected engineering work",
+    "From business problems to working systems.": "From business problems to working systems.",
+    "Four examples of how I approach business software and applied AI, with my role and the available evidence made explicit.": "Four examples of how I approach business software and applied AI, with my role and the available evidence made explicit.",
+    "Technologies and focus": "Technologies and focus",
+    "View the anonymised preview": "View the anonymised preview",
+    "My role": "My role",
+    "Constraint & decision": "Constraint & decision",
+    "Current evidence": "Current evidence",
+    "More enterprise systems, AI tools, voice workflows and earlier projects.": "More enterprise systems, AI tools, voice workflows and earlier projects.",
+    "Explore all 30 projects": "Explore all 30 projects",
+    "More project categories": "More project categories",
+    "Enterprise systems": "Enterprise systems",
+    "AI & engineering tools": "AI & engineering tools",
+    "Web applications": "Web applications",
+    "Earlier work": "Earlier work",
+    "Languages": "Languages",
+    "Jay Liu home": "Jay Liu home",
+    "GitHub Privacy Statement": "GitHub Privacy Statement",
+    "English": "English",
+    "Simplified Chinese": "Simplified Chinese",
+    "Traditional Chinese": "Traditional Chinese",
+    "Japanese": "Japanese",
+    "French": "French",
+    "Korean": "Korean",
+    "Website": "Website",
+    "Private system": "Private system",
+    "Development instance": "Development instance",
+    "Prototype": "Prototype",
+    "Open source": "Open source",
+    "Historical project": "Historical project",
+    "Archived project": "Archived project",
+    "MVP · preparing for pilots": "MVP · preparing for pilots",
+    "Internal operational system": "Internal operational system",
+    "AI Agents": "AI Agents"
+  },
+  "meta": {
+    "homeTitle": "Jay Liu - Senior Software Engineer | FinTech | .NET | React | Cloud | AI Integration",
+    "homeDescription": "Jay Liu, senior software engineer in Auckland. 18+ years in enterprise software, financial-platform delivery at FNZ, and independent applied AI projects.",
+    "projectsTitle": "Projects & Engineering Work | Jay Liu",
+    "projectsDescription": "Explore 30 projects by Jay Liu: enterprise software, applied AI, voice workflows and open-source engineering tools, with project stages and public evidence.",
+    "socialAlt": "Jay Liu. Senior Software Engineer. FinTech, Cloud and Applied AI. Auckland, New Zealand."
+  },
+  "featured": {
+    "transactional-crm": {
+      "tags": [
+        "Python / FastAPI",
+        "PostgreSQL",
+        "Typed API / CLI"
+      ],
+      "name": "Enterprise CRM",
+      "category": "Business systems",
+      "stage": "Internal operational system",
+      "problem": "Customer relationships, projects and invoices need a consistent record when people and software agents both update the same business data.",
+      "role": "I designed and built the application, API and CLI, connecting structured records with versioned notes.",
+      "decision": "Retries and concurrent edits can duplicate or overwrite work. Idempotent writes and version checks make repeat requests safe and expose conflicting edits for resolution.",
+      "evidence": "An implemented internal workflow with revision history and controlled writes. The complete project collection includes an empty-data preview; operational records and endpoints stay private."
+    },
+    "bookkeeping-assistant": {
+      "tags": [
+        "Structured records",
+        "Reconciliation",
+        "Python"
+      ],
+      "name": "NZ Accounting Assistant",
+      "category": "Financial workflows",
+      "stage": "Open-source workflow",
+      "problem": "Receipts and bank statements arrive in different formats. Preparing a reviewable ledger requires matching entries without losing the original evidence.",
+      "role": "I built the reusable skill and supporting tooling for evidence capture, ledger preparation, reconciliation and export.",
+      "decision": "Unclear matches must remain visible. Preserve source files, normalise records into JSON and leave ambiguous items for human confirmation before preparing exports.",
+      "evidence": "Public workflow instructions and scripts cover Xero CSV exports and accountant review packs. Financial records and final decisions remain subject to human review.",
+      "linkLabel": "Read the workflow & source"
+    },
+    "voice-companion": {
+      "tags": [
+        "Conversational AI",
+        "Memory",
+        "Voice processing"
+      ],
+      "name": "HiLily",
+      "category": "AI systems integration",
+      "stage": "Functional MVP · preparing for pilots",
+      "problem": "A voice companion for older adults needs speech, conversation and memory to work together across an embedded device and cloud services.",
+      "role": "As a volunteer AI Coach, I guide the team on AI architecture, conversational memory and audio processing. The product is a team effort.",
+      "decision": "Device audio, model responses and retained context have different constraints. My guidance focuses on how those parts connect through the AI pipeline and edge voice processing.",
+      "evidence": "The project website includes demonstrations and my team role. The team reports a working MVP with multiple iterations completed and is preparing for real-world pilots.",
+      "linkLabel": "See the demo & team"
+    },
+    "codexview": {
+      "tags": [
+        "TypeScript",
+        "React",
+        "Transcript adapters"
+      ],
+      "name": "CodexView",
+      "category": "Engineering tools",
+      "stage": "Open-source packages",
+      "problem": "Coding agents produce different transcript formats. Reviewing tool calls and nested sessions should not require a different viewer for every agent.",
+      "role": "I developed the transcript adapters, React components and Markdown CLI as reusable packages.",
+      "decision": "Keep format parsing separate from presentation. Adapters produce a shared event model that supports both a visual transcript and compact text, preserving tool and subagent context.",
+      "evidence": "The public repository contains the three packages, usage examples and test fixtures. The implementation can be inspected independently of private workbench projects.",
+      "linkLabel": "Explore the packages & source"
+    }
+  },
+  "projects": {
+    "voice-companion": {
+      "name": "HiLily · Voice companion",
+      "description": "Volunteer AI Coach providing guidance on AI architecture, conversational memory and audio processing. A team-built functional MVP preparing for pilots; the public site includes demos and team roles.",
+      "alt": "Generated interface mockup: Voice pipeline"
+    },
+    "web-builder-agent": {
+      "name": "Web Builder Agent · Website delivery",
+      "description": "A complete website workflow from research and design to build, checks and deployment. Reusable stages and agent profiles accommodate Claude Code, Codex and OpenCode, with evidence, retries and review gates.",
+      "alt": "Generated interface mockup: Website workflow"
+    },
+    "idea-builder": {
+      "name": "Idea Builder · Multi-agent delivery",
+      "description": "A guided software delivery system turning an idea into planning, implementation, testing and deployment stages, with interchangeable coding agents, streamed output and resumable sessions.",
+      "alt": "Generated interface mockup: Idea Builder"
+    },
+    "agent-workbench": {
+      "name": "AgentWeb · AI engineering workbench",
+      "description": "A browser workbench for coding-agent sessions, streamed tool events and workspace artifacts, built with React, TypeScript and Fastify.",
+      "alt": "Small redacted screenshot of the ai engineering workbench"
+    },
+    "voice-capture": {
+      "name": "Voice2Task · Voice capture & intent",
+      "description": "Android voice capture with VAD segmentation, AAC encoding and retryable uploads, paired with server-side transcription and contextual processing of spoken requests.",
+      "alt": "Generated interface mockup: Voice capture"
+    },
+    "writing-assessment": {
+      "name": "Education industry · AI writing assessment",
+      "description": "An assessment application combining rubric-based AI feedback, teacher review and role-based access, with structured assessment records and an editable grading workflow.",
+      "alt": "Generated interface mockup: Writing review"
+    },
+    "knowledge-memory": {
+      "name": "Knowledge & memory · Evidence workflow",
+      "description": "A source-backed knowledge prototype with validity checks, reviewed records and traceable retrieval.",
+      "alt": "Small redacted screenshot of the evidence prototype"
+    },
+    "agentmeshkit": {
+      "name": "AgentMeshKit · Agent workbench SDK",
+      "description": "A modular toolkit extracted from agent-workbench engineering: shared event protocols, CLI runners, conversation components, workspace artifacts and task-state handling.",
+      "alt": "Generated interface mockup: AgentMeshKit"
+    },
+    "codexview": {
+      "name": "CodexView · Agent transcript rendering",
+      "description": "React components, adapters and a Markdown CLI for reading coding-agent transcripts, preserving tool events and nested sessions in a consistent conversation format.",
+      "alt": "Generated interface mockup: CodexView"
+    },
+    "capability-vault": {
+      "name": "Agent Capability Vault · Configuration sync",
+      "description": "A desktop and LAN-sync system for managing agent instructions, skills, tool connections and machine capabilities across engineering workstations.",
+      "alt": "Generated interface mockup: Capability Vault"
+    },
+    "agent-home": {
+      "name": "AgentHome · Persistent agent workspace",
+      "description": "A reusable work-directory toolkit for coding agents, combining instruction templates, Markdown memory, reminders and CLI maintenance tools in a persistent workspace.",
+      "alt": "Generated interface mockup: Agent workspace"
+    },
+    "browser-test-workspace": {
+      "name": "Browser testing · Isolated workspace",
+      "description": "A containerised desktop browser environment for functional checks, with persistent browser profiles, captured test artifacts and backup/restore tooling.",
+      "alt": "Generated interface mockup: Browser test workspace"
+    },
+    "hardware-control": {
+      "name": "Hardware control · Vision-to-HID bridge",
+      "description": "An ESP32-S3 keyboard/mouse bridge paired with host-side screen capture and decision tooling, connecting visual observation to controlled USB HID actions.",
+      "alt": "Generated interface mockup: HID bridge"
+    },
+    "local-narration": {
+      "name": "Local voice synthesis · Narration toolkit",
+      "description": "CLI and service integration around the existing VoxCPM2 model, packaging script input, voice settings, playback and WAV/MP3 delivery into repeatable narration workflows.",
+      "alt": "Generated interface mockup: Narration toolkit"
+    },
+    "live-interpretation": {
+      "name": "Live interpretation · Speech to captions",
+      "description": "An Android interpretation prototype that segments incoming speech, sends it for transcription and presents translated captions through a continuous audio-processing flow.",
+      "alt": "Generated interface mockup: Live captions"
+    },
+    "speech-tooling": {
+      "name": "OmniVoice TTS Skill",
+      "description": "A command-line wrapper for the existing OmniVoice engine, packaging local speech generation into repeatable workflows.",
+      "alt": "Generated interface mockup: Local speech synthesis and audio preview"
+    },
+    "lan-microphone": {
+      "name": "AirMicLAN · Network microphone",
+      "description": "A Mac-to-Mac microphone bridge using Bonjour discovery and TCP audio streaming, with PCM capture and virtual audio input on the receiving computer.",
+      "alt": "Generated interface mockup: AirMicLAN"
+    },
+    "video-editing": {
+      "name": "Video Editing Skill",
+      "description": "Transcript-led editing and reproducible media delivery with Python, FFmpeg and artifact validation.",
+      "alt": "Generated interface mockup: Transcript-led editing and media export"
+    },
+    "editorial-workflow": {
+      "name": "AI editorial workflow · Reviewed publishing",
+      "description": "A source-aware drafting pipeline connecting topic planning, article generation, metadata and content checks, with review before publishing.",
+      "alt": "Generated interface mockup: Editorial review"
+    },
+    "media-workspace": {
+      "name": "Media workflows · Android workspace",
+      "description": "An Android and API-backed workspace for organising copy, images and video into media packages, handling agent requests and delivering assets to the phone.",
+      "alt": "Generated interface mockup: Media workspace"
+    },
+    "bookkeeping-assistant": {
+      "name": "NZ Accounting Assistant",
+      "description": "Receipt and statement normalisation, structured ledgers and reconciliation packs for human review.",
+      "alt": "Generated interface mockup: Ledger reconciliation and accountant review"
+    },
+    "operations-erp": {
+      "name": "Tourism industry · Operations ERP",
+      "description": "An ERP development instance connecting planning, product/SKU catalogues, orders, procurement and operational reminders, with permissions and audit records.",
+      "alt": "Small empty-data demonstration of the operations ERP dashboard"
+    },
+    "transactional-crm": {
+      "name": "Business operations · Enterprise CRM",
+      "description": "Relationships, projects, invoicing and operational records in one platform, with PostgreSQL, typed APIs, controlled writes and revision history.",
+      "alt": "Small redacted screenshot of the internal operations"
+    },
+    "tourism": {
+      "name": "Tourism industry · Journey website",
+      "description": "A travel website organising journeys, itineraries and enquiry paths with reusable pages and structured metadata.",
+      "alt": "Small redacted screenshot of the journey website"
+    },
+    "transport": {
+      "name": "Transport industry · Service website",
+      "description": "A bilingual service website with clear service information, contact flows and mobile navigation.",
+      "alt": "Small redacted screenshot of the service website"
+    },
+    "accounting": {
+      "name": "Accounting industry · Services & insights",
+      "description": "A bilingual professional-services website with a structured insights library and maintainable content models.",
+      "alt": "Small redacted screenshot of the services & insights"
+    },
+    "finance-archive": {
+      "name": "Financial industry · Digital asset platform",
+      "description": "An earlier digital-asset web project. The preview is historical; the current domain serves a holding page.",
+      "alt": "Small redacted screenshot of the digital asset platform"
+    },
+    "medical-archive-a": {
+      "name": "Medical industry · Service website",
+      "description": "An earlier healthcare website presenting service categories, team information and enquiry paths.",
+      "alt": "Small redacted screenshot of the service website"
+    },
+    "consumer-app-archive": {
+      "name": "Consumer app · Spending & activity",
+      "description": "A mobile-app project for recording spending and activity, with a companion web introduction.",
+      "alt": "Small redacted screenshot of the spending & activity records"
+    },
+    "medical-archive-b": {
+      "name": "Medical industry · Specialist website",
+      "description": "An earlier healthcare website presenting specialist services and patient-facing information.",
+      "alt": "Small redacted screenshot of the specialist service website"
+    }
+  }
+}

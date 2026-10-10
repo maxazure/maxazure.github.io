@@ -1,14 +1,16 @@
 ---
 import { copy, profile, type Locale } from '../data/profile';
+import { locales, localeCodes } from '../lib/locales';
 import { seo } from '../lib/seo';
 import '../styles/global.css';
 interface Props { locale?: Locale; kind?: 'home' | 'privacy' | 'projects' | '404' }
 const { locale = 'en', kind = 'home' } = Astro.props;
+
 const c = copy[locale];
 const meta = seo(locale, kind);
 ---
 <!doctype html>
-<html lang={c.lang}>
+<html lang={locales[locale].lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,18 +31,18 @@ const meta = seo(locale, kind);
     <meta property="og:title" content={meta.title} />
     <meta property="og:description" content={meta.description} />
     <meta property="og:url" content={meta.canonical} />
-    <meta property="og:locale" content={locale === 'en' ? 'en_NZ' : 'zh_CN'} />
-    <meta property="og:locale:alternate" content={locale === 'en' ? 'zh_CN' : 'en_NZ'} />
+    <meta property="og:locale" content={locales[locale].og} />
+    {localeCodes.filter(code => code !== locale).map(code => <meta property="og:locale:alternate" content={locales[code].og} />)}
     <meta property="og:image" content={meta.image} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Jay Liu. Senior Software Engineer. FinTech, Cloud and Applied AI. Auckland, New Zealand." />
+    <meta property="og:image:alt" content={meta.socialAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={meta.title} />
     <meta name="twitter:description" content={meta.description} />
     <meta name="twitter:image" content={meta.image} />
-    <meta name="twitter:image:alt" content="Jay Liu. Senior Software Engineer. FinTech, Cloud and Applied AI. Auckland, New Zealand." />
+    <meta name="twitter:image:alt" content={meta.socialAlt} />
     {meta.graph && <script type="application/ld+json" set:html={JSON.stringify(meta.graph).replace(/</g, '\\u003c')} />}
   </head>
   <body>

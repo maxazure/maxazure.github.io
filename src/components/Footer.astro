@@ -1,10 +1,11 @@
 ---
+import { localePath } from '../lib/locales';
 import { copy, profile, type Locale } from '../data/profile';
 interface Props { locale: Locale }
 const { locale } = Astro.props;
 const c = copy[locale];
 ---
 <footer class="site-footer shell">
-  <div><a class="footer-name" href={locale === 'en' ? '/#home' : '/zh/#home'}>Jay Liu<span>.</span></a><p>{c.footerRole}</p></div>
-  <div class="footer-meta"><p>© {profile.updated.slice(0, 4)} Jay Liu</p><p>{c.personalNote}</p><a href={locale === 'en' ? '/privacy/' : '/zh/privacy/'}>{c.privacy}</a></div>
+  <div><a class="footer-name" href={`${localePath(locale)}#home`}>Jay Liu<span>.</span></a><p>{c.footerRole}</p></div>
+  <div class="footer-meta"><p>© {profile.updated.slice(0, 4)} Jay Liu</p><p>{c.personalNote}</p><a href={localePath(locale, 'privacy')}>{c.privacy}</a></div>
 </footer>

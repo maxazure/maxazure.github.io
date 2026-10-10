@@ -1,0 +1,455 @@
+{
+  "copy": {
+    "skip": "跳到正文",
+    "menu": "菜单",
+    "navLabel": "主导航",
+    "nav": [
+      [
+        "about",
+        "关于"
+      ],
+      [
+        "portfolio",
+        "重点案例"
+      ],
+      [
+        "resume",
+        "经历"
+      ],
+      [
+        "skills",
+        "技术能力"
+      ],
+      [
+        "contact",
+        "联系"
+      ]
+    ],
+    "location": "新西兰，奥克兰",
+    "heroDomains": [
+      "企业软件",
+      "AI 应用系统",
+      "Agent 工作流"
+    ],
+    "role": "资深软件工程师",
+    "heroIntro": "理解业务流程，连接现有系统与 AI。",
+    "heroBody": "18+ 年企业软件经验，覆盖 ERP／CRM 与金融平台交付。以这些工程积累，构建 AI Agent、知识检索和语音系统。",
+    "heroSpecialism": "企业 AI 应用与金融科技",
+    "viewWork": "查看重点案例",
+    "cvLabel": "英文简历（PDF）",
+    "focus": "构建 AI 应用系统",
+    "aboutLabel": "关于我",
+    "aboutHeading": "理解业务，\n把系统做扎实。",
+    "aboutLead": "从业务流程出发，推进到实际可用的软件。",
+    "aboutBody": "我是 Jay，中文名刘杰，目前住在奥克兰。在中国和新西兰的工作涉及 ERP／CRM、零售软件、医疗信息系统和金融平台，经历覆盖开发、架构设计与团队管理。",
+    "aboutBody2": "在 FNZ，我的工作主要围绕软件交付。个人项目则将 AI 模型、工具与数据接入具体流程，关注结果校验、失败后的恢复，以及需要判断时的人工复核。",
+    "skillLabel": "技术能力",
+    "skillHeading": "从业务需求，\n推进到系统交付。",
+    "skillIntro": "围绕业务建模、系统集成和软件交付，结合企业开发与 AI 应用技术。",
+    "skills": [
+      {
+        "name": "企业软件开发",
+        "summary": "围绕 ERP／CRM、金融平台与业务应用，完成数据建模、开发和交付。",
+        "items": [
+          "C# · .NET · ASP.NET Core",
+          "React · TypeScript · Astro",
+          "Python · FastAPI · Node.js",
+          "SQL Server · PostgreSQL · REST APIs"
+        ]
+      },
+      {
+        "name": "AI 应用与 Agent",
+        "summary": "连接模型与工具，在流程中保留来源信息和人工复核环节。",
+        "items": [
+          "Agent 编排 · MCP · LLM 集成",
+          "RAG · 知识检索 · Agent 记忆",
+          "ASR · VAD · TTS · 语音工作流",
+          "Claude Code · Codex · OpenCode"
+        ]
+      },
+      {
+        "name": "云平台与交付",
+        "summary": "让系统上线运行，并持续处理运行中的问题。",
+        "items": [
+          "Azure · Cloudflare · Linux",
+          "Docker · CI/CD · GitHub Actions",
+          "架构 · 测试 · 代码审查",
+          "可观测性 · 生产支持"
+        ]
+      },
+      {
+        "name": "系统集成",
+        "summary": "让接口与数据流在变化和冲突下仍然可预测。",
+        "items": [
+          "类型化 API · Schema 校验",
+          "幂等性 · 乐观并发控制",
+          "来源追溯 · 执行边界",
+          "响应式界面 · 无障碍"
+        ]
+      }
+    ],
+    "experienceLabel": "工作经历",
+    "experienceHeading": "企业系统中的长期积累。",
+    "experienceIntro": "ERP／CRM、零售业务软件、医院管理信息系统与企业金融平台，覆盖实际开发和团队管理。",
+    "experience": [
+      {
+        "date": "2022 年 10 月至今",
+        "role": "Analyst Developer",
+        "company": "FNZ Group",
+        "place": "新西兰，奥克兰",
+        "description": "以交付为重点，使用 C# 和 .NET 参与企业金融平台的开发与维护。",
+        "responsibilities": [
+          "分析需求，将其细化为可实现的应用变更。",
+          "完成开发、测试和代码审查，关注可维护性与回归风险。",
+          "与分析师、开发、测试及交付团队协作，排查问题并支持版本发布。"
+        ],
+        "note": "客户项目与具体实现涉及保密，不在此公开。"
+      },
+      {
+        "date": "2022 年 2-7 月",
+        "role": "信息技术讲师",
+        "company": "Southern Institute of Technology",
+        "place": "新西兰，因弗卡吉尔",
+        "description": "教授编程基础和软件工程，通过实践课程和个别辅导帮助学生学习。"
+      },
+      {
+        "date": "2020-2022 年",
+        "role": "全栈开发工程师（兼职）",
+        "company": "零售行业",
+        "place": "中国，广州",
+        "description": "使用 .NET Core、REST API、MySQL 和 Vue.js 开发、维护开票与销售管理软件，将零售业务需求落实为系统功能。"
+      },
+      {
+        "date": "2018-2021 年",
+        "role": "全栈开发工程师",
+        "company": "Best IT Solution / Hangzhou Xianbing Technology",
+        "place": "新西兰与中国",
+        "description": "使用 Flask、REST API、MySQL、React 和 Redux 开发商用 Web 系统和短信平台。"
+      },
+      {
+        "date": "2011-2017 年",
+        "role": "软件开发团队负责人",
+        "company": "企业软件与技术咨询",
+        "place": "中国，北京",
+        "description": "带领团队交付企业信息管理系统，工作涉及中间件、数据库架构和服务器部署。"
+      },
+      {
+        "date": "2008-2011 年",
+        "role": "信息技术总监",
+        "company": "医疗行业",
+        "place": "中国，北京",
+        "description": "设计医院管理信息系统的架构并带领开发团队，同时负责医疗网站的交付和维护。"
+      }
+    ],
+    "educationLabel": "教育经历",
+    "education": "信息技术硕士",
+    "educationSchool": "Southern Institute of Technology · 2019-2021",
+    "educationNote": "研究方向涉及对话式 AI 与生成模型。",
+    "contactLabel": "联系",
+    "contactHeading": "聊聊需要理解业务、\n也需要动手交付的岗位。",
+    "contactBody": "我关注资深软件工程、企业 AI 集成与前线部署工程（FDE）方向。欢迎发来岗位信息、要解决的业务问题和团队背景，我们可以从这些具体内容聊起。",
+    "emailLabel": "给 Jay 发邮件",
+    "personalNote": "个人项目及观点仅代表我自己。",
+    "privacy": "隐私说明",
+    "backHome": "返回首页",
+    "footerRole": "软件工程师，也喜欢做工具",
+    "privacyTitle": "隐私说明 | Jay Liu",
+    "privacyHeading": "一个简单的网站，\n一份清楚的说明。",
+    "privacyIntro": "这是 Jay Liu 的个人网站，用于介绍我的工作，并提供联系入口。",
+    "privacySections": [
+      [
+        "浏览网站",
+        "本站的应用代码没有设置 Cookie，也没有联系表单、广告跟踪或分析脚本。字体和图形随网站提供。网站由 GitHub Pages 托管，托管方可能根据其隐私政策处理 IP 地址、访问日志等技术信息。"
+      ],
+      [
+        "邮件和外部链接",
+        "邮件链接会打开你自己的邮件应用。如果你给我发邮件，我会使用你提供的信息阅读和回复。项目和个人主页链接会带你前往外部网站，它们有独立的隐私政策。"
+      ],
+      [
+        "有疑问时",
+        "如果对分享给我的个人信息有疑问，或需要申请查看、更正，可发送邮件至 maxazure@gmail.com。"
+      ]
+    ],
+    "updatedLabel": "更新于 2026 年 10 月 10 日",
+    "heroName": "刘杰",
+    "portraitName": "Jie Liu · 刘杰"
+  },
+  "ui": {
+    "Engineering focus": "主攻方向",
+    "From architecture to delivery": "从架构设计到系统交付",
+    "Jay Liu": "刘杰（Jay Liu）",
+    "Open-source work": "开源成果",
+    "Follow the implementation.": "直接查看实现。",
+    "Source, workflow instructions and examples you can inspect.": "通过源码、工作流说明与示例，进一步了解工程实现。",
+    "Transcript-led editing, FFmpeg rendering and artifact checks.": "转录驱动剪辑、FFmpeg 渲染与交付物校验。",
+    "Transcript adapters, a React viewer and a Markdown CLI.": "会话适配器、React 阅读组件与 Markdown 命令行工具。",
+    "Traceable bookkeeping workflows and exports for review.": "可追溯的账簿整理工作流与待复核导出资料。",
+    "Jay’s profiles": "Jay 的个人主页",
+    "Projects & engineering work.": "项目与工程实践。",
+    "Enterprise systems, applied AI, developer tools and earlier work. For the business context, my role and engineering decisions, start with the four selected cases.": "这里汇集企业系统、AI 应用、开发工具与早期工作。重点案例进一步介绍业务背景、我的责任和工程取舍。",
+    "Read the selected engineering cases": "阅读重点工程案例",
+    "Discuss a role with Jay": "与 Jay 交流岗位机会",
+    "Complete project collection": "完整项目集",
+    "A wider view of the work.": "更多项目与实践。",
+    "project examples": "个项目案例",
+    "AI systems, voice workflows, enterprise software and web applications. Client work is anonymised; previews include screenshots and illustrative interfaces.": "AI 系统、语音工作流、企业软件与 Web 应用。客户案例匿名处理，预览包括截图与界面示意。",
+    "AI interface illustration": "AI 界面示意",
+    "Current site": "访问现网站",
+    "Demo & team": "演示与团队",
+    "Visit website": "访问网站",
+    "Selected engineering work": "重点工程案例",
+    "From business problems to working systems.": "从业务问题到工程实现。",
+    "Four examples of how I approach business software and applied AI, with my role and the available evidence made explicit.": "通过四个案例，说明我如何处理业务软件与 AI 应用中的问题，以及本人承担的工作和可查看的证据。",
+    "Technologies and focus": "技术与关注点",
+    "View the anonymised preview": "查看匿名预览",
+    "My role": "我的责任",
+    "Constraint & decision": "难点与取舍",
+    "Current evidence": "当前成果与证据",
+    "More enterprise systems, AI tools, voice workflows and earlier projects.": "继续查看企业系统、AI 工具、语音工作流与早期项目。",
+    "Explore all 30 projects": "浏览全部 30 个项目",
+    "More project categories": "更多项目分类",
+    "Enterprise systems": "企业系统",
+    "AI & engineering tools": "AI 与工程工具",
+    "Web applications": "Web 应用",
+    "Earlier work": "早期项目",
+    "Languages": "语言",
+    "Jay Liu home": "Jay Liu 首页",
+    "GitHub Privacy Statement": "GitHub 隐私声明",
+    "English": "英文",
+    "Simplified Chinese": "简体中文",
+    "Traditional Chinese": "繁体中文",
+    "Japanese": "日文",
+    "French": "法语",
+    "Korean": "韩语",
+    "Website": "网站项目",
+    "Private system": "非开源系统",
+    "Development instance": "开发实例",
+    "Prototype": "实验原型",
+    "Open source": "开源项目",
+    "Historical project": "历史项目",
+    "Archived project": "归档项目",
+    "MVP · preparing for pilots": "MVP · 准备试点",
+    "Internal operational system": "内部使用系统",
+    "AI Agents": "AI Agent"
+  },
+  "meta": {
+    "homeTitle": "Jay Liu 刘杰 - 资深软件工程师 | FinTech | .NET | React | Cloud | AI Integration",
+    "homeDescription": "Jay Liu（刘杰），常驻奥克兰的资深软件工程师。18 年以上企业软件经验，在 FNZ 参与金融平台交付，个人项目关注 AI 集成、Agent 与语音系统。",
+    "projectsTitle": "项目与工程实践 | Jay Liu 刘杰",
+    "projectsDescription": "查看 Jay Liu 的 30 个项目案例：企业软件、AI 应用、语音工作流与开源工程工具，包含项目阶段和公开证据链接。",
+    "socialAlt": "刘杰，资深软件工程师。金融科技、云平台与 AI 应用。新西兰奥克兰。"
+  },
+  "featured": {
+    "transactional-crm": {
+      "tags": [
+        "Python / FastAPI",
+        "PostgreSQL",
+        "类型化 API / CLI"
+      ],
+      "name": "企业 CRM",
+      "category": "业务系统",
+      "stage": "内部使用系统",
+      "problem": "客户关系、项目和发票需要一致的业务记录，同时支持人员与软件 Agent 参与更新。",
+      "role": "我设计并实现应用、API 和命令行工具，将结构化业务记录与版本化笔记连接起来。",
+      "decision": "重复请求和并发编辑容易造成重复记录或覆盖。通过幂等写入和版本检查，允许安全重试，并将冲突交回使用者处理。",
+      "evidence": "已实现带版本历史和受控写入的内部工作流。完整项目页提供空数据预览，实际业务记录与系统入口保持私有。"
+    },
+    "bookkeeping-assistant": {
+      "tags": [
+        "结构化记录",
+        "对账",
+        "Python"
+      ],
+      "name": "NZ Accounting Assistant",
+      "category": "财务工作流",
+      "stage": "开源工作流",
+      "problem": "收据和银行流水格式各异。整理可复核的账簿，需要在匹配记录时保留每一笔对应的原始依据。",
+      "role": "我编写可复用技能和配套工具，连接凭证采集、账簿整理、对账与导出。",
+      "decision": "不明确的匹配需要保留。保存原文件，将记录整理为 JSON，把有歧义的条目留给人工确认，再准备导出资料。",
+      "evidence": "公开的工作流与脚本覆盖 Xero CSV 导出和会计复核材料。财务记录与最终判断由人复核。",
+      "linkLabel": "查看工作流与源码"
+    },
+    "voice-companion": {
+      "tags": [
+        "对话式 AI",
+        "记忆",
+        "语音处理"
+      ],
+      "name": "HiLily",
+      "category": "AI 系统集成",
+      "stage": "功能 MVP · 准备试点",
+      "problem": "面向老年人的语音陪伴设备，需要在嵌入式终端与云服务之间协同处理语音、对话和记忆。",
+      "role": "我以志愿 AI Coach 身份，为团队提供 AI 架构、对话记忆与音频处理方面的技术指导。产品由团队共同完成。",
+      "decision": "设备音频、模型响应和记忆上下文各有约束。我的指导重点是 AI 处理链路与端侧语音处理如何衔接。",
+      "evidence": "项目官网提供演示和我的团队角色说明。团队已完成功能 MVP 与多轮迭代，正在准备实际场景的试点。",
+      "linkLabel": "查看演示与团队介绍"
+    },
+    "codexview": {
+      "tags": [
+        "TypeScript",
+        "React",
+        "会话适配器"
+      ],
+      "name": "CodexView",
+      "category": "工程工具",
+      "stage": "开源软件包",
+      "problem": "不同编码 Agent 的会话格式各异。阅读工具调用和嵌套会话时，需要一个统一的呈现方式。",
+      "role": "我将会话适配器、React 组件和 Markdown 命令行工具开发为可复用的软件包。",
+      "decision": "分开处理格式解析与界面呈现。适配器输出共享事件模型，同时支持可视化会话与紧凑文本，并保留工具调用及子 Agent 上下文。",
+      "evidence": "公开仓库包含三个软件包、使用示例和测试样本，可直接查看实现，无需访问私有工作台。",
+      "linkLabel": "查看软件包与源码"
+    }
+  },
+  "projects": {
+    "voice-companion": {
+      "name": "HiLily · 语音陪伴设备",
+      "description": "以志愿 AI Coach 身份提供 AI 架构、对话记忆与音频处理方面的技术指导。团队已完成功能 MVP，正在准备试点；官网提供演示与团队角色说明。",
+      "alt": "AI 生成的界面示意：语音会话链路、设备状态与记忆上下文"
+    },
+    "web-builder-agent": {
+      "name": "Web Builder Agent · 网站交付工作流",
+      "description": "串联调研、设计、构建、检查与部署的完整流程。通过可复用阶段和 Agent 配置兼容 Claude Code、Codex 与 OpenCode，记录执行证据，支持重试与审核节点。",
+      "alt": "AI 生成的界面示意：网站交付阶段、Agent 选择与审核节点"
+    },
+    "idea-builder": {
+      "name": "Idea Builder · 多 Agent 软件交付",
+      "description": "将想法推进到规划、实现、测试与部署的分阶段系统，支持切换编码 Agent、实时输出与会话恢复。",
+      "alt": "AI 生成的界面示意：软件规划、实现任务与 Agent 输出工作台"
+    },
+    "agent-workbench": {
+      "name": "AgentWeb · AI 工程工作台",
+      "description": "以 React、TypeScript 和 Fastify 连接编程 Agent 会话、工具事件流与工作区交付物。",
+      "alt": "AI 工程工作台的匿名缩略图"
+    },
+    "voice-capture": {
+      "name": "Voice2Task · 语音采集与意图处理",
+      "description": "Android 端使用 VAD 分段、AAC 编码与可重试上传，服务端完成语音转写和结合上下文的请求处理。",
+      "alt": "AI 生成的界面示意：语音采集、分段上传与转写预览"
+    },
+    "writing-assessment": {
+      "name": "教育行业 · AI 写作评估系统",
+      "description": "将评分量表、AI 反馈与教师复核连接到同一评估流程，包含角色权限、结构化评估记录与可编辑的评分环节。",
+      "alt": "AI 生成的界面示意：写作稿件、评分量表与教师复核"
+    },
+    "knowledge-memory": {
+      "name": "知识与记忆 · 证据工作流",
+      "description": "通过来源有效性检查、人工审阅与可追溯检索，组织知识与记忆记录的实验原型。",
+      "alt": "证据管理原型的匿名缩略图"
+    },
+    "agentmeshkit": {
+      "name": "AgentMeshKit · Agent 工作台 SDK",
+      "description": "从 Agent 工作台工程中提取的模块化工具包，覆盖共享事件协议、CLI 执行器、对话组件、工作区产物和任务状态。",
+      "alt": "AI 生成的界面示意：Agent 会话组件、协议事件与工作区产物"
+    },
+    "codexview": {
+      "name": "CodexView · Agent 会话渲染",
+      "description": "通过 React 组件、会话适配器与 Markdown CLI 呈现编码 Agent 的记录，将工具事件和嵌套会话整理成一致的阅读格式。",
+      "alt": "AI 生成的界面示意：编码 Agent 会话、工具事件与代码差异"
+    },
+    "capability-vault": {
+      "name": "Agent Capability Vault · 能力配置同步",
+      "description": "通过桌面应用和局域网同步服务，在多台工程工作站之间管理 Agent 指示、技能、工具连接与机器能力配置。",
+      "alt": "AI 生成的界面示意：Agent 指示、技能与工具配置管理"
+    },
+    "agent-home": {
+      "name": "AgentHome · 持久化 Agent 工作区",
+      "description": "为编码 Agent 提供可复用的工作目录，将指示模板、Markdown 记忆、提醒与命令行维护工具放入持久化工作区。",
+      "alt": "AI 生成的界面示意：持久化工作区的指示、记忆与维护工具"
+    },
+    "browser-test-workspace": {
+      "name": "浏览器测试 · 隔离工作区",
+      "description": "面向功能检查的容器化桌面浏览器环境，保留浏览器配置、测试产物，并提供备份和恢复工具。",
+      "alt": "AI 生成的界面示意：隔离浏览器、功能检查与测试产物"
+    },
+    "hardware-control": {
+      "name": "硬件控制 · 视觉到 HID 桥接",
+      "description": "将 ESP32-S3 键鼠桥接与主机端屏幕采集、决策工具连接起来，把视觉观察转换成受控的 USB HID 操作。",
+      "alt": "AI 生成的界面示意：屏幕观察与 USB 键鼠控制"
+    },
+    "local-narration": {
+      "name": "本地语音合成 · 配音工具链",
+      "description": "围绕现有 VoxCPM2 模型构建命令行与服务集成，把稿件输入、音色设置、试听和 WAV／MP3 输出组织成可重复的配音流程。",
+      "alt": "AI 生成的界面示意：本地配音命令行与音频输出"
+    },
+    "live-interpretation": {
+      "name": "语音翻译 · 实时字幕原型",
+      "description": "在 Android 端检测并分段语音，调用转写与翻译服务，将连续音频处理结果显示为翻译字幕。",
+      "alt": "AI 生成的界面示意：原文、翻译字幕与音频活动"
+    },
+    "speech-tooling": {
+      "name": "OmniVoice TTS Skill",
+      "description": "封装现有 OmniVoice 引擎，为本地语音生成提供可重复使用的命令行工作流。",
+      "alt": "AI 生成的界面示意：本地语音合成与音频试听"
+    },
+    "lan-microphone": {
+      "name": "AirMicLAN · 局域网麦克风",
+      "description": "通过 Bonjour 发现与 TCP 音频流连接两台 Mac，发送端采集 PCM，接收端将声音送入虚拟音频输入。",
+      "alt": "AI 生成的界面示意：局域网麦克风发送与接收设置"
+    },
+    "video-editing": {
+      "name": "Video Editing Skill",
+      "description": "以 Python 和 FFmpeg 连接转录驱动的剪辑、媒体渲染与交付物校验。",
+      "alt": "AI 生成的界面示意：转写稿、视频片段与编辑时间线"
+    },
+    "editorial-workflow": {
+      "name": "AI 内容工作流 · 审核后发布",
+      "description": "将选题规划、来源材料、文章生成、元数据与内容检查连接起来，并在发布前保留人工审核环节。",
+      "alt": "AI 生成的界面示意：来源材料、文章草稿与人工审核"
+    },
+    "media-workspace": {
+      "name": "媒体工作流 · Android 素材工作区",
+      "description": "使用 Android 应用和后端 API 整理文案、图片与视频素材包，处理 Agent 请求，并将产物交付到手机。",
+      "alt": "AI 生成的界面示意：文案、图片与视频素材包"
+    },
+    "bookkeeping-assistant": {
+      "name": "NZ Accounting Assistant",
+      "description": "整理收据和流水，生成结构化账簿与对账资料，供人工核对。",
+      "alt": "AI 生成的界面示意：账簿对账与会计复核"
+    },
+    "operations-erp": {
+      "name": "旅游行业 · 运营 ERP",
+      "description": "连接需求规划、产品与 SKU、订单、采购预订和业务提醒，结合权限与审计管理业务流程。当前展示开发实例。",
+      "alt": "运营 ERP 空数据演示界面的缩略图"
+    },
+    "transactional-crm": {
+      "name": "业务管理 · 企业 CRM",
+      "description": "统一管理关系、项目、开票及业务记录，以 PostgreSQL、类型化 API 和受控写入支持版本追溯。",
+      "alt": "内部业务系统的匿名缩略图"
+    },
+    "tourism": {
+      "name": "旅游行业 · 行程展示网站",
+      "description": "组织行程、路线与咨询路径，通过可复用页面和结构化元数据支持持续维护。",
+      "alt": "行程展示网站的匿名缩略图"
+    },
+    "transport": {
+      "name": "运输行业 · 服务网站",
+      "description": "以双语页面呈现服务与联系入口，兼顾手机端导航和使用体验。",
+      "alt": "服务与询价网站的匿名缩略图"
+    },
+    "accounting": {
+      "name": "会计行业 · 服务与知识网站",
+      "description": "连接专业服务与知识内容，使用共享内容模型维护双语页面和文章库。",
+      "alt": "服务与知识网站的匿名缩略图"
+    },
+    "finance-archive": {
+      "name": "金融行业 · 数字资产平台",
+      "description": "早期数字资产 Web 项目。缩略图保留历史界面，现域名为占位页面。",
+      "alt": "数字资产平台的匿名缩略图"
+    },
+    "medical-archive-a": {
+      "name": "医疗行业 · 服务网站",
+      "description": "早期医疗网站，组织服务类别、团队信息和咨询路径。",
+      "alt": "服务展示网站的匿名缩略图"
+    },
+    "consumer-app-archive": {
+      "name": "消费应用 · 支出与活动记录",
+      "description": "用于记录支出与活动的移动应用，配有 Web 介绍页面。",
+      "alt": "支出与活动记录的匿名缩略图"
+    },
+    "medical-archive-b": {
+      "name": "医疗行业 · 专科服务网站",
+      "description": "早期医疗网站，呈现专科服务和面向患者的信息。",
+      "alt": "专项服务网站的匿名缩略图"
+    }
+  }
+}

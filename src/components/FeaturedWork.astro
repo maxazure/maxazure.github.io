@@ -1,42 +1,44 @@
 ---
+import { ui } from '../data/content';
+import { localePath } from '../lib/locales';
 import { featuredWork } from '../data/featured-work';
 import type { Locale } from '../data/profile';
 import Arrow from './Arrow.astro';
 interface Props { locale: Locale }
 const { locale } = Astro.props;
-const en = locale === 'en';
-const archive = en ? '/projects/' : '/zh/projects/';
+const t = ui(locale);
+const archive = localePath(locale, 'projects');
 ---
 <section class="work-section section-space" id="portfolio" aria-labelledby="work-title">
   <div class="shell">
     <div class="section-header">
-      <div><p class="eyebrow">{en ? 'Selected engineering work' : '重点工程案例'}</p><h2 id="work-title" class="display-heading">{en ? 'From business problems to working systems.' : '从业务问题到工程实现。'}</h2></div>
+      <div><p class="eyebrow">{t("Selected engineering work")}</p><h2 id="work-title" class="display-heading">{t("From business problems to working systems.")}</h2></div>
     </div>
-    <p class="section-description">{en ? 'Four examples of how I approach business software and applied AI, with my role and the available evidence made explicit.' : '通过四个案例，说明我如何处理业务软件与 AI 应用中的问题，以及本人承担的工作和可查看的证据。'}</p>
+    <p class="section-description">{t("Four examples of how I approach business software and applied AI, with my role and the available evidence made explicit.")}</p>
     <div class="featured-list">{featuredWork(locale).map((project) => <article class="featured-case" data-featured={project.id}>
       <div class="featured-heading">
         <p class="case-category">{project.category}</p>
         <h3>{project.name}</h3>
         <p class="featured-stage">{project.stage}</p>
-        <ul class="case-technologies" aria-label={en ? 'Technologies and focus' : '技术与关注点'}>{project.tags.map(tag => <li>{tag}</li>)}</ul>
+        <ul class="case-technologies" aria-label={t("Technologies and focus")}>{project.tags.map(tag => <li>{tag}</li>)}</ul>
         {'href' in project && 'linkLabel' in project && <a class="text-link" href={project.href} target="_blank" rel="noopener noreferrer">{project.linkLabel}<Arrow /></a>}
-        {!('href' in project) && <a class="text-link" href={`${archive}#project-${project.id}`}>{en ? 'View the anonymised preview' : '查看匿名预览'}<Arrow /></a>}
+        {!('href' in project) && <a class="text-link" href={`${archive}#project-${project.id}`}>{t("View the anonymised preview")}<Arrow /></a>}
       </div>
       <div class="featured-body">
         <p class="case-problem">{project.problem}</p>
         <dl class="case-reasoning">
-          <div><dt>{en ? 'My role' : '我的责任'}</dt><dd>{project.role}</dd></div>
-          <div><dt>{en ? 'Constraint & decision' : '难点与取舍'}</dt><dd>{project.decision}</dd></div>
-          <div><dt>{en ? 'Current evidence' : '当前成果与证据'}</dt><dd>{project.evidence}</dd></div>
+          <div><dt>{t("My role")}</dt><dd>{project.role}</dd></div>
+          <div><dt>{t("Constraint & decision")}</dt><dd>{project.decision}</dd></div>
+          <div><dt>{t("Current evidence")}</dt><dd>{project.evidence}</dd></div>
         </dl>
       </div>
     </article>)}</div>
-    <div class="work-archive-link"><p>{en ? 'More enterprise systems, AI tools, voice workflows and earlier projects.' : '继续查看企业系统、AI 工具、语音工作流与早期项目。'}</p><a class="text-link" href={archive}>{en ? 'Explore all 30 projects' : '浏览全部 30 个项目'}<Arrow direction="right" /></a></div>
-    <nav class="project-group-links" aria-label={en ? 'More project categories' : '更多项目分类'}>
-      <a id="projects-enterprise" href={`${archive}#projects-enterprise`}>{en ? 'Enterprise systems' : '企业系统'}</a>
-      <a id="projects-labs" href={`${archive}#projects-labs`}>{en ? 'AI & engineering tools' : 'AI 与工程工具'}</a>
-      <a id="projects-recent" href={`${archive}#projects-recent`}>{en ? 'Web applications' : 'Web 应用'}</a>
-      <a id="projects-legacy" href={`${archive}#projects-legacy`}>{en ? 'Earlier work' : '早期项目'}</a>
+    <div class="work-archive-link"><p>{t("More enterprise systems, AI tools, voice workflows and earlier projects.")}</p><a class="text-link" href={archive}>{t("Explore all 30 projects")}<Arrow direction="right" /></a></div>
+    <nav class="project-group-links" aria-label={t("More project categories")}>
+      <a id="projects-enterprise" href={`${archive}#projects-enterprise`}>{t("Enterprise systems")}</a>
+      <a id="projects-labs" href={`${archive}#projects-labs`}>{t("AI & engineering tools")}</a>
+      <a id="projects-recent" href={`${archive}#projects-recent`}>{t("Web applications")}</a>
+      <a id="projects-legacy" href={`${archive}#projects-legacy`}>{t("Earlier work")}</a>
     </nav>
   </div>
 </section>

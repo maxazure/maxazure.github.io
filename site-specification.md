@@ -1,14 +1,14 @@
 # Jay Liu portfolio specification
 
-Updated: 2026-10-10. Owner: Jay Liu. Canonical: https://jayliu.co.nz/. Repository: https://github.com/maxazure/maxazure.github.io. Working branch: improve/recruiter-positioning. Production branch: master.
+Updated: 2026-10-10. Owner: Jay Liu. Canonical: https://jayliu.co.nz/. Repository: https://github.com/maxazure/maxazure.github.io. Working and production branch: master.
 
 ## Purpose and success criteria
 
 Help hiring teams understand Jay’s fit for senior software engineering, enterprise AI integration and FDE opportunities. Lead with business understanding and delivery, then show attributed engineering evidence. FDE is a direction of interest; the formal FNZ title remains Analyst Developer. The owner confirms FNZ work is delivery-focused and confidential.
 
-Success: four equivalent featured cases on both homepages; all 30 existing projects on bilingual project indexes; CV, LinkedIn and selected-work actions in the hero; public source/demo links alongside relevant evidence; no fabricated outcomes or confidential employer/client details. The supplied portrait is small and appears in About after the hero. Preserve the exact Transformer component and its existing CSS, old homepage anchors, original CV and all existing project images.
+Success: four equivalent featured cases on all six homepages; all 30 existing projects on each language’s project index; CV, LinkedIn and selected-work actions in the hero; public source/demo links alongside relevant evidence; no fabricated outcomes or confidential employer/client details. The supplied portrait is small and appears in About after the hero. Preserve the exact Transformer component and its existing CSS, old homepage anchors, original CV and all existing project images.
 
-`src/data/profile.ts` owns identity and locale copy. `src/data/featured-work.ts` owns the four engineering cases; `src/data/projects.ts` owns the complete collection. [Positioning and evidence](docs/positioning.md) records the goal, sources, outcome hypothesis and acceptance plan. The source baseline is the deployed `525d9eb` revision; its rebuilt homepage matches live HTML byte-for-byte.
+`src/data/profile.ts` owns shared identity; `src/data/locales/en.json` owns the source copy, with complete dictionaries for five other languages. `src/data/featured-work.ts` owns the four engineering cases; `src/data/projects.ts` owns the complete collection. [Positioning and evidence](docs/positioning.md) records the goal, sources, outcome hypothesis and acceptance plan. The source baseline is the deployed `525d9eb` revision; its rebuilt homepage matches live HTML byte-for-byte.
 
 ## Creative route and section capacity
 
@@ -28,13 +28,13 @@ Frontend-design is available and applied. Impeccable is unavailable in the local
 
 ## Runtime, hosting and URL contracts
 
-Astro 7.3.5, TypeScript and Tailwind 4.3.3, static output, no React runtime. Native mobile-menu enhancement remains below 1KB. GitHub Actions checks types, builds and verifies HTML contracts before Pages publication. Maintained actions are pinned to full commit SHAs, Node 22 application runtime, Ubuntu 24.04 runner. Custom domain and HTTPS are retained; no new DNS or account resources are required.
+Astro 7.3.5, TypeScript and Tailwind 4.3.3, static output, no React runtime. Native navigation and language-disclosure enhancement remains within the 10KB total JavaScript budget. GitHub Actions checks types, builds and verifies HTML contracts before Pages publication. Maintained actions are pinned to full commit SHAs, Node 22 application runtime, Ubuntu 24.04 runner. Custom domain and HTTPS are retained; no new DNS or account resources are required.
 
 Preserved: `/`, `/index.html`, `#home`, `#about`, `#skills`, `#resume`, `#portfolio`, `#contact`, `/cv/Jie-Liu-CV.pdf`, original favicon path. Canonical pages include `/zh/`, `/privacy/`, `/zh/privacy/`, `/projects/` and `/zh/projects/`. Unknown URLs return HTTP 404 with a custom noindex document. `url-migration.csv` records contracts. Git history retains retired assets; no compatibility implementation is added.
 
 ## SEO and discovery
 
-The English homepage title remains verbatim. Both homepage descriptions are intentionally rewritten to distinguish FNZ delivery from independent AI work. Person + WebSite + ProfilePage schema matches the career record; it includes no project performance, authorship or employer-architecture claims. Single canonical, Open Graph/Twitter preview, fully qualified en-NZ/zh-CN/x-default alternatives, robots, sitemap and `llms.txt`. Six indexable canonical pages. Case images have real `<img src>`, dimensions, contextual alt text and nearby descriptions. No fabricated gallery schema, review/award claims or image-ranking promise.
+The English homepage title remains verbatim. Both homepage descriptions are intentionally rewritten to distinguish FNZ delivery from independent AI work. Person + WebSite + ProfilePage schema matches the career record; it includes no project performance, authorship or employer-architecture claims. Single canonical, Open Graph/Twitter preview, fully qualified en-NZ/zh-Hans/zh-Hant/ja/fr/ko/x-default alternatives, robots, sitemap and `llms.txt`. Eighteen indexable canonical pages. Case images have real `<img src>`, dimensions, contextual alt text and nearby descriptions. No fabricated gallery schema, review/award claims or image-ranking promise.
 
 Search Console/Bing indexing, field performance, rankings, recruiting conversions, social-crawler refresh and AI citations are unmeasured. Technical readiness and lab results do not establish those outcomes.
 
@@ -65,7 +65,7 @@ All case content survives no-JavaScript and images-disabled states. Native headi
 
 Strict target: initial page below 500KB, JS below 10KB, CSS below 40KB, fonts below 100KB. Eleven small lazy screenshots remain within the strict image budget. No video, external fonts, runtime carousel or third-party scripts. Expected LCP: hero role; explicit thumbnail dimensions preserve layout. GitHub Pages owns cache headers, previously verified `max-age=600`; unsupported `_headers` rules are not shipped.
 
-Verification uses `pnpm check`, build, HTML-contract verifier, strict resource/fragment/media audits and normal browser inputs. The verifier checks seven HTML routes, four featured cases, thirty archive entries, reciprocal project language links, metadata/schema, unchanged CV, legacy anchors, portrait placement, small images, generated labels and private endpoint restrictions. Desktop/mobile Chromium rendering is reviewed. Branded Safari, assistive-technology certification and field metrics are not claimed.
+Verification uses `pnpm check`, build, HTML-contract verifier, strict resource/fragment/media audits and normal browser inputs. The verifier checks nineteen HTML routes, four featured cases, thirty archive entries, reciprocal project language links, metadata/schema, unchanged CV, legacy anchors, portrait placement, small images, generated labels and private endpoint restrictions. Desktop/mobile Chromium rendering is reviewed. Branded Safari, assistive-technology certification and field metrics are not claimed.
 
 The original redesign was published in content commit `50f506a` and workflow update `03fcbd8`. This case-focused follow-up, content commit `c0b4f75`, supersedes that release's abstract projects and research section. GitHub Pages workflow run `37999003089` completed successfully. Live verification downloaded all 32 release files and confirmed byte-for-byte agreement with the local build, then passed the HTML contracts against that live snapshot. The homepage alias, canonical www redirect and custom HTTP 404 also passed.
 
@@ -194,3 +194,12 @@ The current contract above supersedes earlier historical section-order and metad
 - Website Copy Read: personal recruiting portfolio; audience is recruiters and technical hiring managers; goal is a relevant conversation; voice is direct and technical; proof comes from owner-confirmed career facts, public roles, source code and reviewed previews. Never imply confidential employer assignments, clinical results, accounting accuracy guarantees or adoption numbers. AI assists with wording and EN/ZH adaptation; Jay is the content owner. Facts are checked against the sources in positioning.md. No new tax, legal or medical advice is authored.
 - Outcome Measurement Register: use the pre-implementation hypothesis and eleven-field measurement row in positioning.md. No historical conversion baseline or new analytics. Count voluntarily attributed recruitment conversations only after a release; do not claim a hiring or search improvement from QA.
 - Documentation audits: the existing site-specification and DESIGN documents predate the installed skill’s current mandatory template. Those format audits report pre-existing schema/section mismatches. This pass updates the actual project and content contracts without a broad template migration; it does not claim those format audits passed. Functional, rendered and SEO evidence is recorded separately.
+
+
+## Six-language release, 2026-10-10
+
+Owner-authorised localisation uses English as the factual source, with complete Simplified Chinese, Traditional Chinese, Japanese, French and Korean variants. [Localisation contract and review](docs/localisation.md) records source revision, terminology, invariants, disclosure behaviour and test scope. The English UI and language-menu labels contain no Chinese characters. Every language has home, projects and privacy pages; `/zh/` is preserved, with new `/zh-hant/`, `/ja/`, `/fr/` and `/ko/` families. Translation does not change the underlying career, project or privacy facts.
+
+AI-assisted content: the assistant authored and checked each translation against the published English source; Jay requested the six-language release and owns the content. No external native-editor review is claimed. The protected animation and English CV remain byte-identical; no new tracking or data processors are introduced. Search-result performance remains unmeasured.
+
+Release checks: 25 files typechecked without errors, warnings or hints; 19 generated HTML pages pass contracts; all 18 indexable routes are reachable with no orphan/dead-end/broken internal links. Six-language homepages pass 1440/820/390/320px reflow, and project/privacy counterparts pass 1440/320px. Dropdown keyboard, outside dismissal, current state, page/fragment preservation, mobile navigation, native no-JavaScript switching and text-spacing/forced-colour checks pass. The original English case/project facts, animation source and animation CSS rules are preserved. Static resources remain under the project budgets; this is lab evidence, with field metrics and external native-editor review unmeasured.

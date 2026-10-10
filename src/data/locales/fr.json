@@ -1,0 +1,455 @@
+{
+  "copy": {
+    "skip": "Aller au contenu",
+    "menu": "Menu",
+    "navLabel": "Navigation principale",
+    "nav": [
+      [
+        "about",
+        "À propos"
+      ],
+      [
+        "portfolio",
+        "Projets choisis"
+      ],
+      [
+        "resume",
+        "Parcours"
+      ],
+      [
+        "skills",
+        "Compétences"
+      ],
+      [
+        "contact",
+        "Contact"
+      ]
+    ],
+    "location": "Auckland, Nouvelle-Zélande",
+    "heroDomains": [
+      "Logiciels d’entreprise",
+      "Systèmes d’IA appliquée",
+      "Workflows d’agents"
+    ],
+    "role": "Ingénieur logiciel senior",
+    "heroIntro": "Relier les processus métier, les systèmes existants et l’IA.",
+    "heroBody": "Plus de 18 ans dans les logiciels d’entreprise, des ERP et CRM aux plateformes financières. Je m’appuie sur cette expérience pour concevoir des agents IA, des outils de recherche de connaissances et des systèmes vocaux.",
+    "heroSpecialism": "IA d’entreprise et FinTech",
+    "viewWork": "Voir les projets choisis",
+    "cvLabel": "CV (PDF, en anglais)",
+    "focus": "Conception de systèmes d’IA appliquée",
+    "aboutLabel": "À propos",
+    "aboutHeading": "Comprendre le métier.\nMaîtriser la technique.",
+    "aboutLead": "Je pars des processus métier pour aller jusqu’au logiciel utilisé au quotidien.",
+    "aboutBody": "Je m’appelle Jay (Jie Liu), ingénieur logiciel basé à Auckland. Mon parcours en Chine et en Nouvelle-Zélande couvre les ERP et CRM, les logiciels de commerce de détail, les systèmes de santé et les plateformes financières, avec des responsabilités en développement, architecture et encadrement d’équipe.",
+    "aboutBody2": "Chez FNZ, mon travail est centré sur la réalisation et la livraison de logiciels. Dans mes projets indépendants, je relie modèles d’IA, outils et données à des workflows concrets, en prévoyant des contrôles explicites, la reprise après erreur et une validation humaine lorsque le jugement est nécessaire.",
+    "skillLabel": "Compétences techniques",
+    "skillHeading": "Du besoin métier\nau système opérationnel.",
+    "skillIntro": "Modélisation métier, intégration de systèmes et livraison, avec les outils adaptés au logiciel d’entreprise et à l’IA.",
+    "skills": [
+      {
+        "name": "Logiciels d’entreprise",
+        "summary": "ERP, CRM, plateformes financières et applications métier, du modèle de données à la livraison.",
+        "items": [
+          "C# · .NET · ASP.NET Core",
+          "React · TypeScript · Astro",
+          "Python · FastAPI · Node.js",
+          "SQL Server · PostgreSQL · REST APIs"
+        ]
+      },
+      {
+        "name": "IA appliquée et agents",
+        "summary": "Intégrer modèles et outils en préservant le contexte des sources et les étapes de validation.",
+        "items": [
+          "Orchestration d’agents · MCP · Intégration de LLM",
+          "RAG · Recherche de connaissances · Mémoire des agents",
+          "ASR · VAD · TTS · Workflows vocaux",
+          "Claude Code · Codex · OpenCode"
+        ]
+      },
+      {
+        "name": "Cloud et livraison",
+        "summary": "Mettre les systèmes en production et en assurer le suivi.",
+        "items": [
+          "Azure · Cloudflare · Linux",
+          "Docker · CI/CD · GitHub Actions",
+          "Architecture · Tests · Revue de code",
+          "Observabilité · Support de production"
+        ]
+      },
+      {
+        "name": "Intégration de systèmes",
+        "summary": "Concevoir des interfaces et des flux de données au comportement prévisible, même lorsqu’ils évoluent.",
+        "items": [
+          "API typées · Validation de schémas",
+          "Idempotence · Contrôle de concurrence optimiste",
+          "Traçabilité des sources · Limites d’exécution",
+          "Interfaces adaptatives · Accessibilité"
+        ]
+      }
+    ],
+    "experienceLabel": "Parcours",
+    "experienceHeading": "Une expérience construite dans les logiciels d’entreprise.",
+    "experienceIntro": "ERP et CRM, logiciels de commerce de détail, systèmes d’information de santé et plateformes financières, avec une pratique du développement et de l’encadrement d’équipe.",
+    "experience": [
+      {
+        "date": "Oct. 2022 - Aujourd’hui",
+        "role": "Analyste-développeur",
+        "company": "FNZ Group",
+        "place": "Auckland, Nouvelle-Zélande",
+        "description": "Développement axé sur la livraison de plateformes financières d’entreprise avec C# et .NET.",
+        "responsibilities": [
+          "Analyser les besoins et les traduire en évolutions applicatives réalisables.",
+          "Développer, tester et relire les modifications, en veillant à la maintenabilité et aux risques de régression.",
+          "Analyser les incidents et accompagner les mises en production avec les analystes, développeurs, testeurs et autres équipes de livraison."
+        ],
+        "note": "Les missions clients et les détails d’implémentation sont confidentiels."
+      },
+      {
+        "date": "Fév. - Juil. 2022",
+        "role": "Enseignant en informatique",
+        "company": "Southern Institute of Technology",
+        "place": "Invercargill, Nouvelle-Zélande",
+        "description": "Enseignement des bases de la programmation et du génie logiciel, avec travaux pratiques et accompagnement individuel."
+      },
+      {
+        "date": "2020 - 2022",
+        "role": "Développeur full stack à temps partiel",
+        "company": "Commerce de détail",
+        "place": "Guangzhou, Chine",
+        "description": "Développement et maintenance de logiciels de facturation et de gestion des ventes avec .NET Core, REST API, MySQL et Vue.js, à partir des besoins des commerçants."
+      },
+      {
+        "date": "2018 - 2021",
+        "role": "Développeur full stack",
+        "company": "Best IT Solution / Hangzhou Xianbing Technology",
+        "place": "Nouvelle-Zélande et Chine",
+        "description": "Développement de systèmes web professionnels et de plateformes SMS avec Flask, REST API, MySQL, React et Redux."
+      },
+      {
+        "date": "2011 - 2017",
+        "role": "Responsable d’équipe de développement",
+        "company": "Logiciels d’entreprise et conseil",
+        "place": "Pékin, Chine",
+        "description": "Pilotage de missions de conseil et de livraison de systèmes d’information d’entreprise : middleware, architecture de bases de données et déploiement de serveurs."
+      },
+      {
+        "date": "2008 - 2011",
+        "role": "Directeur informatique",
+        "company": "Secteur de la santé",
+        "place": "Pékin, Chine",
+        "description": "Conception d’un système d’information de gestion hospitalière et encadrement de l’équipe de développement, ainsi que réalisation et maintenance de sites web de santé."
+      }
+    ],
+    "educationLabel": "Formation",
+    "education": "Master en technologies de l’information",
+    "educationSchool": "Southern Institute of Technology · 2019-2021",
+    "educationNote": "Intérêts de recherche : IA conversationnelle et modèles génératifs.",
+    "contactLabel": "Contact",
+    "contactHeading": "Un poste à la croisée\ndu métier et de la technique ?",
+    "contactBody": "Je m’intéresse aux postes d’ingénieur logiciel senior, à l’intégration d’IA en entreprise et au Forward Deployed Engineering (FDE), au contact des équipes clientes. Pour engager la discussion, envoyez-moi le descriptif du poste, le problème métier et le contexte de l’équipe.",
+    "emailLabel": "Écrire à Jay",
+    "personalNote": "Mes projets personnels et mes opinions n’engagent que moi.",
+    "privacy": "Confidentialité",
+    "backHome": "Retour à l’accueil",
+    "footerRole": "Ingénieur logiciel et créateur d’outils",
+    "privacyTitle": "Confidentialité | Jay Liu",
+    "privacyHeading": "Un site simple.\nUne politique claire.",
+    "privacyIntro": "Ce portfolio personnel de Jay Liu présente mon travail et les moyens de me contacter.",
+    "privacySections": [
+      [
+        "Navigation sur ce site",
+        "Le code de ce site ne met en place ni formulaire de contact, ni traceur publicitaire, ni script d’analyse, ni cookie. Les polices et les images sont hébergées avec le site. GitHub Pages assure l’hébergement et peut traiter des informations techniques, notamment les adresses IP et les journaux de requêtes, conformément à sa propre politique de confidentialité."
+      ],
+      [
+        "E-mails et liens externes",
+        "Les liens e-mail ouvrent votre propre application de messagerie. Si vous m’écrivez, j’utilise les informations fournies pour prendre connaissance de votre message et y répondre. Les liens vers les projets et les profils mènent à des sites externes disposant de leurs propres politiques de confidentialité."
+      ],
+      [
+        "Questions",
+        "Pour toute question sur les informations que vous m’avez communiquées, ou pour demander à y accéder ou à les rectifier, écrivez à maxazure@gmail.com."
+      ]
+    ],
+    "updatedLabel": "Mis à jour le 10 octobre 2026",
+    "heroName": "Jay Liu",
+    "portraitName": "Jie Liu"
+  },
+  "ui": {
+    "Engineering focus": "Domaines de prédilection",
+    "From architecture to delivery": "De l’architecture à la livraison",
+    "Jay Liu": "Jay Liu",
+    "Open-source work": "Travaux open source",
+    "Follow the implementation.": "Explorer l’implémentation.",
+    "Source, workflow instructions and examples you can inspect.": "Du code, des procédures et des exemples à consulter.",
+    "Transcript-led editing, FFmpeg rendering and artifact checks.": "Montage guidé par la transcription, rendu FFmpeg et validation des livrables.",
+    "Transcript adapters, a React viewer and a Markdown CLI.": "Adaptateurs de transcriptions, lecteur React et CLI Markdown.",
+    "Traceable bookkeeping workflows and exports for review.": "Workflows comptables traçables et exports à vérifier.",
+    "Jay’s profiles": "Profils de Jay",
+    "Projects & engineering work.": "Projets et réalisations techniques.",
+    "Enterprise systems, applied AI, developer tools and earlier work. For the business context, my role and engineering decisions, start with the four selected cases.": "Systèmes d’entreprise, IA appliquée, outils de développement et projets antérieurs. Les quatre projets choisis détaillent le contexte métier, mon rôle et les choix techniques.",
+    "Read the selected engineering cases": "Lire les études de cas",
+    "Discuss a role with Jay": "Échanger avec Jay sur un poste",
+    "Complete project collection": "Tous les projets",
+    "A wider view of the work.": "Une vue d’ensemble du travail.",
+    "project examples": "exemples de projets",
+    "AI systems, voice workflows, enterprise software and web applications. Client work is anonymised; previews include screenshots and illustrative interfaces.": "Systèmes d’IA, workflows vocaux, logiciels d’entreprise et applications web. Les projets clients sont anonymisés ; les aperçus comprennent des captures d’écran et des interfaces illustratives.",
+    "AI interface illustration": "Illustration d’interface par IA",
+    "Current site": "Site actuel",
+    "Demo & team": "Démo et équipe",
+    "Visit website": "Voir le site",
+    "Selected engineering work": "Projets techniques choisis",
+    "From business problems to working systems.": "Du problème métier au système opérationnel.",
+    "Four examples of how I approach business software and applied AI, with my role and the available evidence made explicit.": "Quatre exemples de mon approche du logiciel métier et de l’IA appliquée, avec mon rôle et les éléments vérifiables pour chacun.",
+    "Technologies and focus": "Technologies et axes de travail",
+    "View the anonymised preview": "Voir l’aperçu anonymisé",
+    "My role": "Mon rôle",
+    "Constraint & decision": "Contraintes et choix",
+    "Current evidence": "Éléments vérifiables à ce jour",
+    "More enterprise systems, AI tools, voice workflows and earlier projects.": "D’autres systèmes d’entreprise, outils d’IA, workflows vocaux et projets antérieurs.",
+    "Explore all 30 projects": "Explorer les 30 projets",
+    "More project categories": "Autres catégories de projets",
+    "Enterprise systems": "Systèmes d’entreprise",
+    "AI & engineering tools": "IA et outils de développement",
+    "Web applications": "Applications web",
+    "Earlier work": "Projets antérieurs",
+    "Languages": "Choisir la langue",
+    "Jay Liu home": "Accueil de Jay Liu",
+    "GitHub Privacy Statement": "Politique de confidentialité de GitHub",
+    "English": "Anglais",
+    "Simplified Chinese": "Chinois simplifié",
+    "Traditional Chinese": "Chinois traditionnel",
+    "Japanese": "Japonais",
+    "French": "Français",
+    "Korean": "Coréen",
+    "Website": "Site web",
+    "Private system": "Système privé",
+    "Development instance": "Instance de développement",
+    "Prototype": "Prototype",
+    "Open source": "Open source",
+    "Historical project": "Projet historique",
+    "Archived project": "Projet archivé",
+    "MVP · preparing for pilots": "MVP · préparation des pilotes",
+    "Internal operational system": "Système interne en service",
+    "AI Agents": "Agents IA"
+  },
+  "meta": {
+    "homeTitle": "Jay Liu | Ingénieur logiciel senior | IA d’entreprise et FinTech",
+    "homeDescription": "Jay Liu, ingénieur logiciel à Auckland. Plus de 18 ans dans les logiciels d’entreprise, des plateformes financières chez FNZ et des projets indépendants d’IA appliquée.",
+    "projectsTitle": "Projets et réalisations techniques | Jay Liu",
+    "projectsDescription": "Explorez 30 projets de Jay Liu : logiciels d’entreprise, IA appliquée, workflows vocaux et outils open source, avec leur état d’avancement et les éléments publics disponibles.",
+    "socialAlt": "Jay Liu. Ingénieur logiciel senior. FinTech, cloud et IA appliquée. Auckland, Nouvelle-Zélande."
+  },
+  "featured": {
+    "transactional-crm": {
+      "name": "CRM d’entreprise",
+      "category": "Systèmes métier",
+      "stage": "Système interne en service",
+      "tags": [
+        "Python / FastAPI",
+        "PostgreSQL",
+        "API typée / CLI"
+      ],
+      "problem": "Lorsque des personnes et des agents logiciels modifient les mêmes données, les relations clients, les projets et les factures doivent rester cohérents.",
+      "role": "J’ai conçu et développé l’application, l’API et la CLI, en reliant les données structurées à des notes versionnées.",
+      "decision": "Les nouvelles tentatives et les modifications simultanées peuvent créer des doublons ou écraser des données. Des écritures idempotentes et des contrôles de version sécurisent les requêtes répétées et rendent les conflits explicites pour permettre leur résolution.",
+      "evidence": "Un workflow interne est en place, avec historique des révisions et écritures contrôlées. La collection complète présente un aperçu sans données ; les enregistrements opérationnels et les points d’accès restent privés."
+    },
+    "bookkeeping-assistant": {
+      "name": "NZ Accounting Assistant",
+      "category": "Workflows financiers",
+      "stage": "Workflow open source",
+      "tags": [
+        "Données structurées",
+        "Rapprochement",
+        "Python"
+      ],
+      "problem": "Reçus et relevés bancaires arrivent dans des formats différents. Préparer un livre comptable vérifiable demande de rapprocher les écritures tout en conservant les pièces d’origine.",
+      "role": "J’ai développé un module d’instructions réutilisable pour agent IA (skill) et les outils associés, couvrant la collecte des justificatifs, la préparation du livre comptable, le rapprochement et l’export.",
+      "decision": "Les rapprochements incertains doivent rester visibles. Les fichiers sources sont conservés, les données normalisées en JSON et les éléments ambigus soumis à une confirmation humaine avant la préparation des exports.",
+      "evidence": "Les procédures et scripts publics couvrent les exports CSV pour Xero et les dossiers à remettre au comptable. Les données financières et les décisions finales restent soumises à une vérification humaine.",
+      "linkLabel": "Voir le workflow et le code"
+    },
+    "voice-companion": {
+      "name": "HiLily",
+      "category": "Intégration de systèmes d’IA",
+      "stage": "MVP fonctionnel · préparation des pilotes",
+      "tags": [
+        "IA conversationnelle",
+        "Mémoire",
+        "Traitement vocal"
+      ],
+      "problem": "Un compagnon vocal destiné aux personnes âgées doit coordonner parole, conversation et mémoire entre un appareil embarqué et des services cloud.",
+      "role": "En tant qu’AI Coach bénévole, je conseille l’équipe sur l’architecture IA, la mémoire conversationnelle et le traitement audio. Le produit est un travail collectif.",
+      "decision": "L’audio de l’appareil, les réponses des modèles et le contexte mémorisé ont des contraintes différentes. Mes conseils portent sur leur articulation dans le pipeline IA et le traitement vocal côté appareil.",
+      "evidence": "Le site du projet présente des démonstrations et mon rôle dans l’équipe. Celle-ci indique disposer d’un MVP fonctionnel, après plusieurs itérations, et préparer des pilotes en conditions réelles.",
+      "linkLabel": "Voir la démo et l’équipe"
+    },
+    "codexview": {
+      "name": "CodexView",
+      "category": "Outils de développement",
+      "stage": "Paquets open source",
+      "tags": [
+        "TypeScript",
+        "React",
+        "Adaptateurs de transcriptions"
+      ],
+      "problem": "Les agents de programmation produisent des transcriptions de formats différents. Examiner les appels d’outils et les sessions imbriquées doit pouvoir se faire dans un lecteur commun.",
+      "role": "J’ai développé les adaptateurs de transcriptions, les composants React et la CLI Markdown sous forme de paquets réutilisables.",
+      "decision": "Le décodage des formats est séparé de la présentation. Les adaptateurs produisent un modèle d’événements commun pour un affichage visuel ou un texte compact, en conservant le contexte des outils et des sous-agents.",
+      "evidence": "Le dépôt public contient les trois paquets, des exemples d’utilisation et des données de test. Leur implémentation peut être examinée sans accès aux projets privés de l’atelier de développement.",
+      "linkLabel": "Explorer les paquets et le code"
+    }
+  },
+  "projects": {
+    "voice-companion": {
+      "name": "HiLily · Compagnon vocal",
+      "description": "AI Coach bénévole, j’apporte des conseils sur l’architecture IA, la mémoire conversationnelle et le traitement audio. L’équipe a développé un MVP fonctionnel et prépare des pilotes ; le site public présente des démonstrations et les rôles de chacun.",
+      "alt": "Maquette d’interface générée par IA : HiLily · Compagnon vocal"
+    },
+    "web-builder-agent": {
+      "name": "Web Builder Agent · Livraison de sites web",
+      "description": "Un workflow complet, de la recherche et du design à la construction, aux vérifications et au déploiement. Des étapes réutilisables et des profils d’agents accueillent Claude Code, Codex et OpenCode, avec traces d’exécution, reprises et points de revue.",
+      "alt": "Maquette d’interface générée par IA : Web Builder Agent · Livraison de sites web"
+    },
+    "idea-builder": {
+      "name": "Idea Builder · Développement multi-agents",
+      "description": "Un système guidé qui transforme une idée en étapes de planification, d’implémentation, de test et de déploiement, avec des agents de programmation interchangeables, une sortie en continu et des sessions reprenables.",
+      "alt": "Maquette d’interface générée par IA : Idea Builder · Développement multi-agents"
+    },
+    "agent-workbench": {
+      "name": "AgentWeb · Atelier de développement IA",
+      "description": "Un espace dans le navigateur pour les sessions d’agents de programmation, les événements d’outils en continu et les livrables du workspace, développé avec React, TypeScript et Fastify.",
+      "alt": "Petite capture d’écran anonymisée : AgentWeb · Atelier de développement IA"
+    },
+    "voice-capture": {
+      "name": "Voice2Task · Capture vocale et intentions",
+      "description": "Capture vocale Android avec segmentation VAD, encodage AAC et envois pouvant être relancés, associée à la transcription côté serveur et au traitement contextualisé des demandes orales.",
+      "alt": "Maquette d’interface générée par IA : Voice2Task · Capture vocale et intentions"
+    },
+    "writing-assessment": {
+      "name": "Éducation · Évaluation de l’écriture par IA",
+      "description": "Une application associant retours de l’IA selon une grille d’évaluation, relecture par l’enseignant et accès par rôle, avec des dossiers structurés et un workflow de notation modifiable.",
+      "alt": "Maquette d’interface générée par IA : Éducation · Évaluation de l’écriture par IA"
+    },
+    "knowledge-memory": {
+      "name": "Connaissances et mémoire · Traçabilité des sources",
+      "description": "Un prototype de gestion des connaissances fondé sur les sources, avec contrôles de validité, fiches vérifiées et recherche traçable.",
+      "alt": "Petite capture d’écran anonymisée : Connaissances et mémoire · Traçabilité des sources"
+    },
+    "agentmeshkit": {
+      "name": "AgentMeshKit · SDK d’atelier pour agents",
+      "description": "Une boîte à outils modulaire issue du développement d’un atelier pour agents : protocoles d’événements partagés, exécuteurs CLI, composants de conversation, livrables et gestion de l’état des tâches.",
+      "alt": "Maquette d’interface générée par IA : AgentMeshKit · SDK d’atelier pour agents"
+    },
+    "codexview": {
+      "name": "CodexView · Affichage des conversations d’agents",
+      "description": "Des composants React, des adaptateurs et une CLI Markdown pour lire les transcriptions d’agents de programmation, en conservant les événements d’outils et les sessions imbriquées dans un format cohérent.",
+      "alt": "Maquette d’interface générée par IA : CodexView · Affichage des conversations d’agents"
+    },
+    "capability-vault": {
+      "name": "Agent Capability Vault · Synchronisation des configurations",
+      "description": "Une application de bureau et un système de synchronisation sur réseau local pour gérer les instructions, compétences, connexions aux outils et capacités des machines sur plusieurs postes de développement.",
+      "alt": "Maquette d’interface générée par IA : Agent Capability Vault · Synchronisation des configurations"
+    },
+    "agent-home": {
+      "name": "AgentHome · Espace de travail persistant",
+      "description": "Un kit réutilisable de répertoires de travail pour agents de programmation, réunissant modèles d’instructions, mémoire Markdown, rappels et outils de maintenance CLI dans un espace persistant.",
+      "alt": "Maquette d’interface générée par IA : AgentHome · Espace de travail persistant"
+    },
+    "browser-test-workspace": {
+      "name": "Tests navigateur · Environnement isolé",
+      "description": "Un environnement de navigateur de bureau conteneurisé pour les vérifications fonctionnelles, avec profils persistants, capture des résultats de test et outils de sauvegarde et de restauration.",
+      "alt": "Maquette d’interface générée par IA : Tests navigateur · Environnement isolé"
+    },
+    "hardware-control": {
+      "name": "Contrôle matériel · Passerelle vision-HID",
+      "description": "Une passerelle clavier-souris ESP32-S3 associée à la capture d’écran et aux outils de décision sur la machine hôte, pour relier l’observation visuelle à des actions USB HID contrôlées.",
+      "alt": "Maquette d’interface générée par IA : Contrôle matériel · Passerelle vision-HID"
+    },
+    "local-narration": {
+      "name": "Synthèse vocale locale · Outils de narration",
+      "description": "Une intégration CLI et service du modèle VoxCPM2 existant, réunissant saisie du texte, réglages de voix, écoute et livraison WAV/MP3 dans des workflows de narration reproductibles.",
+      "alt": "Maquette d’interface générée par IA : Synthèse vocale locale · Outils de narration"
+    },
+    "live-interpretation": {
+      "name": "Interprétation en direct · Sous-titrage vocal",
+      "description": "Un prototype Android qui segmente la parole entrante, la transmet pour transcription et affiche des sous-titres traduits dans un flux continu de traitement audio.",
+      "alt": "Maquette d’interface générée par IA : Interprétation en direct · Sous-titrage vocal"
+    },
+    "speech-tooling": {
+      "name": "OmniVoice TTS Skill",
+      "description": "Une interface en ligne de commande pour le moteur OmniVoice existant, organisant la génération vocale locale en workflows reproductibles.",
+      "alt": "Maquette d’interface générée par IA : OmniVoice TTS Skill"
+    },
+    "lan-microphone": {
+      "name": "AirMicLAN · Microphone en réseau",
+      "description": "Une passerelle de microphone entre deux Mac, avec découverte Bonjour et diffusion audio TCP, capture PCM et entrée audio virtuelle sur l’ordinateur récepteur.",
+      "alt": "Maquette d’interface générée par IA : AirMicLAN · Microphone en réseau"
+    },
+    "video-editing": {
+      "name": "Video Editing Skill",
+      "description": "Montage guidé par la transcription et livraison multimédia reproductible, avec Python, FFmpeg et validation des fichiers produits.",
+      "alt": "Maquette d’interface générée par IA : Video Editing Skill"
+    },
+    "editorial-workflow": {
+      "name": "Workflow éditorial IA · Publication après revue",
+      "description": "Un pipeline de rédaction tenant compte des sources, reliant planification des sujets, génération d’articles, métadonnées et contrôles de contenu, avec revue avant publication.",
+      "alt": "Maquette d’interface générée par IA : Workflow éditorial IA · Publication après revue"
+    },
+    "media-workspace": {
+      "name": "Workflows multimédias · Espace Android",
+      "description": "Un espace Android adossé à une API pour organiser textes, images et vidéos en ensembles de contenus, traiter les demandes des agents et transmettre les fichiers au téléphone.",
+      "alt": "Maquette d’interface générée par IA : Workflows multimédias · Espace Android"
+    },
+    "bookkeeping-assistant": {
+      "name": "NZ Accounting Assistant",
+      "description": "Normalisation des reçus et relevés, livres comptables structurés et dossiers de rapprochement destinés à une vérification humaine.",
+      "alt": "Maquette d’interface générée par IA : NZ Accounting Assistant"
+    },
+    "operations-erp": {
+      "name": "Tourisme · ERP opérationnel",
+      "description": "Une instance de développement ERP reliant planification, catalogues produits et SKU, commandes, achats et rappels opérationnels, avec droits d’accès et traces d’audit.",
+      "alt": "Petite démonstration sans données : Tourisme · ERP opérationnel"
+    },
+    "transactional-crm": {
+      "name": "Gestion d’entreprise · CRM",
+      "description": "Relations, projets, facturation et données opérationnelles sur une même plateforme, avec PostgreSQL, API typées, écritures contrôlées et historique des révisions.",
+      "alt": "Petite capture d’écran anonymisée : Gestion d’entreprise · CRM"
+    },
+    "tourism": {
+      "name": "Tourisme · Site de voyages",
+      "description": "Un site organisant voyages, itinéraires et parcours de demande d’information, avec pages réutilisables et métadonnées structurées.",
+      "alt": "Petite capture d’écran anonymisée : Tourisme · Site de voyages"
+    },
+    "transport": {
+      "name": "Transport · Site de services",
+      "description": "Un site bilingue présentant clairement les services, les parcours de contact et la navigation mobile.",
+      "alt": "Petite capture d’écran anonymisée : Transport · Site de services"
+    },
+    "accounting": {
+      "name": "Comptabilité · Services et publications",
+      "description": "Un site bilingue de services professionnels, avec une bibliothèque structurée de publications et des modèles de contenu faciles à maintenir.",
+      "alt": "Petite capture d’écran anonymisée : Comptabilité · Services et publications"
+    },
+    "finance-archive": {
+      "name": "Finance · Plateforme d’actifs numériques",
+      "description": "Un ancien projet web consacré aux actifs numériques. L’aperçu est historique ; le domaine actuel affiche une page d’attente.",
+      "alt": "Petite capture d’écran anonymisée : Finance · Plateforme d’actifs numériques"
+    },
+    "medical-archive-a": {
+      "name": "Santé · Site de services",
+      "description": "Un ancien site de santé présentant les catégories de services, l’équipe et les moyens de prendre contact.",
+      "alt": "Petite capture d’écran anonymisée : Santé · Site de services"
+    },
+    "consumer-app-archive": {
+      "name": "Application grand public · Dépenses et activités",
+      "description": "Un projet d’application mobile pour enregistrer les dépenses et les activités, accompagné d’un site de présentation.",
+      "alt": "Petite capture d’écran anonymisée : Application grand public · Dépenses et activités"
+    },
+    "medical-archive-b": {
+      "name": "Santé · Site spécialisé",
+      "description": "Un ancien site de santé présentant des services spécialisés et des informations destinées aux patients.",
+      "alt": "Petite capture d’écran anonymisée : Santé · Site spécialisé"
+    }
+  }
+}
