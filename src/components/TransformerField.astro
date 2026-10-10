@@ -1,32 +1,269 @@
 ---
-const tokens = [48, 76, 104, 132];
-const strengths = [.28, .12, .42, .18, .16, .48, .18, .28, .32, .22, .52, .14, .14, .36, .22, .46];
 ---
 <div class="transformer-field" aria-hidden="true">
-  <svg viewBox="0 0 400 180" fill="none" focusable="false">
-    <g class="attention-links">
-      {tokens.map((y, i) => <>
-        <path d={`M66 ${y}H94L158 ${62 + i * 20}`} />
-        <path d={`M254 ${62 + i * 20}L316 ${y}H338`} />
-      </>)}
-      <path d="M200 12V24M200 160V168" stroke-dasharray="2 5" />
-    </g>
-    <g class="attention-signals">
-      <path class="attention-signal" d="M66 76H94L158 82" />
-      <path class="attention-signal signal-out" d="M254 102L316 104H338" />
-    </g>
-    <g class="attention-planes">
-      <rect x="174" y="26" width="96" height="96" />
-      <rect x="166" y="36" width="96" height="96" />
-      <rect class="attention-face" x="158" y="46" width="96" height="96" />
-    </g>
-    <g class="attention-matrix">
-      {strengths.map((opacity, i) => <rect x={168 + (i % 4) * 20} y={56 + Math.floor(i / 4) * 20} width="14" height="14" style={`opacity:${opacity}`} />)}
-    </g>
-    <g class="attention-tokens">
-      {tokens.map(y => <><rect x="54" y={y - 6} width="12" height="12" /><rect x="338" y={y - 6} width="12" height="12" /></>)}
-    </g>
-    <path class="attention-edge" d="M158 68V46H180M232 142H254V120" />
-  </svg>
+  <canvas width="460" height="196"></canvas>
   <p>Transformer <span> / </span> Multi-head attention</p>
 </div>
+
+<script>
+  const W = 460, H = 196, N = 6;
+  const TOKENS = ['Jay', 'builds', 'AI', 'agents', 'for', 'teams'];
+  const COLS = [88, 142, 196, 250];
+  const ROW0 = 42, PITCH = 26;
+  const HM_X = 294, CELL = 22;
+  const HEAD_PERIOD = 4.8;
+  const HEADS: { name: string; rgb: number[] }[] = [
+    { name: 'previous-token', rgb: [255, 131, 91] },
+    { name: 'self', rgb: [127, 209, 185] },
+    { name: 'anchor', rgb: [233, 196, 106] },
+    { name: 'semantic', rgb: [157, 180, 255] },
+  ];
+  const SEMANTIC = [[0], [2, 0], [2, 3], [3, 2, 1], [1, 3, 4], [3, 2, 5]];
+  const MONO = 'ui-monospace, SFMono-Regular, Menlo, monospace';
+
+  const rowY = (i: number) => ROW0 + i * PITCH;
+  const rgba = (c: number[], a: number) => `rgba(${c[0] | 0},${c[1] | 0},${c[2] | 0},${a})`;
+  const mix = (a: number[], b: number[], t: number) => a.map((v, i) => v + (b[i] - v) * t);
+  const smooth = (t: number) => t * t * (3 - 2 * t);
+  const frac = (x: number) => x - Math.floor(x);
+
+  function score(h: number, q: number, k: number) {
+    if (h === 0) return k === q - 1 ? 3 : k === q ? 1 : 0;
+    if (h === 1) return k === q ? 3.2 : 0;
+    if (h === 2) return k === 2 ? 3 : k === 0 ? 1.2 : 0;
+    const idx = SEMANTIC[q].indexOf(k);
+    return idx < 0 ? 0 : 3 - idx * 0.9;
+  }
+
+  // Causal softmax attention for one head and layer, with gentle drift over time.
+  function attention(h: number, layer: number, t: number) {
+    const A: number[][] = [];
+    for (let q = 0; q < N; q++) {
+      const row: number[] = [];
+      let sum = 0;
+      for (let k = 0; k < N; k++) {
+        if (k > q) { row.push(0); continue; }
+        const s = score(h, q, k) + 0.8 * Math.sin(t * 1.3 + q * 1.7 + k * 2.3 + h + layer * 0.9);
+        const e = Math.exp(s);
+        row.push(e);
+        sum += e;
+      }
+      A.push(row.map((v) => v / sum));
+    }
+    return A;
+  }
+
+  function bezier(x1: number, y1: number, x2: number, y2: number, s: number) {
+    const cx = (x2 - x1) * 0.5, u = 1 - s;
+    const x = u * u * u * x1 + 3 * u * u * s * (x1 + cx) + 3 * u * s * s * (x2 - cx) + s * s * s * x2;
+    const y = u * u * u * y1 + 3 * u * u * s * y1 + 3 * u * s * s * y2 + s * s * s * y2;
+    return [x, y];
+  }
+
+  function curve(ctx: CanvasRenderingContext2D, x1: number, y1: number, x2: number, y2: number) {
+    const cx = (x2 - x1) * 0.5;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.bezierCurveTo(x1 + cx, y1, x2 - cx, y2, x2, y2);
+    ctx.stroke();
+  }
+
+  function draw(ctx: CanvasRenderingContext2D, t: number) {
+    ctx.clearRect(0, 0, W, H);
+
+    // Head cycle with crossfade into the next head.
+    const cycle = t / HEAD_PERIOD;
+    const h = Math.floor(cycle) % HEADS.length;
+    const next = (h + 1) % HEADS.length;
+    const local = frac(cycle) * HEAD_PERIOD;
+    const blend = smooth(Math.max(0, (local - (HEAD_PERIOD - 0.7)) / 0.7));
+    const color = mix(HEADS[h].rgb, HEADS[next].rgb, blend);
+
+    const layers = [0, 1, 2].map((l) => {
+      const a = attention(h, l, t), b = attention(next, l, t);
+      return a.map((row, q) => row.map((v, k) => v + (b[q][k] - v) * blend));
+    });
+
+    // Query sweep: each token takes a turn as the active query.
+    const qPos = (local / HEAD_PERIOD) * (N + 0.4) - 0.2;
+    const act = Array.from({ length: N }, (_, q) => Math.max(0, 1 - Math.abs(qPos - q - 0.5) * 1.5));
+
+    // Forward-pass pulse sweeping left to right.
+    const pulseX = -40 + frac(t / 2.4) * (W + 80);
+    const glow = (x: number) => Math.exp(-(((pulseX - x) / 26) ** 2));
+
+    // Dot grid backdrop.
+    ctx.fillStyle = 'rgba(175,182,175,0.07)';
+    for (let x = 10; x < W; x += 18) for (let y = 12; y < H; y += 18) ctx.fillRect(x, y, 1, 1);
+
+    // Labels.
+    ctx.font = `8px ${MONO}`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'alphabetic';
+    COLS.forEach((x, i) => {
+      ctx.fillStyle = rgba([175, 182, 175], 0.45 + glow(x) * 0.5);
+      ctx.fillText(i === 0 ? 'EMB' : `L${i}`, x, 18);
+    });
+    ctx.textAlign = 'left';
+    ctx.fillStyle = rgba(color, 0.95);
+    const headIdx = blend > 0.5 ? next : h;
+    ctx.fillText(`HEAD ${headIdx + 1}/4 · ${HEADS[headIdx].name}`, HM_X, 18);
+
+    // Token labels and embedding links.
+    ctx.font = `10px ${MONO}`;
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'middle';
+    for (let i = 0; i < N; i++) {
+      const y = rowY(i);
+      let focus = act[i];
+      for (let q = 0; q < N; q++) focus = Math.max(focus, act[q] * layers[0][q][i] * 1.3);
+      ctx.fillStyle = rgba(mix([120, 130, 122], [236, 237, 230], Math.min(1, focus)), 1);
+      ctx.fillText(TOKENS[i], COLS[0] - 18, y);
+      ctx.strokeStyle = rgba([88, 100, 92], 0.6);
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(COLS[0] - 14, y);
+      ctx.lineTo(COLS[0] - 5, y);
+      ctx.stroke();
+    }
+
+    // Ambient attention web between layers.
+    for (let l = 0; l < 3; l++) {
+      const x1 = COLS[l], x2 = COLS[l + 1];
+      for (let q = 0; q < N; q++) for (let k = 0; k <= q; k++) {
+        const w = layers[l][q][k];
+        ctx.strokeStyle = rgba(mix([88, 100, 92], color, 0.35), 0.05 + w * 0.28);
+        ctx.lineWidth = 0.6 + w * 0.8;
+        curve(ctx, x1, rowY(k), x2, rowY(q));
+      }
+    }
+
+    // Active query: glowing weighted curves with particles.
+    ctx.globalCompositeOperation = 'lighter';
+    for (let l = 0; l < 3; l++) {
+      const x1 = COLS[l], x2 = COLS[l + 1];
+      for (let q = 0; q < N; q++) {
+        if (act[q] <= 0.01) continue;
+        for (let k = 0; k <= q; k++) {
+          const w = layers[l][q][k] * act[q];
+          if (w < 0.02) continue;
+          ctx.strokeStyle = rgba(color, Math.min(1, 0.15 + w * 0.9));
+          ctx.lineWidth = 0.6 + w * 2.6;
+          ctx.shadowColor = rgba(color, 0.9);
+          ctx.shadowBlur = 6 * w;
+          curve(ctx, x1, rowY(k), x2, rowY(q));
+          ctx.shadowBlur = 0;
+          for (let p = 0; p < 3; p++) {
+            const s = frac(t * 0.9 + p / 3 + k * 0.17 + l * 0.11);
+            const [px, py] = bezier(x1, rowY(k), x2, rowY(q), s);
+            const a = w * Math.sin(Math.PI * s);
+            ctx.fillStyle = rgba([255, 240, 225], Math.min(1, a * 1.4));
+            ctx.beginPath();
+            ctx.arc(px, py, 0.8 + w * 1.6, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+      }
+    }
+    ctx.globalCompositeOperation = 'source-over';
+
+    // Links from last layer into heatmap rows.
+    ctx.setLineDash([2, 4]);
+    for (let q = 0; q < N; q++) {
+      ctx.strokeStyle = rgba(act[q] > 0.05 ? color : [88, 100, 92], 0.3 + act[q] * 0.6);
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(COLS[3] + 6, rowY(q));
+      ctx.lineTo(HM_X - 6, rowY(q));
+      ctx.stroke();
+    }
+    ctx.setLineDash([]);
+
+    // Nodes.
+    COLS.forEach((x) => {
+      const g = glow(x);
+      for (let i = 0; i < N; i++) {
+        const y = rowY(i), a = act[i];
+        if (g > 0.05 || a > 0.05) {
+          ctx.fillStyle = rgba(color, 0.25 * Math.max(g, a));
+          ctx.beginPath();
+          ctx.arc(x, y, 7 + 3 * g, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.fillStyle = rgba(mix([28, 34, 30], color, Math.max(g * 0.8, a)), 1);
+        ctx.strokeStyle = rgba(mix([120, 135, 124], [236, 237, 230], g), 1);
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(x, y, 3.4, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      }
+
+    });
+
+    // Attention heatmap for the last layer.
+    const A = layers[2];
+    const top = ROW0 - CELL / 2;
+    for (let q = 0; q < N; q++) for (let k = 0; k < N; k++) {
+      const x = HM_X + k * (CELL + 4), y = top + q * PITCH;
+      if (k > q) {
+        ctx.fillStyle = 'rgba(88,100,92,0.35)';
+        ctx.fillRect(x + CELL / 2 - 1, y + CELL / 2 - 1, 2, 2);
+        continue;
+      }
+      ctx.fillStyle = 'rgba(32,41,35,0.9)';
+      ctx.fillRect(x, y, CELL, CELL);
+      const v = Math.pow(A[q][k], 0.7);
+      ctx.fillStyle = rgba(color, 0.08 + v * 0.9);
+      const inset = (1 - v) * 4;
+      ctx.fillRect(x + inset, y + inset, CELL - inset * 2, CELL - inset * 2);
+    }
+    for (let q = 0; q < N; q++) {
+      if (act[q] < 0.05) continue;
+      ctx.strokeStyle = rgba([236, 237, 230], act[q] * 0.85);
+      ctx.lineWidth = 1;
+      ctx.strokeRect(HM_X - 2.5, top + q * PITCH - 2.5, (q + 1) * (CELL + 4) + 1, CELL + 5);
+    }
+
+    // Accent corner brackets on the matrix.
+    ctx.strokeStyle = 'rgba(255,131,91,0.9)';
+    ctx.lineWidth = 1.5;
+    const right = HM_X + N * (CELL + 4) - 4, bottom = top + (N - 1) * PITCH + CELL;
+    ctx.beginPath();
+    ctx.moveTo(HM_X - 6, top + 10); ctx.lineTo(HM_X - 6, top - 6); ctx.lineTo(HM_X + 10, top - 6);
+    ctx.moveTo(right + 6, bottom - 10); ctx.lineTo(right + 6, bottom + 6); ctx.lineTo(right - 10, bottom + 6);
+    ctx.stroke();
+  }
+
+  for (const canvas of document.querySelectorAll<HTMLCanvasElement>('.transformer-field canvas')) {
+    const ctx = canvas.getContext('2d');
+    if (!ctx) continue;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+    let raf = 0, visible = false, start = performance.now();
+
+    const resize = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const w = canvas.clientWidth || W;
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round((w * H / W) * dpr);
+      ctx.setTransform((canvas.width / W), 0, 0, canvas.height / H, 0, 0);
+      if (reduced.matches || !visible) draw(ctx, 2.6);
+    };
+    const frame = (now: number) => {
+      draw(ctx, (now - start) / 1000);
+      raf = requestAnimationFrame(frame);
+    };
+    const update = () => {
+      cancelAnimationFrame(raf);
+      raf = 0;
+      if (visible && !document.hidden && !reduced.matches) raf = requestAnimationFrame(frame);
+      else draw(ctx, 2.6);
+    };
+
+    new ResizeObserver(resize).observe(canvas);
+    new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; update(); }).observe(canvas);
+    document.addEventListener('visibilitychange', update);
+    reduced.addEventListener('change', update);
+    resize();
+  }
+</script>
