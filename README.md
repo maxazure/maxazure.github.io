@@ -4,7 +4,7 @@ Personal engineering portfolio, built with Astro 7, TypeScript and Tailwind CSS 
 
 The portfolio supports senior software engineering, enterprise AI integration and FDE recruitment conversations. Its homepage explains Jay’s business and delivery focus, then presents four attributable cases (enterprise CRM, NZ Accounting Assistant, HiLily and CodexView), career experience, capabilities and direct contact. FDE is an interest, not a past title. The complete 30-project gallery is at `/projects/` and `/zh/projects/`.
 
-The owner requested that the existing Transformer animation remain unchanged. A small owner-supplied portrait appears in About, after the first screen. The original public CV is linked from the hero, contact and project collection. Homepage descriptions distinguish FNZ employment from independent AI work; the established page titles and identity remain.
+The owner requested that the existing Transformer animation remain unchanged. A small rounded-square owner-supplied portrait appears in About, after the first screen. The original public CV is linked from the hero, contact and project collection. Homepage descriptions distinguish FNZ employment from independent AI work; the established page titles and identity remain.
 
 ## Develop and verify
 

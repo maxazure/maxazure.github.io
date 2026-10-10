@@ -17,7 +17,7 @@ Retain the graphite/paper/orange editorial style, self-hosted Jost, botanical ba
 | Section | Capacity / narrow transformation |
 | --- | --- |
 | Hero | Name, role, Enterprise AI / FinTech focus, one value statement, one experience summary; selected work, CV and LinkedIn actions; original right panel unchanged |
-| About | Brief background and delivery approach; portrait 94px desktop / 76px phone, original aspect ratio, below the first viewport at tested sizes |
+| About | Brief background and delivery approach; portrait 94px desktop / 76px phone, rounded square, below the first viewport at tested sizes |
 | Featured work | Four cases: CRM, accounting workflow, HiLily, CodexView; each covers problem, role, constraint/decision, stage and evidence |
 | Experience | Six roles; FNZ has three general delivery responsibilities plus confidentiality note; degree retained |
 | Capabilities / open source | Four capability groups; tool names follow capabilities; three public repositories |
@@ -188,7 +188,7 @@ Verification of this correction:
 
 The current contract above supersedes earlier historical section-order and metadata-preservation notes below it. Details and fact provenance are in [docs/positioning.md](docs/positioning.md); earlier verification records remain historical evidence.
 
-- New portrait: owner-supplied `https://www.hilily.ai/images/team/jay.jpg`, stored byte-for-byte as `public/images/jay-liu.jpg`, JPEG 219×256, 19,369 bytes. Original colour/aspect ratio and metadata retained; no generated edit. Owner explicitly authorises use on the personal website. Consumer: About on both homepages, 94px/76px wide, lazy/async with fixed dimensions and a name alternative. Replace only with owner-approved imagery. Exclude from hero and social card.
+- New portrait: owner-supplied `https://www.hilily.ai/images/team/jay.jpg`, stored byte-for-byte as `public/images/jay-liu.jpg`, JPEG 219×256, 19,369 bytes. Original colour/aspect ratio and metadata retained; no generated edit. Owner explicitly authorises use on the personal website. Consumer: About on both homepages, 94×94px desktop / 76×76px phone rounded square, 10px corners, object-fit cover at center 40%, lazy/async with fixed dimensions and a name alternative. Replace only with owner-approved imagery. Exclude from hero and social card.
 - SEO: comparison against deployed `525d9eb` has zero audit errors and zero critical changes. Four intentional review warnings: EN/ZH description rewrites and two new indexable project routes. All original canonical routes, homepage titles and identity schema remain. `llms.txt`, sitemap and locale switches match the new page jobs.
 - Performance: retain the project-specific 500KB total / 10KB JS / 40KB CSS / 100KB font ceiling. Only the 19KB portrait is added; the homepage no longer references thirty thumbnails. Text is LCP; existing menu is the interaction risk; image dimensions reserve layout. No new dependencies, analytics or remote embeds.
 - Website Copy Read: personal recruiting portfolio; audience is recruiters and technical hiring managers; goal is a relevant conversation; voice is direct and technical; proof comes from owner-confirmed career facts, public roles, source code and reviewed previews. Never imply confidential employer assignments, clinical results, accounting accuracy guarantees or adoption numbers. AI assists with wording and EN/ZH adaptation; Jay is the content owner. Facts are checked against the sources in positioning.md. No new tax, legal or medical advice is authored.

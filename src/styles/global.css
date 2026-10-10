@@ -226,7 +226,7 @@ html[lang='zh-CN'] .contact-section h2{font-family:var(--body);font-size:clamp(3
 .hero-specialism+.hero-intro{margin-top:18px}
 .hero-actions{flex-wrap:wrap;column-gap:24px;row-gap:8px}
 .about-portrait{display:flex;align-items:center;gap:18px;margin:30px 0 0}
-.about-portrait img{width:94px;height:auto;flex:0 0 auto;border:1px solid var(--line)}
+.about-portrait img{width:94px;height:94px;object-fit:cover;object-position:center 40%;border-radius:10px;flex:0 0 auto;border:1px solid var(--line)}
 .about-portrait figcaption{font:500 18px/1.5 var(--display)}
 .about-portrait figcaption span{display:block;font:12px/1.8 var(--body);color:var(--muted);margin-top:3px}
 .featured-list{margin-top:48px}
@@ -278,7 +278,7 @@ html[lang='zh-CN'] .contact-section h2{font-family:var(--body);font-size:clamp(3
 @media(max-width:799px){
   .hero-specialism{font-size:15px;margin-top:16px}.hero-specialism+.hero-intro{margin-top:16px}
   .hero-actions{column-gap:20px}.hero-actions>.text-link{font-size:13px;gap:8px}
-  .about-portrait{margin-top:24px}.about-portrait img{width:76px}
+  .about-portrait{margin-top:24px}.about-portrait img{width:76px;height:76px}
   .featured-case{grid-template-columns:1fr;gap:26px;padding-block:34px}.featured-heading h3{font-size:29px}
   .case-technologies{margin-top:14px}.featured-heading>.text-link{margin-top:12px}.case-problem{font-size:17px}
   .case-reasoning dd{font-size:15px}.work-archive-link{align-items:flex-start;flex-direction:column;gap:8px}
@@ -288,4 +288,4 @@ html[lang='zh-CN'] .contact-section h2{font-family:var(--body);font-size:clamp(3
 }
 @media(max-width:420px){.hero-actions{gap:8px 16px}.hero-actions>.button{flex-basis:100%;justify-content:space-between}.hero-actions>.text-link{min-height:44px}.case-problem{font-size:16px}.featured-heading h3{font-size:27px}.case-meta{flex-wrap:wrap}}
 @media(forced-colors:active){.media-label{color:CanvasText;background:Canvas;border-color:CanvasText}.featured-stage,.hero-specialism{color:CanvasText}}
-@media print{.featured-case{break-inside:avoid;gap:24px;padding-block:20px}.featured-stage,.case-category,.case-problem,.case-reasoning dd,.case-reasoning dt,.hero-specialism{color:#222}.featured-list{margin-top:20px}.case-reasoning{gap:10px}.case-reasoning dd{font-size:11px}.featured-heading h3{font-size:24px}.about-portrait img{width:60px}.open-source-section{padding-bottom:24px}.project-group-links,.work-archive-link{display:none}}
+@media print{.featured-case{break-inside:avoid;gap:24px;padding-block:20px}.featured-stage,.case-category,.case-problem,.case-reasoning dd,.case-reasoning dt,.hero-specialism{color:#222}.featured-list{margin-top:20px}.case-reasoning{gap:10px}.case-reasoning dd{font-size:11px}.featured-heading h3{font-size:24px}.about-portrait img{width:60px;height:60px}.open-source-section{padding-bottom:24px}.project-group-links,.work-archive-link{display:none}}

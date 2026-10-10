@@ -50,6 +50,14 @@
       "scope": "Bilingual recruitment positioning, four engineering cases, complete project indexes, owner-supplied portrait below hero and CV/contact paths",
       "evidence": "docs/positioning.md",
       "publication": "Local preview; feature branch awaiting publication"
+    },
+    {
+      "date": "2026-10-10",
+      "actions": [
+        "content-refresh"
+      ],
+      "scope": "Owner-requested portrait shape: rounded square, 94px desktop / 76px phone, 10px corners, face-centred CSS crop",
+      "validation": "Build and seven-page HTML verifier passed. New browser screenshot not captured after user took control of the task space."
     }
   ],
   "visibility_snapshots": [
