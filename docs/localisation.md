@@ -36,3 +36,5 @@ Published commit `f5944e5bc8f570d2d6a1a9fc18e3ad23bb6c809e` via [Pages run 38042
 ## Language-picker refinement, 2026-10-10
 
 The owner requested a recognisable Google translation icon and native language names on every page. The official Round translate glyph replaces the original icon, the control and panel have 10px corners, and language choices now come from shared native names rather than page translations. Typecheck (25 files, zero diagnostics), build and 19-page verification pass, including the exact native names and each link’s language annotation. Browser reinspection was attempted but the existing preview space was under user control and rejected automation; no new visual or keyboard check is claimed for this refinement. The previous interaction code, animation and portrait are unchanged.
+
+Published commit `b3db404d053719b34a67796379f076d9a52794ea` via [Pages run 38043561167](https://github.com/maxazure/maxazure.github.io/actions/runs/38043561167). At 2026-10-10T10:04:22+00:00, all 70 live files matched the local build byte-for-byte; the 19-page verifier passed against the live snapshot.

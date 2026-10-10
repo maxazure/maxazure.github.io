@@ -154,7 +154,16 @@
       ],
       "scope": "Google Material Icons Round translate glyph; rounded language control and panel; fixed native names and language annotations on all six menu links",
       "evidence": "docs/localisation.md",
-      "validation": "25-file typecheck, build and 19-page verifier passed. Browser reinspection unavailable because the existing preview space is user-controlled; prior interaction code unchanged."
+      "validation": "25-file typecheck, build and 19-page verifier passed. Browser reinspection unavailable because the existing preview space is user-controlled; prior interaction code unchanged.",
+      "publication": {
+        "commit": "b3db404d053719b34a67796379f076d9a52794ea",
+        "workflow": "https://github.com/maxazure/maxazure.github.io/actions/runs/38043561167",
+        "status": "success",
+        "verified_at": "2026-10-10T10:04:22+00:00",
+        "live_files": 70,
+        "matching_files": 70,
+        "verified_html_pages": 19
+      }
     }
   ],
   "visibility_snapshots": [
