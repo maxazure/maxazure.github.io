@@ -120,7 +120,7 @@ for relative in ["index.html", "zh/index.html"]:
         text = page.path.read_text().split('id="' + section + '"', 1)[1].split('</section>', 1)[0]
         assert "FNZ" not in text, "Employer emphasis in short introduction"
     image_nodes = [a for t,a in page.nodes if t == "img" and a.get("src", "").startswith("/projects/")]
-    assert len(image_nodes) == 30, "Every project needs a small preview or labelled concept cover"
+    assert len(image_nodes) == 30, "Every project needs a small preview or labelled interface mockup"
     for attrs in image_nodes:
         assert attrs.get("width") == "320" and attrs.get("height") == "200"
         assert attrs.get("loading") == "lazy"
@@ -133,8 +133,8 @@ for relative in ["index.html", "zh/index.html"]:
     assert html.count('href="https://github.com/maxazure/') >= 3
     for identifier in ["video-editing", "speech-tooling", "bookkeeping-assistant", "voice-companion", "web-builder-agent", "idea-builder", "writing-assessment", "voice-capture", "live-interpretation", "local-narration", "lan-microphone", "agentmeshkit", "codexview", "capability-vault", "agent-home", "browser-test-workspace", "hardware-control", "editorial-workflow", "media-workspace"]:
         article = html.split('data-project="' + identifier + '"', 1)[1].split('</article>', 1)[0]
-        assert "AI-generated concept illustration" in article or "AI 生成的项目示意图" in article, "Generated covers must not imply actual screenshots"
-        assert identifier + "-concept.jpg" in article
+        assert "AI-generated interface mockup" in article or "AI 生成的界面示意" in article, "Generated covers must not imply actual screenshots"
+        assert identifier + "-interface.jpg" in article
         if identifier in {"video-editing", "speech-tooling", "bookkeeping-assistant", "agentmeshkit", "codexview"}:
             assert 'href="https://github.com/' in article, "Open-source repository link missing"
     hero = html.split('id="home"', 1)[1].split('</section>', 1)[0]

@@ -13,7 +13,7 @@ const statuses = en
 <section class="work-section section-space" id="portfolio" aria-labelledby="work-title">
   <div class="shell">
     <div class="section-header"><div><p class="eyebrow">{en ? 'Selected projects' : '项目案例'}</p><h2 id="work-title" class="display-heading">{en ? 'What I’ve built.' : '我做过的项目。'}</h2></div><p class="project-count"><strong>{cases.length}</strong><span>{en ? 'selected examples' : '个精选案例'}</span></p></div>
-    <p class="section-description">{en ? 'AI systems, voice workflows, enterprise software and web applications. Client names are anonymised; previews are small screenshots or clearly labelled concept illustrations.' : 'AI 系统、语音工作流、企业软件与 Web 应用。客户名称匿名处理，预览使用小截图或明确标注的项目示意图。'}</p>
+    <p class="section-description">{en ? 'AI systems, voice workflows, enterprise software and web applications. Client names are anonymised; previews are small screenshots or clearly labelled generated interface mockups.' : 'AI 系统、语音工作流、企业软件与 Web 应用。客户名称匿名处理，预览使用小截图或明确标注的 AI 界面示意。'}</p>
     <div class="project-gallery">{cases.map((project, index) => <article class="project-card" data-project={project.id} id={cases.findIndex(item => item.group === project.group) === index ? `projects-${project.group}` : undefined}>
       <figure class="case-preview"><div class="preview-frame"><img src={project.image} alt={project.alt} width="320" height="200" loading="lazy" decoding="async" draggable="false" /></div><figcaption>{project.caption}</figcaption></figure>
       <div class="case-copy"><p class="case-meta"><span class="case-index">{String(index + 1).padStart(2, '0')}</span><span class="case-status">{statuses[project.status]}</span></p><h3>{project.name}</h3><p>{project.description}</p></div>

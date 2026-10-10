@@ -22,13 +22,13 @@ The financial-project domain serves a holding page; its screenshot is historical
 
 Eleven screenshots are intrinsic 320×200 WebP files, rendered at no more than 320 CSS pixels. They have no clickable image wrapper, lightbox, full-size sibling or high-resolution `srcset`. Resolution and redaction provide the privacy boundary.
 
-Existing exports mask brands, contacts and private session/user areas. The historical medical portrait is blurred and its signature covered. The CRM preview is an empty-data demo; the memory preview is CLI help without personal records. The new ERP preview renders the actual dashboard and shell components with an anonymous account, empty collections and zero counters. It makes no API calls and accesses no database. Nineteen generated covers carry explicit concept-illustration captions. These explain software purposes without showing private interfaces or implying actual screenshots.
+Existing exports mask brands, contacts and private session/user areas. The historical medical portrait is blurred and its signature covered. The CRM preview is an empty-data demo; the memory preview is CLI help without personal records. The new ERP preview renders the actual dashboard and shell components with an anonymous account, empty collections and zero counters. It makes no API calls and accesses no database. Nineteen generated covers are screenshot-style interface mockups with explicit AI-generated captions. They use generic demo content to explain software purposes, without reproducing private interfaces or implying actual screenshots.
 
 Original captures, temporary render scripts, application HTML and proof files remain outside Git/public output. Only reviewed low-resolution image exports are published. Names, alternative text and captions use anonymous project IDs and industry descriptions. Any replacement requires a fresh privacy review.
 
 ## Locale and delivery contract
 
-English and Chinese expose the same career facts, 30 projects, 11 screenshots, 19 concept illustrations, status and links. Project descriptions stay short; detailed technical lists are omitted from the cards. All content remains in initial HTML, including when JavaScript or images are disabled.
+English and Chinese expose the same career facts, 30 projects, 11 screenshots, 19 labelled interface mockups, status and links. Project descriptions stay short; detailed technical lists are omitted from the cards. All content remains in initial HTML, including when JavaScript or images are disabled.
 
 The established homepage title/description, canonical and alternate URLs, schema identity, old anchors and unchanged CV URL are preserved. No claims about hiring conversion, search rankings or field performance follow from a successful build or local lab result.
 
@@ -43,4 +43,4 @@ The Web Builder workflow was checked against the running source: research/build 
 
 Voice2Task, live interpretation, AirMicLAN and local narration describe capture, segmentation, transcription, translation, LAN streaming and delivery integrations. VoxCPM2 and OmniVoice remain attributed as existing model/engine integrations.
 
-CodexView and AgentMeshKit source links were checked as public, with Jay's commit authorship verified. Other new private systems include guided multi-agent delivery, writing assessment, agent configuration sync, persistent workspaces, browser testing, ESP32 HID control, reviewed editorial workflows and Android media delivery. Their concepts use generic functionality without customer records or private interfaces.
+CodexView and AgentMeshKit source links were checked as public, with Jay's commit authorship verified. Other new private systems include guided multi-agent delivery, writing assessment, agent configuration sync, persistent workspaces, browser testing, ESP32 HID control, reviewed editorial workflows and Android media delivery. Their interface mockups use generic functionality without customer records or private interfaces.

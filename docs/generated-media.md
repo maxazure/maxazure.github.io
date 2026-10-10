@@ -1,3 +1,5 @@
+> Historical generation record. The original botanical texture and concept covers have been superseded; current asset paths and complete prompts are in [interface-media.md](interface-media.md).
+
 # Generated portfolio media — 2026-10-10
 
 The owner requested a subtle New Zealand silver fern hero texture and images for the three open-source projects that previously used code covers. Four separate assets were generated with the built-in `image_gen` tool (OpenAI GPT Image 2), using the prompts below.

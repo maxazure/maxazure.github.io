@@ -1,3 +1,5 @@
+> Historical generation record. The seventeen delivery assets recorded below have been superseded by the native 3D fern and screenshot-style mockups in [interface-media.md](interface-media.md). Retired concept/texture files are no longer in the published build.
+
 # AI portfolio media — 2026-10-10
 
 Mode: built-in `image_gen`, OpenAI GPT Image 2. Seventeen separate generation calls: one replacement hero decoration and sixteen project illustrations. Prompts use generic capabilities only; no customer screenshots, records, names, credentials or private source files were supplied to the generator.

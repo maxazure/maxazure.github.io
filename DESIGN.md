@@ -1,12 +1,12 @@
 ---
 name: Jay Liu Engineering Portfolio
-version: 5
+version: 6
 updated: 2026-10-10
 ---
 
 # Design intent
 
-A personal engineering portfolio for hiring teams. Use a graphite editorial composition, a role-led first viewport and a restrained engineering trace graphic. The visual subject is software systems, with Jay's identity, enterprise experience and technical role carrying the first viewport.
+A personal engineering portfolio for hiring teams. Use a graphite editorial composition, a role-led first viewport and a sculptural silver fern. The visual subject combines New Zealand identity and engineering, with Jay's identity, enterprise experience and technical role carrying the first viewport.
 
 ## Colour tokens
 
@@ -31,17 +31,17 @@ Desktop name: 20–24px; primary role: 48–80px, 38–56px on phones. Major hea
 
 Max shell: 1280px. Desktop gutters: 56px; medium 36px; mobile 20px. Section space: 112px desktop, 72px mobile. Major gaps: 80–120px; project gap: 28px. Use mostly square corners. Separate material by grids and rules rather than repeated rounded cards.
 
-Hero: personal name above a prominent engineering role on the left; bounded profile panel with a decorative integration trace, enterprise and AI focus areas with career facts on the right. About and skills establish enterprise capability. Experience uses a paper background and six chronological roles. Projects follow Experience as one continuous three-column album, with 30 numbered cards and concise descriptions, with AI systems first. Contact offers direct email and personal profiles.
+Hero: personal name, engineering role, concise enterprise/AI introduction and two actions on the right; one silver fern mesh with depth and silver lighting on the left. About and skills establish enterprise capability. Experience uses a paper background and six chronological roles. Projects follow Experience as one continuous three-column album, with 30 numbered cards and concise descriptions, with AI systems first. Contact offers direct email and personal profiles.
 
-At narrow widths, put hero copy/actions before the profile panel. Keep the purpose of every project visible. The gallery reflows from three columns to two below 1000px and one below 600px. Small thumbnails never exceed 320 CSS pixels and have no image links or zoom controls. Convert skills to two columns at medium widths and one column below 420px. Collapse chronology into readable rows. Native mobile menu retains a usable no-JavaScript navigation fallback.
+At narrow widths, put concise hero copy/actions before a separate 200–220px fern stage. The repeated profile summary has been removed; the fern never sits under text. The repeated stack strip is hidden on phones, while the technical stack remains in hero copy and Skills. Keep the purpose of every project visible. The gallery reflows from three columns to two below 1000px and one below 600px. Small thumbnails never exceed 320 CSS pixels and have no image links or zoom controls. Convert skills to two columns at medium widths and one column below 420px. Collapse chronology into readable rows. Native mobile menu retains a usable no-JavaScript navigation fallback.
 
 ## Signature and assets
 
-The hero trace is a decorative abstraction of integration, with no employer-architecture or product-UI claim. Its thin rules and coral node are echoed in the project frames. A single original tapered silver fern frond emerges from the left edge, blended into graphite at 16% opacity with a separately positioned 10% phone crop. The texture sits behind the HTML content, accepts no pointer input and disappears in print and forced colours. The existing social card retains the original decorative orbit and its established name/role identity. The gallery uses eleven actual anonymous screenshot exports; nineteen cards use labelled AI-generated concept illustrations. The original wordmark is preserved as an archival asset. The refreshed wordmark spells **JAY LIU** and the favicon uses **JL**. Asset paths, production treatment and full prompts are recorded in `docs/generated-media.md` and `docs/ai-project-media.md`.
+The single code-authored 3D silver fern has a curved stem, tapered lobed pinnae and shallow folds. It occupies the left visual plane on desktop and a separate landscape stage on phones, at visible contrast with no text overlap. A static transparent render is available before JavaScript. Native WebGL in an OffscreenCanvas worker adds gentle pointer-driven viewpoint changes on fine-pointer desktops; phones, reduced motion, data-saving, missing WebGL and no JavaScript retain the static 3D render. The fern disappears in print and forced colours. The existing social card retains the original decorative orbit and its established name/role identity. The gallery uses eleven actual anonymous screenshot exports; nineteen cards use labelled AI-generated interface mockups. The original wordmark is preserved as an archival asset. The refreshed wordmark spells **JAY LIU** and the favicon uses **JL**. Asset paths, production treatment and full prompts are recorded in `docs/interface-media.md`; historical prompts are retained in the two earlier media records.
 
 ## Radius, shadow and motion
 
-Production UI corners: square. Favicon: 12/64-unit radius. Case images use a thin border, with no zoom cursor, hover enlargement or image interaction. Hover: orange colour, slight 3px arrow movement, 200ms. The hero trace is static; no continuous animation or extra runtime is used. All animation and smooth scrolling are disabled under reduced motion.
+Production UI corners: square. Favicon: 12/64-unit radius. Case images use a thin border, with no zoom cursor, hover enlargement or image interaction. Hover: orange colour, slight 3px arrow movement, 200ms. The fern has no continuous animation; its small worker renderer updates only for resize or desktop pointer input. No 3D framework is shipped. All animation and smooth scrolling are disabled under reduced motion.
 
 ## Components and states
 
@@ -49,4 +49,4 @@ Primary button: orange fill, dark text, 52px minimum height, paper hover. Text l
 
 ## Rules
 
-Use concise, technically specific copy tied to reviewed work. Keep the FNZ career role and personal projects distinct. Omit personal-business branding, links and promotional text. Preserve homepage metadata and legacy anchor IDs. Never add fabricated project screenshots, research results, percentage skill bars, auto-playing media or hiring availability claims. Technical concepts should make the hiring relevance clearer; they should not obscure what was built.
+Use concise, technically specific copy tied to reviewed work. Keep the FNZ career role and personal projects distinct. Omit personal-business branding, links and promotional text. Preserve homepage metadata and legacy anchor IDs. Never present generated mockups as actual project screenshots, research results, percentage skill bars, auto-playing media or hiring availability claims. Technical concepts should make the hiring relevance clearer; they should not obscure what was built.

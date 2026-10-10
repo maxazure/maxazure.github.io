@@ -8,4 +8,4 @@
 - [中文个人网站](https://jayliu.co.nz/zh/): Chinese version of the same personal portfolio.
 - [Privacy](https://jayliu.co.nz/privacy/): How this website and contact links handle information.
 
-Previews are small redacted screenshots or clearly labelled AI-generated concept illustrations. The private system previews contain no customer records. Public links identify externally accessible websites or open-source repositories; private system endpoints are not published.
+Previews are small redacted screenshots or clearly labelled AI-generated interface mockups. The private system previews contain no customer records. Public links identify externally accessible websites or open-source repositories; private system endpoints are not published.
