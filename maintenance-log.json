@@ -58,6 +58,13 @@
       ],
       "scope": "Owner-requested portrait shape: rounded square, 94px desktop / 76px phone, 10px corners, face-centred CSS crop",
       "validation": "Build and seven-page HTML verifier passed. New browser screenshot not captured after user took control of the task space."
+    },
+    {
+      "date": "2026-10-10",
+      "actions": [
+        "content-refresh"
+      ],
+      "scope": "Owner-requested Chinese hero name: 刘杰; English remains Jay Liu."
     }
   ],
   "visibility_snapshots": [

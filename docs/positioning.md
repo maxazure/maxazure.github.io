@@ -49,3 +49,5 @@ The installed website skill's optional Impeccable package is unavailable after s
 - Limitations: branded Safari, screen-reader certification, field CWV, hiring outcomes and Search Console indexing have not been measured. No Lighthouse binary was available, so no new Lighthouse score is claimed. The existing documentation files do not match the newly installed skill’s template schemas; those format checks remain reported separately from passing implementation checks.
 
 Portrait follow-up: the owner requested a square or circular frame. Applied a 10px rounded square using CSS object-fit cover at center 40%; 94px desktop, 76px phone, 60px print. Build and HTML verification pass. The subsequent browser capture was stopped because the browser task space was under user control; no new crop screenshot is claimed.
+
+Name follow-up: display “刘杰” in the Chinese hero name and retain “Jay Liu” in English. This is an intentional Chinese H1 wording change; canonical identity and metadata remain bilingual.
