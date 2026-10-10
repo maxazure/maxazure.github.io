@@ -136,7 +136,15 @@
       ],
       "scope": "Six complete languages from English source; native translation-icon dropdown, matching page and fragment navigation; English UI without Chinese characters",
       "evidence": "docs/localisation.md",
-      "publication": "Validated locally; owner-authorised GitHub Pages release pending",
+      "publication": {
+        "commit": "f5944e5bc8f570d2d6a1a9fc18e3ad23bb6c809e",
+        "workflow": "https://github.com/maxazure/maxazure.github.io/actions/runs/38042959504",
+        "status": "success",
+        "verified_at": "2026-10-10T09:54:44+00:00",
+        "live_files": 69,
+        "matching_files": 69,
+        "verified_html_pages": 19
+      },
       "validation": "Typecheck/build/19-page verifier passed; six homepages at 1440/820/390/320px; all project/privacy routes at 1440/320px; page/fragment switching, keyboard, native no-JS, forced colours and text spacing passed."
     }
   ],
@@ -158,6 +166,25 @@
       "limitations": [
         "No field-performance or recruitment-conversion data",
         "Existing documentation template audits report legacy format mismatches"
+      ]
+    },
+    {
+      "date": "2026-10-10",
+      "scope": "19 HTML pages / 18 indexable routes / six languages",
+      "source": "GitHub Pages live snapshot at f5944e5, compared with local build",
+      "checks": [
+        "all 69 release files byte-identical",
+        "six complete locale dictionaries",
+        "English without Chinese characters",
+        "reciprocal locale routes",
+        "metadata and schema",
+        "internal links",
+        "sitemap and robots",
+        "unchanged animation and CV"
+      ],
+      "limitations": [
+        "No field-performance or recruitment-conversion data",
+        "No external native-editor or branded Safari review"
       ]
     }
   ],
