@@ -3,3 +3,5 @@ source_path,target_path,action,evidence
 /index.html,/index.html,preserve,existing homepage file
 /cv/Jie-Liu-CV.pdf,/cv/Jie-Liu-CV.pdf,preserve,existing public CV exact bytes
 /content/resume/images/favicon.ico,/content/resume/images/favicon.ico,preserve,existing favicon reference
+/projects/,/projects/,new,owner-directed complete project collection
+/zh/projects/,/zh/projects/,new,Chinese counterpart of complete project collection

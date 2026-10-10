@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 root = Path(sys.argv[1] if len(sys.argv) > 1 else "dist").resolve()
 origin = "https://jayliu.co.nz"
 expected_title = "Jay Liu - Senior Software Engineer | FinTech | .NET | React | Cloud | AI Integration"
-expected_description = "Professional portfolio of Jay Liu, a senior software engineer with 18+ years of experience. Currently at FNZ Group building enterprise financial platforms with .NET, React, Azure, and AI integration. Based in Auckland, New Zealand."
+expected_description = "Jay Liu, senior software engineer in Auckland. 18+ years in enterprise software, financial-platform delivery at FNZ, and independent applied AI projects."
 legacy_fragments = {"home", "about", "skills", "resume", "portfolio", "contact"}
 
 class Page(HTMLParser):
@@ -53,7 +53,7 @@ class Page(HTMLParser):
         return [a.get("content") for t,a in self.nodes if t == "meta" and (a.get("name") == key or a.get("property") == key)]
 
 pages = {p: Page(p) for p in root.rglob("*.html")}
-assert len(pages) == 5, f"Unexpected page inventory: {list(pages)}"
+assert len(pages) == 7, f"Unexpected page inventory: {list(pages)}"
 for path, page in pages.items():
     assert "bestai" not in path.read_text().lower(), "Personal business association must not appear"
     assert page.h1 == 1, f"Expected one H1: {path}"
@@ -102,29 +102,42 @@ for relative in ["index.html", "zh/index.html"]:
     assert person["jobTitle"] == "Analyst Developer"
     assert not any(x["@type"] == "LocalBusiness" for x in graph), "Portfolio is a Person"
     assert 'id="research"' not in page.path.read_text(), "Retired third-party research section"
-    cases = [(t,a) for t,a in page.nodes if t == "article" and "data-project" in a]
-    assert len(cases) == 30, "Expected concrete project inventory"
     html = page.path.read_text()
-    assert html.index('id="resume"') < html.index('id="portfolio"') < html.index('id="contact"'), "Project gallery must follow experience"
-    assert 'class="project-gallery"' in html, "Project gallery missing"
+    featured = [a["data-featured"] for t,a in page.nodes if t == "article" and "data-featured" in a]
+    assert featured == ["transactional-crm", "bookkeeping-assistant", "voice-companion", "codexview"], "Featured cases must be equivalent in both languages"
+    assert not any("data-project" in a for _,a in page.nodes), "The complete gallery belongs on its own route"
+    assert html.index('id="about"') < html.index('id="portfolio"') < html.index('id="resume"') < html.index('id="skills"') < html.index('id="contact"')
+    hero = html.split('id="home"', 1)[1].split('</section>', 1)[0]
+    assert "FNZ" not in hero, "Employer detail belongs with background and experience"
+    assert "AI" in hero and ("Agent" in hero or "agent" in hero)
+    assert 'href="/cv/Jie-Liu-CV.pdf"' in hero and 'linkedin.com/in/jayliuinvers/' in hero
+    assert '<img' not in hero, "Portrait must stay outside the first screen"
+    assert html.index('id="about"') < html.index('/images/jay-liu.jpg') < html.index('id="portfolio"')
+    assert '<canvas' in hero, "Keep the Transformer field"
+    assert 'class="delivery-responsibilities"' in html
+    assert 'href="mailto:maxazure@gmail.com"' in html
+
+for relative in ["projects/index.html", "zh/projects/index.html"]:
+    page = pages[root / relative]
+    html = page.path.read_text()
+    cases = [(t,a) for t,a in page.nodes if t == "article" and "data-project" in a]
+    assert len(cases) == 30, "Expected complete project inventory"
     identifiers = [a["data-project"] for _,a in cases]
     assert len(set(identifiers)) == 30, "Each project must be distinct"
-    assert identifiers[:3] == ["voice-companion", "web-builder-agent", "idea-builder"], "AI systems must lead the gallery"
-    assert {"operations-erp", "transactional-crm", "agent-workbench", "knowledge-memory"} <= set(identifiers), "Existing systems must remain"
-    if relative == "index.html":
+    assert {"operations-erp", "transactional-crm", "agent-workbench", "knowledge-memory"} <= set(identifiers)
+    if relative == "projects/index.html":
         english_projects = identifiers
     else:
         assert identifiers == english_projects, "English and Chinese project inventories must match"
-    assert "ERP" in html.split('id="home"', 1)[1].split('</section>', 1)[0], "Enterprise/ERP introduction missing"
-    for section in ["home", "about"]:
-        text = page.path.read_text().split('id="' + section + '"', 1)[1].split('</section>', 1)[0]
-        assert "FNZ" not in text, "Employer emphasis in short introduction"
+    locale_target = "/zh/projects/" if relative == "projects/index.html" else "/projects/"
+    assert any(t == "a" and a.get("class") == "language-link" and a.get("href") == locale_target for t,a in page.nodes), "Locale switch must retain project context"
     image_nodes = [a for t,a in page.nodes if t == "img" and a.get("src", "").startswith("/projects/")]
+    assert html.count('class="media-label"') == 19, "Generated interfaces need visible disclosure"
     assert len(image_nodes) == 30, "Every project needs a small preview or labelled interface mockup"
     for attrs in image_nodes:
         assert attrs.get("width") == "320" and attrs.get("height") == "200"
         assert attrs.get("loading") == "lazy"
-    assert not any(t == "a" and a.get("href", "").startswith("/projects/") for t,a in page.nodes), "Thumbnail must not be a zoom link"
+    assert not any(t == "a" and urlsplit(a.get("href", "")).path.endswith((".webp", ".jpg", ".png")) for t,a in page.nodes), "Thumbnail must not be a zoom link"
     assert not any("srcset" in a for a in image_nodes), "Do not offer high-resolution variants"
     html = page.path.read_text()
     for identifier in ["operations-erp", "agent-workbench", "transactional-crm", "knowledge-memory", "web-builder-agent", "idea-builder", "writing-assessment", "voice-capture", "live-interpretation", "local-narration", "lan-microphone", "capability-vault", "agent-home", "browser-test-workspace", "hardware-control", "editorial-workflow", "media-workspace"]:
@@ -137,8 +150,6 @@ for relative in ["index.html", "zh/index.html"]:
         assert identifier + "-interface.jpg" in article
         if identifier in {"video-editing", "speech-tooling", "bookkeeping-assistant", "agentmeshkit", "codexview"}:
             assert 'href="https://github.com/' in article, "Open-source repository link missing"
-    hero = html.split('id="home"', 1)[1].split('</section>', 1)[0]
-    assert "AI" in hero and ("Agent" in hero or "agent" in hero), "Current AI engineering skills must appear in the hero"
     web_builder = html.split('data-project="web-builder-agent"', 1)[1].split('</article>', 1)[0]
     assert all(agent in web_builder for agent in ["Claude Code", "Codex", "OpenCode"]), "Web Builder agent compatibility missing"
 
@@ -153,6 +164,6 @@ assert "User-agent: OAI-SearchBot\nAllow: /" in robots
 assert "Disallow: /\n" not in robots
 sitemap = ET.parse(root / "sitemap-0.xml")
 urls = {e.text for e in sitemap.iter() if e.tag.endswith('}loc')}
-assert urls == {origin + p for p in ["/", "/zh/", "/privacy/", "/zh/privacy/"]}, urls
+assert urls == {origin + p for p in ["/", "/zh/", "/projects/", "/zh/projects/", "/privacy/", "/zh/privacy/"]}, urls
 assert "noindex" in pages[root / "404.html"].meta("robots")[0]
 print(f"Verified {len(pages)} pages: identity, metadata, schema, fragments, project inventory/privacy, local links, assets, sitemap, robots and unchanged CV")

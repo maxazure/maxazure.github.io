@@ -2,7 +2,7 @@
 import { copy, profile, type Locale } from '../data/profile';
 import { seo } from '../lib/seo';
 import '../styles/global.css';
-interface Props { locale?: Locale; kind?: 'home' | 'privacy' | '404' }
+interface Props { locale?: Locale; kind?: 'home' | 'privacy' | 'projects' | '404' }
 const { locale = 'en', kind = 'home' } = Astro.props;
 const c = copy[locale];
 const meta = seo(locale, kind);

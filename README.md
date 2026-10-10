@@ -2,7 +2,9 @@
 
 Personal engineering portfolio, built with Astro 7, TypeScript and Tailwind CSS 4. Static HTML is generated at build time. A small native JavaScript disclosure handles mobile navigation; no React runtime, animation library, analytics or third-party fonts are required.
 
-The English homepage retains its established title and description. The site presents enterprise financial, ERP/CRM and healthcare information-system experience alongside personal engineering projects for a recruitment audience, with a three-column project gallery after the career timeline: ERP/CRM systems, engineering tools, anonymous industry websites and earlier projects. Current employment is kept in the career timeline.
+The portfolio supports senior software engineering, enterprise AI integration and FDE recruitment conversations. Its homepage explains Jay’s business and delivery focus, then presents four attributable cases (enterprise CRM, NZ Accounting Assistant, HiLily and CodexView), career experience, capabilities and direct contact. FDE is an interest, not a past title. The complete 30-project gallery is at `/projects/` and `/zh/projects/`.
+
+The owner requested that the existing Transformer animation remain unchanged. A small owner-supplied portrait appears in About, after the first screen. The original public CV is linked from the hero, contact and project collection. Homepage descriptions distinguish FNZ employment from independent AI work; the established page titles and identity remain.
 
 ## Develop and verify
 
@@ -25,11 +27,11 @@ pnpm preview
 
 Pushes to `master` trigger `.github/workflows/deploy.yml`. GitHub Actions installs the locked dependencies, checks types, builds static output and verifies it before deploying `dist/` to GitHub Pages. Pages uses the existing `jayliu.co.nz` custom domain and HTTPS. The repository's Pages build source must be **GitHub Actions**.
 
-Preserved public contracts: `/`, `/index.html`, `#home`, `#about`, `#skills`, `#resume`, `#portfolio`, `#contact`, `/cv/Jie-Liu-CV.pdf` and the legacy favicon path. New routes are `/zh/`, `/privacy/`, `/zh/privacy/` and a real GitHub Pages 404 document. The CV is retained byte-for-byte as an existing public document; it is not promoted as a newly prepared job-application CV.
+Preserved public contracts: `/`, `/index.html`, `#home`, `#about`, `#skills`, `#resume`, `#portfolio`, `#contact`, `/cv/Jie-Liu-CV.pdf` and the legacy favicon path. Public routes also include `/zh/`, `/projects/`, `/zh/projects/`, `/privacy/`, `/zh/privacy/` and a real GitHub Pages 404 document. The CV is retained byte-for-byte as an existing public document; it is not promoted as a newly prepared job-application CV.
 
 After publishing, check the homepage, both language versions, privacy, an unknown URL, robots, sitemap, social image and CV. GitHub Pages owns HTTP headers and cache policy; this project does not claim to configure unsupported `_headers` rules. Search rankings, indexing and project impact are not inferred from build success.
 
-See [DESIGN.md](DESIGN.md), [site specification](site-specification.md) and [content rationale](docs/engineering-content.md) for the design, evidence boundaries and verification record.
+See [positioning and evidence](docs/positioning.md), [DESIGN.md](DESIGN.md), [site specification](site-specification.md) and [content rationale](docs/engineering-content.md) for the design, evidence boundaries and verification record.
 
 ## Primary references
 

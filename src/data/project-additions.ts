@@ -2,10 +2,10 @@ import type { Locale } from './profile';
 
 const additions = [
   {
-    id: 'voice-companion', group: 'labs', status: 'live', href: 'https://hilily.ai/',
+    id: 'voice-companion', group: 'labs', status: 'mvp', href: 'https://www.hilily.ai/',
     tags: ['Python', 'Streaming audio', 'Conversational AI'],
-    en: { name: 'Conversational AI · Voice companion backend', description: 'A device-to-cloud conversation pipeline connecting voice activity detection, transcription, language models, memory and speech synthesis for an embedded companion device.', alt: 'Generated interface mockup: Voice pipeline' },
-    zh: { name: '对话式 AI · 语音陪伴设备后端', description: '为嵌入式语音陪伴设备连接端云对话链路，集成语音活动检测、转写、语言模型、记忆与语音合成。', alt: 'AI 生成的界面示意：语音会话链路、设备状态与记忆上下文' },
+    en: { name: 'HiLily · Voice companion', description: 'Volunteer AI Coach providing guidance on AI architecture, conversational memory and audio processing. A team-built functional MVP preparing for pilots; the public site includes demos and team roles.', alt: 'Generated interface mockup: Voice pipeline' },
+    zh: { name: 'HiLily · 语音陪伴设备', description: '以志愿 AI Coach 身份提供 AI 架构、对话记忆与音频处理方面的技术指导。团队已完成功能 MVP，正在准备试点；官网提供演示与团队角色说明。', alt: 'AI 生成的界面示意：语音会话链路、设备状态与记忆上下文' },
   },
   {
     id: 'web-builder-agent', group: 'labs', status: 'private',

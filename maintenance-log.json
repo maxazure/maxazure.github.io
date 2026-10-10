@@ -1,0 +1,85 @@
+{
+  "industry": "personal engineering portfolio",
+  "business_name": "Jay Liu",
+  "location": "Auckland, New Zealand",
+  "last_maintenance": "2026-10-10",
+  "pages": [
+    {
+      "path": "/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/zh/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/projects/",
+      "last_updated": "2026-10-10",
+      "type": "collection"
+    },
+    {
+      "path": "/zh/projects/",
+      "last_updated": "2026-10-10",
+      "type": "collection"
+    },
+    {
+      "path": "/privacy/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    },
+    {
+      "path": "/zh/privacy/",
+      "last_updated": "2026-10-10",
+      "type": "core"
+    }
+  ],
+  "articles": [],
+  "seasonal_pages": [],
+  "maintenance_history": [
+    {
+      "date": "2026-10-10",
+      "actions": [
+        "content-refresh",
+        "content-evidence-refresh",
+        "page-created",
+        "seo-fix",
+        "sitemap-updated"
+      ],
+      "scope": "Bilingual recruitment positioning, four engineering cases, complete project indexes, owner-supplied portrait below hero and CV/contact paths",
+      "evidence": "docs/positioning.md",
+      "publication": "Local preview; feature branch awaiting publication"
+    }
+  ],
+  "visibility_snapshots": [
+    {
+      "date": "2026-10-10",
+      "scope": "7 built pages / 6 indexable routes",
+      "source": "dist + local Chromium preview",
+      "checks": [
+        "metadata",
+        "schema",
+        "internal-links",
+        "locale-parity",
+        "sitemap",
+        "legacy-fragments",
+        "CV-bytes",
+        "animation-preservation"
+      ],
+      "limitations": [
+        "No field-performance or recruitment-conversion data",
+        "Existing documentation template audits report legacy format mismatches"
+      ]
+    }
+  ],
+  "post_launch_visibility": [
+    {
+      "date": "2026-10-10",
+      "surface": "Recruitment outcome",
+      "evidence": "docs/positioning.md measurement row",
+      "result": "queued",
+      "follow_up": "Jay: assess relevant portfolio-attributed conversations during the first 28 complete days after publication; no tracking added"
+    }
+  ]
+}

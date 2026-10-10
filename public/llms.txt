@@ -1,11 +1,15 @@
 # Jay Liu
 
-> Jay Liu (Jie Liu) is a senior software engineer based in Auckland, New Zealand. His experience includes enterprise financial platforms, ERP/CRM, retail invoicing and sales software, and hospital management systems. He works with C#/.NET, SQL, React/TypeScript and Python. Current projects include AI-assisted delivery workflows, coding-agent orchestration, knowledge retrieval and speech processing. The portfolio presents his career first, followed by 30 selected project examples with AI systems first.
+> Jay Liu (Jie Liu) is a senior software engineer based in Auckland, New Zealand, interested in enterprise AI integration, senior software engineering and forward deployed engineering. His experience includes ERP/CRM, retail software, healthcare systems and delivery-focused financial-platform work at FNZ. His independent projects cover AI agents, knowledge retrieval and speech processing. The homepage presents four cases with responsibilities, engineering decisions and current evidence, followed by career experience and capabilities. FDE is an area of interest, not a past job title.
 
 ## Public website
 
 - [English portfolio](https://jayliu.co.nz/): Concrete project cases, background, skills, experience and contact details.
 - [中文个人网站](https://jayliu.co.nz/zh/): Chinese version of the same personal portfolio.
+- [Project collection](https://jayliu.co.nz/projects/): All 30 project examples, stages, small previews and public links.
+- [完整项目集](https://jayliu.co.nz/zh/projects/): Chinese version of the complete collection.
 - [Privacy](https://jayliu.co.nz/privacy/): How this website and contact links handle information.
 
-Previews are small redacted screenshots or clearly labelled AI-generated interface mockups. The private system previews contain no customer records. Public links identify externally accessible websites or open-source repositories; private system endpoints are not published.
+Jay is a volunteer AI Coach for HiLily, providing technical guidance; its team reports a functional MVP preparing for pilots. The accounting assistant prepares records and exports for human review. CodexView is publicly inspectable source. The enterprise CRM is an internal system. FNZ client assignments and implementations are confidential; independent AI work is not attributed to FNZ.
+
+Previews are small redacted screenshots or labelled AI-generated interface illustrations. Private previews contain no customer records or private endpoints. The homepage and project collection include a link to the existing public CV. Email and LinkedIn provide direct contact; the site does not collect form submissions or run analytics.

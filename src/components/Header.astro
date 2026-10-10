@@ -1,10 +1,10 @@
 ---
 import { copy, type Locale } from '../data/profile';
-interface Props { locale: Locale; kind?: 'home' | 'privacy' | '404' }
+interface Props { locale: Locale; kind?: 'home' | 'privacy' | 'projects' | '404' }
 const { locale, kind = 'home' } = Astro.props;
 const c = copy[locale];
 const root = locale === 'en' ? '/' : '/zh/';
-const switchHref = kind === 'privacy' ? `${c.switchHref}privacy/` : c.switchHref;
+const switchHref = kind === 'privacy' || kind === 'projects' ? `${c.switchHref}${kind}/` : c.switchHref;
 ---
 <header class="site-header">
   <div class="shell header-inner">

@@ -26,7 +26,7 @@ const existingProjects = {
         "PostgreSQL",
         "Concurrency control"
       ],
-      "status": "private",
+      "status": "operational",
       "image": "/projects/transactional-crm.webp",
       "alt": "Small redacted screenshot of the internal operations",
     },
@@ -227,7 +227,7 @@ const existingProjects = {
         "PostgreSQL",
         "并发控制"
       ],
-      "status": "private",
+      "status": "operational",
       "image": "/projects/transactional-crm.webp",
       "alt": "内部业务系统的匿名缩略图",
     },
