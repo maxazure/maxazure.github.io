@@ -182,7 +182,7 @@ for locale, prefix in locale_roots.items():
     assert all(agent in web_builder for agent in ["Claude Code", "Codex", "OpenCode"]), "Web Builder agent compatibility missing"
 
 pdf = root / "cv/Jie-Liu-CV.pdf"
-assert hashlib.sha256(pdf.read_bytes()).hexdigest() == "dd839a1ac4edbc3b48419cdb06931967db707220b074987fc46f70051ca76b21", "Public CV differs from the reviewed export"
+assert hashlib.sha256(pdf.read_bytes()).hexdigest() == "83db2384c48f159532bd3aab965691b65da68cd9be8099172180b95a4f5eeb5c", "Public CV differs from the reviewed export"
 assert (root / "CNAME").read_text().strip() == "jayliu.co.nz"
 assert (root / "brand/social-card.png").is_file()
 assert (root / "content/resume/images/favicon.ico").is_file()

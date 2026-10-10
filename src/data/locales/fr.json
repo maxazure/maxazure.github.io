@@ -36,13 +36,13 @@
     "heroBody": "Plus de 18 ans dans les logiciels d’entreprise, des ERP et CRM aux plateformes financières. Je m’appuie sur cette expérience pour concevoir des agents IA, des outils de recherche de connaissances et des systèmes vocaux.",
     "heroSpecialism": "IA d’entreprise et FinTech",
     "viewWork": "Voir les projets choisis",
-    "cvLabel": "CV anglais (PDF, 2 pages, 203 KB)",
+    "cvLabel": "CV anglais (PDF, 2 pages, 207 KB)",
     "focus": "Conception de systèmes d’IA appliquée",
     "aboutLabel": "À propos",
     "aboutHeading": "Comprendre le métier.\nMaîtriser la technique.",
     "aboutLead": "Je pars des processus métier pour aller jusqu’au logiciel utilisé au quotidien.",
     "aboutBody": "Je m’appelle Jay (Jie Liu), ingénieur logiciel basé à Auckland. Mon parcours en Chine et en Nouvelle-Zélande couvre les ERP et CRM, les logiciels de commerce de détail, les systèmes de santé et les plateformes financières, avec des responsabilités en développement, architecture et encadrement d’équipe.",
-    "aboutBody2": "Chez FNZ, mon travail est centré sur la réalisation et la livraison de logiciels. Dans mes projets indépendants, je relie modèles d’IA, outils et données à des workflows concrets, en prévoyant des contrôles explicites, la reprise après erreur et une validation humaine lorsque le jugement est nécessaire.",
+    "aboutBody2": "Chez FNZ, j’analyse et résous des problèmes logiciels complexes en veillant à une haute fiabilité. Dans mes projets indépendants, je relie modèles d’IA, outils et données à des workflows concrets, en prévoyant des contrôles explicites, la reprise après erreur et une validation humaine lorsque le jugement est nécessaire.",
     "skillLabel": "Compétences techniques",
     "skillHeading": "Du besoin métier\nau système opérationnel.",
     "skillIntro": "Modélisation métier, intégration de systèmes et livraison, avec les outils adaptés au logiciel d’entreprise et à l’IA.",
@@ -97,11 +97,11 @@
         "role": "Analyste-développeur",
         "company": "FNZ Group",
         "place": "Auckland, Nouvelle-Zélande",
-        "description": "Développement axé sur la livraison de plateformes financières d’entreprise avec C# et .NET.",
+        "description": "Analyser et résoudre des problèmes complexes sur des plateformes financières, en veillant à la haute fiabilité du logiciel.",
         "responsibilities": [
-          "Analyser les besoins et les traduire en évolutions applicatives réalisables.",
-          "Développer, tester et relire les modifications, en veillant à la maintenabilité et aux risques de régression.",
-          "Analyser les incidents et accompagner les mises en production avec les analystes, développeurs, testeurs et autres équipes de livraison."
+          "Analyser les problèmes complexes, en rechercher les causes et définir des corrections adaptées au système existant.",
+          "Évaluer les effets des changements et les tester en tenant compte de la fiabilité et des risques de régression.",
+          "Collaborer avec analystes, développeurs et testeurs pour les investigations et des mises en production fiables."
         ],
         "note": "Les missions clients et les détails d’implémentation sont confidentiels."
       },
@@ -235,7 +235,7 @@
   },
   "featured": {
     "transactional-crm": {
-      "name": "CRM d’entreprise",
+      "name": "Intégration CRM et workflows IA",
       "category": "Systèmes métier",
       "stage": "Système interne en service",
       "tags": [
@@ -243,10 +243,10 @@
         "PostgreSQL",
         "API typée / CLI"
       ],
-      "problem": "Lorsque des personnes et des agents logiciels modifient les mêmes données, les relations clients, les projets et les factures doivent rester cohérents.",
-      "role": "J’ai conçu et développé l’application, l’API et la CLI, en reliant les données structurées à des notes versionnées.",
-      "decision": "Les nouvelles tentatives et les modifications simultanées peuvent créer des doublons ou écraser des données. Des écritures idempotentes et des contrôles de version sécurisent les requêtes répétées et rendent les conflits explicites pour permettre leur résolution.",
-      "evidence": "Utilisé en interne pour les clients, projets, factures et notes. Le parcours public utilise des données fictives pour illustrer les nouvelles tentatives, les conflits et l’historique. Les dossiers et points d’accès restent privés."
+      "problem": "Les équipes de service client ont besoin de processus adaptés à leurs propres problèmes de suivi, d’analyse et de validation. Le CRM doit relier le contexte métier à la prochaine action.",
+      "role": "J’ai conçu et développé le CRM, l’API et la CLI comme une base personnalisable pour les workflows assistés par IA, reliant historique client, projets, factures et notes versionnées.",
+      "decision": "Mon approche relie rappels et analyse métier aux actions proposées, avec validation humaine avant les opérations importantes. Clés stables, contrôle de version et attribution des modifications rendent les écritures des agents traçables.",
+      "evidence": "Le système interne comprend rappels de suivi, dossiers partagés et écritures API/CLI contrôlées. Les analyses et décisions IA plus larges constituent des extensions à adapter à chaque activité. La démo fictive illustre les protections d’écriture implémentées."
     },
     "bookkeeping-assistant": {
       "name": "NZ Accounting Assistant",
@@ -272,9 +272,9 @@
         "Mémoire",
         "Traitement vocal"
       ],
-      "problem": "Un compagnon vocal destiné aux personnes âgées doit coordonner parole, conversation et mémoire entre un appareil embarqué et des services cloud.",
-      "role": "En tant qu’AI Coach bénévole, je conseille l’équipe sur l’architecture IA, la mémoire conversationnelle et le traitement audio. Le produit est un travail collectif.",
-      "decision": "L’audio de l’appareil, les réponses des modèles et le contexte mémorisé ont des contraintes différentes. Mes conseils portent sur leur articulation dans le pipeline IA et le traitement vocal côté appareil.",
+      "problem": "Le développement matériel et son extension à un système logiciel complet sont des défis centraux de ce compagnon vocal, notamment l’écho, le bruit ambiant et le temps de réponse.",
+      "role": "Comme AI Coach bénévole, j’apporte un accompagnement technique sur la chaîne IA matériel-logiciel, le traitement des microphones et l’intégration de modèles vocaux à faible latence. Le matériel et le produit sont un travail d’équipe.",
+      "decision": "Le travail porte sur l’annulation d’écho avec un ou deux microphones, la reconnaissance en milieu bruyant et les modèles de langage à entrée et sortie audio. J’aide l’équipe à examiner les contraintes liées entre audio embarqué, intégration des modèles et extension du système.",
       "evidence": "Le site du projet présente des démonstrations et mon rôle dans l’équipe. Celle-ci indique disposer d’un MVP fonctionnel, après plusieurs itérations, et préparer des pilotes en conditions réelles.",
       "linkLabel": "Voir la démo et l’équipe"
     },
@@ -297,7 +297,7 @@
   "projects": {
     "voice-companion": {
       "name": "HiLily · Compagnon vocal",
-      "description": "AI Coach bénévole, j’apporte des conseils sur l’architecture IA, la mémoire conversationnelle et le traitement audio. L’équipe a développé un MVP fonctionnel et prépare des pilotes ; le site public présente des démonstrations et les rôles de chacun.",
+      "description": "Contribution bénévole comme AI Coach à l’annulation d’écho, à la reconnaissance en milieu bruyant et à l’intégration vocale à faible latence dans un MVP matériel et logiciel développé en équipe.",
       "alt": "Maquette d’interface générée par IA : HiLily · Compagnon vocal"
     },
     "web-builder-agent": {
@@ -407,7 +407,7 @@
     },
     "transactional-crm": {
       "name": "Gestion d’entreprise · CRM",
-      "description": "Relations, projets, facturation et données opérationnelles sur une même plateforme, avec PostgreSQL, API typées, écritures contrôlées et historique des révisions.",
+      "description": "CRM interne personnalisable avec rappels de suivi, contexte métier partagé et mises à jour API/CLI contrôlées, servant de base aux workflows de service client intégrant l’IA.",
       "alt": "Petite capture d’écran anonymisée : Gestion d’entreprise · CRM"
     },
     "tourism": {
@@ -451,23 +451,23 @@
     "label": "Démonstration du workflow CRM",
     "intro": "Données fictives, uniquement dans votre navigateur. Cette simulation simplifiée illustre les règles de requête et de version implémentées. Elle ne se connecte pas au CRM privé et ne reproduit pas son interface de production.",
     "link": "Essayer le workflow CRM",
-    "storyTitle": "Des index documentaires aux dossiers partagés",
+    "storyTitle": "Construire les workflows IA autour du problème métier",
     "story": [
       [
-        "Qui l’utilise",
-        "Un collègue et moi utilisons le CRM en interne pour gérer les relations clients, projets, factures et notes. Les clients ne s’y connectent pas."
+        "Partir du besoin",
+        "Un collègue et moi utilisons le CRM pour le service client interne. La conception part de questions concrètes : qui relancer, quel contexte éclaire l’action suivante, et qui doit l’approuver."
       ],
       [
-        "Le changement de processus",
-        "Auparavant, des index Markdown locaux accompagnaient les documents sources. Les données structurées et les notes versionnées sont désormais réunies dans une base de données ; les fichiers originaux restent dans les archives documentaires."
+        "Adapter les données et le processus",
+        "J’ai construit un modèle partagé, une API et une CLI autour des relations clients, projets, factures et notes versionnées. Les rappels sont implémentés. Ils fournissent le contexte et le chemin d’écriture contrôlé pour des workflows IA adaptés."
       ],
       [
-        "Ce que j’ai livré",
-        "L’application web et la CLI destinée aux agents utilisent la même API. Chaque modification porte un auteur et une version ; les créations utilisent une clé stable. Le dossier accepté et son historique sont consultables."
+        "Relier analyse et exécution",
+        "Le schéma est : rappel ou événement, analyse du contexte, proposition d’action, revue humaine, exécution et résultat enregistré. Les analyses et décisions IA plus larges restent des extensions dont les règles et validations doivent correspondre au service réel."
       ],
       [
-        "La place de la revue humaine",
-        "Un conflit bloque l’écriture. Une personne lit la version actuelle, fusionne les modifications puis les soumet à nouveau. Les documents et les décisions financières restent à vérifier. Les gains de temps et l’adoption hors de l’équipe interne n’ont pas été mesurés."
+        "Assurer une exploitation fiable",
+        "Les personnes approuvent les actions importantes. Les versions périmées sont rejetées, les nouvelles tentatives évitent les doublons et l’historique conserve le contenu antérieur. Les évolutions doivent partir de l’usage et des cas non résolus. Aucun gain de productivité ou déploiement externe n’est mesuré."
       ]
     ],
     "steps": [

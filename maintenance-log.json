@@ -175,6 +175,16 @@
       ],
       "release": "Feature branch prepared; website publication pending owner approval; CodexView About already updated",
       "evidence": "docs/recruiting-evidence.md"
+    },
+    {
+      "date": "2026-10-11",
+      "actions": [
+        "Reframed CRM around business-specific AI workflow integration with implemented/extension boundaries",
+        "Added owner-confirmed FNZ complex-problem and reliability responsibilities",
+        "Added owner-confirmed HiLily microphone echo/noise/speech-model integration contribution",
+        "Updated six languages and regenerated two-page public CV including volunteer contribution"
+      ],
+      "release": "Same review branch; no website deployment requested in this follow-up"
     }
   ],
   "visibility_snapshots": [

@@ -213,15 +213,15 @@ This section supersedes earlier instructions to preserve the old PDF bytes. The 
 
 ### Fact Register and AI-Assisted Content Register
 
-Owner/accountable author: Jay Liu. AI assistance: drafting, translation and implementation from the existing career record, owner operating rules and inspected application source/tests. Public claims are bounded to known employment facts, internal workflow and implemented behaviours. No specific FNZ senior-responsibility story or HiLily technical decision is added without owner evidence. CRM users are described as Jay and a colleague; no colleague identity, customer identity, private path, endpoint or source repository is disclosed. The walkthrough is visibly labelled a simplified local simulation. Public source verifies CodexView's adapter coverage; GitHub About now agrees with README.
+Owner/accountable author: Jay Liu. AI assistance: drafting, translation and implementation from the existing career record, owner operating rules and inspected application source/tests. Public claims are bounded to known employment facts, internal workflow and implemented behaviours. The owner supplied FNZ and HiLily specifics in this conversation; no unprovided metrics or sole hardware authorship are inferred. CRM users are described as Jay and a colleague; no colleague identity, customer identity, private path, endpoint or source repository is disclosed. The walkthrough is visibly labelled a simplified local simulation. Public source verifies CodexView's adapter coverage; GitHub About now agrees with README.
 
 ### Section Capacity Map and Design System Handoff
 
-The homepage retains its order and four case rows. The CRM evidence link targets the walkthrough; CV labels now state English, PDF, two pages and 203 KB. Project indexes add one CRM case section before the unchanged thirty-card collection: introduction, five-step explanation, local demo console and four concise delivery-story entries. Desktop uses two columns, phones show controls first and stack the explanation and story. Existing Jost, graphite/paper/orange tokens, square borders, 44px actions and focus treatment are reused. No global stylesheet or Transformer changes. Frontend-design guidance applied; Impeccable is unavailable, so direct rendered verification is recorded without claiming that tool ran.
+The homepage retains its order and four case rows. The CRM evidence link targets the walkthrough; CV labels now state English, PDF, two pages and 207 KB. Project indexes add one CRM case section before the unchanged thirty-card collection: introduction, five-step explanation, local demo console and four concise delivery-story entries. Desktop uses two columns, phones show controls first and stack the explanation and story. Existing Jost, graphite/paper/orange tokens, square borders, 44px actions and focus treatment are reused. No global stylesheet or Transformer changes. Frontend-design guidance applied; Impeccable is unavailable, so direct rendered verification is recorded without claiming that tool ran.
 
 ### Media Register and URL Migration Register
 
-CV source `docs/cv/Jay-Liu-Public-CV.html` → `public/cv/Jie-Liu-CV.pdf`; HTML-authored, Chromium tagged export, two A4 pages, 202,628 bytes, English. Owner-directed public revision, reviewed metadata/text/links and both rendered pages. Existing URL is stable; replace-in-place PDF cache is controlled by GitHub Pages, with live verification pending. Index decision: document-primary. Invalidate export on source changes. Existing project images and social assets remain byte-identical. New local fragments: `/projects/#crm-demo` and the five equivalent locale fragments; no page routes removed or added.
+CV source `docs/cv/Jay-Liu-Public-CV.html` → `public/cv/Jie-Liu-CV.pdf`; HTML-authored, Chromium tagged export, two A4 pages, 206,610 bytes, English. Owner-directed public revision, reviewed metadata/text/links and both rendered pages. Existing URL is stable; replace-in-place PDF cache is controlled by GitHub Pages, with live verification pending. Index decision: document-primary. Invalidate export on source changes. Existing project images and social assets remain byte-identical. New local fragments: `/projects/#crm-demo` and the five equivalent locale fragments; no page routes removed or added.
 
 ### Privacy and Data Flow Register
 
@@ -231,7 +231,7 @@ No new personal information collection, storage, cookies, analytics or network c
 
 | Surface / states | Evidence and outcome |
 | --- | --- |
-| Public CV and download actions | Two A4 pages visually reviewed, tagged headings/lists/links, extracted text and seven annotation URLs verified; metadata and public contacts correct; PDF/UA and screen-reader certification not claimed |
+| Public CV and download actions | Two A4 pages visually reviewed, tagged headings/lists/links, extracted text and eight annotation URLs verified; metadata and public contacts correct; PDF/UA and screen-reader certification not claimed |
 | CRM create, replay, colleague edit, stale rejection, reviewed merge, reset | Unit invariants and normal browser pointer/keyboard input; count stays one, stale version preserves note/history, final history has three revisions; controls announce status and reset focus |
 | Six-language narrow variants | Complete interactions and no horizontal overflow at 320px; Chinese also 390px, English desktop 1440px; same five operations and factual scope |
 | No JS / forced colours / text spacing / reduced motion | Complete initial-HTML explanation; hidden inactive controls; readable 320px reflow, visible focus and no new motion |
@@ -239,7 +239,7 @@ No new personal information collection, storage, cookies, analytics or network c
 
 ### Performance Budget Register
 
-No dependencies or external resources added. The demo JavaScript loads only on project indexes; styles are scoped. Existing strict static resource audit passes without warnings. The public PDF is 203 KB and fetched only on navigation. No field Core Web Vitals or hiring impact is inferred.
+No dependencies or external resources added. The demo JavaScript loads only on project indexes; styles are scoped. Existing strict static resource audit passes without warnings. The public PDF is 207 KB and fetched only on navigation. No field Core Web Vitals or hiring impact is inferred.
 
 ### Outcome Measurement Register
 

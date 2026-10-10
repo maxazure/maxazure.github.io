@@ -57,4 +57,15 @@ Publication: the owner explicitly authorised push and deployment. Commit `8520c8
 
 ## Superseding owner request, 11 October 2026
 
-The owner requested replacing the internal-style PDF and adding clear CRM evidence. The earlier preserve-CV-bytes rule is superseded; the stable download URL remains. A fictional browser-only walkthrough and internal workflow story are now implemented in all six locales. See [current recruiting evidence](recruiting-evidence.md). FNZ and HiLily remain at the existing specificity until the owner supplies a publishable example.
+The owner requested replacing the internal-style PDF and adding clear CRM evidence. The earlier preserve-CV-bytes rule is superseded; the stable download URL remains. A fictional browser-only walkthrough and internal workflow story are now implemented in all six locales. See [current recruiting evidence](recruiting-evidence.md). The owner subsequently supplied publishable FNZ and HiLily examples, incorporated in the follow-up below.
+
+
+## Owner-supplied FDE evidence, 11 October 2026
+
+The owner describes the CRM focus as integrating AI workflows and customising them around each business's service problems, including reminders, analysis/decisions and human review before final execution. Public copy expresses the business-problem-to-action workflow and distinguishes the implemented shared records, follow-up reminders and controlled API/CLI writes from broader AI analysis/decision extensions. Reminder behaviour is corroborated by the application follow-up scheduling and dashboard logic. No autonomous AI decision engine or configurable approval product is claimed to be shipped.
+
+FNZ: the owner states his main work is analysing and resolving complex problems and ensuring high software reliability. The career copy and CV now lead with this responsibility while preserving the Analyst Developer title and confidentiality.
+
+HiLily: the owner identifies hardware development and hardware/software/system extension as central difficulties, with single/dual microphone echo cancellation, recognition in noisy environments, fast response and audio-input/audio-output language models. Copy attributes guidance and contribution to the volunteer AI Coach role, and keeps hardware/product delivery with the team. No measured latency, recognition score or algorithm invention is claimed.
+
+This is first-party career/project evidence supplied in the conversation, not an independently measured outcome. The six language dictionaries, project summaries, internal usage story and two-page CV are updated together. The underlying demonstration remains an explicitly fictional browser simulation of write safety, not a demonstration of autonomous AI analysis.

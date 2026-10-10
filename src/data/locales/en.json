@@ -36,13 +36,13 @@
     "heroBody": "18+ years in enterprise software, from ERP/CRM to financial-platform delivery. I bring that foundation to AI agents, knowledge retrieval and voice systems.",
     "heroSpecialism": "Enterprise AI & FinTech",
     "viewWork": "See selected work",
-    "cvLabel": "CV (English PDF, 2 pages, 203 KB)",
+    "cvLabel": "CV (English PDF, 2 pages, 207 KB)",
     "focus": "Building applied AI systems",
     "aboutLabel": "About me",
     "aboutHeading": "Business context.\nEngineering depth.",
     "aboutLead": "I work from the business process through to the software people use.",
     "aboutBody": "I’m Jay (Jie Liu), a software engineer based in Auckland. My background spans ERP/CRM, retail software, healthcare systems and financial platforms in China and New Zealand, including development, architecture and team leadership.",
-    "aboutBody2": "At FNZ, my work focuses on software delivery. In my independent projects, I connect AI models, tools and data to practical workflows, with explicit checks, recoverable failures and human review where judgement is needed.",
+    "aboutBody2": "At FNZ, I analyse and resolve complex software problems, with a focus on high reliability. In my independent projects, I connect AI models, tools and data to practical workflows, with explicit checks, recoverable failures and human review where judgement is needed.",
     "skillLabel": "Technical capabilities",
     "skillHeading": "From a business requirement\nto a working system.",
     "skillIntro": "Business modelling, system integration and delivery, supported by a practical enterprise and AI toolkit.",
@@ -97,11 +97,11 @@
         "role": "Analyst Developer",
         "company": "FNZ Group",
         "place": "Auckland, New Zealand",
-        "description": "Delivery-focused engineering on enterprise financial platforms with C# and .NET.",
+        "description": "Analysing and resolving complex problems in enterprise financial-platform software, with reliability at the centre of delivery.",
         "responsibilities": [
-          "Analyse requirements and translate them into implementable application changes.",
-          "Develop, test and review changes, with attention to maintainability and regression risk.",
-          "Investigate issues and support releases with analysts, developers, testers and wider delivery teams."
+          "Analyse complex issues, trace their causes and develop fixes within the existing system.",
+          "Assess the effect of changes and test them with attention to reliability and regression risk.",
+          "Work with analysts, developers and testers to investigate issues and support dependable releases."
         ],
         "note": "Client assignments and implementation details are confidential."
       },
@@ -240,13 +240,13 @@
         "PostgreSQL",
         "Typed API / CLI"
       ],
-      "name": "Enterprise CRM",
+      "name": "CRM & AI workflow integration",
       "category": "Business systems",
       "stage": "Internal operational system",
-      "problem": "Customer relationships, projects and invoices need a consistent record when people and software agents both update the same business data.",
-      "role": "I designed and built the application, API and CLI, connecting structured records with versioned notes.",
-      "decision": "Retries and concurrent edits can duplicate or overwrite work. Idempotent writes and version checks make repeat requests safe and expose conflicting edits for resolution.",
-      "evidence": "Used internally for customer, project, invoice and note workflows. The public walkthrough uses fictional data to demonstrate retries, conflicting edits and note history; business records and endpoints stay private."
+      "problem": "Customer-service teams need workflows shaped around their own follow-up, analysis and approval problems. A useful CRM must connect business context with the next action.",
+      "role": "I designed and built the CRM, API and CLI as a customisable foundation for AI-assisted service workflows, linking customer history, projects, invoices and versioned notes.",
+      "decision": "My integration approach is to connect reminders and business analysis to proposed actions, with human approval before consequential execution. Stable request keys, version checks and attributed updates make agent writes traceable and protect shared records.",
+      "evidence": "The internal system includes follow-up reminders, shared business records and controlled API/CLI writes. Broader AI analysis and decision workflows are extension areas tailored to each business. The fictional-data demo shows the implemented write-safety rules."
     },
     "bookkeeping-assistant": {
       "tags": [
@@ -272,9 +272,9 @@
       "name": "HiLily",
       "category": "AI systems integration",
       "stage": "Functional MVP · preparing for pilots",
-      "problem": "A voice companion for older adults needs speech, conversation and memory to work together across an embedded device and cloud services.",
-      "role": "As a volunteer AI Coach, I guide the team on AI architecture, conversational memory and audio processing. The product is a team effort.",
-      "decision": "Device audio, model responses and retained context have different constraints. My guidance focuses on how those parts connect through the AI pipeline and edge voice processing.",
+      "problem": "Hardware development and extending it into a complete software system are central challenges for this voice companion, especially echo, noisy environments and conversational response time.",
+      "role": "As a volunteer AI Coach, I contribute technical guidance on the hardware-to-software AI pipeline, microphone audio processing and low-latency speech-to-speech model integration. Hardware and product delivery are team efforts.",
+      "decision": "The work includes echo cancellation with single- and dual-microphone setups, recognition in noisy environments, and audio-in/audio-out language models. I help the team work through these connected constraints across device audio, model integration and system extension.",
       "evidence": "The project website includes demonstrations and my team role. The team reports a working MVP with multiple iterations completed and is preparing for real-world pilots.",
       "linkLabel": "See the demo & team"
     },
@@ -297,7 +297,7 @@
   "projects": {
     "voice-companion": {
       "name": "HiLily · Voice companion",
-      "description": "Volunteer AI Coach providing guidance on AI architecture, conversational memory and audio processing. A team-built functional MVP preparing for pilots; the public site includes demos and team roles.",
+      "description": "Volunteer AI Coach contributing to microphone echo cancellation, noisy-environment recognition and low-latency speech-to-speech integration in a team-built hardware and software MVP.",
       "alt": "Generated interface mockup: Voice pipeline"
     },
     "web-builder-agent": {
@@ -407,7 +407,7 @@
     },
     "transactional-crm": {
       "name": "Business operations · Enterprise CRM",
-      "description": "Relationships, projects, invoicing and operational records in one platform, with PostgreSQL, typed APIs, controlled writes and revision history.",
+      "description": "Configurable internal CRM with follow-up reminders, shared business context and controlled API/CLI updates, providing a foundation for integrated AI service workflows.",
       "alt": "Small redacted screenshot of the internal operations"
     },
     "tourism": {
@@ -451,23 +451,23 @@
     "label": "CRM workflow demonstration",
     "intro": "Fictional data, running only in your browser. This simplified simulation illustrates the implemented request and version rules; it does not connect to the private CRM or reproduce its production interface.",
     "link": "Try the CRM workflow",
-    "storyTitle": "From document indexes to shared business records",
+    "storyTitle": "Building AI workflows around the service problem",
     "story": [
       [
-        "Who uses it",
-        "I use the CRM in internal work with a colleague to maintain customer relationships, projects, invoices and notes. Customers do not log in."
+        "Start with the business problem",
+        "I use the CRM with a colleague for internal customer-service work. The design starts with practical questions: who needs a follow-up, what business context informs the next action, and who should approve it."
       ],
       [
-        "The workflow change",
-        "The earlier workflow used local Markdown indexes alongside source documents. Structured business state and versioned notes now live in one database; the original files remain in the document archive."
+        "Shape the workflow and data",
+        "I built a shared data model, API and CLI around customer relationships, projects, invoices and versioned notes. Follow-up reminders are implemented. These provide the context and controlled write path for business-specific AI workflows."
       ],
       [
-        "What I delivered",
-        "The web application and agent-facing CLI use the same API. Updates carry a named actor and a version; repeated creates use a stable request key. This makes the accepted record and its revision history inspectable."
+        "Connect analysis to execution",
+        "The integration pattern is reminder or business event, contextual analysis, proposed action, human review, execution and a recorded result. Broader AI analysis and decision flows are extension areas; their rules and approval points must be tailored to the actual service process."
       ],
       [
-        "Where people stay involved",
-        "An editing conflict stops the write. A person reads the current version, merges the intended changes and resubmits. Documents and financial decisions still need review. This case describes the working process; time savings and adoption beyond the internal team have not been measured."
+        "Make the workflow safe to operate",
+        "People retain approval of consequential actions. Version checks reject stale edits, retries do not create duplicate records, and note history preserves prior content. The next iteration should be driven by real usage and unresolved cases; no measured productivity gain or external adoption is claimed."
       ]
     ],
     "steps": [
