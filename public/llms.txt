@@ -1,6 +1,6 @@
 # Jay Liu
 
-> Jay Liu (Jie Liu) is a senior software engineer based in Auckland, New Zealand. His experience includes enterprise financial platforms, ERP/CRM, retail invoicing and sales software, and hospital management systems. He works with C#/.NET, SQL, React/TypeScript and Python. The portfolio presents his career first, followed by an anonymous project gallery.
+> Jay Liu (Jie Liu) is a senior software engineer based in Auckland, New Zealand. His experience includes enterprise financial platforms, ERP/CRM, retail invoicing and sales software, and hospital management systems. He works with C#/.NET, SQL, React/TypeScript and Python. Current projects include AI-assisted delivery workflows, coding-agent orchestration, knowledge retrieval and speech processing. The portfolio presents his career first, followed by 30 selected project examples with AI systems first.
 
 ## Public website
 
@@ -8,4 +8,4 @@
 - [中文个人网站](https://jayliu.co.nz/zh/): Chinese version of the same personal portfolio.
 - [Privacy](https://jayliu.co.nz/privacy/): How this website and contact links handle information.
 
-The private system previews contain no customer records. Public links identify externally accessible websites or open-source repositories; private system endpoints are not published.
+Previews are small redacted screenshots or clearly labelled AI-generated concept illustrations. The private system previews contain no customer records. Public links identify externally accessible websites or open-source repositories; private system endpoints are not published.

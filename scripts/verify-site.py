@@ -103,32 +103,44 @@ for relative in ["index.html", "zh/index.html"]:
     assert not any(x["@type"] == "LocalBusiness" for x in graph), "Portfolio is a Person"
     assert 'id="research"' not in page.path.read_text(), "Retired third-party research section"
     cases = [(t,a) for t,a in page.nodes if t == "article" and "data-project" in a]
-    assert len(cases) == 14, "Expected concrete project inventory"
+    assert len(cases) == 30, "Expected concrete project inventory"
     html = page.path.read_text()
     assert html.index('id="resume"') < html.index('id="portfolio"') < html.index('id="contact"'), "Project gallery must follow experience"
     assert 'class="project-gallery"' in html, "Project gallery missing"
-    assert cases[0][1]["data-project"] == "operations-erp", "ERP must lead the project gallery"
+    identifiers = [a["data-project"] for _,a in cases]
+    assert len(set(identifiers)) == 30, "Each project must be distinct"
+    assert identifiers[:3] == ["voice-companion", "web-builder-agent", "idea-builder"], "AI systems must lead the gallery"
+    assert {"operations-erp", "transactional-crm", "agent-workbench", "knowledge-memory"} <= set(identifiers), "Existing systems must remain"
+    if relative == "index.html":
+        english_projects = identifiers
+    else:
+        assert identifiers == english_projects, "English and Chinese project inventories must match"
     assert "ERP" in html.split('id="home"', 1)[1].split('</section>', 1)[0], "Enterprise/ERP introduction missing"
     for section in ["home", "about"]:
         text = page.path.read_text().split('id="' + section + '"', 1)[1].split('</section>', 1)[0]
         assert "FNZ" not in text, "Employer emphasis in short introduction"
     image_nodes = [a for t,a in page.nodes if t == "img" and a.get("src", "").startswith("/projects/")]
-    assert len(image_nodes) == 14, "Every project needs a small preview or labelled concept cover"
+    assert len(image_nodes) == 30, "Every project needs a small preview or labelled concept cover"
     for attrs in image_nodes:
         assert attrs.get("width") == "320" and attrs.get("height") == "200"
         assert attrs.get("loading") == "lazy"
     assert not any(t == "a" and a.get("href", "").startswith("/projects/") for t,a in page.nodes), "Thumbnail must not be a zoom link"
     assert not any("srcset" in a for a in image_nodes), "Do not offer high-resolution variants"
     html = page.path.read_text()
-    for identifier in ["operations-erp", "agent-workbench", "transactional-crm", "knowledge-memory"]:
+    for identifier in ["operations-erp", "agent-workbench", "transactional-crm", "knowledge-memory", "web-builder-agent", "idea-builder", "writing-assessment", "voice-capture", "live-interpretation", "local-narration", "lan-microphone", "capability-vault", "agent-home", "browser-test-workspace", "hardware-control", "editorial-workflow", "media-workspace"]:
         article = html.split('data-project="' + identifier + '"', 1)[1].split('</article>', 1)[0]
         assert '<a ' not in article, "Private project must not expose an endpoint"
     assert html.count('href="https://github.com/maxazure/') >= 3
-    for identifier in ["video-editing", "speech-tooling", "bookkeeping-assistant"]:
+    for identifier in ["video-editing", "speech-tooling", "bookkeeping-assistant", "voice-companion", "web-builder-agent", "idea-builder", "writing-assessment", "voice-capture", "live-interpretation", "local-narration", "lan-microphone", "agentmeshkit", "codexview", "capability-vault", "agent-home", "browser-test-workspace", "hardware-control", "editorial-workflow", "media-workspace"]:
         article = html.split('data-project="' + identifier + '"', 1)[1].split('</article>', 1)[0]
         assert "AI-generated concept illustration" in article or "AI 生成的项目示意图" in article, "Generated covers must not imply actual screenshots"
         assert identifier + "-concept.jpg" in article
-        assert 'href="https://github.com/maxazure/' in article, "Open-source repository link missing"
+        if identifier in {"video-editing", "speech-tooling", "bookkeeping-assistant", "agentmeshkit", "codexview"}:
+            assert 'href="https://github.com/' in article, "Open-source repository link missing"
+    hero = html.split('id="home"', 1)[1].split('</section>', 1)[0]
+    assert "AI" in hero and ("Agent" in hero or "agent" in hero), "Current AI engineering skills must appear in the hero"
+    web_builder = html.split('data-project="web-builder-agent"', 1)[1].split('</article>', 1)[0]
+    assert all(agent in web_builder for agent in ["Claude Code", "Codex", "OpenCode"]), "Web Builder agent compatibility missing"
 
 pdf = root / "cv/Jie-Liu-CV.pdf"
 assert hashlib.sha256(pdf.read_bytes()).hexdigest() == "1b62833b705d9f38b1b83b24aaf40954c3d7a0b37a1d7cc5335ee32ac4db95e1", "Existing CV changed"

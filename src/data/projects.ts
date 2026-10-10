@@ -1,4 +1,6 @@
-export const projects = {
+import { projectAdditions } from './project-additions';
+
+const existingProjects = {
   "en": [
     {
       "id": "operations-erp",
@@ -430,3 +432,21 @@ export const projects = {
     }
   ]
 } as const;
+
+
+// Keep AI systems together while retaining enterprise and historical examples.
+const order: string[] = [
+  'voice-companion', 'web-builder-agent', 'idea-builder', 'agent-workbench',
+  'voice-capture', 'writing-assessment', 'knowledge-memory', 'agentmeshkit',
+  'codexview', 'capability-vault', 'agent-home', 'browser-test-workspace',
+  'hardware-control', 'local-narration', 'live-interpretation', 'speech-tooling',
+  'lan-microphone', 'video-editing', 'editorial-workflow', 'media-workspace',
+  'bookkeeping-assistant', 'operations-erp', 'transactional-crm', 'tourism',
+  'transport', 'accounting', 'finance-archive', 'medical-archive-a',
+  'consumer-app-archive', 'medical-archive-b',
+];
+
+export const projects = {
+  en: [...existingProjects.en, ...projectAdditions('en')].sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id)),
+  zh: [...existingProjects.zh, ...projectAdditions('zh')].sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id)),
+};

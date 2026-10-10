@@ -1,6 +1,6 @@
 ---
 name: Jay Liu Engineering Portfolio
-version: 4
+version: 5
 updated: 2026-10-10
 ---
 
@@ -31,13 +31,13 @@ Desktop name: 20–24px; primary role: 48–80px, 38–56px on phones. Major hea
 
 Max shell: 1280px. Desktop gutters: 56px; medium 36px; mobile 20px. Section space: 112px desktop, 72px mobile. Major gaps: 80–120px; project gap: 28px. Use mostly square corners. Separate material by grids and rules rather than repeated rounded cards.
 
-Hero: personal name above a prominent engineering role on the left; bounded profile panel with a decorative integration trace, ERP focus and career facts on the right. About and skills establish enterprise capability. Experience uses a paper background and six chronological roles. Projects follow Experience as one continuous three-column album, with 14 numbered cards and concise descriptions. Contact offers direct email and personal profiles.
+Hero: personal name above a prominent engineering role on the left; bounded profile panel with a decorative integration trace, enterprise and AI focus areas with career facts on the right. About and skills establish enterprise capability. Experience uses a paper background and six chronological roles. Projects follow Experience as one continuous three-column album, with 30 numbered cards and concise descriptions, with AI systems first. Contact offers direct email and personal profiles.
 
 At narrow widths, put hero copy/actions before the profile panel. Keep the purpose of every project visible. The gallery reflows from three columns to two below 1000px and one below 600px. Small thumbnails never exceed 320 CSS pixels and have no image links or zoom controls. Convert skills to two columns at medium widths and one column below 420px. Collapse chronology into readable rows. Native mobile menu retains a usable no-JavaScript navigation fallback.
 
 ## Signature and assets
 
-The hero trace is a decorative abstraction of integration, with no employer-architecture or product-UI claim. Its thin rules and coral node are echoed in the project frames. A static silver fern texture supplies a New Zealand botanical background, blended into graphite at low opacity with a separate phone crop. The texture sits behind the HTML content, accepts no pointer input and disappears in print and forced colours. The existing social card retains the original decorative orbit and its established name/role identity. The gallery uses eleven actual anonymous screenshot exports; three open-source cards use labelled AI-generated concept illustrations. The original wordmark is preserved as an archival asset. The refreshed wordmark spells **JAY LIU** and the favicon uses **JL**. Asset paths, production treatment and full prompts are recorded in `docs/generated-media.md`.
+The hero trace is a decorative abstraction of integration, with no employer-architecture or product-UI claim. Its thin rules and coral node are echoed in the project frames. A single original tapered silver fern frond emerges from the left edge, blended into graphite at 16% opacity with a separately positioned 10% phone crop. The texture sits behind the HTML content, accepts no pointer input and disappears in print and forced colours. The existing social card retains the original decorative orbit and its established name/role identity. The gallery uses eleven actual anonymous screenshot exports; nineteen cards use labelled AI-generated concept illustrations. The original wordmark is preserved as an archival asset. The refreshed wordmark spells **JAY LIU** and the favicon uses **JL**. Asset paths, production treatment and full prompts are recorded in `docs/generated-media.md` and `docs/ai-project-media.md`.
 
 ## Radius, shadow and motion
 
