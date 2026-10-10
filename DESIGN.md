@@ -45,7 +45,7 @@ Production UI corners: square. Favicon: 12/64-unit radius. Case images use a thi
 
 ## Components and states
 
-Primary button: orange fill, dark text, 52px minimum height, paper hover. Text links: minimum 44px hit area and simple arrow. Language control: bounded 44px target. Focus: 2px orange outline with 6px offset. The header is sticky, 72px on desktop and 64px on mobile. Scroll padding keeps anchor destinations clear of the header. The mobile menu exposes expanded state, supports Escape and closes after navigation. Without JavaScript, mobile navigation is visible and its header stays in the document flow. Forced colours preserve text and buttons while removing nonessential illustrations. Print removes navigation and decorative media.
+Primary button: orange fill, dark text, 52px minimum height, paper hover. Text links: minimum 44px hit area and simple arrow. Language control: bounded 44px target. Focus: 2px orange outline with 6px offset. The header is sticky, 72px on desktop and 64px on mobile. Scroll padding keeps anchor destinations clear of the header. The mobile menu exposes expanded state, supports Escape and closes after navigation. Without JavaScript, mobile navigation is visible and its header stays in the document flow. Forced colours preserve text and buttons while removing nonessential illustrations. Print uses A4 with 14mm margins, dark text on white, hidden navigation and a compact project layout with small previews. Headings, career rows, project cards and the contact block stay together across page breaks.
 
 ## Rules
 
