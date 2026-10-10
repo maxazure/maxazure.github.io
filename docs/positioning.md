@@ -54,3 +54,7 @@ Name follow-up: display “刘杰” in the Chinese hero name and retain “Jay 
 
 
 Publication: the owner explicitly authorised push and deployment. Commit `8520c86` was fast-forwarded to master and [Pages run 38041508348](https://github.com/maxazure/maxazure.github.io/actions/runs/38041508348) succeeded. All 57 live release files matched the local build; seven-page contracts, HTTP-to-HTTPS/www redirects and custom 404 passed. The subsequent six-language work is recorded in [localisation.md](localisation.md).
+
+## Superseding owner request, 11 October 2026
+
+The owner requested replacing the internal-style PDF and adding clear CRM evidence. The earlier preserve-CV-bytes rule is superseded; the stable download URL remains. A fictional browser-only walkthrough and internal workflow story are now implemented in all six locales. See [current recruiting evidence](recruiting-evidence.md). FNZ and HiLily remain at the existing specificity until the owner supplies a publishable example.

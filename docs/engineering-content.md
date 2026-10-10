@@ -1,12 +1,12 @@
 # Engineering content and evidence boundaries
 
-Updated: 2026-10-10. Owner: Jay Liu. Audience: senior enterprise/full-stack and applied AI hiring teams.
+Updated: 2026-10-11. Owner: Jay Liu. Audience: senior enterprise/full-stack and applied AI hiring teams.
 
 ## Career positioning
 
 The opening description presents enterprise platforms and applied AI together, backed by 18+ years in enterprise software and ERP/CRM. C#/.NET, React/TypeScript and Python support current agent orchestration, engineering-delivery workflows, knowledge retrieval and speech-processing work. Earlier financial, retail and hospital-system experience remains explicit in the career record.
 
-ERP/CRM and retail business-system experience are explicit in the owner's original career record. The retail role used .NET Core, REST APIs, MySQL and Vue.js. Earlier leadership roles covered enterprise middleware, database architecture, server delivery and hospital management software. The 2022 and owner-reviewed 2026 career records supply these facts. No scale, revenue, performance or customer-result figures are added. The established 18+ years search identity and original public CV remain unchanged.
+ERP/CRM and retail business-system experience are explicit in the owner's original career record. The retail role used .NET Core, REST APIs, MySQL and Vue.js. Earlier leadership roles covered enterprise middleware, database architecture, server delivery and hospital management software. The 2022 and owner-reviewed 2026 career records supply these facts. No scale, revenue, performance or customer-result figures are added. The established 18+ years search identity remains. The public CV has been replaced with the evidence-aligned two-page version described in [recruiting evidence](recruiting-evidence.md).
 
 The hero introduces engineering value without employer emphasis. About and the career record distinguish FNZ delivery work from independent AI projects. General delivery responsibilities use the owner’s clarification, existing CV and official Analyst Developer role context; confidential assignments and internal implementation details are excluded. The site contains no personal-business promotion or company-service links. Third-party papers are not displayed as portfolio evidence.
 
@@ -44,3 +44,7 @@ The Web Builder workflow was checked against the running source: research/build 
 Voice2Task, live interpretation, AirMicLAN and local narration describe capture, segmentation, transcription, translation, LAN streaming and delivery integrations. VoxCPM2 and OmniVoice remain attributed as existing model/engine integrations.
 
 CodexView and AgentMeshKit source links were checked as public, with Jay's commit authorship verified. Other new private systems include guided multi-agent delivery, writing assessment, agent configuration sync, persistent workspaces, browser testing, ESP32 HID control, reviewed editorial workflows and Android media delivery. Their interface mockups use generic functionality without customer records or private interfaces.
+
+## CRM public walkthrough, 11 October 2026
+
+The existing small-image restrictions remain in force. A separate text and interactive walkthrough uses fictional notes in a browser-only simulation, with no production connection. It illustrates implemented retry and revision rules and explains internal usage and human review. All six languages have equivalent content and controls. This explicitly labelled simulation is additional evidence presentation; it does not claim to be an actual production session.

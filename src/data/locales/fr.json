@@ -36,7 +36,7 @@
     "heroBody": "Plus de 18 ans dans les logiciels d’entreprise, des ERP et CRM aux plateformes financières. Je m’appuie sur cette expérience pour concevoir des agents IA, des outils de recherche de connaissances et des systèmes vocaux.",
     "heroSpecialism": "IA d’entreprise et FinTech",
     "viewWork": "Voir les projets choisis",
-    "cvLabel": "CV (PDF, en anglais)",
+    "cvLabel": "CV anglais (PDF, 2 pages, 203 KB)",
     "focus": "Conception de systèmes d’IA appliquée",
     "aboutLabel": "À propos",
     "aboutHeading": "Comprendre le métier.\nMaîtriser la technique.",
@@ -246,7 +246,7 @@
       "problem": "Lorsque des personnes et des agents logiciels modifient les mêmes données, les relations clients, les projets et les factures doivent rester cohérents.",
       "role": "J’ai conçu et développé l’application, l’API et la CLI, en reliant les données structurées à des notes versionnées.",
       "decision": "Les nouvelles tentatives et les modifications simultanées peuvent créer des doublons ou écraser des données. Des écritures idempotentes et des contrôles de version sécurisent les requêtes répétées et rendent les conflits explicites pour permettre leur résolution.",
-      "evidence": "Un workflow interne est en place, avec historique des révisions et écritures contrôlées. La collection complète présente un aperçu sans données ; les enregistrements opérationnels et les points d’accès restent privés."
+      "evidence": "Utilisé en interne pour les clients, projets, factures et notes. Le parcours public utilise des données fictives pour illustrer les nouvelles tentatives, les conflits et l’historique. Les dossiers et points d’accès restent privés."
     },
     "bookkeeping-assistant": {
       "name": "NZ Accounting Assistant",
@@ -445,5 +445,72 @@
       "description": "Un ancien site de santé présentant des services spécialisés et des informations destinées aux patients.",
       "alt": "Petite capture d’écran anonymisée : Santé · Site spécialisé"
     }
+  },
+  "crmDemo": {
+    "title": "Un dossier, deux éditeurs, un historique visible.",
+    "label": "Démonstration du workflow CRM",
+    "intro": "Données fictives, uniquement dans votre navigateur. Cette simulation simplifiée illustre les règles de requête et de version implémentées. Elle ne se connecte pas au CRM privé et ne reproduit pas son interface de production.",
+    "link": "Essayer le workflow CRM",
+    "storyTitle": "Des index documentaires aux dossiers partagés",
+    "story": [
+      [
+        "Qui l’utilise",
+        "Un collègue et moi utilisons le CRM en interne pour gérer les relations clients, projets, factures et notes. Les clients ne s’y connectent pas."
+      ],
+      [
+        "Le changement de processus",
+        "Auparavant, des index Markdown locaux accompagnaient les documents sources. Les données structurées et les notes versionnées sont désormais réunies dans une base de données ; les fichiers originaux restent dans les archives documentaires."
+      ],
+      [
+        "Ce que j’ai livré",
+        "L’application web et la CLI destinée aux agents utilisent la même API. Chaque modification porte un auteur et une version ; les créations utilisent une clé stable. Le dossier accepté et son historique sont consultables."
+      ],
+      [
+        "La place de la revue humaine",
+        "Un conflit bloque l’écriture. Une personne lit la version actuelle, fusionne les modifications puis les soumet à nouveau. Les documents et les décisions financières restent à vérifier. Les gains de temps et l’adoption hors de l’équipe interne n’ont pas été mesurés."
+      ]
+    ],
+    "steps": [
+      "Créer une note de projet",
+      "Renvoyer la même requête",
+      "Un collègue modifie la version 1",
+      "Soumettre une modification périmée",
+      "Vérifier et fusionner avec la version 2"
+    ],
+    "details": [
+      "Créer un dossier fictif avec la clé demo-note-001.",
+      "Renvoyer le même contenu et la même clé : le dossier initial est retourné sans doublon.",
+      "Un collègue ajoute une réunion de revue. Le dossier passe à la version 2.",
+      "L’agent possède encore la version 1. Sa modification est rejetée avec 409 ; celle du collègue est conservée.",
+      "Une personne lit la version 2 et combine les deux changements. L’enregistrement avec la version actuelle crée la version 3."
+    ],
+    "notes": [
+      "Préparer le brief du projet.",
+      "Préparer le brief du projet. Prévoir une réunion de revue.",
+      "Préparer le brief du projet. Prévoir une réunion de revue et une liste des justificatifs."
+    ],
+    "outcomes": [
+      "Prêt. Commencez par créer une note fictive.",
+      "201 Created : une note, version 1.",
+      "Rejeu : même identifiant, une note, version 1.",
+      "200 OK : modification du collègue enregistrée en version 2.",
+      "409 Conflict : modification périmée rejetée ; la version 2 reste intacte.",
+      "200 OK : fusion revue par une personne, enregistrée en version 3."
+    ],
+    "record": "Dossier actuel",
+    "history": "Versions enregistrées de la note",
+    "empty": "Aucune note créée.",
+    "version": "Version",
+    "count": "Dossiers",
+    "next": "Exécuter l’étape suivante",
+    "reset": "Réinitialiser",
+    "progress": "Étape",
+    "revisionLabels": [
+      "Création par l’agent",
+      "Modification du collègue",
+      "Fusion après revue humaine"
+    ],
+    "noscript": "La séquence complète est décrite ci-dessous. Activez JavaScript pour exécuter la simulation locale.",
+    "complete": "Parcours terminé"
   }
 }

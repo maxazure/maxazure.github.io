@@ -1,7 +1,7 @@
 source_path,target_path,action,evidence
 /,/,preserve,existing repository and live homepage
 /index.html,/index.html,preserve,existing homepage file
-/cv/Jie-Liu-CV.pdf,/cv/Jie-Liu-CV.pdf,preserve,existing public CV exact bytes
+/cv/Jie-Liu-CV.pdf,/cv/Jie-Liu-CV.pdf,preserve,public recruiting CV replaces internal-style PDF at the existing URL
 /content/resume/images/favicon.ico,/content/resume/images/favicon.ico,preserve,existing favicon reference
 /projects/,/projects/,new,owner-directed complete project collection
 /zh/projects/,/zh/projects/,new,Chinese counterpart of complete project collection
@@ -17,3 +17,9 @@ source_path,target_path,action,evidence
 /ko/,/ko/,new,owner-requested six-language counterpart based on English facts
 /ko/projects/,/ko/projects/,new,owner-requested six-language counterpart based on English facts
 /ko/privacy/,/ko/privacy/,new,owner-requested six-language counterpart based on English facts
+/projects/#crm-demo,/projects/#crm-demo,add,fictional browser-only CRM walkthrough
+/zh/projects/#crm-demo,/zh/projects/#crm-demo,add,fictional browser-only CRM walkthrough
+/zh-hant/projects/#crm-demo,/zh-hant/projects/#crm-demo,add,fictional browser-only CRM walkthrough
+/ja/projects/#crm-demo,/ja/projects/#crm-demo,add,fictional browser-only CRM walkthrough
+/fr/projects/#crm-demo,/fr/projects/#crm-demo,add,fictional browser-only CRM walkthrough
+/ko/projects/#crm-demo,/ko/projects/#crm-demo,add,fictional browser-only CRM walkthrough

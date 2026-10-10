@@ -10,7 +10,7 @@ export const profile = {
   location: 'Auckland, New Zealand',
   employer: 'FNZ Group',
   role: 'Analyst Developer',
-  updated: '2026-10-10',
+  updated: '2026-10-11',
   keywords: 'Jay Liu, senior software engineer, FinTech, .NET, ASP.NET Core, React, TypeScript, Azure, microservices, AI integration, AI agent, full stack developer, Auckland, New Zealand, FNZ',
   social: [
     { label: 'GitHub', href: 'https://github.com/maxazure' },

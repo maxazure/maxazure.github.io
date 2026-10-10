@@ -36,7 +36,7 @@
     "heroBody": "18+ years in enterprise software, from ERP/CRM to financial-platform delivery. I bring that foundation to AI agents, knowledge retrieval and voice systems.",
     "heroSpecialism": "Enterprise AI & FinTech",
     "viewWork": "See selected work",
-    "cvLabel": "CV (PDF, English)",
+    "cvLabel": "CV (English PDF, 2 pages, 203 KB)",
     "focus": "Building applied AI systems",
     "aboutLabel": "About me",
     "aboutHeading": "Business context.\nEngineering depth.",
@@ -246,7 +246,7 @@
       "problem": "Customer relationships, projects and invoices need a consistent record when people and software agents both update the same business data.",
       "role": "I designed and built the application, API and CLI, connecting structured records with versioned notes.",
       "decision": "Retries and concurrent edits can duplicate or overwrite work. Idempotent writes and version checks make repeat requests safe and expose conflicting edits for resolution.",
-      "evidence": "An implemented internal workflow with revision history and controlled writes. The complete project collection includes an empty-data preview; operational records and endpoints stay private."
+      "evidence": "Used internally for customer, project, invoice and note workflows. The public walkthrough uses fictional data to demonstrate retries, conflicting edits and note history; business records and endpoints stay private."
     },
     "bookkeeping-assistant": {
       "tags": [
@@ -445,5 +445,72 @@
       "description": "An earlier healthcare website presenting specialist services and patient-facing information.",
       "alt": "Small redacted screenshot of the specialist service website"
     }
+  },
+  "crmDemo": {
+    "title": "One record. Two editors. A visible history.",
+    "label": "CRM workflow demonstration",
+    "intro": "Fictional data, running only in your browser. This simplified simulation illustrates the implemented request and version rules; it does not connect to the private CRM or reproduce its production interface.",
+    "link": "Try the CRM workflow",
+    "storyTitle": "From document indexes to shared business records",
+    "story": [
+      [
+        "Who uses it",
+        "I use the CRM in internal work with a colleague to maintain customer relationships, projects, invoices and notes. Customers do not log in."
+      ],
+      [
+        "The workflow change",
+        "The earlier workflow used local Markdown indexes alongside source documents. Structured business state and versioned notes now live in one database; the original files remain in the document archive."
+      ],
+      [
+        "What I delivered",
+        "The web application and agent-facing CLI use the same API. Updates carry a named actor and a version; repeated creates use a stable request key. This makes the accepted record and its revision history inspectable."
+      ],
+      [
+        "Where people stay involved",
+        "An editing conflict stops the write. A person reads the current version, merges the intended changes and resubmits. Documents and financial decisions still need review. This case describes the working process; time savings and adoption beyond the internal team have not been measured."
+      ]
+    ],
+    "steps": [
+      "Create a project note",
+      "Replay the same request",
+      "A colleague edits version 1",
+      "Submit a stale version 1 edit",
+      "Review and merge into version 2"
+    ],
+    "details": [
+      "Create one fictional record with request key demo-note-001.",
+      "Resend the identical request and key: return the original record without creating a second one.",
+      "A colleague adds a review requirement. The saved record becomes version 2.",
+      "The agent still holds version 1. Reject its edit with 409 and preserve the colleague’s change.",
+      "A person reads version 2 and combines both changes. Saving with the current version creates version 3."
+    ],
+    "notes": [
+      "Prepare the project brief.",
+      "Prepare the project brief. Include a review meeting.",
+      "Prepare the project brief. Include a review meeting and an evidence checklist."
+    ],
+    "outcomes": [
+      "Ready. Start by creating a fictional note.",
+      "201 Created: one note, version 1.",
+      "Replay: same record ID, one note, version 1.",
+      "200 OK: colleague’s update saved as version 2.",
+      "409 Conflict: stale edit rejected; version 2 is unchanged.",
+      "200 OK: reviewed merge saved as version 3."
+    ],
+    "record": "Current record",
+    "history": "Saved note revisions",
+    "empty": "No note has been created.",
+    "version": "Version",
+    "count": "Records",
+    "next": "Run next step",
+    "reset": "Reset demo",
+    "progress": "Step",
+    "revisionLabels": [
+      "Created by agent",
+      "Updated by colleague",
+      "Merged after human review"
+    ],
+    "noscript": "The complete sequence is described below. Enable JavaScript to run the local simulation.",
+    "complete": "Walkthrough complete"
   }
 }

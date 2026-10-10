@@ -1,12 +1,12 @@
 # Jay Liu portfolio specification
 
-Updated: 2026-10-10. Owner: Jay Liu. Canonical: https://jayliu.co.nz/. Repository: https://github.com/maxazure/maxazure.github.io. Working and production branch: master.
+Updated: 2026-10-11. Owner: Jay Liu. Canonical: https://jayliu.co.nz/. Repository: https://github.com/maxazure/maxazure.github.io. Working and production branch: master.
 
 ## Purpose and success criteria
 
 Help hiring teams understand Jay’s fit for senior software engineering, enterprise AI integration and FDE opportunities. Lead with business understanding and delivery, then show attributed engineering evidence. FDE is a direction of interest; the formal FNZ title remains Analyst Developer. The owner confirms FNZ work is delivery-focused and confidential.
 
-Success: four equivalent featured cases on all six homepages; all 30 existing projects on each language’s project index; CV, LinkedIn and selected-work actions in the hero; public source/demo links alongside relevant evidence; no fabricated outcomes or confidential employer/client details. The supplied portrait is small and appears in About after the hero. Preserve the exact Transformer component and its existing CSS, old homepage anchors, original CV and all existing project images.
+Success: four equivalent featured cases on all six homepages; all 30 existing projects on each language’s project index; CV, LinkedIn and selected-work actions in the hero; public source/demo links alongside relevant evidence; no fabricated outcomes or confidential employer/client details. The supplied portrait is small and appears in About after the hero. Preserve the exact Transformer component and its existing CSS, old homepage anchors, existing CV URL and all existing project images. The original PDF is superseded by the public two-page CV.
 
 `src/data/profile.ts` owns shared identity; `src/data/locales/en.json` owns the source copy, with complete dictionaries for five other languages. `src/data/featured-work.ts` owns the four engineering cases; `src/data/projects.ts` owns the complete collection. [Positioning and evidence](docs/positioning.md) records the goal, sources, outcome hypothesis and acceptance plan. The source baseline is the deployed `525d9eb` revision; its rebuilt homepage matches live HTML byte-for-byte.
 
@@ -40,7 +40,7 @@ Search Console/Bing indexing, field performance, rankings, recruiting conversion
 
 ## Brand asset and media register
 
-Original wordmark and CV remain unchanged. Self-hosted Jost 500/700 WOFF2 is OFL licensed. The role-led hero retains the existing animated Transformer field; the deterministic 1200×630 social card remains the preferred share image. Retired project diagrams are removed. No generated imagery is used as proof.
+Original wordmark remains unchanged. The CV is replaced as recorded in the 11 October revision below. Self-hosted Jost 500/700 WOFF2 is OFL licensed. The role-led hero retains the existing animated Transformer field; the deterministic 1200×630 social card remains the preferred share image. Retired project diagrams are removed. No generated imagery is used as proof.
 
 | Family / anonymous ID | Source and non-destructive derivative | Consumer / QA |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ All case content survives no-JavaScript and images-disabled states. Native headi
 
 Strict target: initial page below 500KB, JS below 10KB, CSS below 40KB, fonts below 100KB. Eleven small lazy screenshots remain within the strict image budget. No video, external fonts, runtime carousel or third-party scripts. Expected LCP: hero role; explicit thumbnail dimensions preserve layout. GitHub Pages owns cache headers, previously verified `max-age=600`; unsupported `_headers` rules are not shipped.
 
-Verification uses `pnpm check`, build, HTML-contract verifier, strict resource/fragment/media audits and normal browser inputs. The verifier checks nineteen HTML routes, four featured cases, thirty archive entries, reciprocal project language links, metadata/schema, unchanged CV, legacy anchors, portrait placement, small images, generated labels and private endpoint restrictions. Desktop/mobile Chromium rendering is reviewed. Branded Safari, assistive-technology certification and field metrics are not claimed.
+Verification uses `pnpm check`, build, HTML-contract verifier, strict resource/fragment/media audits and normal browser inputs. The verifier checks nineteen HTML routes, four featured cases, thirty archive entries, reciprocal project language links, metadata/schema, reviewed public CV, legacy anchors, portrait placement, small images, generated labels and private endpoint restrictions. Desktop/mobile Chromium rendering is reviewed. Branded Safari, assistive-technology certification and field metrics are not claimed.
 
 The original redesign was published in content commit `50f506a` and workflow update `03fcbd8`. This case-focused follow-up, content commit `c0b4f75`, supersedes that release's abstract projects and research section. GitHub Pages workflow run `37999003089` completed successfully. Live verification downloaded all 32 release files and confirmed byte-for-byte agreement with the local build, then passed the HTML contracts against that live snapshot. The homepage alias, canonical www redirect and custom HTTP 404 also passed.
 
@@ -205,3 +205,50 @@ AI-assisted content: the assistant authored and checked each translation against
 Release checks: 25 files typechecked without errors, warnings or hints; 19 generated HTML pages pass contracts; all 18 indexable routes are reachable with no orphan/dead-end/broken internal links. Six-language homepages pass 1440/820/390/320px reflow, and project/privacy counterparts pass 1440/320px. Dropdown keyboard, outside dismissal, current state, page/fragment preservation, mobile navigation, native no-JavaScript switching and text-spacing/forced-colour checks pass. The original English case/project facts, animation source and animation CSS rules are preserved. Static resources remain under the project budgets; this is lab evidence, with field metrics and external native-editor review unmeasured.
 
 Production release: `f5944e5bc8f570d2d6a1a9fc18e3ad23bb6c809e`, [Pages run 38042959504](https://github.com/maxazure/maxazure.github.io/actions/runs/38042959504), successful. Live verification at 2026-10-10T09:54:44+00:00 matched all 69 files and passed all 19 HTML-page contracts.
+
+
+## Public recruiting evidence revision, 11 October 2026
+
+This section supersedes earlier instructions to preserve the old PDF bytes. The owner requested a public CV, inspectable CRM evidence and an internal delivery story while retaining the overall layout. Details, sources, regeneration and verification: [recruiting evidence](docs/recruiting-evidence.md). Success criteria: a readable two-page public CV with personal contacts and three attributed projects; an honest fictional-data walkthrough of retry/conflict/history semantics; equivalent content in all six languages; no private records or fabricated employment outcomes.
+
+### Fact Register and AI-Assisted Content Register
+
+Owner/accountable author: Jay Liu. AI assistance: drafting, translation and implementation from the existing career record, owner operating rules and inspected application source/tests. Public claims are bounded to known employment facts, internal workflow and implemented behaviours. No specific FNZ senior-responsibility story or HiLily technical decision is added without owner evidence. CRM users are described as Jay and a colleague; no colleague identity, customer identity, private path, endpoint or source repository is disclosed. The walkthrough is visibly labelled a simplified local simulation. Public source verifies CodexView's adapter coverage; GitHub About now agrees with README.
+
+### Section Capacity Map and Design System Handoff
+
+The homepage retains its order and four case rows. The CRM evidence link targets the walkthrough; CV labels now state English, PDF, two pages and 203 KB. Project indexes add one CRM case section before the unchanged thirty-card collection: introduction, five-step explanation, local demo console and four concise delivery-story entries. Desktop uses two columns, phones show controls first and stack the explanation and story. Existing Jost, graphite/paper/orange tokens, square borders, 44px actions and focus treatment are reused. No global stylesheet or Transformer changes. Frontend-design guidance applied; Impeccable is unavailable, so direct rendered verification is recorded without claiming that tool ran.
+
+### Media Register and URL Migration Register
+
+CV source `docs/cv/Jay-Liu-Public-CV.html` → `public/cv/Jie-Liu-CV.pdf`; HTML-authored, Chromium tagged export, two A4 pages, 202,628 bytes, English. Owner-directed public revision, reviewed metadata/text/links and both rendered pages. Existing URL is stable; replace-in-place PDF cache is controlled by GitHub Pages, with live verification pending. Index decision: document-primary. Invalidate export on source changes. Existing project images and social assets remain byte-identical. New local fragments: `/projects/#crm-demo` and the five equivalent locale fragments; no page routes removed or added.
+
+### Privacy and Data Flow Register
+
+No new personal information collection, storage, cookies, analytics or network calls. Fictional demo records live only in memory and clear on reset/reload. The private operational CRM remains unreachable from the demo. Source documents and records are never embedded in the public bundle.
+
+### UI QA Coverage Register and Design Verification Ledger
+
+| Surface / states | Evidence and outcome |
+| --- | --- |
+| Public CV and download actions | Two A4 pages visually reviewed, tagged headings/lists/links, extracted text and seven annotation URLs verified; metadata and public contacts correct; PDF/UA and screen-reader certification not claimed |
+| CRM create, replay, colleague edit, stale rejection, reviewed merge, reset | Unit invariants and normal browser pointer/keyboard input; count stays one, stale version preserves note/history, final history has three revisions; controls announce status and reset focus |
+| Six-language narrow variants | Complete interactions and no horizontal overflow at 320px; Chinese also 390px, English desktop 1440px; same five operations and factual scope |
+| No JS / forced colours / text spacing / reduced motion | Complete initial-HTML explanation; hidden inactive controls; readable 320px reflow, visible focus and no new motion |
+| Existing hero and collection | English/Chinese CV actions reviewed at desktop/narrow widths; four featured cases, all thirty cards, protected animation and image hashes verified |
+
+### Performance Budget Register
+
+No dependencies or external resources added. The demo JavaScript loads only on project indexes; styles are scoped. Existing strict static resource audit passes without warnings. The public PDF is 203 KB and fetched only on navigation. No field Core Web Vitals or hiring impact is inferred.
+
+### Outcome Measurement Register
+
+| Change | Hypothesis / scope | Primary outcome | Guardrails | Baseline / period | Release evidence | Observation window | Segments | Result source | Decision | Owner |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| public-proof-2026-10-11 | Aligned CV and inspectable workflow support recruiter evaluation across six locales | Recruitment conversations that explicitly mention a project or CV | No private data, accurate attribution, usable CV, honest simulated evidence | No comparable conversion count; old internal-style PDF and empty preview | Review branch; publication pending owner approval | First 28 full days after publication | Role interest and volunteered source | Owner observations, no added tracking | planned | Jay |
+
+### Release and verification
+
+`pnpm check`, build, HTML verification and demo invariant tests pass. Strict internal-link, downloadable-document and resource audits pass with no warnings. SEO baseline is retained deployed source b3db404d053719b34a67796379f076d9a52794ea, Pages run 38043561167; retained homepage hash matches live. Comparison: 19 routes, zero errors, critical findings or warnings. All old routes/metadata/locale links remain intact. GitHub Pages publication and live PDF response checks await owner approval; a feature-branch push has no deploy trigger. No skill-managed Cloudflare/shared-server deployment applies to this existing GitHub Pages repository.
+
+Documentation audit limitation: the installed skill’s `site-spec-audit` and `design-md-audit` reject the repository’s pre-existing document format (required canonical headings/token-map schema). This revision keeps the established documentation structure and records current evidence; those schema-format audits are not reported as passing. The same limitation was recorded in the prior release. It does not change the passing application, link, PDF, resource and SEO checks.
