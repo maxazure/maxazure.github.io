@@ -10,7 +10,7 @@ Each language has a homepage, a complete 30-project collection and a privacy pag
 
 The translation pass covers navigation, actions, accessibility labels, headings, biography, six career entries, four capability groups, four featured cases, all thirty projects, image alternatives, privacy, metadata and footer. Proper product, institution and employer names retain their official spellings. The original English CV is labelled as an English PDF in every language. The existing decorative Transformer component and its English technical labels are deliberately preserved at the owner's direction.
 
-English pages contain no Chinese characters, including the portrait caption, accessible labels and language choices. The language selector uses an original source-controlled SVG combining a letter panel and globe, followed by a caret. Choices are written in the current page's language; the English menu therefore says “Simplified Chinese” and “Traditional Chinese”. Chinese pages use the requested Chinese labels. No flags, external icon font or translation service is loaded.
+English page content, portrait captions and accessible labels contain no Chinese characters. At the owner’s subsequent request, the language menu always uses each language’s native name: English, 简体中文, 繁體中文, 日本語, Français and 한국어. Each link declares its own `lang` as well as its destination `hreflang`. The selector uses Google’s official [Material Icons Round translate glyph](https://github.com/google/material-design-icons/blob/49d4db35df873165d6bd6ba09b063c7dafbac2f4/src/action/translate/materialiconsround/24px.svg), followed by a caret, with 10px corners on the button and panel. The SVG is inlined with the existing colour tokens; its Apache 2.0 licence and source attribution are included in `public/licenses/google-material-icons.txt`. No flags, external icon font or translation service is loaded.
 
 ## Translation review
 
@@ -26,9 +26,13 @@ The menu uses the existing graphite, paper, orange and rule tokens, with a 44px 
 
 ## Acceptance
 
-- Typecheck, static build and 19-page HTML verification, including six complete dictionaries, route parity, privacy constraints, unchanged protected files and English without Chinese characters.
+- Typecheck, static build and 19-page HTML verification, including six complete dictionaries, route parity, privacy constraints, unchanged protected files, native language labels and English content without Chinese outside the language menu.
 - Homepage layouts at 1440, 820, 390 and 320 CSS pixels in all six languages; no page overflow. Photo is 94px square on desktop and 76px square on phones, 10px corners, below the first viewport.
 - Project/privacy routes passed at 1440px and 320px in every language (24 route/viewport checks). Actual EN-to-FR project switching preserved `#project-codexview`. Enter, Tab, Escape/focus return, outside dismissal and mobile-menu destination focus passed. With JavaScript disabled, native disclosure and KO-to-JA project navigation passed using browser input. All six homepages passed 320px text-spacing overrides. Forced colours preserved the current-language marker, menu border and focus; the accessibility tree exposes the native disclosure name, expanded state and controlled navigation.
 - Final typecheck: 25 files, zero errors, warnings or hints. Build and six-language verifier pass. Original English project/case facts and every Transformer CSS rule were compared with the published source and are preserved. Internal-link and static-resource audits pass. Search indexing, field performance, branded Safari, screen-reader certification and external native-editor review are not claimed.
 
 Published commit `f5944e5bc8f570d2d6a1a9fc18e3ad23bb6c809e` via [Pages run 38042959504](https://github.com/maxazure/maxazure.github.io/actions/runs/38042959504). The workflow passed typecheck, build, verification and deployment. At 2026-10-10T09:54:44+00:00, all 69 live files matched the local build byte-for-byte, and the verifier passed against the live 19-page snapshot.
+
+## Language-picker refinement, 2026-10-10
+
+The owner requested a recognisable Google translation icon and native language names on every page. The official Round translate glyph replaces the original icon, the control and panel have 10px corners, and language choices now come from shared native names rather than page translations. Typecheck (25 files, zero diagnostics), build and 19-page verification pass, including the exact native names and each link’s language annotation. Browser reinspection was attempted but the existing preview space was under user control and rejected automation; no new visual or keyboard check is claimed for this refinement. The previous interaction code, animation and portrait are unchanged.

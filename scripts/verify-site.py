@@ -15,6 +15,7 @@ expected_title = "Jay Liu - Senior Software Engineer | FinTech | .NET | React | 
 expected_description = "Jay Liu, senior software engineer in Auckland. 18+ years in enterprise software, financial-platform delivery at FNZ, and independent applied AI projects."
 locale_roots = {'en': '', 'zh': 'zh/', 'zh-hant': 'zh-hant/', 'ja': 'ja/', 'fr': 'fr/', 'ko': 'ko/'}
 locale_langs = {'en': 'en-NZ', 'zh': 'zh-Hans', 'zh-hant': 'zh-Hant', 'ja': 'ja', 'fr': 'fr', 'ko': 'ko'}
+locale_names = {'en': 'English', 'zh': '简体中文', 'zh-hant': '繁體中文', 'ja': '日本語', 'fr': 'Français', 'ko': '한국어'}
 content_root = Path(__file__).resolve().parents[1] / 'src/data/locales'
 translations = {code: json.loads((content_root / f'{code}.json').read_text()) for code in locale_roots}
 legacy_fragments = {"home", "about", "skills", "resume", "portfolio", "contact"}
@@ -31,6 +32,8 @@ class Page(HTMLParser):
         self.in_json = False
         self.json_text = ""
         self.graphs = []
+        self.language_names = {}
+        self.in_language = None
         self.feed(path.read_text())
 
     def handle_starttag(self, tag, attrs):
@@ -40,6 +43,9 @@ class Page(HTMLParser):
             assert attrs["id"] not in self.ids, f"Duplicate ID in {self.path}: {attrs['id']}"
             self.ids.add(attrs["id"])
         self.h1 += tag == "h1"
+        if tag == "a" and "data-language" in attrs:
+            self.in_language = attrs["data-language"]
+            self.language_names[self.in_language] = ""
         if tag == "title": self.in_title = True
         if tag == "script" and attrs.get("type") == "application/ld+json":
             self.in_json = True
@@ -48,8 +54,10 @@ class Page(HTMLParser):
     def handle_data(self, data):
         if self.in_title: self.title += data
         if self.in_json: self.json_text += data
+        if self.in_language: self.language_names[self.in_language] += data
 
     def handle_endtag(self, tag):
+        if tag == "a": self.in_language = None
         if tag == "title": self.in_title = False
         if tag == "script" and self.in_json:
             self.graphs.append(json.loads(self.json_text))
@@ -67,6 +75,10 @@ for path, page in pages.items():
     assert len(canonical) == 1 and canonical[0].startswith(origin + "/"), path
     assert page.meta("og:url") == canonical, path
     assert len(page.meta("description")) == 1, path
+    assert page.language_names == locale_names, f"Language choices must use native names: {path}"
+    for tag, attrs in page.nodes:
+        if tag == "a" and "data-language" in attrs:
+            assert attrs.get("lang") == attrs.get("hreflang") == locale_langs[attrs["data-language"]], path
     if path.name != "404.html":
         alternates = [a for t,a in page.nodes if t == "link" and a.get("rel") == "alternate"]
         assert len(alternates) == 7, path
@@ -205,7 +217,9 @@ for locale, prefix in locale_roots.items():
         assert {a["data-language"]: a["href"] for a in controls} == {code: "/" + p + suffix for code,p in locale_roots.items()}
         assert [a["data-language"] for a in controls if a.get("aria-current") == "page"] == [locale]
         if locale == "en":
-            assert not re.search(r"[\u3400-\u9fff]", html), f"Chinese characters in English HTML: {page.path}"
+            english_content, removed = re.subn(r'<nav id="language-options"[^>]*>.*?</nav>', '', html, flags=re.S)
+            assert removed == 1, f"Expected one native-language menu: {page.path}"
+            assert not re.search(r"[\u3400-\u9fff]", english_content), f"Chinese characters outside the English language menu: {page.path}"
     # A missing translation must never silently publish an English paragraph.
     if locale != "en":
         for identifier, project in text["projects"].items():
@@ -215,4 +229,4 @@ for locale, prefix in locale_roots.items():
                 assert project[field] != translations["en"]["featured"][identifier][field]
 
 assert hashlib.sha256((Path(__file__).resolve().parents[1] / "src/components/TransformerField.astro").read_bytes()).hexdigest() == "adcc96f6413e0ff67a29fd0dd94ec7e7c3848d31f22d07538f10318c7765450f", "Protected animation changed"
-print(f"Verified {len(pages)} pages in six languages: complete translations, reciprocal routes, English without Chinese, metadata, schema, project privacy, assets, unchanged animation and CV")
+print(f"Verified {len(pages)} pages in six languages: native language names, complete translations, reciprocal routes, English content without Chinese, metadata, schema, project privacy, assets, unchanged animation and CV")

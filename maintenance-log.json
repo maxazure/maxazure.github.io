@@ -146,6 +146,15 @@
         "verified_html_pages": 19
       },
       "validation": "Typecheck/build/19-page verifier passed; six homepages at 1440/820/390/320px; all project/privacy routes at 1440/320px; page/fragment switching, keyboard, native no-JS, forced colours and text spacing passed."
+    },
+    {
+      "date": "2026-10-10",
+      "actions": [
+        "content-refresh"
+      ],
+      "scope": "Google Material Icons Round translate glyph; rounded language control and panel; fixed native names and language annotations on all six menu links",
+      "evidence": "docs/localisation.md",
+      "validation": "25-file typecheck, build and 19-page verifier passed. Browser reinspection unavailable because the existing preview space is user-controlled; prior interaction code unchanged."
     }
   ],
   "visibility_snapshots": [

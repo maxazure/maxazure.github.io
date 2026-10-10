@@ -1,10 +1,10 @@
 export const locales = {
-  en: { lang: 'en-NZ', og: 'en_NZ', name: 'English' },
-  zh: { lang: 'zh-Hans', og: 'zh_CN', name: 'Simplified Chinese' },
-  'zh-hant': { lang: 'zh-Hant', og: 'zh_TW', name: 'Traditional Chinese' },
-  ja: { lang: 'ja', og: 'ja_JP', name: 'Japanese' },
-  fr: { lang: 'fr', og: 'fr_FR', name: 'French' },
-  ko: { lang: 'ko', og: 'ko_KR', name: 'Korean' },
+  en: { lang: 'en-NZ', og: 'en_NZ', nativeName: 'English' },
+  zh: { lang: 'zh-Hans', og: 'zh_CN', nativeName: '简体中文' },
+  'zh-hant': { lang: 'zh-Hant', og: 'zh_TW', nativeName: '繁體中文' },
+  ja: { lang: 'ja', og: 'ja_JP', nativeName: '日本語' },
+  fr: { lang: 'fr', og: 'fr_FR', nativeName: 'Français' },
+  ko: { lang: 'ko', og: 'ko_KR', nativeName: '한국어' },
 } as const;
 
 export type Locale = keyof typeof locales;
